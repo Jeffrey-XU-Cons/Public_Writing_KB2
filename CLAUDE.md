@@ -28,8 +28,10 @@
 - `03_dictionary/tobacco_terms/04_管理成熟度术语.yaml`
 - `03_dictionary/tobacco_terms/05_十五五规划术语.yaml`
 
-### 金句与段落（每次必读）
-- `03_dictionary/金句库(P4).yaml` — 394条个人风格金句
+### 风格参考素材（每次必读，非可抄金句）
+- `03_dictionary/golden_sentences/词句应用大全_排比句库.yaml` — 排比句式参考
+- `03_dictionary/golden_sentences/词句应用大全_比喻词库.yaml` — 比喻表达参考
+- `03_dictionary/golden_sentences/石头哥_金句素材.yaml` — 个人风格金句素材
 - `04_corpus/段落库_v2.yaml` — 200个可复用段落（写法范例标本库，源自73份真实交付物；按 usage 字段分"可改写直用/仅供学结构"）
 
 ### 范文参考（按文种选读，每次选3-5篇高分范文）
