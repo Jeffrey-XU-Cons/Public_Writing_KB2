@@ -1,0 +1,529 @@
+meta:
+  source_book: 胡森林《公文写作心法·笔杆》
+  source_file: "Gong Wen Xie Zuo Xin Fa _Bi Gan - Hu Sen Lin.md"
+  extraction_date: "2026-03-15"
+  total_entries: 30
+  type_counts:
+    SP: 5
+    LR: 12
+    MT: 10
+    PM: 3
+  dedup_against:
+    - 李忠秋《结构化写作》
+    - 胡森林《公文写作底层心法》
+  notes: >
+    本书为《公文写作底层心法》姊妹篇，重复内容（七步成文法、段头撮要法、统稿八看、
+    文气三要素、八种逻辑关系、永远重复持续创新、套路善用、四种角色跃迁、四种文本境界）
+    已去重。本书最有价值的部分为LR类（语言规范），重点提炼。
+
+entries:
+
+  # ========== SP 结构原则 ==========
+
+  - id: SP-001
+    type: SP
+    title: 公文五定特征
+    rule_type: GENRE
+    execution: agent_prompt
+    content: |
+      检查是否符合公文的五个法定性特征：
+      1. 检查法定作者——发文机关是否为依法成立并能以自身名义行使职权的机关或组织；
+      2. 检查既定程序——公文的起草、审核、签发、印制是否遵循规定程序；
+      3. 检查法定效力——是否具备其他文体不具备的强制性约束力；
+      4. 检查固定格式——是否符合国家标准规定的格式要求；
+      5. 检查特定功能——是否以传递公务信息、处理公务事项为核心功能。
+      起草公文前须先确认文种的"五定"属性，确保文稿合规合法合程序。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第十六章
+    usage: rule_engine
+
+  - id: SP-002
+    type: SP
+    title: 结构三层次
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文结构是否在三个层次上保持一致：
+      1. 浅层结构——章节、段落、标题的物理排列是否清晰合理；
+      2. 表层结构——内容板块之间的逻辑关联与组织方式是否明确；
+      3. 深层结构——文章内在的思维逻辑框架是否体现对事物本质的认识。
+      必须检查三层结构是否一致：外在排列服从逻辑关联，逻辑关联服从思维框架。
+      不得出现浅层结构清晰但深层结构混乱的情况。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十八章
+    usage: rule_engine
+
+  - id: SP-003
+    type: SP
+    title: 结构三要点
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文结构是否同时满足三个要点：
+      1. 完整——该有的内容是否都有，是否存在缺项或跑题；
+      2. 连贯——各部分之间过渡是否自然，前后是否呼应，上下是否贯通；
+      3. 严密——逻辑是否严谨，各部分之间关系是否经得起推敲，是否存在矛盾和漏洞。
+      提纲确定后，须用"完整-连贯-严密"三标准逐一审查。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十八章
+    usage: rule_engine
+
+  - id: SP-004
+    type: SP
+    title: 内容决定结构原则
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查是否先明确"写什么"再决定"怎么排"：不得先套结构再填内容，
+      不得出现内容与结构不匹配的情况。
+      检查结构类型是否与内容匹配，属于以下四类之一：
+      1. 总分式——是否先总后分，先提论点再展开；
+      2. 并列式——各部分地位是否平等，横向展开；
+      3. 递进式——是否层层深入，逐步推进；
+      4. 问题导向式——是否遵循提出问题→分析问题→解决问题的顺序。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十八章
+    usage: rule_engine
+
+  - id: SP-005
+    type: SP
+    title: 公文六要素框架（二八法则应用）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文是否覆盖六个核心要素：
+      1. 立意——是否解决了"言之有方"的问题，方向是否正确；
+      2. 主题——是否解决了"言之有核"的问题，中心是否明确；
+      3. 结构——是否解决了"言之有序"的问题，逻辑是否清晰；
+      4. 内容——是否解决了"言之有物"的问题，材料是否充实；
+      5. 语言——是否解决了"言之有味"的问题，表达是否得体；
+      6. 文气——是否解决了"言之有脉"的问题，气韵是否贯通。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》附录2·二八法则
+    usage: rule_engine
+
+  # ========== LR 语言规范（本书核心内容）==========
+
+  - id: LR-001
+    type: LR
+    title: 务实管用第一原则
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查公文是否符合"务实管用"的最高标准：
+      - 务实——内容是否真实、具体、可操作，是否存在空洞套话；
+      - 管用——对实际工作是否有指导价值，是否能解决问题、推动工作。
+      必须检查：这篇文章对执行者是否有实际帮助？
+      不得以语言华丽或篇幅完整为由忽视"管用"标准。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十七章
+    usage: rule_engine
+
+  - id: LR-002
+    type: LR
+    title: 公文文风三弊
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否存在以下三种文风弊病：
+      1. 长篇大论——篇幅是否冗长，废话连篇，重要信息是否被淹没；
+      2. 空洞无物——是否存在概念堆砌，缺乏事实依据，读了等于没读；
+      3. 缺乏新意——是否千篇一律，套话连句，照搬照抄，没有思想。
+      检查方法：删掉此段，意思有无损失？有损失→保留；无损失→删除。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十七章
+    usage: rule_engine
+
+  - id: LR-003
+    type: LR
+    title: 公文四个实的标准
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否符合务实文风的四个具体标准：
+      1. 真实准确——数据、事实、引语是否真实可查，是否存在估数、夸大；
+      2. 充实丰富——内容是否有足够支撑，是否空洞，是否有干货；
+      3. 切实可行——措施、方案是否有可操作性，是否落地不落空；
+      4. 朴实简洁——语言是否平实，是否存在卖弄或堆砌。
+      在四个标准有冲突时：真实准确＞切实可行＞充实丰富＞朴实简洁。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十七章
+    usage: rule_engine
+
+  - id: LR-004
+    type: LR
+    title: 说人话三要求
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查公文语言是否符合"说人话"的三个层次要求：
+      1. 深入浅出——是否将复杂抽象问题用简单具体的语言表达清楚，
+         不得以"内容复杂"为借口写艰涩文字；
+      2. 短实新——句子是否精炼，内容是否实在，表达是否新鲜不落套；
+      3. 准确简洁生动——用词是否精准无歧义，是否去掉多余成分，是否有画面感。
+      检查是否满足：能听懂、能记住、想继续读。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十章
+    usage: rule_engine
+
+  - id: LR-005
+    type: LR
+    title: 消极修辞技法
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否存在以下五类可删除的冗余成分：
+      1. 语义重复——如"十分非常重要"须删减为"非常重要"；
+      2. 无实义虚词——多余的"的""地""了""着"须删除；
+      3. 无效修饰语——修饰成分与中心词无实质区分的须删除；
+      4. 过渡性废语——显而易见时"下面我来谈谈……""综上所述……"须删去；
+      5. 重复交代——同一信息在文中多次出现时须保留最必要的一次。
+      检查方法：此词/此句删掉后意思是否完整？完整→删；不完整→留。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十章
+    usage: rule_engine
+
+  - id: LR-006
+    type: LR
+    title: 简洁文风三方法
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否运用了以下三种方法实现简洁文风：
+      1. 压缩句子——长句是否变为短句，复合句是否拆分为简单句，从句嵌套是否去掉；
+      2. 合并同类项——相同或相近含义的表述是否已合并为一句，避免重复展开；
+      3. 删繁就简——冗长表述是否已提炼为核心词、关键短语，
+         能用列举（①②③）替代的冗长叙述段是否已替代。
+      目标：每段删去20%的字后信息量不减。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第二十章
+    usage: rule_engine
+
+  - id: LR-007
+    type: LR
+    title: 公文长文成因三条
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查文稿是否因以下三种原因而产生冗长问题：
+      1. 思想认识不到位——是否误以为篇幅长等于内容丰富等于态度认真；
+      2. 写作能力欠缺——是否存在铺陈堆砌，缺乏提炼概括能力；
+      3. 敷衍了事——是否以篇幅填充代替深度思考，以数量掩盖质量不足。
+      不得出现冗长文稿：改稿时须主动压缩篇幅10%~30%，短而精胜于长而冗。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第二十章
+    usage: rule_engine
+
+  - id: LR-008
+    type: LR
+    title: 论从事出原则
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查是否符合"论从事出"原则：观点须从事实中提炼，结论须从实践中得出。
+      不得先有结论再找例子（倒推式论证）；论点必须能从所列事实中自然导出。
+      检查方法：遮住观点段，只看事实段，读者能否自己得出同样结论？
+      能→论从事出合格；不能→观点与事实脱节，须修改。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十一章
+    usage: rule_engine
+
+  - id: LR-009
+    type: LR
+    title: 事实论据四要求
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文中使用的事实论据是否满足四个要求：
+      1. 真实——事实是否准确无误，是否存在夸大、虚构、失真；
+      2. 准确——时间、地点、数字、名称等细节是否精确可核实；
+      3. 典型——是否选用最能说明问题、最具代表性的事实，是否堆砌平庸案例；
+      4. 切题——事实与所论证的观点是否直接相关，是否牵强附会。
+      选材原则：宁少勿滥——一个典型事实胜过十个平庸例子。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十一章
+    usage: rule_engine
+
+  - id: LR-010
+    type: LR
+    title: 理论论据三要点
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查公文引用理论、政策、上级精神作为论据时是否符合三点：
+      1. 融会——是否真正理解并消化，是否存在生搬硬套；
+      2. 得体——引用场合和对象是否恰当，政治性表述是否与文件保持一致；
+      3. 适度——引用是否为论证服务，是否铺天盖地堆引语，
+         引用之后是否有自己的阐释和应用。
+      不得直接大段复制上级文件作为正文——这是引用，不是论证。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第二十一章
+    usage: rule_engine
+
+  - id: LR-011
+    type: LR
+    title: 意群概念与段落组织
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查段落组织是否符合意群原则：
+      - 检查是否存在一个段落包含多个不同意思的情况，须拆分；
+      - 检查是否存在相同意思被拆成多个段落的情况，须合并；
+      - 检查段首句是否为该意群的概括句。
+      必须包含以下操作步骤：
+      ① 列出所有材料要点；
+      ② 按意群归类（相同意思归一组）；
+      ③ 为每个意群写段首概括句；
+      ④ 以段首句为骨，展开段落。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十一章
+    usage: rule_engine
+
+  - id: LR-012
+    type: LR
+    title: 奥卡姆原则——废话三类禁令
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否存在以下三类废话，须坚决删除：
+      1. 正确的废话——内容没有错，但读了没收获，如"要高度重视……"；
+      2. 没用的空话——脱离实际，只说应该但不说怎么做；
+      3. 好听的套话——用套路化表达替代具体思考，如年年相同的开场白。
+      识别方法：把这段话换成任何一个同类文件还能用吗？能→套话，删。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》附录2·奥卡姆剃刀定律
+    usage: rule_engine
+
+  # ========== MT 方法论 ==========
+
+  - id: MT-001
+    type: MT
+    title: 观点转化五途径
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文观点是否来源于以下五个渠道之一：
+      1. 书本——是否从理论著作、经典文献中汲取了理论支撑；
+      2. 上级精神——是否将上级文件、领导讲话要求转化为本单位的具体观点；
+      3. 领导意图——是否将领导的想法、思路转化为成文的观点表述；
+      4. 他人智慧——是否从同行经验、调研访谈、讨论交流中提炼了观点；
+      5. 实践感悟——是否从一线工作实践和个人思考中凝练了独特观点。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第五章
+    usage: prompt_supplement
+
+  - id: MT-002
+    type: MT
+    title: 领导满意四标准
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查为领导起草的文稿是否达到四个满意标准：
+      1. 正确领会意图——是否准确理解领导想要表达什么、强调什么、忌讳什么；
+      2. 升华想法——是否在领导原意基础上提炼升华，使表达更有高度、更有力度；
+      3. 扮演角色——是否以领导的身份、立场、语气来写，而非以自我视角；
+      4. 体现风格——是否把握并还原领导的个人表达风格、习惯用语。
+      优先顺序：宁可准确朴素，不可误解意图却文字华丽。
+    applicable_types: ["讲话", "汇报"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第六章
+    usage: prompt_supplement
+
+  - id: MT-003
+    type: MT
+    title: 目标思维双维度（靶向+他者）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文写作是否建立了两种目标思维：
+      1. 靶向思维——是否明确了写作目标，所有内容取舍是否以"服务于靶心目标"为标准；
+         须检查：这篇文章要达到什么效果？读者看完后应有什么改变？
+      2. 他者思维——是否从读者（使用者、接收者）的立场写作，
+         检查是否存在"我想说什么"而非"读者需要知道什么"的问题。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第七章
+    usage: prompt_supplement
+
+  - id: MT-004
+    type: MT
+    title: 修改五字诀
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查文稿修改是否运用了五种操作：增、删、整、调、换。
+      1. 增——是否增加了缺失的内容，补充论据，丰富论证；
+      2. 删——是否删去了冗余内容，去掉废话、重复、偏题部分；
+      3. 整——是否整理了结构，调整了段落内部的逻辑顺序；
+      4. 调——是否调换了段落或层次的前后顺序，优化整体结构；
+      5. 换——是否替换了不恰当的词语、句式或论据。
+      修改顺序须遵循：先整体（调/整/增/删），再局部（换）；先结构，再内容，再语言。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第十四章
+    usage: prompt_supplement
+
+  - id: MT-005
+    type: MT
+    title: 修改四境界
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查公文修改是否达到了较高境界：
+      1. 辨境——是否能辨别文章好坏，知道哪里不好（有眼光，无手段为低级）；
+      2. 正境——是否能改正错误，把明显的问题纠正（能纠错但难锦上添花）；
+      3. 佳境——是否能提升表达质量，不只改错，还能优化（有提升能力）；
+      4. 悟境——是否能从修改中悟出规律，形成原则性认识，指导今后写作（最高境界）。
+      检查当前修改处于哪个境界，下一步努力方向是什么。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第十四章
+    usage: prompt_supplement
+
+  - id: MT-006
+    type: MT
+    title: 驾驭矛盾三法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文处理内容矛盾和张力时是否运用了合适的方法：
+      1. 上下结合——宏观论断与具体数据事实是否相印证，是否存在只高屋建瓴无细节或只有细节无论断；
+      2. 刚柔相济——是否兼顾明确要求（刚）与工作空间（柔），是否过于刚硬或过于模糊；
+      3. 情理交融——是否在逻辑论证的同时兼顾情感共鸣，特别是讲话稿。
+      适用场景：政治性文件用上下结合，部署性文件用刚柔相济，讲话稿用情理交融。
+    applicable_types: ["讲话", "汇报", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》第二十三章
+    usage: prompt_supplement
+
+  - id: MT-007
+    type: MT
+    title: 开头首因策略
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查重要场合的公文开头是否满足首因效应要求：
+      1. 重要场合须特别用心开头——第一次提交工作成果、给新领导准备文稿时，
+         开头段落是否先声夺人，能否留下良好的第一印象；
+      2. 开头段落是否高质量——文章第一页、第一段是否具备：
+         主题鲜明、语言精练、有吸引力（问题感或结论感）。
+      不得出现开头段落一塌糊涂而后文写得好的情况。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》附录2·首因效应
+    usage: prompt_supplement
+
+  - id: MT-008
+    type: MT
+    title: 刻意学习与复盘机制
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查是否建立了刻意学习与复盘的提升机制：
+      1. 刻意学习——是否有意识地钻研，带着问题学，学后即用；
+      2. 深度复盘——每次写作后是否回顾哪里写得好、哪里写得差、为什么；
+         是否复盘他人优秀文稿，总结规律，提出方法论；
+      3. 学用结合——是否将学到的方法立即运用到下一篇文稿中，形成正向循环。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》附录2·复利效应/反馈效应
+    usage: prompt_supplement
+
+  - id: MT-009
+    type: MT
+    title: 循序渐进写作学习路径
+    rule_type: GENRE
+    execution: agent_prompt
+    content: |
+      检查写作学习是否遵循由易到难的三条递进路径：
+      路径一（文体复杂度）：通知→公告→大事记→工作意见→工作规划→工作汇报，是否按序推进；
+      路径二（规范化程度）：是否先从规范化强易借鉴的办法/规定/条例入手，
+                             再迁移到综合性强的领导讲话/调查报告/经验材料；
+      路径三（内容熟悉度）：是否先写自己熟悉的业务领域，再迁移至其他领域。
+      不得一开始就尝试最难的文体或陌生领域，避免无话可说、挫伤信心。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: C
+    source: 胡森林《公文写作心法·笔杆》附录2·登门槛效应
+    usage: prompt_supplement
+
+  - id: MT-010
+    type: MT
+    title: 言之有理有据有物三维检验
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文内容是否通过三维检验：
+      1. 言之有理——是否有明确的论点，逻辑是否成立，推理是否合理；
+      2. 言之有据——是否有支撑论点的依据（事实依据、数据依据、政策依据），
+         不得只有观点而无论据；
+      3. 言之有物——内容是否具体，是否有实质内容，不得空泛表述。
+      三者缺一则文稿要么空洞，要么无据，要么抽象，须逐一检查确保具备。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十一章
+    usage: prompt_supplement
+
+  # ========== PM 短语材料 ==========
+
+  - id: PM-001
+    type: PM
+    title: 公文写作六个"言之"金句
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: |
+      检查公文是否覆盖六个"言之"维度：
+      立意→言之有方（方向是否正确）；主题→言之有核（中心是否明确）；
+      结构→言之有序（逻辑是否清晰）；内容→言之有物（材料是否充实）；
+      语言→言之有味（表达是否得体）；文气→言之有脉（气韵是否贯通）。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: B
+    source: 胡森林《公文写作心法·笔杆》附录2·二八法则
+    usage: dictionary
+
+  - id: PM-002
+    type: PM
+    title: 短实新三字文风标准
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查是否符合"短实新"三字文风标准：
+      短——句子是否精炼，篇幅是否简洁，能短是否已短；
+      实——内容是否充实，是否言之有物，是否有具体事实和数据；
+      新——表达是否新鲜，观点是否有新意，是否落套路，是否炒冷饭。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: A
+    source: 胡森林《公文写作心法·笔杆》第二十章
+    usage: dictionary
+
+  - id: PM-003
+    type: PM
+    title: 公文写作三重修炼境界
+    rule_type: STYLE
+    execution: agent_prompt
+    content: |
+      检查公文写作是否体现了三重修炼境界的进阶追求：
+      修炼——是否掌握了方法和技能，提升了职场写作能力；
+      修养——是否具备分析判断、洞察、运筹等综合素质；
+      修为——是否达到笃定自信、宠辱不惊的写作心理状态。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    importance: C
+    source: 胡森林《公文写作心法·笔杆》后记
+    usage: dictionary

@@ -1,0 +1,1388 @@
+metadata:
+  file: 词句应用大全_比喻词库.yaml
+  description: 公文写作比喻类词句库，含形象分类词、两字/三字/四字型比喻词、比喻式排比金句、比喻式提纲、比喻对偶过渡句、成果类词语
+  source: 公文写作词句应用大全（530页25万字）.docx
+  total_entries: 210
+  id_prefix: MET
+  categories:
+    - 形象分类词
+    - 两字比喻词
+    - 三字比喻词
+    - 四字比喻词
+    - 比喻排比金句
+    - 比喻提纲
+    - 比喻对偶过渡句
+    - 成果类词语
+
+entries:
+  # ===== 形象分类词（按系列分组）=====
+
+  - id: MET-001
+    category: 形象分类词
+    sub_category: 疾病系列
+    content: 免疫针、手术刀、软骨病、恐慌症、降虚火、补元气、定心丸、中梗阻、动力针、镇定剂、免疫力、治顽疾、生命线
+    usage_note: 比喻工作中的问题和解决手段，常用于问题分析和整改部署
+    applicable_types: [讲话, 报告, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-002
+    category: 形象分类词
+    sub_category: 音乐系列
+    content: 主旋律、制高点、最强音、主基调、新格局、正能量、主打歌、好声音、总基调、大合唱、协奏曲
+    usage_note: 比喻工作主题和整体态势，多用于开头定调或结尾号召
+    applicable_types: [讲话, 报告, 汇报]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-003
+    category: 形象分类词
+    sub_category: 人体部位系列
+    content: 关键点、出发点、落脚点、切入点、着力点、主心骨、硬骨头、组合拳、大动脉、大筋骨
+    usage_note: 比喻工作的核心要素和关键环节
+    applicable_types: [讲话, 方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-004
+    category: 形象分类词
+    sub_category: 人作用系列
+    content: 明白人、带头人、贴心人、责任人、暖心人、清白人、细心人、铁面人、监护人
+    usage_note: 比喻干部角色定位，多用于干部要求类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-005
+    category: 形象分类词
+    sub_category: 航船车辆系列
+    content: 航船舵、风向标、方向盘、压舱石、定盘星、导航仪、指南针、双引擎、安全带、警示灯、发动机、直通车
+    usage_note: 比喻方向引领和工作驱动力，多用于部署类文种
+    applicable_types: [讲话, 方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-006
+    category: 形象分类词
+    sub_category: 军队战争系列
+    content: 突破战、阵地战、升级战、攻坚战、持久战、歼灭战、遭遇战、主力军、生力军、战略篇、战术篇
+    usage_note: 比喻工作任务的艰巨性和战略性，常用于动员部署
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-007
+    category: 形象分类词
+    sub_category: 作用系列
+    content: 领头羊、领头雁、风向标、助推器、防火网、指挥棒、杀手锏、人才库、晴雨表、试金石、定盘星、同心圆、压舱石、公约数、桥头堡、牛鼻子、防火墙、金钥匙、铁笼子、连心桥
+    usage_note: 比喻机构或举措的作用定位，用途极广
+    applicable_types: [讲话, 报告, 汇报, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  - id: MET-008
+    category: 形象分类词
+    sub_category: 状态系列
+    content: 精气神、战斗力、好氛围、强动力、真功夫、穷帽子、穷根子
+    usage_note: 比喻工作精神面貌和团队状态
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句形象分类
+
+  # ===== 两字比喻词 =====
+
+  - id: MET-009
+    category: 两字比喻词
+    sub_category: 问题类
+    content: 走神、散光、反弹、回潮、炎症、癌症、淬火、掉队、插队、长板、短板、软肋、红线、护栏、虚弹、臭弹、水分、包袱、污垢、灰尘
+    usage_note: 描述工作中存在的问题和弱点
+    applicable_types: [报告, 讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·两字型
+
+  - id: MET-010
+    category: 两字比喻词
+    sub_category: 工具标准类
+    content: 靶子、空子、暗礁、清单、套路、靶标、主线、红线、重心、针眼、欠账、导标、铆钉、镜子、标尺、瓶颈、摆设、橡皮、红灯、黄灯、绿灯
+    usage_note: 比喻工作目标、标准、障碍
+    applicable_types: [讲话, 方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·两字型
+
+  - id: MET-011
+    category: 两字比喻词
+    sub_category: 干部作风类
+    content: 镀金、到位、站位、补位、彩排、异化、变味、窗户、深潜、守摊、空转、吃香、实惠、有位、班长、领班
+    usage_note: 描述干部履职状态，多用于作风建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·两字型
+
+  - id: MET-012
+    category: 两字比喻词
+    sub_category: 腐败廉洁类
+    content: 老虎、苍蝇、腐肉、毒瘤、病毒、刺耳、刺眼、旋涡、体检、保健、打包
+    usage_note: 用于党风廉政建设、反腐倡廉类文稿
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·两字型
+
+  # ===== 三字比喻词 =====
+
+  - id: MET-013
+    category: 三字比喻词
+    sub_category: 工作方法类
+    content: 割韭菜、照镜子、钉钉子、小切口、点穴式、弹钢琴、牛鼻子、两张皮、点对点、点对面
+    usage_note: 形容工作方法，常用于部署讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-014
+    category: 三字比喻词
+    sub_category: 组织领导类
+    content: 火车头、领头羊、尖刀班、智囊团、顶梁柱、领头雁、主心骨、金钥匙、磁针石、挖井人、拓荒牛
+    usage_note: 比喻组织和带头人作用，适用领导讲话和先进典型材料
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-015
+    category: 三字比喻词
+    sub_category: 纪律约束类
+    content: 高压线、防火墙、紧箍咒、硬杠杠、军令状、责任状、承诺书、保护伞、生命线、安全带
+    usage_note: 比喻纪律制度的约束力，常用于党纪教育类文稿
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-016
+    category: 三字比喻词
+    sub_category: 问题障碍类
+    content: 夹生饭、烂摊子、绊脚石、拦路虎、地雷阵、两面人、墙头草、软骨头、稻草人、泥菩萨、隐身衣
+    usage_note: 比喻工作中的障碍和不良现象
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-017
+    category: 三字比喻词
+    sub_category: 人才角色类
+    content: 千里马、跟跑者、并行者、领跑者、监督员、护林员、保健员、战斗员、软实力、照妖镜、行动派、实干家、空谈家
+    usage_note: 比喻不同类型的人才或干部角色
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-018
+    category: 三字比喻词
+    sub_category: 改革发展类
+    content: 深水区、无人区、新蓝海、先手棋、主动仗、新航道、快车道、快进键、主战场、桥头堡
+    usage_note: 比喻改革进程和发展阶段，适用发展类报告讲话
+    applicable_types: [讲话, 报告, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-019
+    category: 三字比喻词
+    sub_category: 作风问题类
+    content: 踢皮球、打太极、玩推手、打折扣、搞变通、玩花样、小算盘、摆样子、翻烧饼、打补丁、混日子、熬资历
+    usage_note: 描述不良作风，多用于批评警示类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·三字型
+
+  - id: MET-020
+    category: 三字比喻词
+    sub_category: 调研学习类
+    content: 灌输式、互动式、填鸭式、快餐式、老黄历、五加二、白加黑、练兵场、大熔炉、必修课、老黄牛
+    usage_note: 描述学习教育方式，适用党建和教育类文稿
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·三字型
+
+  # ===== 四字比喻词 =====
+
+  - id: MET-021
+    category: 四字比喻词
+    sub_category: 工作方式类
+    content: 大水漫灌、精准滴灌、绣花功夫、工匠精神、穿针引线、泥腿调研、赤脚调研、海绵吸水、望闻问切
+    usage_note: 描述工作方式方法，常用于讲话中强调精细化工作
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-022
+    category: 四字比喻词
+    sub_category: 问题现象类
+    content: 文山会海、花拳绣腿、蜻蜓点水、走读干部、烂尾工程、涛声依旧、海市蜃楼、空头支票、表面文章、跑冒滴漏、虎头蛇尾
+    usage_note: 描述形式主义、官僚主义问题，适用作风建设类文稿
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-023
+    category: 四字比喻词
+    sub_category: 发展成效类
+    content: 乘数效应、蝴蝶效应、蝶变效应、化学反应、腾笼换鸟、破冰之旅、头脑风暴、源头活水、正本清源
+    usage_note: 描述政策效果和发展变化，适用于总结汇报类文种
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-024
+    category: 四字比喻词
+    sub_category: 廉洁纪律类
+    content: 红脸出汗、咬耳扯袖、外科手术、刀刃向内、廉政体检、纪律门诊、排毒祛邪、猛药去疴、露头便打
+    usage_note: 用于党风廉政和纪律建设类讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-025
+    category: 四字比喻词
+    sub_category: 改革攻坚类
+    content: 啃硬骨头、涉险滩、突破重围、另起炉灶、重新洗牌、另辟蹊径、攻坚克难、滚石上山、负重前行
+    usage_note: 描述改革攻坚的决心和难度，多用于动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-026
+    category: 四字比喻词
+    sub_category: 思维认知类
+    content: 火眼金睛、靶向意识、本领恐慌、知识枯竭、路径依赖、经验主义、上接天线、下接地气、站位不高
+    usage_note: 描述思维能力和认知方式，适用学习教育类文稿
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-027
+    category: 四字比喻词
+    sub_category: 民生服务类
+    content: 精准滴灌、雪中送炭、授人以渔、店小二精神、末梢神经、毛细血管、便民直通车
+    usage_note: 比喻政府服务方式，适用于民生报告和方案
+    applicable_types: [报告, 方案]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 比喻类词句按字数分类·四字型
+
+  - id: MET-028
+    category: 四字比喻词
+    sub_category: 谚语俗语类
+    content: 打铁必须自身硬、头痛医头脚痛医脚、九龙治水天下旱、三个和尚没水吃、眉毛胡子一把抓、拍脑门决策拍胸脯保证拍屁股走人、基础不牢地动山摇
+    usage_note: 俗语式比喻，生动形象，常用于讲话增强感染力
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 一般
+    source: 比喻类词句按字数分类·多字型
+
+  # ===== 比喻排比金句（选取代表性条目）=====
+
+  - id: MET-029
+    category: 比喻排比金句
+    content: 这是一次维护核心、捍卫核心的"再宣誓"，这是一次继往开来、继续前行的"再出发"，这是一次激发斗志、激励士气的"再鼓劲"。
+    usage_note: 三重排比式强调，适用于会议开场或动员讲话开头
+    applicable_types: [讲话]
+    applicable_position: 开头
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-030
+    category: 比喻排比金句
+    content: 掌握方法的"金钥匙"，锚定前进的"总航标"，筑牢政治的"压舱石"。
+    usage_note: 三要素并列结构，适用于目标部署类讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-031
+    category: 比喻排比金句
+    content: 干好工作的"发动机"，成就事业的"推进器"，成功人生的"加油站"。
+    usage_note: 三层递进，适用于学习教育、干部激励类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-032
+    category: 比喻排比金句
+    content: 攻坚破难的"狮子型"干部，锐意进取的"雄鹰型"干部，脚踏实地的"骆驼型"干部。
+    usage_note: 干部类型描述，适用于干部队伍建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-033
+    category: 比喻排比金句
+    content: 用好真评实考"指挥棒"，树起激励激发"风向标"，使出追责问效"杀手锏"。
+    usage_note: 考核激励机制类讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-034
+    category: 比喻排比金句
+    content: 政治建设的集中"充电"，党性修养的集中"淬炼"，担当精神的集中"加油"。
+    usage_note: 集中教育学习活动类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-035
+    category: 比喻排比金句
+    content: 身上带着"军令状"，眼里盯着"倒计时"，手中拿着"作战图"，心中想着"责任书"。
+    usage_note: 四层递进，强调责任担当，多用于攻坚战类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-036
+    category: 比喻排比金句
+    content: 为灵魂"补钙"，为品德"提纯"，为本领"淬火"，为事业"燃烧"。
+    usage_note: 党性修养和能力建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-037
+    category: 比喻排比金句
+    content: 绷紧讲政治之"弦"，校准讲政治之"标"，提高讲政治之"能"，履行讲政治之"责"。
+    usage_note: 政治建设类讲话，四层架构
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-038
+    category: 比喻排比金句
+    content: 不做思想上的"糊涂虫"，不做政治上的"墙头草"，不做行动上的"两面人"。
+    usage_note: 三否定句式，用于警示教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-039
+    category: 比喻排比金句
+    content: 绘出明确的"路线图"，列出详细的"任务书"，排出科学的"锦囊计"。
+    usage_note: 工作部署三要素，适用方案和讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-040
+    category: 比喻排比金句
+    content: 在方向上不能有"偏差"，在行动上不能有"温差"，在成效上不能有"落差"。
+    usage_note: 三不能句式，适用工作要求类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-041
+    category: 比喻排比金句
+    content: 筑牢政治信仰"压舱石"，把牢政治方向"生命线"，立牢政治规矩"顶梁柱"。
+    usage_note: 政治建设三要素，常用于党建类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-042
+    category: 比喻排比金句
+    content: 架好"望远镜"，建立机制重布局；用好"显微镜"，查摆整改重细节；握好"放大镜"，互融互通促合作。
+    usage_note: 三镜喻工作层次，适用综合性讲话或报告
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-043
+    category: 比喻排比金句
+    content: 把心思集中在"想干事"上，把胆识体现在"敢干事"上，把能力展现在"会干事"上，把目标锁定在"干成事"上。
+    usage_note: 四字递进式干部要求，适用于干部大会讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-044
+    category: 比喻排比金句
+    content: "主心骨"越来越硬，"主导权"越抓越牢，"主旋律"越唱越响，"主阵地"越筑越实，"主力军"越建越强。
+    usage_note: 五"主"递进式，适用于党建工作总结和讲话
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-045
+    category: 比喻排比金句
+    content: 在对党忠诚上当"排头兵"，在科学决策上当"好参谋"，在督查落实上当"主攻手"，在转变作风上当"急先锋"、在清廉自律上当"模范生"。
+    usage_note: 五维度干部定位，适用于干部培训讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-046
+    category: 比喻排比金句
+    content: 在工作面前当"多面手"，在问题面前当"灭火器"，在压力面前当"千斤顶"。
+    usage_note: 三面向干部角色，适用干部讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-047
+    category: 比喻排比金句
+    content: 以"滚石上山、负重前行"的决心抓发展，以"时不我待、只争朝夕"的作风推工作，以"善始善终、善作善成"的精神强落实。
+    usage_note: 三以句式，配合名言典故，适用于大型会议讲话开头或结尾
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-048
+    category: 比喻排比金句
+    content: "领头雁"的果敢，"拓荒牛"的劲头，"下山虎"的气势，"千里马"的恒心。
+    usage_note: 四动物喻精神，适用于激励号召类讲话结尾
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-049
+    category: 比喻排比金句
+    content: 转型的"瓶颈"，发展的"短板"，社会的"触点"，群众的"渴望"。
+    usage_note: 四重定性句式，适用于问题分析类讲话正文
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-050
+    category: 比喻排比金句
+    content: 催人奋进的"冲锋号"、干事创业的"及时雨"、实干为民的"加速器"、凝心聚力的"同心圆"。
+    usage_note: 四修饰语+比喻，适用于总结成效类讲话
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-051
+    category: 比喻排比金句
+    content: 冲破心理的"大山"，突破思维的"峡谷"，打破行动的"枷锁"。
+    usage_note: 三破句式，适用于思想解放类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-052
+    category: 比喻排比金句
+    content: 清长期未解的"淤点"，通梗阻不畅的"堵点"，解悬而未决的"难点"。
+    usage_note: 三清通解句式，适用于工作部署和问题整改类文稿
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-053
+    category: 比喻排比金句
+    content: 时间上"缺斤短两"，内容上"偷工减料"，落实上"跑偏走样"。
+    usage_note: 批评工作形式主义，适用于批评警示类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-054
+    category: 比喻排比金句
+    content: "吹"响宣传动员这声号，"拉"紧社会稳定这根弦，"弹"奏和谐发展这首曲，"唱"好文化繁荣这台戏。
+    usage_note: 音乐动词四元组，适用于文化宣传类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-055
+    category: 比喻排比金句
+    content: 瞄准"保障"做加法，瞄准"症结"做减法，瞄准"担当"做乘法，瞄准"病灶"做除法。
+    usage_note: 加减乘除四运算喻，适用于综合治理类讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-056
+    category: 比喻排比金句
+    content: 把群众呼声作为"第一信号"，把群众需求作为"第一选择"，把群众利益作为"第一考虑"，把群众满意作为"第一标准"。
+    usage_note: 四个"第一"群众观，适用于为民服务类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-057
+    category: 比喻排比金句
+    content: 知识都有"保质期"，本领都有"折旧率"，能力都有"迭代率"。
+    usage_note: 学习必要性论证，适用于学习教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-058
+    category: 比喻排比金句
+    content: 平常工作"看得出"，关键时刻"站得出"，危难关头"豁得出"。
+    usage_note: 干部担当三层次，适用于干部培训讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-059
+    category: 比喻排比金句
+    content: 获取"带露珠"的一手资料，采集"冒热气"的生动案例，学习"接地气"的群众语言。
+    usage_note: 调研工作三要求，适用于调研工作部署讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-060
+    category: 比喻排比金句
+    content: 学习进步有"想头"，成长发展有"盼头"，工作生活有"甜头"。
+    usage_note: 激励性三头句式，适用于干部激励类讲话结尾
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-061
+    category: 比喻排比金句
+    content: 优化选才用才的"量尺"，培厚人才成长的"沃土"，构建吸引人才的"磁场"。
+    usage_note: 人才工作三维度，适用于人才工作讲话和方案
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-062
+    category: 比喻排比金句
+    content: "打虎"不惧位高权重，"拍蝇"不拘旮旮旯旯，"猎狐"不辞山高水远。
+    usage_note: 反腐斗争三维度，适用于反腐专题讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-063
+    category: 比喻排比金句
+    content: 干部的"辛苦指数"，群众的"幸福指数"，地方的"发展指数"。
+    usage_note: 三指数论，适用于为民服务类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-064
+    category: 比喻排比金句
+    content: 做好开源增收的"加法"，做好削冗减支的"减法"，做好深化改革的"乘法"，做好兴利除弊的"除法"。
+    usage_note: 四则运算喻经济工作，适用于经济工作讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-065
+    category: 比喻排比金句
+    content: 立下"愚公志"，确定"路线图"，绘好"时间表"，制定"任务书"。
+    usage_note: 工作部署四要素，适用于攻坚任务讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-066
+    category: 比喻排比金句
+    content: 把好用权"方向盘"，系好廉洁"安全带"，练好政德"基本功"。
+    usage_note: 廉政建设三维度，适用于廉政教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-067
+    category: 比喻排比金句
+    content: 学习要有一股"挤劲儿"，调研要有一股"钻劲儿"，检视要有一股"狠劲儿"，整改要有一股"韧劲儿"。
+    usage_note: 四劲儿精神，适用于学习教育活动讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-068
+    category: 比喻排比金句
+    content: 坚定是"压舱石"，镇定是"定心丸"，淡定是"试金石"。
+    usage_note: 三定三喻，适用于心理素质要求类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-069
+    category: 比喻排比金句
+    content: 注入了"清醒剂"，擘画了"路线图"，发出了"动员令"。
+    usage_note: 学习活动效果三要素，适用于学习总结类讲话
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-070
+    category: 比喻排比金句
+    content: 成为"行家里手"，当好"施工队长"，发挥"头雁效应"。
+    usage_note: 能力要求三层次，适用于干部培训讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-071
+    category: 比喻排比金句
+    content: 用好"关键一招"，接好"关键一棒"，走好"关键一程"。
+    usage_note: 三关键时序句式，适用于攻坚节点讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-072
+    category: 比喻排比金句
+    content: 提升"信仰度"，增强"忠诚度"，淬炼"纯净度"。
+    usage_note: 党性修养三度，适用于党员教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-073
+    category: 比喻排比金句
+    content: 摘掉"穷帽子"，栽下"摇钱树"，捧上"金饭碗"。
+    usage_note: 脱贫攻坚三阶段，适用于扶贫脱贫类讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-074
+    category: 比喻排比金句
+    content: 自筑"防火墙"，自套"紧箍咒"，自设"高压线"。
+    usage_note: 自律三举措，适用于廉政党纪类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-075
+    category: 比喻排比金句
+    content: 找准"牛鼻子"，学会"弹钢琴"，打好"组合拳"。
+    usage_note: 工作方法三要诀，适用于工作方法论讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-076
+    category: 比喻排比金句
+    content: 勇当"探路者"、勇攀"制高点"。
+    usage_note: 双勇句式，适用于改革探索类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-077
+    category: 比喻排比金句
+    content: 以"自身硬"来涵养革命勇气，以"自身严"来保持革命精神，以"自身强"来激励革命斗志。
+    usage_note: 三以自身句式，适用于党性教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  - id: MET-078
+    category: 比喻排比金句
+    content: 在以案示警中"严规矩"，在以案为戒中"正风气"，在以案促改中"净生态"。
+    usage_note: 警示教育三效果，适用于以案促改类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 120例"比喻式"排比金句
+
+  # ===== 高水准比喻式提纲 =====
+
+  - id: MET-079
+    category: 比喻提纲
+    content: |
+      一是强基固本，画出共同理想"同心圆"。
+      二是崇德向善，筑牢社会文明"压舱石"。
+      三是引领舆论，找准改革发展"公约数"。
+      四是文化自信，彰显精气神。
+      五是勤政廉洁，提升干部队伍"战斗力"。
+    usage_note: 五点式文化建设提纲，每点以比喻词收尾，适用党建或精神文明类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第1例
+
+  - id: MET-080
+    category: 比喻提纲
+    content: |
+      一、系统规划"读"，占领思想阵地"制高点"。
+      二、多维触角"听"，倾听时代主流"最强音"。
+      三、把握特点"析"，奠定析事明理"主基调"。
+      四、聚焦疑点"辩"，形成百家争鸣"新格局"。
+      五、融入实践"研"，汇聚正能量。
+    usage_note: 读听析辩研五动作+比喻词，适用于学习教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第2例
+
+  - id: MET-081
+    category: 比喻提纲
+    content: |
+      一是产业筋骨"壮起来"。
+      二是城乡面貌"靓起来"。
+      三是民生福祉"厚起来"。
+      四是改革开放"快起来"。
+      五是党的建设"强起来"。
+    usage_note: "起来"式五点提纲，适用于年度工作总结讲话
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第3例
+
+  - id: MET-082
+    category: 比喻提纲
+    content: |
+      一是经济发展"高出一筹"。
+      二是改革创新"独树一帜"。
+      三是城市面貌"焕然一新"。
+      四是脱贫攻坚"快人一拍"。
+    usage_note: 四成语式提纲，适用于地方发展成果汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第4例
+
+  - id: MET-083
+    category: 比喻提纲
+    content: |
+      下好"先手棋"，确保平台推广有速度。
+      筑牢"基础桩"，确保平台覆盖有广度。
+      激发"活因子"，确保平台使用有热度。
+    usage_note: 三喻词+效果结构，适用于工作推进类讲话或方案
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第6例
+
+  - id: MET-084
+    category: 比喻提纲
+    content: |
+      一是当好"研究员"。
+      二是当好"参谋员"。
+      三是当好"协调员"。
+      四是当好"督查员"。
+    usage_note: 四角色定位式提纲，适用于办公室或综合部门工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第8例
+
+  - id: MET-085
+    category: 比喻提纲
+    content: |
+      以"理想信念坚如铁"的定力补钙铸魂。
+      以"咬定青山不放松"的韧劲干事创业。
+      以"俯首甘为孺子牛"的情怀服务人民。
+      以"只留清气满乾坤"的操守永葆本色。
+    usage_note: 四以+古诗词式提纲，适用于主题教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第9例
+
+  - id: MET-086
+    category: 比喻提纲
+    content: |
+      一、坚持合力共治，压实环保"责任链"。
+      二、坚持科学防治，打好治理"组合拳"。
+      三、坚持铁腕惩治，用好执法"杀手锏"。
+    usage_note: 三坚持+比喻词，适用于生态环保类讲话或报告
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第11例
+
+  - id: MET-087
+    category: 比喻提纲
+    content: |
+      从"零"到"一"的关键技术突破。
+      从"一"到"百"的科技成果孵化。
+      从"百"到"万"的应用场景拓展。
+      从"万"到"亿"的产业链条壮大。
+    usage_note: 数字递进式提纲，适用于科技创新产业发展类报告
+    applicable_types: [报告, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第12例
+
+  - id: MET-088
+    category: 比喻提纲
+    content: |
+      奏响开放合作的"协奏曲"，共创新平台。
+      奏响创新发展的"进行曲"，共享新机遇。
+      奏响优化生态的"交响曲"，共赢新未来。
+    usage_note: 三曲式提纲，适用于对外合作或发展论坛讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第14例
+
+  - id: MET-089
+    category: 比喻提纲
+    content: |
+      不能惯性依赖走"老路"。
+      不能急于求成走"近路"。
+      不能按部就班走"慢路"。
+      不能自我封闭走"窄路"。
+      不能同质发展走"熟路"。
+    usage_note: 五不走路提纲，适用于改革思路类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第19例
+
+  - id: MET-090
+    category: 比喻提纲
+    content: |
+      一、强化思想教育，拧紧"总开关"。
+      二、强化氛围营造，构筑"防火墙"。
+      三、强化平时考核，用好"指挥棒"。
+      四、狠抓作风建设，勤念"紧箍咒"。
+    usage_note: 四强化+比喻词，适用于党建、组工类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第29例
+
+  - id: MET-091
+    category: 比喻提纲
+    content: |
+      居安思危、高度重视，坚决筑牢防汛防旱的思想"堤防"。
+      未雨绸缪、防患未然，坚决筑牢防汛防旱的消险"堤防"。
+      超前应对、严阵以待，坚决筑牢防汛防旱的应急"堤防"。
+      严肃纪律、狠抓落实，坚决筑牢防汛防旱的责任"堤防"。
+    usage_note: 四堤防提纲，适用于安全防汛类讲话或方案
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 高水准比喻式提纲30例·第30例
+
+  # ===== 比喻对偶过渡句 =====
+
+  - id: MET-092
+    category: 比喻对偶过渡句
+    content: 打掉"拦路虎"，搬开"绊脚石"。
+    usage_note: 攻坚克难类过渡句，用于承接问题与对策
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-093
+    category: 比喻对偶过渡句
+    content: 用好"铁夹板"，拧紧"螺丝扣"。
+    usage_note: 纪律约束类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-094
+    category: 比喻对偶过渡句
+    content: 燃烧"卡路里"，跑出"加速度"。
+    usage_note: 效率提升类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 一般
+    source: 比喻对偶过渡句41例
+
+  - id: MET-095
+    category: 比喻对偶过渡句
+    content: 既要"高颜值"，更要"好气质"。
+    usage_note: 内外兼修类过渡句，适用于城市建设或队伍建设
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-096
+    category: 比喻对偶过渡句
+    content: 牵住"牛鼻子"，落实"硬任务"。
+    usage_note: 抓重点工作类过渡句
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-097
+    category: 比喻对偶过渡句
+    content: 消除了"梗阻"，打通了"经脉"。
+    usage_note: 改革成效类，适用于工作总结
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-098
+    category: 比喻对偶过渡句
+    content: 想出"金点子"，拿出"好招数"。
+    usage_note: 创新举措类过渡句
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 一般
+    source: 比喻对偶过渡句41例
+
+  - id: MET-099
+    category: 比喻对偶过渡句
+    content: 不编"花篮子"，不搭"花架子"。
+    usage_note: 反对形式主义类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-100
+    category: 比喻对偶过渡句
+    content: 学透"必修课"，打好"理论桩"。
+    usage_note: 理论学习类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-101
+    category: 比喻对偶过渡句
+    content: 当好"裁判员"，不当"运动员"。
+    usage_note: 政府职能转变类过渡句，适用于营商环境报告
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-102
+    category: 比喻对偶过渡句
+    content: 按下"快进键"，跑出"加速度"。
+    usage_note: 工作提速类过渡句，常用于攻坚冲刺阶段
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-103
+    category: 比喻对偶过渡句
+    content: 创新"一子落"，发展"满盘活"。
+    usage_note: 以点带面创新类过渡句
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-104
+    category: 比喻对偶过渡句
+    content: 打好"组合拳"，弹好"协奏曲"。
+    usage_note: 整体联动工作类过渡句
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-105
+    category: 比喻对偶过渡句
+    content: 向问题"叫板"，拿问题"开刀"。
+    usage_note: 整改攻坚类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-106
+    category: 比喻对偶过渡句
+    content: 端起"望远镜"，用好"显微镜"。
+    usage_note: 工作视角类过渡句，宏观谋划与细节管控并重
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-107
+    category: 比喻对偶过渡句
+    content: 立好"风向标"，当好"领头雁"。
+    usage_note: 示范引领类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-108
+    category: 比喻对偶过渡句
+    content: 把好"方向盘"，用好"指挥棒"。
+    usage_note: 领导管理类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-109
+    category: 比喻对偶过渡句
+    content: 雷厉风行"加速跑"，攻坚克难"奋力跑"。
+    usage_note: 工作节奏类过渡句
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-110
+    category: 比喻对偶过渡句
+    content: 工作视为"练兵场"，难题作为"磨刀石"。
+    usage_note: 历练成长类过渡句，适用于干部培训或青年工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 比喻对偶过渡句41例
+
+  - id: MET-111
+    category: 比喻对偶过渡句
+    content: 科学研判"形"与"势"，辩证把握"危"与"机"。
+    usage_note: 形势研判类过渡句
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 比喻对偶过渡句41例
+
+  # ===== 成果类词语 =====
+
+  - id: MET-112
+    category: 成果类词语
+    sub_category: 三字新成果
+    content: 新论断、新特点、新目标、新要求、新征程、新期待、新时代、新使命、新方位、新水平、新境界、新举措、新发展、新突破、新成绩、新成效、新方法、新成果、新形势、新关系、新体制、新机制、新知识、新本领、新进展、新实践、新风尚、新纽带、新规律、新亮点、新模式、新特色、新秩序、新增量、新基础、新途径、新格局、新意识、新环境、新台阶
+    usage_note: 工作汇报/总结中描述发展成就的三字"新"词汇集，可按需选用
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 成果类词语与应用实例篇
+
+  - id: MET-113
+    category: 成果类词语
+    sub_category: 五字新成果
+    content: 实现新提升、实现新提高、实现新跨越、实现新突破、实现新发展、取得新改善、取得新成绩、取得新突破、取得新成果、取得新进展、得到新加强、得到新改善、迎来新突破、呈现新气象、形成新骨架、汇聚新动能、展示新风貌、展现新风采、开创新局面、迈上新台阶、迈出新步伐、收获新成效、达到新高度、创造新辉煌、谱写新篇章
+    usage_note: 工作汇报/总结中描述五字"新"成果动宾结构，适用于总结段落
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 成果类词语与应用实例篇
+
+  - id: MET-114
+    category: 成果类词语
+    sub_category: 更加系列
+    content: 更加广泛、更加坚强、更加鲜明、更加完善、更加凸显、更加巩固、更加彰显、更加坚定、更加强劲、更加响亮、更加突出、更加富足、更加扎实、更加有力、更加壮大、更加优化、更加改善、更加和谐、更加强化
+    usage_note: 成效描述，常用于年度总结和工作报告
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-115
+    category: 成果类词语
+    sub_category: 不断系列
+    content: 不断发展、不断提升、不断健全、不断深入、不断优化、不断增强、不断改善、不断巩固、不断涌现、不断扩大、不断显现、不断凸显、不断释放、不断彰显、不断强化、不断推进
+    usage_note: 持续改进类成效描述，适用于汇报报告
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-116
+    category: 成果类词语
+    sub_category: 全面系列
+    content: 全面加强、全面提升、全面深化、全面进步、全面推进、全面展开、全面提高、全面优化、全面发展、全面改善、全面改进、全面夯实
+    usage_note: 整体推进类成效描述
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-117
+    category: 成果类词语
+    sub_category: 持续系列
+    content: 持续完善、持续繁荣、持续改善、持续壮大、持续向好、持续发展、持续增进、持续发力
+    usage_note: 持续性成效描述
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-118
+    category: 成果类词语
+    sub_category: 明显系列
+    content: 明显增强、明显加强、明显提升、明显好转、明显提高、明显改观；作用明显、效果明显、成效明显
+    usage_note: 量化可感的成效描述
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-119
+    category: 成果类词语
+    sub_category: 逐步系列
+    content: 逐步完善、逐步扭转、逐步规范、逐步健全、逐步加强、逐步改善、逐步改进、逐步实施、逐步夯实、逐步改观、逐步实现、逐步提高、逐步发展、逐步推进
+    usage_note: 渐进式成效描述，适用于阶段性汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-120
+    category: 成果类词语
+    sub_category: 日益初步系列
+    content: 日益规范、日益健全、日益完备、日益完善、日益加强；初步形成、初步构建、初步建立、初步发展、初步实施
+    usage_note: 成效程度描述，"日益"强调趋势，"初步"强调阶段
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-121
+    category: 成果类词语
+    sub_category: 推进发展系列
+    content: 深入推进、扎实推进、纵深推进、创新推进、有序推进、统筹推进、持续推进；健康发展、蓬勃发展、巩固发展、协调发展、稳健发展
+    usage_note: 工作推进和发展状态描述，高频使用词汇
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-122
+    category: 成果类词语
+    sub_category: 点面开花系列
+    content: 多点开花、亮点纷呈、点上出彩、线上结果、面上开花、全面推进、全面深化、全面开花
+    usage_note: 工作全面铺开的成效描述
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-123
+    category: 成果类词语
+    sub_category: 大幅加快系列
+    content: 极大提振、大幅提升、大幅提高、大力实施、大力推进；加快发展、加快转型、加快实施、加快推进；力度空前、切实加强、取得突破、步伐加快、进展顺利、深刻转型
+    usage_note: 强调显著成效和加速推进的词汇
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·四字词语26类
+
+  - id: MET-124
+    category: 成果类词语
+    sub_category: 综合成效词汇
+    content: 举世瞩目、空前高涨、名列前茅、焕然一新、成果丰硕、卓有成效、富有成效、硕果累累、相继问世、空前释放、初具规模、深入人心、活力增强、竞相迸发、殷实安康、形成品牌、优化提升、蔚然成形、平安和谐、运行平稳
+    usage_note: 综合性成效描述词汇，适用于年终总结报告结语段落
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·其他类
+
+  - id: MET-125
+    category: 成果类词语
+    sub_category: 合作共赢系列
+    content: 相互促进、同频共振、合拍共鸣、同步实施、融合发展、互惠互利、合作共赢；均衡普惠、普遍提高、普遍增加、普遍提升、普遍加强
+    usage_note: 协同发展和普惠成效描述，适用于区域合作、民生类报告
+    applicable_types: [报告, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·合作类/普类
+
+  - id: MET-126
+    category: 成果类词语
+    sub_category: 加强类词组
+    content: 不断加强、切实加强、全面加强、得到加强、持续加强、明显加强、日益加强、逐步加强、有效加强；胜利完成、顺利完成、基本完成
+    usage_note: 工作加强类和完成类成效词汇，高频通用
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 成果类词语与应用实例篇·加强类/完成类

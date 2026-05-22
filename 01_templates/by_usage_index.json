@@ -1,0 +1,945 @@
+{
+  "metadata": {
+    "name": "Public Writing KB - Template Usage Index",
+    "version": "1.0",
+    "generated_at": "2026-03-16",
+    "total_templates": 130
+  },
+  "scenarios": {
+    "其他": {
+      "count": 92,
+      "templates": [
+        {
+          "file_path": "publicity/briefing/publicity-briefing-26.json",
+          "template_id": "publicity_briefing_26",
+          "title": ". 基础工作简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 基础工作简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-27.json",
+          "template_id": "publicity_briefing_27",
+          "title": ". 周工作简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 周工作简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-28.json",
+          "template_id": "publicity_briefing_28",
+          "title": ". 月度工作简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 月度工作简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-29.json",
+          "template_id": "publicity_briefing_29",
+          "title": ". 专项工作简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 专项工作简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-31.json",
+          "template_id": "publicity_briefing_31",
+          "title": ". 工作部署会议简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 工作部署会议简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-32.json",
+          "template_id": "publicity_briefing_32",
+          "title": ". 学习研讨会议简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 学习研讨会议简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-33.json",
+          "template_id": "publicity_briefing_33",
+          "title": ". 领导调研简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 领导调研简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-34.json",
+          "template_id": "publicity_briefing_34",
+          "title": ". 外出考察学习简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 外出考察学习简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-35.json",
+          "template_id": "publicity_briefing_35",
+          "title": ". 基层调研简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 基层调研简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-36.json",
+          "template_id": "publicity_briefing_36",
+          "title": ". 大型活动简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 大型活动简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-37.json",
+          "template_id": "publicity_briefing_37",
+          "title": ". 培训活动简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 培训活动简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-38.json",
+          "template_id": "publicity_briefing_38",
+          "title": ". 志愿服务活动简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 志愿服务活动简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-39.json",
+          "template_id": "publicity_briefing_39",
+          "title": ". 安全生产简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 安全生产简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-40.json",
+          "template_id": "publicity_briefing_40",
+          "title": ". 项目建设进度简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 项目建设进度简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-41.json",
+          "template_id": "publicity_briefing_41",
+          "title": ". 信访维稳工作简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 信访维稳工作简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-47.json",
+          "template_id": "publicity_briefing_47",
+          "title": ". 突发事件简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 突发事件简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-48.json",
+          "template_id": "publicity_briefing_48",
+          "title": ". 舆情应对简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 舆情应对简报模板"
+        },
+        {
+          "file_path": "publicity/briefing/publicity-briefing-49.json",
+          "template_id": "publicity_briefing_49",
+          "title": ". 督查督办简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 督查督办简报模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-21.json",
+          "template_id": "publicity_deeds_21",
+          "title": ". 基础模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 基础模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-22.json",
+          "template_id": "publicity_deeds_22",
+          "title": ". 扶贫干部先进事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 扶贫干部先进事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-23.json",
+          "template_id": "publicity_deeds_23",
+          "title": ". 教师先进事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 教师先进事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-24.json",
+          "template_id": "publicity_deeds_24",
+          "title": ". 医务工作者先进事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 医务工作者先进事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-25.json",
+          "template_id": "publicity_deeds_25",
+          "title": ". 公安干警先进事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 公安干警先进事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-26.json",
+          "template_id": "publicity_deeds_26",
+          "title": ". 先进党支部事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 先进党支部事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-27.json",
+          "template_id": "publicity_deeds_27",
+          "title": ". 先进科室/部门事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 先进科室/部门事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-28.json",
+          "template_id": "publicity_deeds_28",
+          "title": ". 先进班组事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 先进班组事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-29.json",
+          "template_id": "publicity_deeds_29",
+          "title": ". 疫情防控先进个人事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 疫情防控先进个人事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-30.json",
+          "template_id": "publicity_deeds_30",
+          "title": ". 乡村振兴先进个人事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 乡村振兴先进个人事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-31.json",
+          "template_id": "publicity_deeds_31",
+          "title": ". 结构优化提示词",
+          "doc_type": "先进事迹",
+          "sub_type": ". 结构优化提示词"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-33.json",
+          "template_id": "publicity_deeds_33",
+          "title": ". 素材扩充提示词",
+          "doc_type": "先进事迹",
+          "sub_type": ". 素材扩充提示词"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-36.json",
+          "template_id": "publicity_deeds_36",
+          "title": ". 评选申报材料模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 评选申报材料模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-39.json",
+          "template_id": "publicity_deeds_39",
+          "title": ". 青年先进典型事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 青年先进典型事迹模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-40.json",
+          "template_id": "publicity_deeds_40",
+          "title": ". 少数民族先进个人事迹模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 少数民族先进个人事迹模板"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-12.json",
+          "template_id": "publicity_experience_12",
+          "title": "综合性经验材料(标准版)",
+          "doc_type": "经验材料",
+          "sub_type": "综合性经验材料(标准版)"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-14.json",
+          "template_id": "publicity_experience_14",
+          "title": "党建工作经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "党建工作经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-15.json",
+          "template_id": "publicity_experience_15",
+          "title": "改革创新经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "改革创新经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-16.json",
+          "template_id": "publicity_experience_16",
+          "title": "数字化转型经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "数字化转型经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-17.json",
+          "template_id": "publicity_experience_17",
+          "title": "基层治理经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "基层治理经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-19.json",
+          "template_id": "publicity_experience_19",
+          "title": "媒体宣传型经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "媒体宣传型经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-20.json",
+          "template_id": "publicity_experience_20",
+          "title": "评选申报型经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "评选申报型经验材料"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-21.json",
+          "template_id": "publicity_experience_21",
+          "title": "经验材料润色优化",
+          "doc_type": "经验材料",
+          "sub_type": "经验材料润色优化"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-22.json",
+          "template_id": "publicity_experience_22",
+          "title": "提炼经验亮点",
+          "doc_type": "经验材料",
+          "sub_type": "提炼经验亮点"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-29.json",
+          "template_id": "publicity_news_29",
+          "title": "风格参考提示 ....................................................................................39",
+          "doc_type": "新闻稿件",
+          "sub_type": "风格参考提示 ....................................................................................39"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-30.json",
+          "template_id": "publicity_news_30",
+          "title": "重要会议报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "重要会议报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-31.json",
+          "template_id": "publicity_news_31",
+          "title": "专题会议简讯",
+          "doc_type": "新闻稿件",
+          "sub_type": "专题会议简讯"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-32.json",
+          "template_id": "publicity_news_32",
+          "title": "座谈会/研讨会报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "座谈会/研讨会报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-33.json",
+          "template_id": "publicity_news_33",
+          "title": "主题活动报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "主题活动报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-34.json",
+          "template_id": "publicity_news_34",
+          "title": "节日庆祝活动",
+          "doc_type": "新闻稿件",
+          "sub_type": "节日庆祝活动"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-35.json",
+          "template_id": "publicity_news_35",
+          "title": "调研考察报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "调研考察报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-36.json",
+          "template_id": "publicity_news_36",
+          "title": "政策发布新闻",
+          "doc_type": "新闻稿件",
+          "sub_type": "政策发布新闻"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-37.json",
+          "template_id": "publicity_news_37",
+          "title": "工作成果展示",
+          "doc_type": "新闻稿件",
+          "sub_type": "工作成果展示"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-38.json",
+          "template_id": "publicity_news_38",
+          "title": "项目落成/工程竣工",
+          "doc_type": "新闻稿件",
+          "sub_type": "项目落成/工程竣工"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-39.json",
+          "template_id": "publicity_news_39",
+          "title": "先进典型报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "先进典型报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-40.json",
+          "template_id": "publicity_news_40",
+          "title": "团队风采展示",
+          "doc_type": "新闻稿件",
+          "sub_type": "团队风采展示"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-41.json",
+          "template_id": "publicity_news_41",
+          "title": "应急事件通报",
+          "doc_type": "新闻稿件",
+          "sub_type": "应急事件通报"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-42.json",
+          "template_id": "publicity_news_42",
+          "title": "专项整治行动",
+          "doc_type": "新闻稿件",
+          "sub_type": "专项整治行动"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-43.json",
+          "template_id": "publicity_news_43",
+          "title": "帮扶慰问活动",
+          "doc_type": "新闻稿件",
+          "sub_type": "帮扶慰问活动"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-44.json",
+          "template_id": "publicity_news_44",
+          "title": "签约仪式报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "签约仪式报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-45.json",
+          "template_id": "publicity_news_45",
+          "title": "参观学习交流",
+          "doc_type": "新闻稿件",
+          "sub_type": "参观学习交流"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-46.json",
+          "template_id": "publicity_news_46",
+          "title": "科技创新成果",
+          "doc_type": "新闻稿件",
+          "sub_type": "科技创新成果"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-47.json",
+          "template_id": "publicity_news_47",
+          "title": "教育培训活动",
+          "doc_type": "新闻稿件",
+          "sub_type": "教育培训活动"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-48.json",
+          "template_id": "publicity_news_48",
+          "title": "文化体育赛事",
+          "doc_type": "新闻稿件",
+          "sub_type": "文化体育赛事"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-49.json",
+          "template_id": "publicity_news_49",
+          "title": "年度工作总结宣传",
+          "doc_type": "新闻稿件",
+          "sub_type": "年度工作总结宣传"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-50.json",
+          "template_id": "publicity_news_50",
+          "title": "重大节日主题宣传",
+          "doc_type": "新闻稿件",
+          "sub_type": "重大节日主题宣传"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-51.json",
+          "template_id": "publicity_news_51",
+          "title": "专项工作阶段性宣传",
+          "doc_type": "新闻稿件",
+          "sub_type": "专项工作阶段性宣传"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-52.json",
+          "template_id": "publicity_news_52",
+          "title": "表彰大会报道",
+          "doc_type": "新闻稿件",
+          "sub_type": "表彰大会报道"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-53.json",
+          "template_id": "publicity_news_53",
+          "title": "问责通报稿件",
+          "doc_type": "新闻稿件",
+          "sub_type": "问责通报稿件"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-54.json",
+          "template_id": "publicity_news_54",
+          "title": "辟谣声明稿件",
+          "doc_type": "新闻稿件",
+          "sub_type": "辟谣声明稿件"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-57.json",
+          "template_id": "publicity_news_57",
+          "title": "分步骤生成法",
+          "doc_type": "新闻稿件",
+          "sub_type": "分步骤生成法"
+        },
+        {
+          "file_path": "publicity/news/publicity-news-58.json",
+          "template_id": "publicity_news_58",
+          "title": "风格参考提示",
+          "doc_type": "新闻稿件",
+          "sub_type": "风格参考提示"
+        },
+        {
+          "file_path": "plan/emergency/plan-emergency-18.json",
+          "template_id": "plan_emergency_18",
+          "title": ". 综合应急预案基础模板",
+          "doc_type": "应急预案",
+          "sub_type": ". 综合应急预案基础模板"
+        },
+        {
+          "file_path": "plan/emergency/plan-emergency-19.json",
+          "template_id": "plan_emergency_19",
+          "title": ". 应急预案修订提示词",
+          "doc_type": "应急预案",
+          "sub_type": ". 应急预案修订提示词"
+        },
+        {
+          "file_path": "plan/emergency/plan-emergency-32.json",
+          "template_id": "plan_emergency_32",
+          "title": ". 预案演练脚本生成",
+          "doc_type": "应急预案",
+          "sub_type": ". 预案演练脚本生成"
+        },
+        {
+          "file_path": "plan/emergency/plan-emergency-34.json",
+          "template_id": "plan_emergency_34",
+          "title": ". 多场景预案整合",
+          "doc_type": "应急预案",
+          "sub_type": ". 多场景预案整合"
+        },
+        {
+          "file_path": "norm/detail/norm-detail-34.json",
+          "template_id": "norm_detail_34",
+          "title": "】应急预案实施细则",
+          "doc_type": "实施细则",
+          "sub_type": "】应急预案实施细则"
+        },
+        {
+          "file_path": "norm/management/norm-management-20.json",
+          "template_id": "norm_management_20",
+          "title": "通用管理制度框架",
+          "doc_type": "管理制度",
+          "sub_type": "通用管理制度框架"
+        },
+        {
+          "file_path": "norm/management/norm-management-23.json",
+          "template_id": "norm_management_23",
+          "title": "考勤管理制度",
+          "doc_type": "管理制度",
+          "sub_type": "考勤管理制度"
+        },
+        {
+          "file_path": "norm/management/norm-management-28.json",
+          "template_id": "norm_management_28",
+          "title": "公文处理制度",
+          "doc_type": "管理制度",
+          "sub_type": "公文处理制度"
+        },
+        {
+          "file_path": "norm/management/norm-management-34.json",
+          "template_id": "norm_management_34",
+          "title": "廉政风险防控制度",
+          "doc_type": "管理制度",
+          "sub_type": "廉政风险防控制度"
+        },
+        {
+          "file_path": "norm/management/norm-management-38.json",
+          "template_id": "norm_management_38",
+          "title": "信访工作制度",
+          "doc_type": "管理制度",
+          "sub_type": "信访工作制度"
+        },
+        {
+          "file_path": "norm/measure/norm-measure-14.json",
+          "template_id": "norm_measure_14",
+          "title": "标准办法措施模板",
+          "doc_type": "办法措施",
+          "sub_type": "标准办法措施模板"
+        },
+        {
+          "file_path": "norm/measure/norm-measure-18.json",
+          "template_id": "norm_measure_18",
+          "title": "服务优化类",
+          "doc_type": "办法措施",
+          "sub_type": "服务优化类"
+        },
+        {
+          "file_path": "norm/measure/norm-measure-23.json",
+          "template_id": "norm_measure_23",
+          "title": "创新试点模板",
+          "doc_type": "办法措施",
+          "sub_type": "创新试点模板"
+        },
+        {
+          "file_path": "norm/procedure/norm-procedure-18.json",
+          "template_id": "norm_procedure_18",
+          "title": "】公文处理工作规程",
+          "doc_type": "工作规程",
+          "sub_type": "】公文处理工作规程"
+        },
+        {
+          "file_path": "norm/procedure/norm-procedure-23.json",
+          "template_id": "norm_procedure_23",
+          "title": "】督查督办工作规程",
+          "doc_type": "工作规程",
+          "sub_type": "】督查督办工作规程"
+        },
+        {
+          "file_path": "meeting/minutes/meeting-minutes-19.json",
+          "template_id": "meeting_minutes_19",
+          "title": "标准会议纪要生成模板",
+          "doc_type": "会议纪要",
+          "sub_type": "标准会议纪要生成模板"
+        },
+        {
+          "file_path": "meeting/minutes/meeting-minutes-20.json",
+          "template_id": "meeting_minutes_20",
+          "title": "快速会议纪要提炼模板",
+          "doc_type": "会议纪要",
+          "sub_type": "快速会议纪要提炼模板"
+        },
+        {
+          "file_path": "meeting/minutes/meeting-minutes-23.json",
+          "template_id": "meeting_minutes_23",
+          "title": "常务会议纪要模板",
+          "doc_type": "会议纪要",
+          "sub_type": "常务会议纪要模板"
+        },
+        {
+          "file_path": "meeting/minutes/meeting-minutes-34.json",
+          "template_id": "meeting_minutes_34",
+          "title": "会议纪要润色优化模板",
+          "doc_type": "会议纪要",
+          "sub_type": "会议纪要润色优化模板"
+        },
+        {
+          "file_path": "meeting/record/meeting-record-17.json",
+          "template_id": "meeting_record_17",
+          "title": "标准会议记录整理",
+          "doc_type": "会议记录整理",
+          "sub_type": "标准会议记录整理"
+        },
+        {
+          "file_path": "meeting/record/meeting-record-22.json",
+          "template_id": "meeting_record_22",
+          "title": "民主生活会/组织生活会记录",
+          "doc_type": "会议记录整理",
+          "sub_type": "民主生活会/组织生活会记录"
+        },
+        {
+          "file_path": "meeting/record/meeting-record-25.json",
+          "template_id": "meeting_record_25",
+          "title": "会议决定事项提取",
+          "doc_type": "会议记录整理",
+          "sub_type": "会议决定事项提取"
+        }
+      ]
+    },
+    "方案类": {
+      "count": 21,
+      "templates": [
+        {
+          "file_path": "plan/activity/plan-activity-12.json",
+          "template_id": "plan_activity_12",
+          "title": "综合性活动方案（标准版）",
+          "doc_type": "活动方案",
+          "sub_type": "综合性活动方案（标准版）"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-13.json",
+          "template_id": "plan_activity_13",
+          "title": "简约型活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "简约型活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-14.json",
+          "template_id": "plan_activity_14",
+          "title": "大型会议活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "大型会议活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-15.json",
+          "template_id": "plan_activity_15",
+          "title": "视频会议方案",
+          "doc_type": "活动方案",
+          "sub_type": "视频会议方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-16.json",
+          "template_id": "plan_activity_16",
+          "title": "专题培训活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "专题培训活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-17.json",
+          "template_id": "plan_activity_17",
+          "title": "文艺演出活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "文艺演出活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-18.json",
+          "template_id": "plan_activity_18",
+          "title": "体育比赛活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "体育比赛活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-19.json",
+          "template_id": "plan_activity_19",
+          "title": "周年庆典活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "周年庆典活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-20.json",
+          "template_id": "plan_activity_20",
+          "title": "知识竞赛活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "知识竞赛活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-21.json",
+          "template_id": "plan_activity_21",
+          "title": "技能竞赛活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "技能竞赛活动方案"
+        },
+        {
+          "file_path": "plan/activity/plan-activity-22.json",
+          "template_id": "plan_activity_22",
+          "title": "主题宣传活动方案",
+          "doc_type": "活动方案",
+          "sub_type": "主题宣传活动方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-11.json",
+          "template_id": "plan_implementation_11",
+          "title": "综合性实施方案（标准版）",
+          "doc_type": "实施方案",
+          "sub_type": "综合性实施方案（标准版）"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-12.json",
+          "template_id": "plan_implementation_12",
+          "title": "问题导向型实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "问题导向型实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-13.json",
+          "template_id": "plan_implementation_13",
+          "title": "党建工作实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "党建工作实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-14.json",
+          "template_id": "plan_implementation_14",
+          "title": "业务改革实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "业务改革实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-15.json",
+          "template_id": "plan_implementation_15",
+          "title": "专项整治实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "专项整治实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-16.json",
+          "template_id": "plan_implementation_16",
+          "title": "数字化转型实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "数字化转型实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-17.json",
+          "template_id": "plan_implementation_17",
+          "title": "主题活动实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "主题活动实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-18.json",
+          "template_id": "plan_implementation_18",
+          "title": "培训活动实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "培训活动实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-19.json",
+          "template_id": "plan_implementation_19",
+          "title": "创建示范单位实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "创建示范单位实施方案"
+        },
+        {
+          "file_path": "plan/implementation/plan-implementation-20.json",
+          "template_id": "plan_implementation_20",
+          "title": "试点示范实施方案",
+          "doc_type": "实施方案",
+          "sub_type": "试点示范实施方案"
+        }
+      ]
+    },
+    "汇报类": {
+      "count": 1,
+      "templates": [
+        {
+          "file_path": "publicity/experience/publicity-experience-18.json",
+          "template_id": "publicity_experience_18",
+          "title": "对上汇报型经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "对上汇报型经验材料"
+        }
+      ]
+    },
+    "计划类": {
+      "count": 13,
+      "templates": [
+        {
+          "file_path": "plan/planning/plan-planning-14.json",
+          "template_id": "plan_planning_14",
+          "title": "年度工作计划（综合版）",
+          "doc_type": "工作计划",
+          "sub_type": "年度工作计划（综合版）"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-15.json",
+          "template_id": "plan_planning_15",
+          "title": "季度工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "季度工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-16.json",
+          "template_id": "plan_planning_16",
+          "title": "月度工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "月度工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-17.json",
+          "template_id": "plan_planning_17",
+          "title": "周工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "周工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-18.json",
+          "template_id": "plan_planning_18",
+          "title": "单位整体工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "单位整体工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-19.json",
+          "template_id": "plan_planning_19",
+          "title": "部门工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "部门工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-20.json",
+          "template_id": "plan_planning_20",
+          "title": "个人工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "个人工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-21.json",
+          "template_id": "plan_planning_21",
+          "title": "党建工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "党建工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-22.json",
+          "template_id": "plan_planning_22",
+          "title": "业务工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "业务工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-23.json",
+          "template_id": "plan_planning_23",
+          "title": "调研工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "调研工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-24.json",
+          "template_id": "plan_planning_24",
+          "title": "新任领导履职计划",
+          "doc_type": "工作计划",
+          "sub_type": "新任领导履职计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-25.json",
+          "template_id": "plan_planning_25",
+          "title": "帮扶工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "帮扶工作计划"
+        },
+        {
+          "file_path": "plan/planning/plan-planning-26.json",
+          "template_id": "plan_planning_26",
+          "title": "创新试点工作计划",
+          "doc_type": "工作计划",
+          "sub_type": "创新试点工作计划"
+        }
+      ]
+    },
+    "讲话类": {
+      "count": 3,
+      "templates": [
+        {
+          "file_path": "publicity/briefing/publicity-briefing-30.json",
+          "template_id": "publicity_briefing_30",
+          "title": ". 领导讲话会议简报模板",
+          "doc_type": "工作简报",
+          "sub_type": ". 领导讲话会议简报模板"
+        },
+        {
+          "file_path": "publicity/deeds/publicity-deeds-38.json",
+          "template_id": "publicity_deeds_38",
+          "title": ". 表彰大会发言稿模板",
+          "doc_type": "先进事迹",
+          "sub_type": ". 表彰大会发言稿模板"
+        },
+        {
+          "file_path": "publicity/experience/publicity-experience-13.json",
+          "template_id": "publicity_experience_13",
+          "title": "会议交流发言型经验材料",
+          "doc_type": "经验材料",
+          "sub_type": "会议交流发言型经验材料"
+        }
+      ]
+    }
+  }
+}

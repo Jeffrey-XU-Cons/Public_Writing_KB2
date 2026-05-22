@@ -1,0 +1,269 @@
+# C1 审核草稿：official_terms_v2 结构化提取样本
+# 日期：2026-03-18
+# 说明：从 official_terms_v2.yaml 提取约20条，涵盖5种类型，供审核结构设计
+
+# ─── 字段说明 ───────────────────────────────────────────────────────────────
+# id:            唯一ID（OT-NNN）
+# term:          词条/短语
+# type:          forbidden（禁用词）| collocation（搭配规范）| cliche（套话替换）
+#                | term（行业术语）| phrase_pattern（句式模板）
+# category:      大类
+# subcategory:   小类
+# correct_usage: 正确/推荐用法或替换词
+# wrong_usage:   常见错误用法（可选）
+# example:       正确用法示例句（可选）
+# definition:    定义说明（仅 term 类型填写）
+# note:          补充说明
+# priority:      A（必查/高频）| B（建议查） | C（参考）
+
+entries:
+
+  # ─── PW-201 政治性禁用词（绝对用语）────────────────────────────────────────
+  - id: "OT-001"
+    term: "最好的"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "绝对用语"
+    correct_usage: "较好的/更好的"
+    wrong_usage: "这是最好的方案"
+    example: "这是较好的方案"
+    note: "公文禁用绝对化表述，以防争议"
+    priority: "A"
+
+  - id: "OT-002"
+    term: "完全"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "绝对用语"
+    correct_usage: "基本上/较为/大体上"
+    wrong_usage: "完全达到目标"
+    example: "基本达到目标"
+    note: "表述须留有余地，避免绝对断言"
+    priority: "A"
+
+  - id: "OT-003"
+    term: "必定会"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "绝对用语"
+    correct_usage: "有利于/有助于/可望"
+    wrong_usage: "必定会取得成功"
+    example: "有助于取得更好成效"
+    note: "结果预测须用概然语气"
+    priority: "A"
+
+  # ─── PW-201 权力与法律用语 ──────────────────────────────────────────────
+  - id: "OT-004"
+    term: "严厉处罚"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "法律用语"
+    correct_usage: "依法处理"
+    wrong_usage: "对违规者严厉处罚"
+    example: "对违规者依法处理"
+    note: "行政公文须体现法治精神，不用煽情强调"
+    priority: "A"
+
+  - id: "OT-005"
+    term: "强制要求"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "法律用语"
+    correct_usage: "明确要求/提出要求"
+    wrong_usage: "强制要求各单位完成"
+    example: "明确要求各单位按时完成"
+    note: "强制性表述须有法规授权，一般用'明确要求'"
+    priority: "B"
+
+  # ─── PW-202 俗语禁忌 ────────────────────────────────────────────────────
+  - id: "OT-006"
+    term: "折腾"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "口语俗语"
+    correct_usage: "反复调整/多次改进"
+    wrong_usage: "不要折腾基层"
+    example: "减少对基层的反复调整"
+    note: "口语词汇不入公文"
+    priority: "A"
+
+  - id: "OT-007"
+    term: "不靠谱"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "口语俗语"
+    correct_usage: "不可靠/不稳定/可行性存疑"
+    wrong_usage: "这个方案不靠谱"
+    example: "该方案可行性存疑，需进一步论证"
+    note: "非正式表述，须替换为书面语"
+    priority: "A"
+
+  # ─── PW-203 烟草行业特定禁忌 ─────────────────────────────────────────────
+  - id: "OT-008"
+    term: "烟草销售"
+    type: "forbidden"
+    category: "禁用词"
+    subcategory: "烟草行业"
+    correct_usage: "卷烟营销/烟草制品流通"
+    wrong_usage: "烟草销售额增长10%"
+    example: "卷烟营销规模持续扩大"
+    note: "行业规范表述，避免'销售'引发监管敏感"
+    priority: "A"
+
+  # ─── MM-301 搭配错误（动词）────────────────────────────────────────────────
+  - id: "OT-009"
+    term: "制定规划"
+    type: "collocation"
+    category: "搭配规范"
+    subcategory: "动词搭配"
+    correct_usage: "编制规划"
+    wrong_usage: "制定十四五规划"
+    example: "编制十四五规划"
+    note: "规划用'编制'，计划/方案用'制定'"
+    priority: "A"
+
+  - id: "OT-010"
+    term: "加强意识"
+    type: "collocation"
+    category: "搭配规范"
+    subcategory: "动词搭配"
+    correct_usage: "增强意识"
+    wrong_usage: "加强安全意识"
+    example: "增强安全意识"
+    note: "意识用'增强'，管理/工作用'加强'"
+    priority: "A"
+
+  - id: "OT-011"
+    term: "取得措施"
+    type: "collocation"
+    category: "搭配规范"
+    subcategory: "名词搭配"
+    correct_usage: "采取措施"
+    wrong_usage: "取得了相应措施"
+    example: "采取了针对性措施"
+    note: "措施固定搭配'采取'"
+    priority: "A"
+
+  # ─── MM-302 量词规范 ─────────────────────────────────────────────────────
+  - id: "OT-012"
+    term: "召开一个会议"
+    type: "collocation"
+    category: "搭配规范"
+    subcategory: "量词"
+    correct_usage: "召开一次会议"
+    wrong_usage: "召开了一个会议"
+    example: "召开专题会议一次"
+    note: "会议量词用'次'，不用'个'"
+    priority: "B"
+
+  - id: "OT-013"
+    term: "三项建议"
+    type: "collocation"
+    category: "搭配规范"
+    subcategory: "量词"
+    correct_usage: "三条建议"
+    wrong_usage: "提出三项建议"
+    example: "提出三条建议"
+    note: "建议/意见量词用'条'，不用'项'"
+    priority: "B"
+
+  # ─── CP-401 开头套话优化 ────────────────────────────────────────────────
+  - id: "OT-014"
+    term: "当前形势发生了新变化"
+    type: "cliche"
+    category: "套话替换"
+    subcategory: "开头套话"
+    correct_usage: "面对新变化、新形势"
+    wrong_usage: "当前形势发生了新变化，我们..."
+    example: "面对新变化、新形势，我们..."
+    note: "简洁有力，避免废话引入"
+    priority: "B"
+
+  - id: "OT-015"
+    term: "一直以来"
+    type: "cliche"
+    category: "套话替换"
+    subcategory: "时间套话"
+    correct_usage: "长期以来"
+    wrong_usage: "一直以来，我们高度重视..."
+    example: "长期以来，我们高度重视..."
+    note: "'长期以来'更具书面语规范性"
+    priority: "C"
+
+  # ─── TT-501 管理相关术语 ────────────────────────────────────────────────
+  - id: "OT-016"
+    term: "管理诊断"
+    type: "term"
+    category: "行业术语"
+    subcategory: "管理术语"
+    definition: "对企业管理现状的系统化评估"
+    correct_usage: "进行管理诊断/开展管理诊断"
+    wrong_usage: "管理诊疗/诊断工作"
+    example: "开展全面管理诊断，查找管理短板"
+    note: "与'诊疗'区分，诊断是评估，不涉及治疗"
+    priority: "B"
+
+  - id: "OT-017"
+    term: "对标共建"
+    type: "term"
+    category: "行业术语"
+    subcategory: "管理术语"
+    definition: "与标杆单位比较学习，共同改进"
+    correct_usage: "开展对标共建"
+    wrong_usage: "对标建设/对标管理"
+    example: "深入开展对标共建活动"
+    priority: "B"
+
+  # ─── TT-502 物流术语 ─────────────────────────────────────────────────────
+  - id: "OT-018"
+    term: "智慧物流"
+    type: "term"
+    category: "行业术语"
+    subcategory: "物流术语"
+    definition: "运用信息技术的智能物流系统"
+    correct_usage: "建设智慧物流体系"
+    wrong_usage: "智能物流/数字物流"
+    example: "加快建设智慧物流体系，提升配送效率"
+    priority: "B"
+
+  # ─── TT-503 政策战略术语 ────────────────────────────────────────────────
+  - id: "OT-019"
+    term: "高质量发展"
+    type: "term"
+    category: "行业术语"
+    subcategory: "政策术语"
+    definition: "符合新发展理念的可持续发展方式"
+    correct_usage: "推动高质量发展"
+    wrong_usage: "高速度发展/高效益发展"
+    example: "坚定不移推动高质量发展"
+    note: "政治术语，需完整准确表述，不可随意替换"
+    priority: "A"
+
+  - id: "OT-020"
+    term: "转型升级"
+    type: "term"
+    category: "行业术语"
+    subcategory: "政策术语"
+    definition: "从传统方式向新方式的改变与提升"
+    correct_usage: "推进转型升级"
+    wrong_usage: "升级转变/结构调整"
+    example: "深入推进传统产业转型升级"
+    priority: "B"
+
+# ─── 提取统计 ────────────────────────────────────────────────────────────
+# 本样本：20条
+# 类型分布：
+#   forbidden（禁用词）: 8条 (OT-001~OT-008)
+#   collocation（搭配规范）: 5条 (OT-009~OT-013)
+#   cliche（套话替换）: 2条 (OT-014~OT-015)
+#   term（行业术语）: 5条 (OT-016~OT-020)
+#
+# 全量预估（全文件提取后）：
+#   PW禁用词：约65条（PW-201/202/203）
+#   MM搭配规范：约45条（MM-301/302）
+#   CP套话替换：约27条（CP-401/402）
+#   TT行业术语：约65条（TT-501/502/503）
+#   合计：约202条（COU句式模板暂不提取，改入sentence_patterns库）
+#
+# 注：COU-101~104 的句式模板（130条）格式上更适合 sentence_patterns 库，
+# 不纳入本次结构化词条，避免与现有 固定句式模板.yaml 重复

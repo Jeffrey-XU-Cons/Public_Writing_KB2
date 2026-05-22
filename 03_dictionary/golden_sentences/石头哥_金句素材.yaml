@@ -1,0 +1,779 @@
+---
+# 石头哥《公文写作进阶速查》金句素材
+# 来源：向宇（石头哥）著，黑龙江教育出版社
+# 覆盖章节：开头篇、收尾篇、治理篇、工作篇、管理篇、修养篇
+# 提炼时间：2026-03-15
+# 提炼说明：选取各主题代表性金句，保留出处、释义及用法场景
+
+entries:
+
+  # ============ 民生主题 ============
+
+  - id: GS-001
+    type: PM
+    category: golden_sentence
+    topic: 民生
+    title: 人视水见形，视民知治不
+    quote: '"人视水见形，视民知治不。"'
+    source: '"西汉·司马迁《史记·殷本纪》"'
+    meaning: '"在水中可以看到自己的影像，通过观察百姓生活状况就知道国家治理得好不好。比喻以民为镜察治道。"'
+    usage_tips: '"适用于强调民本思想、察民情、问民需的场合，可置于段首引题，引出对民生工作的论述。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-002
+    type: PM
+    category: golden_sentence
+    topic: 民生
+    title: 防民之口，甚于防川
+    quote: '"防民之口，甚于防川。"'
+    source: '"周·召公《国语·周语上》"'
+    meaning: '"阻塞百姓的口，比堵塞河川还危险。告诫统治者必须重视民意，绝不能压制民声。"'
+    usage_tips: '"强调听民声、察民意的重要性。可用于领导讲话中谈及群众路线、社会稳定、舆论引导等内容，引出正面做法。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 管理主题 ============
+
+  - id: GS-003
+    type: PM
+    category: golden_sentence
+    topic: 管理
+    title: 以人为镜，可以明得失
+    quote: '"以人为镜，可以明得失。"'
+    source: '"后晋·刘昫等《旧唐书·魏徵传》（唐太宗语）"'
+    meaning: '"把他人作为镜子，可以看清自己的是非得失。比喻善于倾听他人意见，博采众长，自我完善。"'
+    usage_tips: '"适用于谈领导干部修身律己、听取批评意见、开展批评与自我批评的讲话和报告，尤其适合民主生活会场合。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-004
+    type: PM
+    category: golden_sentence
+    topic: 管理
+    title: 尚贤者，政之本也
+    quote: '"尚贤者，政之本也。"'
+    source: '"战国·墨子《墨子·尚贤》"'
+    meaning: '"崇尚贤能的人是为政的根本。将尚贤提到政本高度，强调选贤任能的核心地位。"'
+    usage_tips: '"可用于人才工作、干部选拔任用、人才强国战略相关讲话和报告，置于段首统领全段。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-005
+    type: PM
+    category: golden_sentence
+    topic: 管理
+    title: 功以才成，业由才广
+    quote: '"功以才成，业由才广。"'
+    source: '"东晋·习凿齿《襄阳耆旧记》"'
+    meaning: '"功绩有人才方能建立，事业有人才才能发展。强调人才对于建功立业的决定性作用。"'
+    usage_tips: '"适合号召重视人才引进、培养，强调人才是第一资源的讲话和工作报告。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-006
+    type: PM
+    category: golden_sentence
+    topic: 管理
+    title: 盖有非常之功，必待非常之人
+    quote: '"盖有非常之功，必待非常之人。"'
+    source: '"西汉·刘彻《求茂才异等诏》"'
+    meaning: '"要建立不寻常的功业，必须依靠不寻常的人才。强调大事业需要大人才，要不拘一格用人才。"'
+    usage_tips: '"适用于强调特殊领域人才重用、打破条框束缚、任人唯才唯贤的讲话，有历史权威背书，说服力强。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 廉政主题 ============
+
+  - id: GS-007
+    type: PM
+    category: golden_sentence
+    topic: 廉政
+    title: 物必先腐，而后虫生
+    quote: '"物必先腐也，而后虫生之；人必先疑也，而后谗入之。"'
+    source: '"北宋·苏轼《范增论》"'
+    meaning: '"世上的东西总是自身先腐烂，然后虫子才会寄生其上。比喻自身先有弱点而后才被外物侵害，强调从源头防腐。"'
+    usage_tips: '"反腐倡廉讲话的经典用句，适合置于段首，引出从源头抓党风廉政建设的论述。注意原文是"物必先腐"而非"物必自腐"。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-008
+    type: PM
+    category: golden_sentence
+    topic: 廉政
+    title: 心不动于微利之诱，目不眩于五色之惑
+    quote: '"心不动于微利之诱，目不眩于五色之惑。"'
+    source: '"拼句：前句本《论语·子路》，后句本《道德经·第十二章》"'
+    meaning: '"心灵不能被蝇头小利所诱惑，眼睛不能被五光十色所迷惑。表达古代"慎微""节欲"思想，强调廉洁自律。"'
+    usage_tips: '"强调廉洁自律、守住底线时用，可直接引用为党员干部培养自我约束意识的行为准则。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-009
+    type: PM
+    category: golden_sentence
+    topic: 廉政
+    title: 壁立千仞，无欲则刚
+    quote: '"海纳百川，有容乃大；壁立千仞，无欲则刚。"'
+    source: '"清·林则徐两广总督府对联"'
+    meaning: '"千仞峭壁巍然屹立，因为它没有世俗欲望。人只有做到没有世俗欲望，才能达到大义凛然的境界。"'
+    usage_tips: '"党风廉政建设讲话的不二选句，强调釜底抽薪——从源头消除腐败欲望，也可全联引用展现廉政格局。"'
+    usage_scene:
+      - 开头引题
+      - 结尾升华
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-010
+    type: PM
+    category: golden_sentence
+    topic: 廉政
+    title: 非淡泊无以明志，非宁静无以致远
+    quote: '"非淡泊无以明志，非宁静无以致远。"'
+    source: '"三国蜀·诸葛亮《诫子书》"'
+    meaning: '"不把名利看得轻淡就不会有明确的志向，不能平静地学习就不能实现远大目标。劝诫淡泊名利，涵养心性。"'
+    usage_tips: '"用于强调领导干部淡泊名利、修身养性，在物质丰裕时代抵御享乐主义，是涵养正气的经典名句。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-011
+    type: PM
+    category: golden_sentence
+    topic: 廉政
+    title: 不义而富且贵，于我如浮云
+    quote: '"不义而富且贵，于我如浮云。"'
+    source: '"春秋战国·《论语·述而》（孔子语）"'
+    meaning: '"用不正当手段获得的荣华富贵，对我来说只是天际浮云，毫无意义。体现孔子义利观，富贵须以道义得之。"'
+    usage_tips: '"可用于强调正确义利观、国际合作义利相兼的讲话，也可用于党员干部廉洁从政教育。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 担当主题 ============
+
+  - id: GS-012
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 筚路蓝缕，以启山林
+    quote: '"筚路蓝缕，以启山林。"'
+    source: '"春秋·左丘明《左传·宣公十二年》"'
+    meaning: '"驾着柴车，穿着破旧的衣服，去开辟山林。形容创业艰辛，勇于担当，不怕吃苦。"'
+    usage_tips: '"适用于讲述党的奋斗历程、创业精神、艰苦岁月的讲话或汇报，表达不忘初心、继续奋斗之意。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "讲话", "报告"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-013
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 天行健，君子以自强不息
+    quote: '"天行健，君子以自强不息。"'
+    source: '"先秦·《周易·乾卦·象传》"'
+    meaning: '"天道运行刚健有力，君子应效法天道，自强不息，永不停歇地奋发向上。中华民族精神的经典表达。"'
+    usage_tips: '"用途极广，适用于几乎所有奋斗、拼搏、自强类讲话，可置于结尾升华，也可作为开篇引题，气势磅礴。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-014
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 多难兴国，殷忧启圣
+    quote: '"多难兴国，殷忧启圣。"'
+    source: '"北宋·《新唐书·张廷圭传》（引西晋·刘琨《劝进表》语）"'
+    meaning: '"灾难频繁反而可以促使国家兴盛，忧患深重反而可以启迪君王圣明。强调困难与成就相辅相成的辩证关系。"'
+    usage_tips: '"适用于面对困难和挑战时的讲话，鼓励上下同心、化危为机。可与"生于忧患，死于安乐"联用。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-015
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 天下兴亡，匹夫有责
+    quote: '"天下兴亡，匹夫有责。"'
+    source: '"近现代·梁启超《无聊消遣》（本自清·顾炎武《日知录》）"'
+    meaning: '"天下大事的兴盛与灭亡，每一个普通百姓都有不可推卸的责任。表达崇高的责任意识和爱国情怀。"'
+    usage_tips: '"适合在排比句中作爱国情怀的表达，或强调公民担当意识，置于段中最为有力。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-016
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 士不可以不弘毅，任重而道远
+    quote: '"士不可以不弘毅，任重而道远。"'
+    source: '"春秋战国·《论语·泰伯》（曾子语）"'
+    meaning: '"读书人不可以不抱负远大、意志坚强，因为责任重大而道路遥远。成语"任重道远"即出于此。"'
+    usage_tips: '"勉励青年干部最为合适，也可用于描述共产党员的使命担当，气势沉雄，感情真挚，置于结尾升华效果佳。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-017
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 究天人之际，通古今之变
+    quote: '"亦欲以究天人之际，通古今之变，成一家之言。"'
+    source: '"西汉·司马迁《报任安书》"'
+    meaning: '"研究探索自然规律和社会规律之间的关系，理顺从古代到现在的变化迁移。代表强烈的历史文化责任意识。"'
+    usage_tips: '"可置于开头表明高度的责任意识，引出目前工作成就；也可直接引用说明要有大责任感、大历史观。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-018
+    type: PM
+    category: golden_sentence
+    topic: 担当
+    title: 精卫衔微木，将以填沧海
+    quote: '"精卫衔微木，将以填沧海。"'
+    source: '"东晋·陶渊明《读山海经十三首》（其十）"'
+    meaning: '"精卫含着微小的木块要填平东海。象征百折不回的毅力和意志，体现中华民族不畏困难的精神气质。"'
+    usage_tips: '"鼓励大家不要自怨自艾，坚持到底，有诗意且不落俗套，适合结尾升华，言简意深。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话", "汇报"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 发展主题 ============
+
+  - id: GS-019
+    type: PM
+    category: golden_sentence
+    topic: 发展
+    title: 壹引其纲，万目皆张
+    quote: '"壹引其纲，万目皆张。"'
+    source: '"战国·《吕氏春秋·离俗·用民》"'
+    meaning: '"一提网的大绳子，许多网眼就会张开。以渔网为喻，强调做事要抓住主要环节，带动全局。成语"纲举目张"即出于此。"'
+    usage_tips: '"部署工作、陈述规划、强调抓主要矛盾时，可置于段首。强调工作重点、关键抓手时使用。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-020
+    type: PM
+    category: golden_sentence
+    topic: 发展
+    title: 万山旁薄，必有主峰；龙衮九章，但挈一领
+    quote: '"万山旁薄，必有主峰；龙衮九章，但挈一领。"'
+    source: '"清·曾国藩《复陈右铭太守书》"'
+    meaning: '"万座高山一定有最高的主峰；复杂的龙袍只要抓住衣领就能提起。比喻再复杂的事物也有关键所在，要善于抓住核心。"'
+    usage_tips: '"谈政治方向、把握主要矛盾、抓住改革关键时使用，尤其适合党建类公文，强调政治方向是第一位的问题。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-021
+    type: PM
+    category: golden_sentence
+    topic: 发展
+    title: 锐始者必图其终，成功者先计于始
+    quote: '"锐始者必图其终，成功者先计于始。"'
+    source: '"明·张居正《答中丞孙槐溪》"'
+    meaning: '"急于开始的一定要考虑其结局，能成就功业的总在开始时就精心设计。说明做事必须善始善终。"'
+    usage_tips: '"适用于与改革、项目推进相关的讲话，要求持之以恒善始善终，尤其在攻坚阶段强调规划和坚持的双重重要性。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["报告", "讲话", "方案"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-022
+    type: PM
+    category: golden_sentence
+    topic: 发展
+    title: 登泰山而览群岳，则冈峦之本末可知也
+    quote: '"登泰山而览群岳，则冈峦之本末可知也。"'
+    source: '"唐·王勃《八卦大演论》"'
+    meaning: '"登上泰山再看其他的山，就知道其他山峰为何以泰山为尊。比喻统之有宗，抓住根本即可驾驭全局，需登高望远。"'
+    usage_tips: '"强调全局视野、系统思维，表明只有登高望远才能溯本求源，一以贯之，在更高层面实现整体把握。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-023
+    type: PM
+    category: golden_sentence
+    topic: 发展
+    title: 见本而知末，执一而应万
+    quote: '"见本而知末，执一而应万。"'
+    source: '"春秋战国·文子《文子·微明》"'
+    meaning: '"观察事物的开端就能预见结局，抓住事物的根本就可以控制全体。强调把握关键、抓住主要矛盾。"'
+    usage_tips: '"面对繁重复杂任务时，用于强调从方法论上把握关键、剑指要害，使工作事半功倍。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["报告", "讲话", "方案"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 改革主题 ============
+
+  - id: GS-024
+    type: PM
+    category: golden_sentence
+    topic: 改革
+    title: 苟日新，日日新，又日新
+    quote: '"苟日新，日日新，又日新。"'
+    source: '"西汉·戴圣《礼记·大学》（引商汤盘铭）"'
+    meaning: '"如果能做到今天自新，那就天天自新，一天又一天永远不停地自新。强调创新的连续性和永恒性。"'
+    usage_tips: '"创新理念、改革精神的最佳引句，适用于部署创新工作、号召改革攻坚的讲话开头，言简意深，历史渊源厚重。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-025
+    type: PM
+    category: golden_sentence
+    topic: 改革
+    title: 周虽旧邦，其命维新
+    quote: '"周虽旧邦，其命维新。"'
+    source: '"春秋·《诗经·大雅·文王》"'
+    meaning: '"周虽然是古老的邦国，但其使命在不断革新。无论国家古老与否，都要不断创新，这是中华民族鲜明的精神禀赋。"'
+    usage_tips: '"适合拥有一定历史的单位或组织的改革创新讲话，引出改革开放只有进行时没有完成时的论述，历史分量重。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-026
+    type: PM
+    category: golden_sentence
+    topic: 改革
+    title: 世异则事异，事异则备变
+    quote: '"世异则事异，事异则备变。"'
+    source: '"战国·韩非《韩非子·五蠹》"'
+    meaning: '"时代不同，事情就随之不同；情况变了，措施也要跟着改变。强调因时制宜，用发展的眼光看问题。"'
+    usage_tips: '"年初计划、改革方案及讲话中皆可使用，引出根据当前世情国情党情制定新方针的论述，承上启下效果好。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-027
+    type: PM
+    category: golden_sentence
+    topic: 改革
+    title: 江山代有才人出，各领风骚数百年
+    quote: '"江山代有才人出，各领风骚数百年。"'
+    source: '"清·赵翼《论诗五首》（其二）"'
+    meaning: '"国家世世代代都有很多有才的人，他们的文章和名声都会流传并影响数百年。强调创新的可能性和连续性。"'
+    usage_tips: '"说明创新的可能性和连续性，节奏铿锵豪气干云，适合鼓励创新的讲话结尾，勉励各位皆是新时代"才人"。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-028
+    type: PM
+    category: golden_sentence
+    topic: 改革
+    title: 随人作计终后人，自成一家始逼真
+    quote: '"随人作计终后人，自成一家始逼真。"'
+    source: '"北宋·黄庭坚《以右军书数种赠邱十四》"'
+    meaning: '"总是跟在别人后面，永远落后；只有另辟蹊径、自成一家，才能达到最高境界。强调独立创新。"'
+    usage_tips: '"用于强调科技创新、文化创作、管理创新不能"跟跑"，要"并跑""领跑"，适合创新专项讲话或方案前言。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["讲话", "方案"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 其他主题（落实/实践） ============
+
+  - id: GS-029
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 与其坐而论道，不如起而行之
+    quote: '"与其坐而论道，不如起而行之。"'
+    source: '"西周·《周礼·冬官考工记》"'
+    meaning: '"坐着谈论大道理，不如亲身实践。今意强调反对高谈阔论，崇尚实干苦干。"'
+    usage_tips: '"强调务实作风、抓落实、反对形式主义时使用，既有古意又有新解，对比句式在反差中说明道理。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-030
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 空谈误国，实干兴邦
+    quote: '"空谈误国，实干兴邦。"'
+    source: '"清·顾炎武语（"清谈误国"之后引申）"'
+    meaning: '"只是泛泛谈论国家大事终究会耽误国家发展，只有脚踏实地做事才能兴盛国家。强调少说空话，真抓实干。"'
+    usage_tips: '""一分部署，九分落实"的最佳引句，适用于抓落实、转作风、反形式主义等几乎所有工作类公文。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-031
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 临渊羡鱼，不如退而结网
+    quote: '"临渊羡鱼，不如退而结网。"'
+    source: '"东汉·班固《汉书·董仲舒传》（引《淮南子》语）"'
+    meaning: '"与其站在河边羡慕鱼儿，还不如回去编织渔网。比喻空空羡慕不如动手去干来得实在。"'
+    usage_tips: '"指出错误做法后引出解决方法的绝佳过渡句，适合抓落实、讲方法论的场合，前后对比结构清晰。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-032
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 虚谈废务，浮文妨要
+    quote: '"虚谈废务，浮文妨要。"'
+    source: '"南朝宋·刘义庆《世说新语·言语》（王羲之语）"'
+    meaning: '"空洞的谈话会荒废办事时间，浮华的文章会妨碍办理要事。强调干实事、干正事，反对形式主义。"'
+    usage_tips: '"批评形式主义、文山会海时使用，言简意赅。注意：不是反对所有的"谈"和"文"，而是摒弃与实际工作无关的部分。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["讲话", "报告"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-033
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 知之非难，行之不易
+    quote: '"知之非难，行之不易。"'
+    source: '"唐·徐贤妃《谏太宗息兵罢役疏》"'
+    meaning: '"懂得道理并不难，实际做起来就不那么容易了。强调知易行难，鼓励知难而进。"'
+    usage_tips: '"用于学习教育、党建实践等主题，表达"知"是基础"行"是关键，激励党员群众既要学深学透更要做好做实。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["讲话", "汇报"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-034
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 天下之事，不难于听言，而难于言之必效
+    quote: '"天下之事，不难于听言，而难于言之必效。"'
+    source: '"明·张居正《请稽查章奏随事考成以修实政疏》"'
+    meaning: '"听别人的话不算难，难的是依照别人的话办事。引申为听取群众意见不算难，难的是让意见真正实现。"'
+    usage_tips: '"党建党风类公文中论述群众路线、政策落地、考核机制的有力引句，后可接相关考核问责内容。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 其他主题（学习） ============
+
+  - id: GS-035
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 腹有诗书气自华
+    quote: '"粗缯大布裹生涯，腹有诗书气自华。"'
+    source: '"北宋·苏轼《和董传留别》"'
+    meaning: '"生活中身上包裹着粗衣劣布，但胸中有学问气质自然光彩夺人。经典阐述读书与人的修养之关系。"'
+    usage_tips: '"宣传读书学习作用的场合使用，前后对比鲜明有力；适合干部培训动员、读书活动讲话，令人印象深刻。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-036
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 博学之，审问之，慎思之，明辨之，笃行之
+    quote: '"博学之，审问之，慎思之，明辨之，笃行之。"'
+    source: '"西汉·戴圣《礼记·中庸》"'
+    meaning: '"要广博地学习，详细地询问，慎重地思考，明白地辨别，切实地力行。关于治学的五层递进法则。"'
+    usage_tips: '"学习教育、培训开班、新员工入职讲话的首选引句，五个层次层层递进，既有逻辑又有力度。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "汇报"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-037
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 盛年不重来，一日难再晨。及时当勉励，岁月不待人
+    quote: '"盛年不重来，一日难再晨。及时当勉励，岁月不待人。"'
+    source: '"东晋·陶渊明《杂诗》（其一）"'
+    meaning: '"美好的青壮年时光不会重来，一天之中也不会有第二个早晨。要抓紧时光，努力奋进，岁月不等人。"'
+    usage_tips: '"适合勉励青年干部珍惜时光、抓紧奋斗，也用于警示不要贻误时机，语言平易深情，亲切感人。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 其他主题（坚持/结尾） ============
+
+  - id: GS-038
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 不积跬步，无以至千里；不积小流，无以成江海
+    quote: '"不积跬步，无以至千里；不积小流，无以成江海。"'
+    source: '"战国·荀子《荀子·劝学》"'
+    meaning: '"不积累每一小步，就无法走完千里之路；不汇集细流，就无法形成江海。强调积累的重要性，宝贵的是坚持。"'
+    usage_tips: '"适合在多个场合使用，强调积累积累再积累，也表达工作不能急于求成的道理，收尾段升华用尤为有力。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-039
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 靡不有初，鲜克有终
+    quote: '"靡不有初，鲜克有终。"'
+    source: '"春秋·《诗经·大雅·荡》"'
+    meaning: '"人们做事大都有良好的开端，但很少有人能够善始善终。告诫为人做事要善始善终，坚持到底。"'
+    usage_tips: '"最适合引用于已取得一定成绩但还需继续努力的场合，如反腐倡廉阶段总结、改革开放节点讲话。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-040
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 合抱之木，生于毫末；九层之台，起于累土
+    quote: '"合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。"'
+    source: '"春秋·老子《道德经·第六十四章》"'
+    meaning: '"合抱的大树生长于细小的萌芽，九层的高台筑起于每一堆泥土。比喻每件事都从最基础处开始，经积累方有成就。"'
+    usage_tips: '"强调从小事做起、积累的重要性，比"千里之行，始于足下"更不落俗套。可用于动员全文开篇，气势宏大。"'
+    usage_scene:
+      - 开头引题
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: A
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-041
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 有善始者实繁，能克终者盖寡
+    quote: '"有善始者实繁，能克终者盖寡。"'
+    source: '"唐·魏徵《谏太宗十思疏》"'
+    meaning: '"有良好开端的实在很多，能够始终如一坚持到底的，却十分稀少。形容坚持做好做完一件事之难。"'
+    usage_tips: '"勉励大家坚持到底，对季度、年度项目或无时限工作皆适用，可与反腐倡廉、改革深化联用，语气厚重有力。"'
+    usage_scene:
+      - 论述支撑
+      - 结尾升华
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-042
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 河冰结合，非一日之寒；积土成山，非斯须之作
+    quote: '"河冰结合，非一日之寒；积土成山，非斯须之作。"'
+    source: '"东汉·王充《论衡·状留》"'
+    meaning: '"河冰的冻结不是一日寒冷所致，积土成山不是一会儿工夫就能完成。说明成绩取得是长期积累的结果。"'
+    usage_tips: '""冰冻三尺，非一日之寒"的原始出处，但"积土成山"之联更强调正面积累。凡涉及量变质变内容皆可使用。"'
+    usage_scene:
+      - 论述支撑
+    applicable_types: '["汇报", "报告", "讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-043
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 凿井者，起于三寸之坎，以就万仞之深
+    quote: '"凿井者，起于三寸之坎，以就万仞之深。"'
+    source: '"北朝齐·刘昼《刘子新论·崇学》"'
+    meaning: '"凿井的人都是从很浅的土坑开始挖，最终挖成极深的井。比喻每件事都从极小处开始，坚持不懈才能成就大业。"'
+    usage_tips: '"此句不常见，可出新意。适合培训动员、项目启动仪式讲话，表达"将改革进行到底""将项目建设到底"的决心，言简意赅。"'
+    usage_scene:
+      - 开头引题
+      - 论述支撑
+    applicable_types: '["讲话", "汇报"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  # ============ 开头素材（季节） ============
+
+  - id: GS-044
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 暮春三月，江南草长，杂花生树，群莺乱飞
+    quote: '"暮春三月，江南草长，杂花生树，群莺乱飞。"'
+    source: '"南朝梁·丘迟《与陈伯之书》"'
+    meaning: '"暮春三月江南草木萌发，各种花朵竞相开放，一群黄莺振翅翻飞。形容江南春天万物萌发的无限生机。成语"草长莺飞"出处。"'
+    usage_tips: '"被誉为最美写景句。适合春季非正式会议、座谈会开篇引题，营造融洽气氛，或作小标题用。"'
+    usage_scene:
+      - 开头引题
+    applicable_types: '["讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查
+
+  - id: GS-045
+    type: PM
+    category: golden_sentence
+    topic: 其他
+    title: 最是一年春好处，绝胜烟柳满皇都
+    quote: '"天街小雨润如酥，草色遥看近却无。最是一年春好处，绝胜烟柳满皇都。"'
+    source: '"唐·韩愈《早春呈水部张十八员外》（其一）"'
+    meaning: '"早春的小雨和草色是一年春光中最美的东西，远远超过了衰落晚春的景色。描写早春的千古名句。"'
+    usage_tips: '"昭示春天美丽，也预示当下是新的开始。适合年初动员讲话、工作布置会，带来积极向上的春日格调。"'
+    usage_scene:
+      - 开头引题
+    applicable_types: '["讲话"]'
+    importance: B
+    usage: dictionary
+    book: 石头哥_公文写作进阶速查

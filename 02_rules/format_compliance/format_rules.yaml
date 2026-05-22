@@ -1,0 +1,503 @@
+# 格式合规规则集
+# 来源：AI写材料手册第14章《质量把控体系建设》
+# 注意：GB/T 9704已在 gbt9704_standard.json 中完整记录，本文件仅收录第14章额外补充的格式规范
+# 生成日期：2026-03-15
+
+meta:
+  version: "1.0"
+  source_chapter: "AI写材料手册第14章"
+  complement_to: "02_rules/gbt9704_standard.json"
+  dedup_note: |
+    以下内容已在GB/T 9704中覆盖，本文件不重复收录：
+    - 纸张尺寸（A4，210mm×297mm）
+    - 版心尺寸（156mm×225mm）及页边距
+    - 标题字体（2号小标宋体）及居中排列
+    - 正文字体（3号仿宋体，每面22行×28字）
+    - 主送机关格式（居左顶格，全角冒号）
+    - 附件说明基本格式（"附件："后跟附件名称）
+    - 成文日期格式（阿拉伯数字，年份全称，月日不补虚位）
+    - 正文层级序号体系（一、/(一)/1./(1)对应字体）
+
+rules:
+
+  # ===== 行文方向规则 =====
+
+  - id: FC-001
+    type: auto_detect
+    category: format_compliance
+    sub_category: 行文方向
+    title: 上行文禁止使用下行文语气
+    description: |
+      上行文（向上级机关行文）不得使用命令、要求、部署类语气，
+      应使用"请"字句或商请式表述。上行文包括请示、报告、意见（向上报送时）。
+    check_method: |
+      检测正文中是否出现"要求各部门""部署""必须执行""命令""指示"等下行文专用词语，
+      且文种为请示/报告类时报警
+    correct_example: '"请批准为盼。""恳请上级予以支持。""特此报告，请审阅。"'
+    wrong_example: '"要求各相关部门认真贯彻执行。"（出现在请示文中）'
+    applicable_types: ["请示", "报告", "汇报"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-002
+    type: auto_detect
+    category: format_compliance
+    sub_category: 行文方向
+    title: 下行文禁止使用请示性语言
+    description: |
+      下行文（向下级机关或所属部门行文）不得出现"请批示""请审批""请审阅"
+      等请示性语言，下行文应使用"通知""要求""部署"等主动语气。
+    check_method: |
+      检测文种为通知/决定/批复/意见（下发）时，正文末尾是否出现
+      "请批示""请审批""请审阅""为盼"等上行文结语
+    correct_example: "各单位收到本通知后，请认真组织落实。"
+    wrong_example: '"以上意见如无不妥，请批示。"（出现在通知文中）'
+    applicable_types: ["通知", "决定", "批复", "方案"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-003
+    type: auto_detect
+    category: format_compliance
+    sub_category: 行文方向
+    title: 平行文应使用商洽式语气
+    description: |
+      平行文（向同级机关或不相隶属机关行文）应使用商洽、协作式语气，
+      不得使用命令口吻，也不得使用卑谦的请示口吻。函是最常见的平行文文种。
+    check_method: |
+      文种为函时，检测是否使用了"命令""决定""要求执行"等强制性语言，
+      或"请批示""恳请批准"等明显上行语气
+    correct_example: '"商请贵单位予以协助。""敬请贵部研究答复。"'
+    wrong_example: '"要求你单位务必于×月×日前完成。"（出现在函文中）'
+    applicable_types: ["函"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  # ===== 文号格式 =====
+
+  - id: FC-004
+    type: auto_detect
+    category: format_compliance
+    sub_category: 文号格式
+    title: 文号格式三要素完整性
+    description: |
+      正式公文文号由"机关代字+年份+顺序号"三部分组成。
+      年份用六角括号〔〕括注，不得使用圆括号（）或方括号[]；
+      年份必须写全四位数字；顺序号不编虚位（如"1"不写成"001"）。
+    check_method: |
+      正则检测：文号中括号类型是否为〔〕；
+      年份是否为4位数字；
+      顺序号是否无前导零（如001、01等）
+    correct_example: "×办发〔2024〕8号"
+    wrong_example: '"×办发（2024）008号"（圆括号+顺序号补虚位）'
+    applicable_types: ["通知", "请示", "报告", "决定", "批复", "函"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-005
+    type: auto_detect
+    category: format_compliance
+    sub_category: 文号格式
+    title: 联合行文文号规范
+    description: |
+      两个以上机关联合行文时，文号只标注主办机关的文号，
+      不得出现多个文号并列。
+    check_method: |
+      检测联合行文文件中是否出现两个及以上"〔年份〕号"格式的文号并列排列
+    correct_example: '"×委办〔2024〕5号"（联合行文只保留主办机关文号）'
+    wrong_example: "×委办〔2024〕5号  ×政办〔2024〕12号"
+    applicable_types: ["通知", "意见", "方案"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  # ===== 标题格式 =====
+
+  - id: FC-006
+    type: auto_detect
+    category: format_compliance
+    sub_category: 标题格式
+    title: 公文标题三要素完整性
+    description: |
+      正式公文标题一般由"发文机关+事由+文种"三部分组成。
+      报告、请示、通知等正式公文标题不得缺少文种要素。
+      讲话稿、汇报材料等非正式公文标题可灵活处理。
+    check_method: |
+      检测正式公文（通知/请示/报告/决定/批复）标题末尾是否包含对应文种词语；
+      如标题末尾无"通知""请示""报告""决定""批复""意见""方案"等文种词，则提示
+    correct_example: "××市人民政府关于加强营商环境建设的通知"
+    wrong_example: '"××市人民政府关于加强营商环境建设"（缺少文种）'
+    applicable_types: ["通知", "请示", "报告", "决定", "批复", "意见", "方案"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-007
+    type: auto_detect
+    category: format_compliance
+    sub_category: 标题格式
+    title: 标题中不得使用标点符号
+    description: |
+      公文标题中除书名号《》外，一般不使用标点符号。
+      逗号、句号、顿号、感叹号等均不得出现在公文标题中。
+    check_method: |
+      正则检测标题行中是否出现除《》外的标点符号（，。、！？；：""''等）
+    correct_example: "××局关于开展安全生产专项检查工作的通知"
+    wrong_example: '"××局关于开展安全生产专项检查、整治工作的通知"（顿号）'
+    applicable_types: ["通知", "请示", "报告", "决定", "批复", "意见", "方案"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-008
+    type: llm_review
+    category: format_compliance
+    sub_category: 标题格式
+    title: 标题事由表述准确性
+    description: |
+      公文标题中的事由应当概括准确、简洁明了，
+      不得使用过于笼统的表述（如"若干问题""有关工作"），
+      也不得使用口语化表述。
+    check_method: |
+      判断标题事由部分是否清晰表达了公文的主要内容；
+      检测"有关""若干""相关"等模糊词是否影响标题准确性
+    correct_example: "关于印发《2024年安全生产工作方案》的通知"
+    wrong_example: "关于有关安全工作若干问题的通知"
+    applicable_types: ["通知", "请示", "报告", "决定", "批复", "意见", "方案"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  # ===== 落款格式 =====
+
+  - id: FC-009
+    type: auto_detect
+    category: format_compliance
+    sub_category: 落款格式
+    title: 落款机关名称与文号机关名称一致性
+    description: |
+      公文落款处的发文机关名称必须与文号中的机关代字所代表的机关名称一致，
+      不得使用简称（法定简称除外），不得与文号机关不符。
+    check_method: |
+      比对落款机关名称与文号中机关代字的对应关系，
+      检测落款是否使用了非标准简称或与文号机关不符
+    correct_example: '"××市人民政府"（对应文号"×政发"）'
+    wrong_example: '"××市政府"（非法定简称，与文号不一致）'
+    applicable_types: ["通知", "请示", "报告", "决定", "批复"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-010
+    type: auto_detect
+    category: format_compliance
+    sub_category: 落款格式
+    title: 联合行文落款机关顺序规范
+    description: |
+      联合行文落款时，各联合机关应按照级别高低或惯例顺序排列，
+      党委机关排在政府机关前，上级机关排在下级机关前。
+    check_method: |
+      联合行文中检测落款机关顺序，
+      判断是否存在党政顺序颠倒或上下级顺序颠倒的情况
+    correct_example: "中共××市委  ××市人民政府"
+    wrong_example: '"××市人民政府  中共××市委"（党政顺序颠倒）'
+    applicable_types: ["通知", "意见", "方案", "决定"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  # ===== 结构完整性 =====
+
+  - id: FC-011
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 请示文须有明确请求事项
+    description: |
+      请示必须有明确的请示事项，即具体请求批准、批复或指示的内容。
+      请示事项要具体，不得以"请批示"代替具体请求内容。
+      一件请示只能写一个主要请求事项（一文一事原则）。
+    check_method: |
+      检测请示正文中是否有明确具体的请求内容；
+      检测是否存在多个并列的独立请求事项（违反一文一事原则）
+    correct_example: "请批准我单位购置办公用车一辆，预算金额××万元。"
+    wrong_example: '"以上情况妥否，请批示。"（无具体请求）'
+    applicable_types: ["请示"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-012
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 报告不得夹带请示事项
+    description: |
+      报告是向上级汇报工作、反映情况的文种，不得在报告中夹带请示事项，
+      不得出现"请批示""请审批""请拨付"等请示性请求。
+      如需请示，应单独行文。
+    check_method: |
+      文种为报告时，检测正文中是否出现"请批准""请批示""请审批""请拨付""
+      请给予解决""请予支持"等请示性表述
+    correct_example: '"以上报告，请审阅。"（结语仅要求审阅，不含具体请求）'
+    wrong_example: '"请批准增加编制5名，并拨付专项经费××万元。"（报告夹带请示）'
+    applicable_types: ["报告"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-013
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 通知正文结构完整性
+    description: |
+      通知正文应包含：发文缘由（依据/背景）、通知事项（具体要求）、
+      执行要求（时限/责任单位）三个基本要素。
+      转发性通知还须包含转发说明和执行要求。
+    check_method: |
+      检查通知正文是否具备发文缘由、通知事项、执行要求三要素；
+      转发性通知是否说明了执行要求和转发意图
+    correct_example: |
+      "为贯彻落实……精神（缘由），现就……工作通知如下（事项）：
+      ……
+      各单位请于×月×日前报送……（执行要求）"
+    wrong_example: '"请各单位认真学习贯彻执行。"（通知事项、执行要求均不具体）'
+    applicable_types: ["通知"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  - id: FC-014
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 讲话稿结构完整性
+    description: |
+      领导讲话稿应包含：开场（点明会议主题/感谢/定调）、
+      主体（分点论述，一般2-4个层次）、
+      结尾（提要求/表态/号召）三大部分。
+      结构应头尾呼应，不得虎头蛇尾或仅有结论无论据。
+    check_method: |
+      检查讲话稿是否具备开场、主体、结尾三部分；
+      主体部分是否有清晰的层次划分（一、二、三…）；
+      结尾是否有明确的要求或号召
+    correct_example: |
+      "开场：同志们……今天召开这次会议，主要目的是……
+      主体：一、充分认识……  二、重点抓好……  三、切实加强……
+      结尾：同志们，……希望大家……谢谢！"
+    wrong_example: "（有开场有主体，但正文最后一段直接截断，无结尾）"
+    applicable_types: ["讲话"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-015
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 方案正文六要素完整性
+    description: |
+      工作方案/实施方案正文应包含：背景目的、工作目标、
+      主要任务（工作措施）、组织领导（职责分工）、
+      时间节点（工作步骤）、保障措施六个基本要素。
+      缺少任何一项均应提示补充。
+    check_method: |
+      逐项检查方案正文是否覆盖：目的/背景、目标、任务/措施、
+      责任分工、时间节点、保障措施六要素
+    correct_example: |
+      "一、工作目标  二、主要任务  三、实施步骤
+       四、职责分工  五、保障措施"
+    wrong_example: "（方案只有措施，缺少目标设定和时间节点）"
+    applicable_types: ["方案"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  # ===== 附件标注规则 =====
+
+  - id: FC-016
+    type: auto_detect
+    category: format_compliance
+    sub_category: 附件格式
+    title: 附件序号与附件标题一致性
+    description: |
+      正文中提及的附件序号必须与附件说明处的序号完全对应，
+      不得出现正文提及"附件3"但附件说明只列到"附件2"的情况，
+      反之亦然。附件名称也须前后保持一致。
+    check_method: |
+      提取正文中所有"附件X""见附件"等引用，
+      与文末附件说明列表进行比对，检查序号和名称是否一一对应
+    correct_example: |
+      正文："详见附件1"；
+      附件说明："附件1：××××表"
+    wrong_example: |
+      正文："详见附件2"；
+      附件说明："附件1：××表（无附件2）"
+    applicable_types: ["通知", "报告", "方案", "请示"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-017
+    type: auto_detect
+    category: format_compliance
+    sub_category: 附件格式
+    title: 附件另起页排版规范
+    description: |
+      附件应另起一页排版，附件首页左上角应标注"附件X："字样，
+      不得将附件与公文正文连排在同一页末尾。
+    check_method: |
+      检测附件内容是否接续在正文最后一段之后无分页符，
+      或附件首行是否有"附件X："标识
+    correct_example: '"（附件另起新页，左上角标"附件1："）"'
+    wrong_example: "（附件内容直接接在落款之后，未另起页）"
+    applicable_types: ["通知", "报告", "方案", "请示"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  # ===== 页码格式 =====
+
+  - id: FC-018
+    type: auto_detect
+    category: format_compliance
+    sub_category: 页码格式
+    title: 首页不排版面页码
+    description: |
+      公文首页不得排印版面页码（页码标注从第二页开始，或全文单页时不排页码）。
+      内部材料（汇报、讲话稿等非正式公文）页码规则可按单位惯例执行。
+    check_method: |
+      检测正式公文首页页脚是否出现"1"或"第1页"等页码标注
+    correct_example: '"（首页无页码，从第二页开始排"—2—"）"'
+    wrong_example: '"（首页页脚出现"-1-"）"'
+    applicable_types: ["通知", "请示", "报告", "决定", "批复"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  # ===== 政治表述规范 =====
+
+  - id: FC-019
+    type: auto_detect
+    category: format_compliance
+    sub_category: 政治表述
+    title: 重要政治表述不得简化缩写
+    description: |
+      党的重要理论、路线、方针、政策表述必须字字准确、不得任意简化。
+      如"高质量发展"不得写成"高质发展"或"高品质发展"；
+      "习近平新时代中国特色社会主义思想"不得随意缩写；
+      "全面深化改革"不得写成"全面改革"。
+    check_method: |
+      建立高频政治术语正确/错误对照词典；
+      用正则或词典匹配检测常见错误变体表述
+    correct_example: '"高质量发展""习近平新时代中国特色社会主义思想"'
+    wrong_example: '"高质发展""习近平思想"（不当缩写）'
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知", "决定"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  - id: FC-020
+    type: auto_detect
+    category: format_compliance
+    sub_category: 政治表述
+    title: 领导职务称谓规范
+    description: |
+      文中提及领导职务时须使用规范全称，不得使用非标准简称。
+      第一次出现时须写全称，同一文中再次出现可使用规范简称。
+      "书记"前须带单位名称，不得单独称"书记"（第一次出现时）。
+    check_method: |
+      检测文中领导职务称谓是否在首次出现时含完整机关名称；
+      检测是否出现"×书记""×市长"等无机关名称的单独职务称谓（首次出现）
+    correct_example: '"中共××市委书记×××""××市人民政府市长×××"'
+    wrong_example: '"书记×××在会上强调"（首次出现未标明机关）'
+    applicable_types: ["汇报", "报告", "讲话", "通知"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  - id: FC-021
+    type: auto_detect
+    category: format_compliance
+    sub_category: 政治表述
+    title: 会议及文件名称准确引用
+    description: |
+      引用上级会议名称、文件名称须准确，不得张冠李戴、混淆年份或简化名称。
+      党代会、全国两会等重大会议名称须使用规范全称。
+    check_method: |
+      检测文中出现的会议名称和文件名称，
+      重点核查年份、届次是否与已知信息一致（如"第×届×次全会"）；
+      检测是否将两个不同会议的名称混用
+    correct_example: '"党的二十届三中全会""《关于进一步全面深化改革、推进中国式现代化的决定》"'
+    wrong_example: '"党的二十届四中全会"（届次或次数有误）'
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第14章"
+
+  # ===== 语言风格格式规范 =====
+
+  - id: FC-022
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 标题层级逻辑一致性
+    description: |
+      正文层级划分应逻辑清晰，层级使用应前后一致。
+      同一级别的标题应使用相同的序号格式；
+      不得跳级使用（如从"一、"直接跳到"（1）"）；
+      不得在同一层级中混用不同序号格式（如"一"与"1."并用）。
+    check_method: |
+      检测正文序号体系是否符合标准层级：一、→（一）→1.→（1）；
+      检测是否存在层级跳跃或同级混用不同格式的问题
+    correct_example: |
+      "一、标题
+       （一）小标题
+         1. 要点"
+    wrong_example: |
+      "一、标题
+         1. 要点（跳过二级"（一）"直接到三级）"
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  - id: FC-023
+    type: auto_detect
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 结构头重脚轻问题检测
+    description: |
+      公文结构应当详略得当，重心分配合理。
+      常见问题：成绩总结篇幅过长（占全文60%以上）而下步打算仅一句话；
+      或问题分析过于简短（一带而过）而措施部署过于详细（比例失衡）。
+    check_method: |
+      统计各层级标题下的字数比例；
+      若"成绩/做法"部分占比超过70%，而"下步打算/措施"部分不足10%，则提示
+    correct_example: "（成绩总结约30%，问题分析约20%，下步打算约40%，其他约10%）"
+    wrong_example: "（成绩总结占75%，下步打算仅一段约5%）"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  - id: FC-024
+    type: llm_review
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 正文逻辑关系自洽性
+    description: |
+      正文中的因果关系、并列关系、递进关系须符合逻辑。
+      常见错误：因果关系倒置、并列项目不在同一层级、
+      论点与论据不对应、总结句与详述内容不一致。
+    check_method: |
+      检查"因此""所以""由于"等因果连接词前后关系是否成立；
+      检查并列项目（"一是…二是…三是…"）是否属于同一层级的概念；
+      检查总括句与下文分述内容是否一一对应
+    correct_example: |
+      "由于我们坚持……，切实推进……，因此取得了……成效。"（因果成立）
+    wrong_example: |
+      "由于深入推进改革创新、加强科技攻关、优化营商环境，
+      因此群众满意度提升。"（因果链条不完整，忽略了民生改善等更直接因素）
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第14章"
+
+  - id: FC-025
+    type: auto_detect
+    category: format_compliance
+    sub_category: 结构完整性
+    title: 极端表述使用规范
+    description: |
+      "最""第一""唯一""全市最""全省率先"等极端或排他性表述须慎用，
+      使用时须有充分依据支撑，不得随意堆砌以示工作成效。
+    check_method: |
+      正则检测：统计"最×""第一""唯一""率先""首家""全国最""全省最"等极端表述频次；
+      若同一文档中出现3次以上此类表述，提示核查是否均有依据
+    correct_example: "全省率先建立……机制（经××部门认定）"
+    wrong_example: '"创下了最快速度、最高质量、最好效果的记录"（堆砌极端表述无依据）'
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第14章"

@@ -1,0 +1,59 @@
+{
+  "selection_summary": {
+    "total_selected": 90,
+    "original_total": 90,
+    "selection_ratio": 100.0,
+    "categories_covered": 6
+  },
+  "category_distribution": {
+    "待分类": 1,
+    "报告类": 43,
+    "方案类": 11,
+    "汇报类": 2,
+    "规划类": 13,
+    "讲话类": 20
+  },
+  "quality_score_distribution": {
+    "6": 20,
+    "8": 30,
+    "7": 40
+  },
+  "word_count_statistics": {
+    "min": 776,
+    "max": 77853,
+    "total": 1449564,
+    "avg": 16106.0,
+    "by_category": {
+      "待分类": {
+        "count": 1,
+        "total_words": 19700,
+        "avg_words": 19700.0
+      },
+      "报告类": {
+        "count": 43,
+        "total_words": 623313,
+        "avg_words": 14496.0
+      },
+      "方案类": {
+        "count": 11,
+        "total_words": 130784,
+        "avg_words": 11889.0
+      },
+      "汇报类": {
+        "count": 2,
+        "total_words": 38072,
+        "avg_words": 19036.0
+      },
+      "规划类": {
+        "count": 13,
+        "total_words": 314691,
+        "avg_words": 24207.0
+      },
+      "讲话类": {
+        "count": 20,
+        "total_words": 323004,
+        "avg_words": 16150.0
+      }
+    }
+  }
+}

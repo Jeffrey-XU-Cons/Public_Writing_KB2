@@ -1,0 +1,1001 @@
+metadata:
+  file: 词句应用大全_排比句库.yaml
+  description: 公文写作分类排比句库，涵盖21个主题类别，共约130条精选排比句
+  source: 公文写作词句应用大全（530页25万字）.docx · 分类排比句篇（paras 1996-4268）
+  total_entries: 130
+  id_prefix: GS
+  categories:
+    - 能力类排比句
+    - 制度类排比句
+    - 规矩类排比句
+    - 纪律类排比句
+    - 人民类排比句
+    - 清廉类排比句
+    - 干部类排比句
+    - 英雄类排比句
+    - 创新类排比句
+    - 干事类排比句
+    - 劳动类排比句
+    - 一切类排比句
+    - 思想类排比句
+    - 服务类排比句
+    - 群众类排比句
+    - 坚持类排比句
+    - 精神类排比句
+    - 学习类排比句
+    - 斗争类排比句
+    - 廉洁自律类排比句
+    - 党性修养类排比句
+
+entries:
+  # ===== 一、能力有关排比句 =====
+
+  - id: GS-001
+    category: 能力类排比句
+    content: 在"急"的一线增强应变能力，在"难"的一线增强协调能力，在"险"的一线增强驾驭能力，在"重"的一线增强执行能力。
+    usage_note: 四维能力培养，适用于干部能力建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  - id: GS-002
+    category: 能力类排比句
+    content: 增强履行使命任务的能力，增强思考谋划工作的能力，增强推动创新发展的能力。
+    usage_note: 三增强能力句式，适用于年度部署讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  - id: GS-003
+    category: 能力类排比句
+    content: 建强治理"指挥部"，提升组织力；锻造治理"主力军"，提升战斗力；构筑治理"共同体"，提升凝聚力。
+    usage_note: 三力提升，适用于基层治理类讲话或报告
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  - id: GS-004
+    category: 能力类排比句
+    content: 聚焦学习实践，推动综合素质提升；聚焦主业创新，驱动服务能力提升；聚焦作风建设，带动组工形象提升。
+    usage_note: 三聚焦推动提升，适用于组工部门或机关建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  - id: GS-005
+    category: 能力类排比句
+    content: 理想信念笃信力是"灵魂支柱"，全局大势把控力是"灯塔坐标"，是非原则鉴别力是"基准标尺"，纪律规矩执行力是"底线方寸"，责任担当驱动力是"成事之要"。
+    usage_note: 五力五喻，适用于全面能力培养类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  - id: GS-006
+    category: 能力类排比句
+    content: 聚焦基层干部狠抓落实能力，如何当好改革创新的"领头雁"；聚焦处理矛盾能力，如何当好依法办事、化解纷争的"金钥匙"；聚焦带领群众能力，如何当好体察民情、引领发展的"大脚掌"。
+    usage_note: 三聚焦+角色喻，适用于基层干部培训讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 一、能力有关排比句大全
+
+  # ===== 二、制度有关排比句 =====
+
+  - id: GS-007
+    category: 制度类排比句
+    content: 做到思考筹划工作坚持以制度为指导，组织指导工作坚持以制度为依据，解决实际问题坚持以制度为武器，检查衡量工作坚持以制度为尺度。
+    usage_note: 四以制度为句式，适用于制度建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二、制度有关排比句大全
+
+  - id: GS-008
+    category: 制度类排比句
+    content: 把严格执行制度作为一种原则来坚持，把严格执行制度作为一种责任来履行，把严格执行制度作为一种素质来培育。
+    usage_note: 三把句式，适用于制度执行类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二、制度有关排比句大全
+
+  - id: GS-009
+    category: 制度类排比句
+    content: 纲举目张，制度设置越来越科学；公开公正，制度运行越来越透明；监督问责，制度落实越来越有力。
+    usage_note: 三方面制度成效，适用于制度建设总结类汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二、制度有关排比句大全
+
+  - id: GS-010
+    category: 制度类排比句
+    content: 精于思，争当制度学习的表率；诚于心，争当制度维护的表率；笃于行，争当制度执行的表率。
+    usage_note: 三表率句式，适用于干部表率示范类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二、制度有关排比句大全
+
+  - id: GS-011
+    category: 制度类排比句
+    content: 制度是规律的总结，违反制度就是违背规律，就要受到客观规律的惩罚；制度是法规的体现，违反制度就是违背法规，就要受到法规的惩处。
+    usage_note: 制度重要性论证，适用于制度教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二、制度有关排比句大全
+
+  # ===== 三、规矩有关排比句 =====
+
+  - id: GS-012
+    category: 规矩类排比句
+    content: 守规矩最重要的是信念过硬，守规矩最根本的是政治过硬，守规矩最关键的是责任过硬，守规矩最迫切的是能力过硬，守规矩最核心的是作风过硬。
+    usage_note: 五最+过硬结构，适用于规矩纪律类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 三、规矩有关排比句大全
+
+  - id: GS-013
+    category: 规矩类排比句
+    content: 立规在前，事事有规矩；落细落小，处处见规矩；一视同仁，人人讲规矩；敬终如始，时时守规矩。
+    usage_note: 四维度规矩要求，适用于纪律教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 三、规矩有关排比句大全
+
+  - id: GS-014
+    category: 规矩类排比句
+    content: 严明规矩要有抓早抓小的决心，严明规矩要有铁面执纪的态度，严明规矩要有较真碰硬的魄力。
+    usage_note: 三要有句式，适用于纪律严明类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 三、规矩有关排比句大全
+
+  - id: GS-015
+    category: 规矩类排比句
+    content: 守规矩就是要以自重铸品德，守规矩就是要以自省管小节，守规矩就是要以自警慎言行，守规矩就是要以自励操节守。
+    usage_note: 四自修炼，适用于党性修养类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 三、规矩有关排比句大全
+
+  - id: GS-016
+    category: 规矩类排比句
+    content: 将讲规矩转化为为民的情怀，将讲规矩转化为担当的行动，将讲规矩转化为清廉的本色，将讲规矩转化为斗争精神。
+    usage_note: 四转化句式，适用于规矩教育实践类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 三、规矩有关排比句大全
+
+  # ===== 六、纪律有关排比句 =====
+
+  - id: GS-017
+    category: 纪律类排比句
+    content: 严守政治纪律的明白人，严守组织纪律的老实人，严守廉政纪律的清白人，严守群众纪律的贴心人。
+    usage_note: 四纪律四角色，适用于党员干部纪律教育
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  - id: GS-018
+    category: 纪律类排比句
+    content: 把"讲规矩"作为政治生命的"紧箍咒""护身符"，把"有纪律"作为干事创业的"生命线""安全带"。
+    usage_note: 两把比喻句，适用于规矩纪律讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  - id: GS-019
+    category: 纪律类排比句
+    content: 铁一般纪律，首先"铁"在政治上；铁一般纪律，重点"铁"在攻坚上；铁一般纪律，关键"铁"在执行上。
+    usage_note: 三铁递进，适用于纪律作风建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  - id: GS-020
+    category: 纪律类排比句
+    content: 维护纪律要守住公与私的"警戒线"，维护纪律要守住是与非的"高压线"，维护纪律要守住情和法的"分界线"。
+    usage_note: 三线比喻，适用于纪律廉洁类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  - id: GS-021
+    category: 纪律类排比句
+    content: 从政治上认清纪律的重大意义，从理论上把握纪律的丰富内涵，从信仰上强化纪律的实践自觉。
+    usage_note: 三维度认识纪律，适用于纪律教育开篇
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  - id: GS-022
+    category: 纪律类排比句
+    content: 坚持深化认识抓教育，让纪律教育摆位到位；坚持设身处地抓教育，让纪律教育见人见事；坚持结合渗透抓教育，让纪律教育入心入脑。
+    usage_note: 三坚持抓教育，适用于纪律教育部署
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 六、纪律有关排比句大全
+
+  # ===== 七、人民有关排比句 =====
+
+  - id: GS-023
+    category: 人民类排比句
+    content: 摆正态度，做人民的"贴心人"；散发热度，做人民的"暖心人"；发扬风度，做人民的"真心人"。
+    usage_note: 三心人角色，适用于为民服务类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 七、人民有关排比句大全
+
+  - id: GS-024
+    category: 人民类排比句
+    content: 要"心"系人民，有为民的情怀；要"师"从人民，学为民的方法；要"身"入人民，做为民的实事。
+    usage_note: 心师身三字起，适用于群众工作类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 七、人民有关排比句大全
+
+  - id: GS-025
+    category: 人民类排比句
+    content: 亲民的举措定一条是一条、条条算数；利民的实事做一件成一件、件件落实；为民的承诺说一项是一项、项项兑现。
+    usage_note: 三叠加强调句式，适用于联系群众类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 七、人民有关排比句大全
+
+  - id: GS-026
+    category: 人民类排比句
+    content: 把为民服务体现到一言一行上，把为民服务熔铸在一岗一哨里，把为民服务落实在一职一位中。
+    usage_note: 三把+落实句式，适用于为民宗旨类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 七、人民有关排比句大全
+
+  - id: GS-027
+    category: 人民类排比句
+    content: 为人民服务，要做蹄疾深耕的"拓荒牛"；为人民服务，要做埋头苦干的"老黄牛"；为人民服务，要做甘于奉献的"孺子牛"。
+    usage_note: 三牛比喻，适用于奉献精神类讲话结尾
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 七、人民有关排比句大全
+
+  - id: GS-028
+    category: 人民类排比句
+    content: 以人民为中心是中国共产党人的理想信念之基，以人民为中心是中国共产党人的根本政治立场，以人民为中心是中国共产党人的力量源头活水。
+    usage_note: 三以人民为中心，适用于党建政治类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 七、人民有关排比句大全
+
+  # ===== 八、清廉有关排比句 =====
+
+  - id: GS-029
+    category: 清廉类排比句
+    content: 勤廉家风是人生成功的"奠基石"，勤廉家风是社会和谐的"黏合剂"，勤廉家风是抵御贪腐的"防火墙"。
+    usage_note: 三喻廉政家风，适用于廉政文化建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 八、清廉有关排比句大全
+
+  - id: GS-030
+    category: 清廉类排比句
+    content: 破一次规矩，就会留一个污点；搞一次特殊，就会减一分威信；谋一次私利，就会失一片人心。
+    usage_note: 三破三失递进，适用于廉政警示类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 八、清廉有关排比句大全
+
+  - id: GS-031
+    category: 清廉类排比句
+    content: 贪婪，是腐败的温床，是走向腐败的通行证；自律，是廉洁的沃土，是廉洁从政的安全阀。
+    usage_note: 对比式廉政警示，适用于廉政教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 八、清廉有关排比句大全
+
+  - id: GS-032
+    category: 清廉类排比句
+    content: 面对"微腐败"绝不能掉以轻心，遇到"潜规则"绝不能随波逐流，碰上"人情礼"绝不能欣然笑纳。
+    usage_note: 三绝不能句式，适用于反腐倡廉警示教育
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 八、清廉有关排比句大全
+
+  - id: GS-033
+    category: 清廉类排比句
+    content: 坚守一个志向：做清官，决不当贪官；牢记一句警训：手莫伸，伸手必被捉。
+    usage_note: 廉洁誓言式，适用于廉政教育开篇
+    applicable_types: [讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 八、清廉有关排比句大全
+
+  # ===== 十、干部有关排比句 =====
+
+  - id: GS-034
+    category: 干部类排比句
+    content: 为敢于"当先锋"的干部"鼓劲"，为敢于"吃螃蟹"的干部"兜底"，为敢于"挑重担"的干部"撑腰"。
+    usage_note: 三为敢于干部句式，适用于担当激励类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十、干部有关排比句大全
+
+  - id: GS-035
+    category: 干部类排比句
+    content: 严格政治标准，拧紧选拔任用"总开关"；突出政治忠诚，守好干部培养"生命线"；考准政治表现，画好干部德才"精准像"；压实政治规矩，拉紧干部监督"高压线"。
+    usage_note: 四严格+比喻词，适用于组织人事类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十、干部有关排比句大全
+
+  - id: GS-036
+    category: 干部类排比句
+    content: 打造实践"赛马场"，把敢担当、善作为的干部磨炼出来；用好考核"指挥棒"，把敢担当、善作为的干部识别出来；树起选拔"风向标"，把敢担当、善作为的干部使用起来。
+    usage_note: 三把干部使用句式，适用于干部工作类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十、干部有关排比句大全
+
+  - id: GS-037
+    category: 干部类排比句
+    content: 鲜明导向引领，充分激发干部"内驱力"；注重依事择人，着力提升选任"匹配度"；突出严管厚爱，大力提振干部"精气神"。
+    usage_note: 三维干部工作句式，适用于组工讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十、干部有关排比句大全
+
+  - id: GS-038
+    category: 干部类排比句
+    content: 年轻干部要有不辞辛苦的担当，年轻干部要有不怕担责的担当，年轻干部要有为民服务的担当。
+    usage_note: 三要有担当，适用于青年干部培训讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十、干部有关排比句大全
+
+  # ===== 十一、英雄有关排比句 =====
+
+  - id: GS-039
+    category: 英雄类排比句
+    content: 英雄是一个国家光辉历史的记忆，英雄是一个民族坚挺不屈的脊梁，英雄是一个社会价值导向的重要坐标。
+    usage_note: 三英雄定义，适用于英模先进典型弘扬类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十一、英雄有关排比句大全
+
+  - id: GS-040
+    category: 英雄类排比句
+    content: 英雄，是这个时代最宝贵的财富；英雄，是这个时代最珍贵的资源；英雄，是这个时代最崇高的精神；英雄，是这个时代最坚强的脊梁；英雄，是这个时代最明亮的航灯。
+    usage_note: 五最英雄排比，适用于英模表彰类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十一、英雄有关排比句大全
+
+  - id: GS-041
+    category: 英雄类排比句
+    content: 忠诚决定方向，信念坚定方铸英雄之魂；执着成就事业，拼搏奋斗方建英雄之功；朴实体现境界，淡泊名利方展英雄之风。
+    usage_note: 三英雄三素质，适用于英模事迹报告或颁奖讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十一、英雄有关排比句大全
+
+  - id: GS-042
+    category: 英雄类排比句
+    content: 英雄在平凡岗位铸就了忠诚担当的政治品格，英雄在平凡岗位练就了服务人民的过硬本领，英雄在平凡岗位弘扬了爱国敬业的奉献情怀，英雄在平凡岗位高扬了干事创业的奋斗精神。
+    usage_note: 四平凡岗位英雄，适用于先进典型事迹报告
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十一、英雄有关排比句大全
+
+  # ===== 十二、创新有关排比句 =====
+
+  - id: GS-043
+    category: 创新类排比句
+    content: 改革再深入，以改革引领创新；思想再解放，以开放促进创新；标准再提升，以标杆激发创新。
+    usage_note: 三以创新，适用于改革创新类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十二、创新有关排比句大全
+
+  - id: GS-044
+    category: 创新类排比句
+    content: 激发创新热情，挖掘创新潜力，提高创新能力，破解创新难题，评判创新成效，转化创新成果。
+    usage_note: 六字递进创新全链条，适用于创新工作部署类
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十二、创新有关排比句大全
+
+  - id: GS-045
+    category: 创新类排比句
+    content: 创新是高质量发展的"引擎"，创新是高品质生活的"载体"，创新是高水平治理的"大脑"。
+    usage_note: 三高创新价值论，适用于科技创新报告或讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十二、创新有关排比句大全
+
+  - id: GS-046
+    category: 创新类排比句
+    content: 以更强的创新自觉补短板、强弱项，以更多的创新硬招增动力、激活力，以更大的创新定力抓落实、求实效。
+    usage_note: 三以更创新，适用于年度创新工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十二、创新有关排比句大全
+
+  # ===== 十三、干事有关排比句 =====
+
+  - id: GS-047
+    category: 干事类排比句
+    content: 激发改革者"想干事"的热情，增强改革者"能干事"的本领，营造改革者"干成事"的环境。
+    usage_note: 三干事氛围，适用于改革工作动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十三、干事有关排比句大全
+
+  - id: GS-048
+    category: 干事类排比句
+    content: 把心思集中在"想干事"上，把胆识体现在"敢干事"上，把能力展现在"会干事"上，把目标落实在"干成事"上。
+    usage_note: 四把干事句式，高频使用，适用于干部大会讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十三、干事有关排比句大全
+
+  - id: GS-049
+    category: 干事类排比句
+    content: 有过硬的肩膀，不怕事、能扛事；有过硬的意志，事不成、不罢休；有过硬的本领，能干事、干成事。
+    usage_note: 三过硬担当，适用于干部担当精神类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十三、干事有关排比句大全
+
+  - id: GS-050
+    category: 干事类排比句
+    content: 干事目标明确，才能定位方向；干事要求清晰，才能把握路径；干事措施精准，才能抓出成效。
+    usage_note: 三干事逻辑，适用于工作部署类讲话或方案
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十三、干事有关排比句大全
+
+  # ===== 十四、劳动有关排比句 =====
+
+  - id: GS-051
+    category: 劳动类排比句
+    content: 人世间的美好梦想，只有通过诚实劳动才能实现；发展中的各种难题，只有通过诚实劳动才能破解；生命里的一切辉煌，只有通过诚实劳动才能铸就。
+    usage_note: 三只有通过劳动，适用于劳动节讲话或激励类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十四、劳动有关排比句大全
+
+  - id: GS-052
+    category: 劳动类排比句
+    content: 在劳动中恪尽担当之责铸"劳动之诚"，在劳动中涵养担当之勇拓"劳动之路"，在劳动中锤炼担当之能创"劳动之果"。
+    usage_note: 三在劳动中，适用于劳模先进表彰讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十四、劳动有关排比句大全
+
+  - id: GS-053
+    category: 劳动类排比句
+    content: 以伟大的劳模精神、劳动精神提神振气，以伟大的劳模精神、劳动精神迎接挑战，以伟大的劳模精神、劳动精神再创辉煌。
+    usage_note: 三以劳动精神句式，适用于劳模表彰大会讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十四、劳动有关排比句大全
+
+  # ===== 十五、一切有关排比句 =====
+
+  - id: GS-054
+    category: 一切类排比句
+    content: 一切难题，只有在实干中才能破解；一切机遇，只有在实干中才能把握；一切愿景，只有在实干中才能实现。
+    usage_note: 三一切只有实干，适用于动员实干类讲话结尾
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十五、有关"一切"排比句大全
+
+  - id: GS-055
+    category: 一切类排比句
+    content: 坚决破除一切不合时宜的思想观念，坚决破除一切陈旧落后的思维惯性，坚决破除一切局限禁锢的工作惯性。
+    usage_note: 三坚决破除，适用于改革解放思想类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十五、有关"一切"排比句大全
+
+  - id: GS-056
+    category: 一切类排比句
+    content: 有梦想，有机会，有奋斗，一切美好的东西都能够干出来；有动力，有韧性，有干劲，一切美好的愿望都能变为现实。
+    usage_note: 三有+一切美好，适用于激励奋进类讲话结尾
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 十五、有关"一切"排比句大全
+
+  - id: GS-057
+    category: 一切类排比句
+    content: 解开一切束缚科技创新的绳索，放开一切影响科技创新的羁绊，打开一切制约科技创新的空间。
+    usage_note: 三解放创新束缚，适用于科技创新政策报告
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十五、有关"一切"排比句大全
+
+  # ===== 十六、思想有关排比句 =====
+
+  - id: GS-058
+    category: 思想类排比句
+    content: 破因循守旧思想，立改革创新意识；破封闭狭隘思想，立开放合作意识；破安于现状思想，立开拓奋进意识；破甘于落后思想，立创先争优意识；破畏首畏尾思想，立敢闯敢干意识。
+    usage_note: 五破五立，适用于思想解放类动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十六、思想有关排比句大全
+
+  - id: GS-059
+    category: 思想类排比句
+    content: 理论创新一脉相承，思想武装更要一以贯之；理论创新推进一步，思想武装就要跟进一步；理论创新源自实践，思想武装需要扎根实践。
+    usage_note: 三论理论与思想武装，适用于主题教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十六、思想有关排比句大全
+
+  - id: GS-060
+    category: 思想类排比句
+    content: 坚持解放思想与创新思想相统一，坚持解放思想与统一思想相统一，坚持解放思想与践行思想相统一。
+    usage_note: 三坚持思想统一，适用于思想建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十六、思想有关排比句大全
+
+  # ===== 十七、服务有关排比句 =====
+
+  - id: GS-061
+    category: 服务类排比句
+    content: 以干部"服务指数"换取地方经济"发展指数"，以干部"服务指数"换取企业发展的"质量指数"，以干部"服务指数"换取百姓的"满意指数"。
+    usage_note: 三指数换取，适用于营商环境和服务型政府类讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十七、服务有关排比句大全
+
+  - id: GS-062
+    category: 服务类排比句
+    content: 守本源，树牢服务思想；守本职，强化服务流程；守本分，提供精准服务；守本位，提升服务标准。
+    usage_note: 四守本句式，适用于服务质量建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十七、服务有关排比句大全
+
+  - id: GS-063
+    category: 服务类排比句
+    content: 让注重服务成为一种工作常态，让真心服务成为一种行为习惯，让优质服务成为一种价值追求。
+    usage_note: 三让服务升华，适用于服务能力提升类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十七、服务有关排比句大全
+
+  - id: GS-064
+    category: 服务类排比句
+    content: 围绕大局反映情况、报送信息，围绕大局出谋划策、贡献智慧，围绕大局加强督办、促进落实，围绕大局统筹协调、搞好保障。
+    usage_note: 四围绕大局，适用于办公厅(室)或综合服务类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十七、服务有关排比句大全
+
+  # ===== 十八、群众有关排比句 =====
+
+  - id: GS-065
+    category: 群众类排比句
+    content: 心平气和，群众才能开心；心如磐石，群众才能安心；心口如一，群众才能放心；心甘情愿，群众才能称心。
+    usage_note: 四心四应，适用于群众工作类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 十八、群众有关排比句大全
+
+  - id: GS-066
+    category: 群众类排比句
+    content: 把群众呼声作为"第一信号"，把群众需求作为"第一选择"，把群众利益作为"第一考虑"，把群众满意作为"第一标准"。
+    usage_note: 四第一群众观，高频使用，适用于群众工作各类文种
+    applicable_types: [讲话, 报告, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十八、群众有关排比句大全
+
+  - id: GS-067
+    category: 群众类排比句
+    content: 转作风、强担当，做群众的"贴心人"；沉一线、摸民情，做群众的"知心人"；办实事，解民忧，做群众的"暖心人"。
+    usage_note: 三心人定位，适用于群众工作作风建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十八、群众有关排比句大全
+
+  - id: GS-068
+    category: 群众类排比句
+    content: 在制定政策上更加注重倾听群众呼声，在推动工作上更加注重汲取群众智慧，在遇到难题时更加注重多向群众请教，在落实成效时更加注重接受群众评判。
+    usage_note: 四在更加注重，适用于民主决策类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十八、群众有关排比句大全
+
+  # ===== 十九、坚持有关排比句 =====
+
+  - id: GS-069
+    category: 坚持类排比句
+    content: 坚持以志立本，在立志立行中坚定信念、砥砺前行；坚持以学固本，在勤学勤思中练就本领、提升能力；坚持以为显本，在实干苦干中成就事业、奉献力量；坚持以律正本，在慎独慎微中彰显本色、塑造形象。
+    usage_note: 四坚持以字立本，适用于党员教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十九、坚持有关排比句大全
+
+  - id: GS-070
+    category: 坚持类排比句
+    content: 必须坚持"一盘棋"、打破"小格局"，一切围绕大局转、盯着大局干；必须坚持"一股绳"、打破"小利益"，杜绝各唱各的调、各喊各的号；必须坚持"一条心"、打破"小算盘"，始终心往一处想、劲往一处使。
+    usage_note: 三必须坚持，适用于凝聚力建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十九、坚持有关排比句大全
+
+  - id: GS-071
+    category: 坚持类排比句
+    content: 守初心，坚持知行合一抓落实；担使命，坚持真抓实干抓落实；找差距，坚持聚焦问题抓落实；见实效，坚持结果评价抓落实。
+    usage_note: 四坚持抓落实，适用于落实工作部署讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十九、坚持有关排比句大全
+
+  - id: GS-072
+    category: 坚持类排比句
+    content: 坚持重品德、看实干、讲学习的识人方法；坚持宽视野、高站位、大胸襟的选人政策；坚持有理想、能创新、敢担当的用人导向。
+    usage_note: 三坚持识选用人，适用于干部人事工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 十九、坚持有关排比句大全
+
+  # ===== 二十、精神有关排比句 =====
+
+  - id: GS-073
+    category: 精神类排比句
+    content: 70年开拓创新，中国人民始终弘扬伟大创造精神；70年前仆后继，中国人民始终弘扬伟大奋斗精神；70年抟心揖志，中国人民始终弘扬伟大团结精神；70年铸梦追梦，中国人民始终弘扬伟大梦想精神。
+    usage_note: 四精神弘扬，适用于重要纪念日讲话或政治报告
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十、精神有关排比句大全
+
+  - id: GS-074
+    category: 精神类排比句
+    content: 改革开放精神是革故鼎新的超越精神，是披荆斩棘的革命精神，是敢为人先的创新精神，是只争朝夕的追赶精神，是敢闯敢试的攻坚精神，是脚踏实地的务实精神，是直面难题的担当精神。
+    usage_note: 七精神定义，适用于改革精神弘扬类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十、精神有关排比句大全
+
+  - id: GS-075
+    category: 精神类排比句
+    content: 同舟共济、守望相助的伟大团结精神，立党为公、忠诚为民的伟大奉献精神，开天辟地、敢为人先的伟大创造精神，自强不息、百折不挠的伟大奋斗精神。
+    usage_note: 四精神并列，适用于建党纪念类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十、精神有关排比句大全
+
+  # ===== 二十一、学习有关排比句 =====
+
+  - id: GS-076
+    category: 学习类排比句
+    content: 学习是文明传承之途，学习是人生成长之梯，学习是政党巩固之基，学习是国家兴盛之要。
+    usage_note: 四学习定义，适用于学习教育开篇
+    applicable_types: [讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十一、学习有关排比句大全
+
+  - id: GS-077
+    category: 学习类排比句
+    content: 忠诚信仰的崇高追求来自学习，百折不挠的奋斗精神来自学习，创新求变的胆识勇气来自学习，舍我其谁的责任担当来自学习。
+    usage_note: 四来自学习句式，适用于学习型机关建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十一、学习有关排比句大全
+
+  - id: GS-078
+    category: 学习类排比句
+    content: 学习坚守初心、对党忠诚的政治品格，学习淡泊名利、甘于奉献的精神品质，学习恪尽职守、担当使命的务实作风，学习清廉自守、克己奉公的高尚情操。
+    usage_note: 四学习楷模品质，适用于向先进典型学习类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十一、学习有关排比句大全
+
+  - id: GS-079
+    category: 学习类排比句
+    content: 聚焦教育主题，明确学习专题；聚焦研读原文，强化学习思考；聚焦思想交流，深化学习研讨；聚焦初心使命，丰富学习载体。
+    usage_note: 四聚焦学习安排，适用于主题教育活动方案或讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十一、学习有关排比句大全
+
+  # ===== 二十二、斗争有关排比句 =====
+
+  - id: GS-080
+    category: 斗争类排比句
+    content: 新时代伟大斗争精神，是"为有牺牲多壮志，敢教日月换新天"的坚定信念；是"踏平坎坷成大道，斗罢艰险又出发"的顽强意志；是"花繁柳密拨得开，风狂雨急立得定"的高强本领。
+    usage_note: 三斗争精神+诗句，适用于斗争精神弘扬类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十二、斗争有关排比句大全
+
+  - id: GS-081
+    category: 斗争类排比句
+    content: "敢于斗争"讲的是斗争态度，"善于斗争"讲的是斗争方法，"骨头要硬"讲的是斗争精神，"见微知著"讲的是斗争本领。
+    usage_note: 四斗争要素，适用于斗争精神教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十二、斗争有关排比句大全
+
+  - id: GS-082
+    category: 斗争类排比句
+    content: 中国革命的胜利是靠斗争打出来的，中国建设的业绩是靠斗争干出来的，中国改革的成就是靠斗争闯出来的。
+    usage_note: 三历史斗争论，适用于历史教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十二、斗争有关排比句大全
+
+  - id: GS-083
+    category: 斗争类排比句
+    content: 强化思想淬炼、提升斗争志气，强化政治历练、增强斗争底气，强化实践锻炼、保持斗争锐气。
+    usage_note: 三强化锻炼斗争精神，适用于斗争能力培养类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十二、斗争有关排比句大全
+
+  - id: GS-084
+    category: 斗争类排比句
+    content: 发扬斗争精神，坚守斗争立场，坚定斗争意志，把握斗争规律，讲求斗争艺术，增强斗争本领。
+    usage_note: 六维斗争要素，适用于斗争精神总结性讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十二、斗争有关排比句大全
+
+  # ===== 二十三、廉洁自律有关排比句 =====
+
+  - id: GS-085
+    category: 廉洁自律类排比句
+    content: "心中有戒"才不"胡思乱想"，"心中有戒"才不"胡言乱语"，"心中有戒"才不"胡作非为"。
+    usage_note: 三心中有戒，适用于廉政自律类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十三、廉洁自律有关排比句大全
+
+  - id: GS-086
+    category: 廉洁自律类排比句
+    content: 政治账——自毁前程；经济账——倾家荡产；名誉账——身败名裂；家庭账——妻离子散；亲情账——众叛亲离；自由账——身陷囹圄；健康账——身心憔悴。
+    usage_note: 七账警示，适用于廉政警示教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十三、廉洁自律有关排比句大全
+
+  - id: GS-087
+    category: 廉洁自律类排比句
+    content: 从人生角度讲，一步很短，一生很长，走错一步，影响一生；从廉洁方面讲，防一念之差、一时糊涂、一着不慎，保一路清醒、一世廉洁、一生平安。
+    usage_note: 一步一生廉洁哲理，适用于廉政教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十三、廉洁自律有关排比句大全
+
+  - id: GS-088
+    category: 廉洁自律类排比句
+    content: 筑牢思想根基，补足精神之钙，高扬信念之帆，把牢思想之舵，校准思想之标，绷紧纪律之弦，调整行为之舵。
+    usage_note: 七维度廉洁修炼，适用于主题教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十三、廉洁自律有关排比句大全
+
+  # ===== 二十四、党性修养有关排比句 =====
+
+  - id: GS-089
+    category: 党性修养类排比句
+    content: 在知行合一中砥砺党性修养，增添学识的成色；在格物致知中坚定理想信念，擦亮学识的底色；在学以致用中贡献智慧力量，展现学识的本色。
+    usage_note: 三在+学识色彩，适用于党员学习教育类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十四、党性修养有关排比句大全
+
+  - id: GS-090
+    category: 党性修养类排比句
+    content: 上好党性修养课，筑牢信仰之基；上好政德修养课，打牢从政之基；上好纪律规矩课，夯实廉政之基；上好基本知识课，强化能力之基。
+    usage_note: 四课四基，适用于党员培训或教育活动讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十四、党性修养有关排比句大全
+
+  - id: GS-091
+    category: 党性修养类排比句
+    content: 坚定不移把住理想信念的"方向灯"，坚定不移把党性修养的"方向盘"，坚定不移把牢政治规矩的"方向标"。
+    usage_note: 三方向比喻，适用于党性教育主旨讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十四、党性修养有关排比句大全
+
+  - id: GS-092
+    category: 党性修养类排比句
+    content: 党的路线方针政策的坚决执行者，党的纪律规矩的有力维护者，团结带领群众干事创业的时代先行者。
+    usage_note: 三者定位，适用于党员干部定位类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十四、党性修养有关排比句大全
+
+  - id: GS-093
+    category: 党性修养类排比句
+    content: 抓住了思想政治建设的"根"，党性才能有力量、立得住；抓住了思想政治建设的"魂"，党性才能有活力、有方向。
+    usage_note: 根魂二喻党性，适用于党性修养讲话开篇
+    applicable_types: [讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 二十四、党性修养有关排比句大全

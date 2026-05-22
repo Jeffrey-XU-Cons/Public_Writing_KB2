@@ -1,0 +1,471 @@
+# 内容质量规则集
+# 来源：AI写材料手册第13章《常见问题与误区》
+# 生成日期：2026-03-15
+
+meta:
+  version: "1.0"
+  source_chapter: "AI写材料手册第13章"
+
+rules:
+
+  # ===== logic：逻辑层次问题检测 =====
+
+  - id: CQ-001
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 段落主题句明确性
+    check_question: "文档各段落是否有明确的主题句？主题句与段落内容是否吻合？"
+    pass_criteria: |
+      每个段落开头或结尾有1句清晰的主题句，能够概括本段核心内容；
+      段落内的其他句子均服务于主题句的论证或展开；
+      读者能通过主题句串联出全文的逻辑主线。
+    fail_example: |
+      某段文字大篇幅描述工作过程，但缺少总括句，
+      读者读完也不清楚这段话要表达的核心观点是什么。
+    fix_suggestion: "在段落开头加1句总括性主题句，或在段尾加1句总结句，点明段落核心。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-002
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 因果关系成立性
+    check_question: '文中的因果关系是否成立？"因此""由于"等连接词前后逻辑是否自洽？'
+    pass_criteria: |
+      使用"因此""由于""所以""因为"等因果连接词时，
+      原因与结果之间确实存在直接的因果关系；
+      因果链条完整，没有跳跃性推断；
+      原因部分能有效解释结果的产生。
+    fail_example: |
+      "由于深入推进改革创新、加强科技攻关、优化营商环境，
+      因此群众满意度提升。"（因果链条不完整，改革创新等与群众满意度
+      之间缺乏直接传导机制说明）
+    fix_suggestion: |
+      补充连接改革措施与群众满意度之间的传导机制，
+      如"由于……改善了民生服务质量、提升了公共服务水平，因此群众满意度提升"。
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-003
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 并列项目同层级检验
+    check_question: "文中并列排列的事项（一是…二是…/首先…其次…等）是否属于同一层级的概念？"
+    pass_criteria: |
+      并列的各项目属于同一抽象层次，不存在上位概念与下位概念并列的情况；
+      各项目之间相互独立，没有包含关系；
+      各项目在重要性和篇幅上基本均衡。
+    fail_example: |
+      "重点做好三项工作：一是党建引领，二是支部标准化建设，三是发展党员。"
+      （"支部标准化建设"和"发展党员"均是"党建引领"的下位概念，不宜并列）
+    fix_suggestion: "将下位概念归入对应的上位概念下作为子项，或用同层级概念替换。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-004
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 总分结构对应性
+    check_question: "文中的总说和分说是否完全对应？总括句提到几项，下文是否逐一展开？"
+    pass_criteria: |
+      总括句提到N项内容，后文恰好有N个并列段落分别展开；
+      各分项的内容与总括句中对应的表述语义匹配；
+      不存在总说提到但分说遗漏，或分说有但总说未提及的情况。
+    fail_example: |
+      开头总括"取得了三方面成效"，但后文实际只展开了两方面，
+      或展开的内容与总括所列的三方面不对应。
+    fix_suggestion: "对照总括句与各分项，补充缺失项，或修改总括句与实际内容对齐。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-005
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 论点与论据匹配性
+    check_question: "文中的每个主要观点是否都有充分的论据支撑？观点与支撑材料是否匹配？"
+    pass_criteria: |
+      每个重要论点至少有1个具体事例或数据支撑；
+      所举事例与论点语义匹配，能有效证明论点；
+      不存在用无关案例支撑不相关论点的情况。
+    fail_example: |
+      提出"我市营商环境大幅改善"的论点，但后文只引用了一个企业注册时间
+      缩短的案例，缺乏多维度的支撑（政务效率、市场准入、法治保障等）。
+    fix_suggestion: "为每个核心论点补充2-3个具体案例或数据，确保论据充分且与论点匹配。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-006
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 结构比例合理性（头重脚轻问题）
+    check_question: "文章各部分的比例是否合理？是否存在'头重脚轻'或'虎头蛇尾'问题？"
+    pass_criteria: |
+      成绩总结部分占全文比例不超过50%；
+      问题分析与下步打算合计不少于30%；
+      结尾部分有实质内容，不是一两句话草草收场。
+    fail_example: |
+      工作汇报中，成绩总结洋洋洒洒占了全文75%，
+      问题部分一笔带过，下步打算只有"下一步我们将继续努力"一句话。
+    fix_suggestion: "适当压缩成绩叙述篇幅，扩充问题分析的深度，下步打算要具体化、可检验。"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-007
+    type: llm_review
+    category: content_quality
+    sub_category: logic
+    title: 层次标题与内容匹配性
+    check_question: "各层级标题是否准确概括了该部分的实际内容？标题与正文是否存在'名实不符'？"
+    pass_criteria: |
+      每个标题能够准确概括其下方正文内容的核心；
+      正文内容不超出标题的范畴（不偏题）；
+      不同标题之间的内容没有重复。
+    fail_example: |
+      标题为"加强组织领导"，但下方正文主要讲的是资金保障和时间节点，
+      与"组织领导"关系不大。
+    fix_suggestion: "根据正文实际内容修改标题，使标题与内容准确对应。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  # ===== empty_talk：空话套话检测 =====
+
+  - id: CQ-008
+    type: auto_detect
+    category: content_quality
+    sub_category: empty_talk
+    title: '"高度重视"类套话检测'
+    check_question: "文中是否频繁使用'高度重视''充分认识''深刻认识'等套话，且后续无实质内容？"
+    pass_criteria: |
+      "高度重视"后须跟具体的工作举措或保障措施；
+      "充分认识"后须跟实质性的认识内容；
+      此类表述在全文中出现频次不超过2次。
+    fail_example: |
+      "各部门要高度重视，充分认识重要性，切实加强领导，确保取得实效。"
+      （四个动词短语均是套话，无任何实质内容）
+    fix_suggestion: "删除或合并套话，换为具体的工作举措，如：'各部门须于X月X日前完成……'"
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-009
+    type: auto_detect
+    category: content_quality
+    sub_category: empty_talk
+    title: 千篇一律开头检测
+    check_question: "文章开头是否使用了毫无针对性的套话开头，如'在新形势下''众所周知''近年来……在……领导下'？"
+    pass_criteria: |
+      开头段落至少含有1个与本文具体主题相关的特定信息
+      （具体时间、具体事件、具体背景、具体数字）；
+      开头不是可以套用于任何同类材料的通用表述。
+    fail_example: |
+      "在当前新形势下，随着经济社会的快速发展，XX工作面临新的机遇和挑战。
+      近年来，在上级领导的关心支持下，我单位认真贯彻落实……"
+    fix_suggestion: "用具体场景、时间节点、重要数据或政策背景切入，增加针对性。"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-010
+    type: auto_detect
+    category: content_quality
+    sub_category: empty_talk
+    title: 公式化结尾检测
+    check_question: "文章结尾是否使用了无差别的套话结尾，可以套用于任何同类材料？"
+    pass_criteria: |
+      结尾段落包含与本文具体内容呼应的元素；
+      有明确的要求、号召或展望，与文章主题紧密相关；
+      结尾不是"总之，我们要进一步提高认识，强化措施，确保取得实效"类通用表述。
+    fail_example: |
+      "让我们携手共进，开拓创新，为实现高质量发展目标而努力奋斗！"
+      （可以套用于任何材料，与正文无呼应关系）
+    fix_suggestion: "结尾重申文章的核心要求或核心目标，并提出具体的行动号召。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-011
+    type: llm_review
+    category: content_quality
+    sub_category: empty_talk
+    title: '"正确的废话"检测'
+    check_question: "文中是否存在大量正确但无信息量的套话，虽然正确却没有针对性？"
+    pass_criteria: |
+      每段话都包含针对本单位、本地区实际情况的具体表述；
+      一般性政治表述和政策引用之后，须有结合本地实际的阐释；
+      全文中纯粹通用性表述（可套用于任何同类单位）占比不超过20%。
+    fail_example: |
+      整段文字都是"坚持以人民为中心的发展思想""发展是第一要务""人才是第一资源"
+      等普适性表述，没有结合本单位具体情况的阐述。
+    fix_suggestion: "在每条通用性政策表述后，补充本单位的具体做法、案例或数据加以印证。"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-012
+    type: llm_review
+    category: content_quality
+    sub_category: empty_talk
+    title: 措施部分可操作性
+    check_question: "文中的工作措施是否具体可操作？是否都是模糊的方向性表述？"
+    pass_criteria: |
+      每项工作措施至少包含以下要素之一：责任主体、时间节点、量化目标；
+      措施表述能够回答"谁来做、做什么、什么时候做完"；
+      不存在"进一步加强""继续深化""持续推进"等无法量化执行的空话措施。
+    fail_example: |
+      方案中的保障措施写道："进一步加强组织领导，持续深化改革攻坚，
+      不断提升工作效能。"（无主体、无时限、无可量化目标）
+    fix_suggestion: "将措施改为'[责任单位]于[时间]前完成[具体事项]，达到[量化目标]'的格式。"
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-013
+    type: llm_review
+    category: content_quality
+    sub_category: empty_talk
+    title: 面面俱到但无深度问题
+    check_question: "文章是否面面俱到地提到了各个方面，但每个方面都只是蜻蜓点水，缺乏深度分析？"
+    pass_criteria: |
+      重点工作应有深度展开（至少200字以上实质内容）；
+      材料聚焦于2-4个核心点，而非平均分配到10个以上方面；
+      能够体现独特做法和创新点，而非仅列举工作名称。
+    fail_example: |
+      汇报材料中，政务服务、市场准入、法治环境、融资环境、人才环境等
+      各方面均有提及，但每方面只有1-2句话，无实质内容。
+    fix_suggestion: "选择2-3个最重要的方面深入展开，其余简要带过，避免'什么都有、什么都没有'。"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-014
+    type: auto_detect
+    category: content_quality
+    sub_category: empty_talk
+    title: 机械化过渡语检测
+    check_question: "文中是否频繁使用套路化、无实质信息的过渡语？"
+    pass_criteria: |
+      "与此同时""另一方面""不仅如此""值得注意的是""需要指出的是"
+      等过渡语在同一文章中总出现频次不超过3次；
+      每次出现后须引出真正有价值的新信息，而非仅是过渡空话。
+    fail_example: |
+      "与此同时，我们还加强了相关工作。另一方面，问题同样存在。
+      不仅如此，挑战也不容忽视。"（每个过渡语后都没有实质信息）
+    fix_suggestion: "删除多余的过渡语，或在过渡语后直接写出具体内容。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  # ===== data_support：数据支撑检查 =====
+
+  - id: CQ-015
+    type: llm_review
+    category: content_quality
+    sub_category: data_support
+    title: 成效表述须有数据支撑
+    check_question: "文中'大幅提升''显著改善''明显增长''大幅度进步'等成效表述是否均有数据支撑？"
+    pass_criteria: |
+      出现"大幅""显著""明显""大幅度""翻倍""跃升"等程度性表述时，
+      后方须有具体数字或百分比印证；
+      数字须注明统计来源（如"据统计局数据""同比""环比"等）。
+    fail_example: |
+      "今年以来，我市营商环境大幅改善，企业满意度显著提升，
+      市场主体活力明显增强。"（三个成效表述均无数据支撑）
+    fix_suggestion: "用具体数字替换模糊的程度副词，如：'企业满意度提升至92%（较去年提高8个百分点）'。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-016
+    type: llm_review
+    category: content_quality
+    sub_category: data_support
+    title: 数据来源可追溯性
+    check_question: "文中引用的数据是否可以追溯来源？是否存在来源不明的数据？"
+    pass_criteria: |
+      统计数据须说明来源（统计部门、调查机构、官方年报等）；
+      数据须注明统计时间（年度、季度等）和统计口径；
+      排名类表述须注明评定机构和评定时间。
+    fail_example: |
+      "我市已成为全国营商环境前十名城市，企业满意度达到95%以上。"
+      （未注明排名评定机构和调查来源）
+    fix_suggestion: "标注数据来源：'据××机构发布的××报告显示（发布时间）……'"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-017
+    type: llm_review
+    category: content_quality
+    sub_category: data_support
+    title: 同一数据前后一致性
+    check_question: "同一份材料中，同一事项的数据在不同位置出现时是否完全一致？"
+    pass_criteria: |
+      相同事项的数字在全文中保持一致（同一GDP增速、同一企业数量等）；
+      不存在同一数据前后矛盾（如第4段写"增长8.5%"，第9段写"增长8.3%"）；
+      增长率等计算数据须与基数数据逻辑自洽。
+    fail_example: |
+      "第4段：上半年GDP同比增长8.5%；第9段：上半年经济增速为8.3%。"
+      （同一数据前后矛盾）
+    fix_suggestion: "统一核查全文数据，与权威来源核对后统一数值，消除前后矛盾。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-018
+    type: llm_review
+    category: content_quality
+    sub_category: data_support
+    title: 排他性表述须有依据
+    check_question: "文中'全国领先''全省首家''全市率先''历史最好'等排他性表述是否有客观依据？"
+    pass_criteria: |
+      "全国领先/先进"须有权威机构认定或可比数据支撑；
+      "首家/率先"须有明确的时间节点和可核实的记录；
+      若无法核实，应改为"较为领先""走在前列"等非排他性表述。
+    fail_example: |
+      "我市企业开办时间压缩至1个工作日，达到全国领先水平。"
+      （若无全国比较数据，"领先"表述过于绝对）
+    fix_suggestion: "核查是否有权威比较数据，有则注明来源；无则改为'达到全国先进水平'或'居全省前列'。"
+    applicable_types: ["汇报", "报告", "讲话"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-019
+    type: llm_review
+    category: content_quality
+    sub_category: data_support
+    title: 数据时效性检验
+    check_question: "文中引用的数据是否为最新有效数据？是否存在使用过时数据的情况？"
+    pass_criteria: |
+      统计数据须为最新公布的官方数据（通常为最近一个统计周期）；
+      不得引用明显过时的数据（如年度报告中使用两年前的统计数据）；
+      预测数据须注明来源和预测时间。
+    fail_example: |
+      "2024年工作报告中引用的GDP数据仍为2022年数字"或
+      "我市营商环境评分基于去年评估结果"。
+    fix_suggestion: "更新数据至最新统计周期，或在引用时注明数据年份（如'据2024年统计'）。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  # ===== policy_citation：政策引用准确性 =====
+
+  - id: CQ-020
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: 政策文件引用完整性
+    check_question: "文中引用上级政策文件时，文件名称是否完整准确？是否使用了规范的全称？"
+    pass_criteria: |
+      正式政策文件名称须使用全称（含发文机关、标题、文号）；
+      不得随意省略文件名中的关键词（如"条例""办法""意见"等）；
+      首次引用须用全称，后文引用可用简称但须保持一致。
+    fail_example: |
+      "根据国务院的规定，企业开办流程已大幅简化。"
+      （未注明具体文件名称和文号）
+    fix_suggestion: "补充具体文件全称，如'根据《国务院关于优化营商环境的若干意见》（国发〔20XX〕X号）'"
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知"]
+    severity: warning
+    source: "AI写材料手册第13章"
+
+  - id: CQ-021
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: 政策表述与原文一致性
+    check_question: "文中引用的政策内容是否与原文件一致？是否存在断章取义或曲解原意的情况？"
+    pass_criteria: |
+      引用政策条文的核心含义须与原文件保持一致；
+      不得选择性引用导致对政策的误读；
+      如需简化表述，须保留政策的核心约束条件。
+    fail_example: |
+      "原文：在全面履行法定职责、维护消费者权益的前提下，
+      可以适当简化审批程序。"
+      引用时写成："可以简化审批程序。"（省略了前提条件）
+    fix_suggestion: "引用政策时保留关键约束条件，避免断章取义，重要政策须对照原文核实。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-022
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: 政策有效性确认
+    check_question: "文中引用的政策是否仍然有效？是否存在引用已废止或已被新政策替代的内容？"
+    pass_criteria: |
+      引用的政策文件须确认仍在有效期内；
+      不得引用已明确废止的文件；
+      若原政策已有更新版本，须引用最新版本。
+    fail_example: |
+      引用的"三大攻坚战"表述时，未注明这是特定历史时期的提法，
+      现在已进入新阶段，相关表述有所调整。
+    fix_suggestion: "核查引用政策的现行有效状态，确认是否有更新版本，按最新政策表述。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-023
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: 层级政策引用规范
+    check_question: "引用上级精神的层级逻辑是否正确？是否出现层级混乱（地方在上、中央在下）的情况？"
+    pass_criteria: |
+      引用政策文件时遵循"中央→省→市→县"的层级顺序；
+      不能"根据我市要求，为贯彻落实国务院……"（地方要求在前）；
+      应先引用上位政策，再引用本级部署。
+    fail_example: |
+      "根据我市关于贯彻落实习近平总书记重要讲话精神的要求……"
+      （层级关系颠倒，应先提中央精神，再提地方贯彻要求）
+    fix_suggestion: "调整为'为深入贯彻落实习近平总书记重要讲话精神，根据市委部署要求……'"
+    applicable_types: ["汇报", "报告", "讲话", "方案", "通知"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-024
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: 人物职务信息时效性
+    check_question: "文中涉及领导职务和人员信息是否为当前现行的准确信息？"
+    pass_criteria: |
+      所有领导职务须为当前任职，不得使用已离任领导的职务；
+      人员分工信息须与当前的职责划分一致；
+      不得将已调整的岗位职责说成当前情况。
+    fail_example: |
+      "分管副市长张某亲自部署……"（但张某已于去年调任，现已非分管副市长）
+    fix_suggestion: "核查所有人员职务信息的时效性，确认为当前任职情况。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"
+
+  - id: CQ-025
+    type: llm_review
+    category: content_quality
+    sub_category: policy_citation
+    title: AI生成数据地方性核查
+    check_question: "材料中是否存在AI可能将其他地区的政策/数据误安在本地的情况？"
+    pass_criteria: |
+      文中所有地方性数据（本市/本省/本单位的具体数字）须与本地实际一致；
+      荣誉称号（如"全国文明城市"等）须与本地实际获得的称号一致；
+      经验做法须为本地实际推行的，不得将外地做法说成本地做法。
+    fail_example: |
+      "我市作为全国文明城市，已连续三届蝉联……"
+      （若本市只是省级文明城市，此表述严重错误）
+    fix_suggestion: "逐一核查地方性信息（荣誉、数据、做法）的真实性，与本地档案资料比对。"
+    applicable_types: ["汇报", "报告", "讲话", "方案"]
+    severity: error
+    source: "AI写材料手册第13章"

@@ -1,0 +1,712 @@
+# 语言风格规则集
+# 来源：AI写材料手册第10章《文稿润色与优化技巧》
+# 生成日期：2026-03-15
+
+meta:
+  version: "1.0"
+  source_chapter: "AI写材料手册第10章"
+
+rules:
+
+  # ===== oral_to_formal：口语→公文转换规则 =====
+
+  - id: LS-001
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: 禁用"搞"字口语用法
+    description: |
+      "搞"是典型的口语动词，在公文中应根据语义替换为"做好""推进""开展"
+      "落实""推动"等规范表述。"搞好"→"做好"，"搞清楚"→"明确/理清"，
+      "搞活动"→"开展活动"。
+    pattern: "检测：'搞[好|清楚|活动|建设|工作|工程|项目|关系]'"
+    replacement: "做好/明确/开展活动/推进建设/做好工作/推进工程/推进项目/协调关系"
+    examples:
+      wrong: "要大力搞好营商环境，搞清楚企业的诉求。"
+      correct: "要大力优化营商环境，深入了解企业的实际诉求。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-002
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: 禁用"弄"字口语用法
+    description: |
+      "弄"在公文中通常为口语化表达，应替换为具体的规范动词。
+      "弄清楚"→"查明/厘清"，"弄好"→"做好/办好"，"弄明白"→"搞清/明确"。
+    pattern: "检测：'弄[清楚|好|明白|出来|一下]'"
+    replacement: "查明/厘清/做好/明确"
+    examples:
+      wrong: "要弄清楚问题的根源，弄好配套政策。"
+      correct: "要查明问题的根源，完善配套政策。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-003
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"老百姓"→"人民群众/广大群众"'
+    description: |
+      "老百姓"是口语化说法，正式公文中应使用"人民群众""广大群众"
+      "广大人民""广大市民"等规范表述。
+      注意：在讲话稿中营造亲和力时，可酌情保留，但须经审核确认。
+    pattern: "检测正则：老百姓"
+    replacement: "人民群众/广大群众"
+    examples:
+      wrong: "要让老百姓过上好日子。"
+      correct: "要不断增进人民群众的获得感、幸福感、安全感。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-004
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"抓好"后不接宾语的不规范用法'
+    description: |
+      "抓好"可单独用作谓语，但在正式公文中宜用更庄重的表述。
+      "切实抓好"可以保留，但单独的"抓好XX工作"在行文较庄重时
+      应改为"切实推进""深入推进""扎实推进""有力推进"等。
+    pattern: "检测：'\\b抓好(?!落实)' 且语境为庄重型公文"
+    replacement: "切实推进/深入推进/扎实推进"
+    examples:
+      wrong: "各单位要抓好学习贯彻工作。"
+      correct: "各单位要切实推进学习贯彻工作。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-005
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"干好"→"做好/完成好"'
+    description: |
+      "干好"是偏口语化动词，公文中应用"做好""完成好""推进好""落实好"等替代。
+    pattern: "检测：'干好[\\S]*工作'"
+    replacement: "做好/完成好/落实好"
+    examples:
+      wrong: "各部门要干好本职工作。"
+      correct: "各部门要切实履职尽责、做好本职工作。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-006
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"出问题"→"出现问题/发生问题"'
+    description: |
+      "出问题"是典型口语，公文中应使用"出现问题""存在问题""产生问题"
+      "发生问题"等规范表述。
+    pattern: "检测：'出了问题|出问题|容易出问题'"
+    replacement: "出现问题/存在问题/出现偏差"
+    examples:
+      wrong: "如果出了问题，要及时反映。"
+      correct: "如出现问题，应及时向上级报告。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-007
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"有问题"→"存在问题/存在不足"'
+    description: |
+      表述客观存在的不足时，"有问题"应改为"存在问题""存在不足""存在差距"，
+      更符合公文庄重严谨的风格。
+    pattern: "检测：'[还|仍|目前]有问题|有[\\S]*问题'"
+    replacement: "存在问题/存在一定差距/存在不足"
+    examples:
+      wrong: "工作中还有一些问题。"
+      correct: "工作中还存在一些问题和不足。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-008
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"提高质量"→"提升质量"'
+    description: |
+      "提高"与"质量"的搭配不够准确，"质量"应用"提升"，
+      "水平"可用"提升"，数量类指标用"提高"（如"提高比例""提高速度"）。
+    pattern: "检测：'提高[\\S]*质量'"
+    replacement: "提升质量"
+    examples:
+      wrong: "要提高材料写作质量。"
+      correct: "要提升材料写作质量。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-009
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: 主语残缺："通过……使/提高/达到"句式
+    description: |
+      "通过……提高了/实现了/使……"是典型的主语残缺句式，
+      "通过"后的介词短语不能作主语，需补充主语或改变句式结构。
+    pattern: "检测：'^通过[^，。]{2,20}，[提高|实现|达到|确保|推动]'"
+    replacement: "补充主语，或改为'通过……我们实现了……'"
+    examples:
+      wrong: "通过深化改革，提高了治理效能。"
+      correct: "通过深化改革，我们切实提升了社会治理效能。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-010
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"想了很多办法"→"积极探索多元路径"'
+    description: |
+      模糊、口语化的"想了很多办法/采取了很多措施"在公文中应改为
+      具体的"积极探索""多措并举""综合施策"等规范表述。
+    pattern: "检测：'想了[很多|不少|多种|各种]办法|采取了[很多|不少]措施'"
+    replacement: "积极探索/多措并举/综合施策"
+    examples:
+      wrong: "我们想了很多办法，采取了不少措施。"
+      correct: "我们积极探索创新路径，多措并举、综合施策。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-011
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"不少"→"一定数量/若干"'
+    description: |
+      "不少"是口语化量词，公文中应使用"一定数量""若干""较多""相当数量"等表述。
+    pattern: "检测：'不少[\\S]*|有不少'"
+    replacement: "若干/一定数量的/相当数量的"
+    examples:
+      wrong: "目前已有不少企业表示愿意参与。"
+      correct: "目前已有若干企业表示参与意向。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-012
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"挺好/挺不错"等程度副词口语化'
+    description: |
+      "挺""蛮""还挺""挺不错""很给力"等口语程度副词不得出现在公文中，
+      应改为"较为""比较""相当""颇为"等书面程度副词。
+    pattern: "检测：'挺[好|不错|有用|重要]|蛮[好|有效|重要]|很给力'"
+    replacement: "较为/比较/相当/颇为"
+    examples:
+      wrong: "这项举措挺有成效。"
+      correct: "这项举措成效显著。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-013
+    type: auto_detect
+    category: language_style
+    sub_category: oral_to_formal
+    title: '"还不够"→"仍有差距/尚需提升"'
+    description: |
+      表述工作不足时，"还不够""做得还不好"等口语化表述应改为
+      "仍有差距""尚有不足""还需加强""亟待改进"等规范表述。
+    pattern: "检测：'还不够[\\S]*|做得还不好|做的不到位'"
+    replacement: "仍有差距/尚有不足/亟待改进"
+    examples:
+      wrong: "目前这方面工作做得还不够好。"
+      correct: "目前这方面工作仍有较大改进空间，亟待加强。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  # ===== redundancy：冗余表述删减规则 =====
+
+  - id: LS-014
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: '"进行了+动词"冗余结构简化'
+    description: |
+      "进行了讨论/研究/检查/整改/部署"等"进行了+动词名词"结构冗余，
+      可直接用动词表达："讨论了/研究了/检查了/整改了/部署了"。
+    pattern: "检测：'进行了[讨论|研究|检查|整改|部署|审议|学习|分析]'"
+    replacement: "直接用动词过去式：讨论了/研究了/检查了等"
+    examples:
+      wrong: "会议对该问题进行了讨论。"
+      correct: "会议讨论了该问题。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-015
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: '"给予了支持"→"给予支持"'
+    description: |
+      "给予了支持/给予了帮助/给予了指导"中的"了"字冗余，
+      公文中"给予"通常不加"了"，直接用"给予支持"即可。
+    pattern: "检测：'给予了[支持|帮助|指导|鼓励|肯定]'"
+    replacement: "去掉'了'字：给予支持/给予帮助等"
+    examples:
+      wrong: "上级部门给予了大力支持。"
+      correct: "上级部门给予大力支持。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-016
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: '"作出了重要指示"→"作出重要指示"'
+    description: |
+      固定搭配"作出重要指示/批示/部署"后不加"了"，
+      这是公文规范用法，加"了"显得不规范。
+    pattern: "检测：'作出了[重要|明确|专门|具体]'"
+    replacement: "去掉'了'字：作出重要指示/作出明确要求"
+    examples:
+      wrong: "市委书记作出了重要批示。"
+      correct: "市委书记作出重要批示。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-017
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: 重复叠加的程度副词删减
+    description: |
+      "非常十分重要""极为非常关键""十分非常紧迫"等双重程度副词叠加属于冗余，
+      应删除其中一个，保留语气更强的即可。
+    pattern: "检测：'[非常|十分|极为|极其][非常|十分|极为|极其]'"
+    replacement: "保留一个程度副词即可"
+    examples:
+      wrong: "这项工作非常十分重要。"
+      correct: "这项工作十分重要。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-018
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: '"大力大力"等动词副词重复删减'
+    description: |
+      同一句子中连续出现相同的副词或动词（如"大力大力""继续继续""深入深入"），
+      属于明显的冗余错误，应删除重复项。
+    pattern: "检测同一词语在同一句中重复出现（间距≤5字符）"
+    replacement: "删除重复词语，保留一个"
+    examples:
+      wrong: "我们要继续继续做好各项工作。"
+      correct: "我们要继续做好各项工作。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-019
+    type: llm_review
+    category: language_style
+    sub_category: redundancy
+    title: 正文段落内容重复检测
+    description: |
+      同一份材料中，不同段落出现高度相似的表述（意思重复），
+      会使材料显得臃肿、逻辑混乱。典型表现：第二部分与第三部分
+      内容高度重叠，或开头总述后各分项重复叙述相同内容。
+    pattern: "AI检测：识别语义高度相似（>70%）的段落对，提示可能存在内容重复"
+    replacement: "合并重复内容，或调整结构使各段落侧重点不同"
+    examples:
+      wrong: |
+        第二部分：深化体制机制改革，推动高质量发展……
+        第三部分：持续深化改革，不断推动高质量发展……（内容高度重叠）
+      correct: "第二部分写体制机制，第三部分写具体措施，各有侧重"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-020
+    type: auto_detect
+    category: language_style
+    sub_category: redundancy
+    title: '"充分认识……的重要性/必要性"套话检测'
+    description: |
+      "充分认识……的重要性""深刻认识……的必要性"等句式作为引导语，
+      如果后续正文并未展开深度分析，则属于虚头巴脑的套话冗余。
+    pattern: "检测：'充分认识[\\S]*的重要性' 且该句后无展开论述"
+    replacement: "若后续无实质论述，删除或合并；若有展开则保留"
+    examples:
+      wrong: "各部门要充分认识这项工作的重要性。（全段仅此一句）"
+      correct: "各部门要深刻认识这项工作的重要性：当前……，必须……"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  # ===== parallelism：排比句/四字格使用规则 =====
+
+  - id: LS-021
+    type: llm_review
+    category: language_style
+    sub_category: parallelism
+    title: 排比句各项须同层级概念
+    description: |
+      排比句中的各项要素必须属于同一概念层级，不能将上位概念与下位概念
+      并列排列。如"党建工作、基层治理、支部建设"中，"支部建设"属于"党建工作"
+      的下位概念，不能并列。
+    pattern: "AI分析排比结构（'一是…二是…三是…'/'首先…其次…最后…'等），
+              判断各项是否属于同层级概念"
+    replacement: "调整至同层级，或将下位概念归入对应的上位概念下"
+    examples:
+      wrong: "我们重点做好三项工作：一是党建引领，二是支部标准化建设，三是发展党员。"
+      correct: |
+        "我们重点做好三项工作：一是党建引领，二是基层治理，三是队伍建设。
+        （支部建设、发展党员均属于党建引领，不宜与其并列）"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-022
+    type: llm_review
+    category: language_style
+    sub_category: parallelism
+    title: 排比句结构须平行对称
+    description: |
+      排比各项应使用相同的句法结构，不能"动宾结构"与"主谓结构"混用。
+      如"加强党建、提升服务能力、领导班子团结"结构不平行
+      （前两项动宾，最后一项主谓）。
+    pattern: "AI分析排比各项的句法结构，检测是否存在动宾/主谓/名词结构混用"
+    replacement: "统一排比各项的句法结构，可全部改为动宾或全部改为名词短语"
+    examples:
+      wrong: "要在三个方面下功夫：一是加强党建，二是提升服务能力，三是领导班子更加团结。"
+      correct: "要在三个方面下功夫：一是加强党建，二是提升服务能力，三是增强班子团结。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-023
+    type: llm_review
+    category: language_style
+    sub_category: parallelism
+    title: 递进式排比须体现层层深入
+    description: |
+      使用"不仅……而且……更是……"或"从……到……再到……"的递进排比时，
+      各项必须体现层次的深入或范围的扩大，不能是同等程度的并列关系。
+    pattern: "AI分析'不仅……而且……'等递进连接词，检测是否真正体现递进关系"
+    replacement: "确保递进层次清晰，后项比前项在范围、程度或层次上有所深入"
+    examples:
+      wrong: "这不仅提升了工作效率，而且提升了工作质量。（两项同等程度，无递进）"
+      correct: "这不仅提升了工作效率，而且显著提升了工作质量，更推动了整体工作迈上新台阶。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-024
+    type: llm_review
+    category: language_style
+    sub_category: four_char
+    title: 四字格词组应语义明确、搭配恰当
+    description: |
+      公文中使用四字格词组要语义明确，不能生造晦涩词汇。
+      "动力引擎""定盘星""压舱石""牛鼻子""主战场"等有固定用法的比喻性四字格
+      须用在合适的语境。不能将"压舱石"用于轻量级工作，不能将"牛鼻子"泛化使用。
+    pattern: "AI识别文中的四字格比喻词（压舱石/定盘星/牛鼻子/主战场/排头兵等），
+              判断是否用在对应的语境和量级中"
+    replacement: "根据实际语境选用合适的比喻性四字格"
+    examples:
+      wrong: "打扫卫生是我们工作的'牛鼻子'和'压舱石'。"
+      correct: "党建引领是各项工作的'定盘星'；项目建设是经济发展的'主战场'。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-025
+    type: llm_review
+    category: language_style
+    sub_category: four_char
+    title: 四字格使用不宜过度堆砌
+    description: |
+      公文中四字格词组可以增强文采和节奏感，但过度堆砌会导致内容空泛、
+      形式大于内容。通常同一段落中连续出现5个以上四字格时，
+      应检查是否每个四字格都有实质内容支撑。
+    pattern: "统计同一段落中连续四字格词组的数量，超过5个时提示"
+    replacement: "保留关键四字格，其余改为具体描述语"
+    examples:
+      wrong: "全市上下凝心聚力、真抓实干、攻坚克难、砥砺前行、蹄疾步稳、奋勇争先、创新突破、再创佳绩。"
+      correct: "全市上下凝心聚力、真抓实干，以实际行动和工作成效迎接新挑战。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-026
+    type: llm_review
+    category: language_style
+    sub_category: four_char
+    title: 标题使用四字格对仗要求
+    description: |
+      层级标题使用四字格时，同级各标题应在字数和结构上保持一致，
+      体现对仗美感。不能同级标题有的四字格、有的七八个字，参差不齐。
+    pattern: "AI检测同级标题（一、二、三……）的字数和结构一致性"
+    replacement: "统一同级标题格式，或全部四字格，或全部动宾短语"
+    examples:
+      wrong: |
+        "一、守正创新取得新成效
+         二、存在一些制约高质量发展的问题
+         三、下步打算"
+      correct: |
+        "一、守正创新，取得发展新成效
+         二、直面问题，找准制约发展短板
+         三、精准发力，推动工作再上台阶"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  # ===== forbidden：公文禁用表述清单 =====
+
+  - id: LS-027
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止使用网络流行语
+    description: |
+      公文中严禁出现网络流行语，包括但不限于：
+      "给力""点赞""神操作""YYDS""绝绝子""破防""全网""刷屏"
+      "打call""内卷""躺平""卷王""整活"等。
+    pattern: "检测词典：给力|点赞|神操作|YYDS|绝绝子|破防|全网刷屏|打call|内卷|躺平|整活|爆款|种草"
+    replacement: "根据语义替换为规范公文用语"
+    examples:
+      wrong: "这项举措非常给力，全网点赞。"
+      correct: "这项举措成效显著，受到社会各界广泛好评。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-028
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止使用方言俚语
+    description: |
+      公文中不得出现地域性方言词汇和俚语，如"搞搞"（闽南语）、
+      "蛮拼的"（偏口语）、"不孬"（北方方言）等。
+    pattern: "AI检测常见方言词汇词典，识别地域性口语表达"
+    replacement: "替换为标准普通话书面表达"
+    examples:
+      wrong: "这个同志蛮拼的，做事不孬。"
+      correct: "该同志工作积极主动，务实担当。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-029
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止过于绝对化的表述
+    description: |
+      "一定会""肯定能""绝对没有问题""必然实现"等过于绝对的表述
+      在公文中应避免，宜改为"有信心""将努力""力争""力求"等留有余地的表述。
+    pattern: "检测：'一定会[实现|成功|完成]|肯定能|绝对没有|必然[实现|完成|成功]'"
+    replacement: "有信心/将努力/力争/力求"
+    examples:
+      wrong: "我们一定会完成既定目标，绝对不会让大家失望。"
+      correct: "我们有信心完成既定目标，将以实际行动回报各方期望。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-030
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止情绪化主观表述
+    description: |
+      "非常感动""特别激动""深受鼓舞"等情绪化过于外露的表述
+      在正式公文（通知、报告、方案等）中应避免；
+      在讲话稿中可适度使用，但不宜过于频繁。
+    pattern: "检测（正式公文中）：'非常感动|特别激动|热泪盈眶|心潮澎湃|激情燃烧'"
+    replacement: "深受鼓舞/倍感振奋/信心倍增（较庄重的情感表述）"
+    examples:
+      wrong: "收到上级批复后，全体职工非常感动，特别激动。"
+      correct: "收到上级批复后，全体职工深受鼓舞，信心倍增。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-031
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止"颠覆性"等易产生负面联想的词语
+    description: |
+      描述改革成就时，"颠覆性变革""颠覆式创新"等词语容易引发负面联想，
+      应改用"历史性变革""根本性变革""革命性变化"等规范表述。
+      此外，"革命性"在改革成就表述中需慎用，只有重大程度才可使用。
+    pattern: "检测：'颠覆性[变革|创新|改变|突破]'"
+    replacement: "历史性变革/根本性变革/重大突破"
+    examples:
+      wrong: "这次改革是颠覆性的变革，具有颠覆性意义。"
+      correct: "这次改革是历史性变革，具有里程碑式意义。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-032
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止"如无不妥""未有不可"等否定式套语
+    description: |
+      "如无不妥，请批示""如无异议，请确认"等双重否定套语语义模糊，
+      措辞软弱，在现代公文中不宜使用，应改为直接明确的表述。
+    pattern: "检测：'如无不妥|如无异议，请|如有不妥[，]?请'（出现在请示/报告结尾）"
+    replacement: "请审阅/请批准/请批复（直接表述请求）"
+    examples:
+      wrong: "如无不妥，请批示。"
+      correct: "以上请示，请批准。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-033
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 禁止在公文中使用"我个人认为"
+    description: |
+      "我个人认为""本人觉得"等强调"个人"的表述在公文中不妥，
+      公文代表机关立场，不宜强调个人观点。
+      讲话稿中可保留"我认为"，但不宜加"个人"。
+    pattern: "检测：'我个人认为|本人认为|我个人觉得'"
+    replacement: "我认为/我们认为/经研究认为"
+    examples:
+      wrong: "我个人认为，这项工作应当提前部署。"
+      correct: "我认为，这项工作应当提前部署。"
+    severity: warning
+    source: "AI写材料手册第10章"
+
+  - id: LS-034
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 高质量发展不加"的"
+    description: |
+      "高质量发展"是固定的政治表述，其中"高质量"直接修饰"发展"，
+      中间不加"的"字（不能写成"高质量的发展"）。
+    pattern: "检测：'高质量的发展'"
+    replacement: "高质量发展（去掉'的'字）"
+    examples:
+      wrong: "推动经济高质量的发展。"
+      correct: "推动经济高质量发展。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-035
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 绿水青山表述准确性
+    description: |
+      "绿水青山就是金山银山"是固定的重要表述，其中"就是"不能改为"也是"
+      "既是""又是"等。"也"字弱化了"绿水青山"与"金山银山"的等价转化关系。
+    pattern: "检测：'绿水青山[也是|既是|又是]金山银山|[既要|要]绿水青山[，也要|也要]金山银山'"
+    replacement: "绿水青山就是金山银山"
+    examples:
+      wrong: "我们既要绿水青山，也要金山银山。"
+      correct: "牢固树立绿水青山就是金山银山的理念。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-036
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: '"共同致富"→"共同富裕"'
+    description: |
+      "共同富裕"是专有表述，不能写成"共同致富"。
+      "致富"强调个体行为，"富裕"是整体状态，两者含义有根本区别。
+    pattern: "检测：'共同致富'"
+    replacement: "共同富裕"
+    examples:
+      wrong: "推动全体人民共同致富。"
+      correct: "扎实推动全体人民共同富裕。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-037
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: '"中国式现代化"表述规范'
+    description: |
+      "中国式现代化"是固定表述，不能写成"中国特色现代化""中国特色的现代化"
+      "具有中国特色的现代化"等变体。
+    pattern: "检测：'中国特色[的]现代化|具有中国特色的现代化'"
+    replacement: "中国式现代化"
+    examples:
+      wrong: "推进具有中国特色的现代化建设。"
+      correct: "推进中国式现代化。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-038
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: '"人民至上、生命第一"→"人民至上、生命至上"'
+    description: |
+      表述抗疫或公共安全理念时，"人民至上、生命至上"是规范表述，
+      "生命第一"是不规范的变体，易与其他概念混淆。
+    pattern: "检测：'人民至上[、，]生命第一'"
+    replacement: "人民至上、生命至上"
+    examples:
+      wrong: "坚持人民至上、生命第一的原则。"
+      correct: "坚持人民至上、生命至上的原则。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-039
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: 新发展理念顺序不得颠倒
+    description: |
+      新发展理念的顺序为"创新、协调、绿色、开放、共享"，
+      五个理念的排列顺序不得颠倒或遗漏，这是党中央确定的规范表述顺序。
+    pattern: "检测：文中出现'新发展理念'时，引用的五个理念顺序是否与标准顺序一致"
+    replacement: "创新、协调、绿色、开放、共享（按此顺序）"
+    examples:
+      wrong: "坚持创新、绿色、协调、共享、开放的新发展理念。"
+      correct: "完整准确全面贯彻创新、协调、绿色、开放、共享的新发展理念。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-040
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: '"二十大精神"须加"党的"'
+    description: |
+      引用党代会精神时，必须加"党的"前缀，如"党的二十大精神"，
+      不能简写为"二十大精神"（省略"党的"二字）。
+    pattern: "检测：'(?<!党的)二十大精神|(?<!党的)二十届[\\S]*全会精神'"
+    replacement: "在'二十大精神'前加'党的'"
+    examples:
+      wrong: "认真学习贯彻二十大精神。"
+      correct: "认真学习贯彻党的二十大精神。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-041
+    type: auto_detect
+    category: language_style
+    sub_category: forbidden
+    title: '"全面从严治党"不得省略"全面"'
+    description: |
+      "全面从严治党"中的"全面"二字不可省略，不能写成"从严治党"。
+      "全面"体现的是全方位、全过程的要求，省略后含义有重大差别。
+    pattern: "检测：'(?<!全面)从严治党'"
+    replacement: "全面从严治党"
+    examples:
+      wrong: "坚定不移推进从严治党。"
+      correct: "坚定不移推进全面从严治党。"
+    severity: error
+    source: "AI写材料手册第10章"
+
+  - id: LS-042
+    type: llm_review
+    category: language_style
+    sub_category: forbidden
+    title: 工作报告结尾语模板化问题
+    description: |
+      "以上汇报如有不当之处，请批评指正"等模板化结尾语过于陈套，
+      在汇报类材料中应根据实际情况使用更具体的结尾语，
+      或使用"以上汇报，请审阅""以上意见，供参考"等简洁表述。
+    pattern: "检测：'如有不当[之处|]，请批评指正'（出现在汇报结尾）"
+    replacement: "以上汇报，请审阅/以上意见，供参考"
+    examples:
+      wrong: "以上汇报，如有不当之处，请批评指正，谢谢！"
+      correct: "以上汇报，请审阅。"
+    severity: warning
+    source: "AI写材料手册第10章"

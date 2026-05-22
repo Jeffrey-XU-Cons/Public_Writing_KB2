@@ -1,0 +1,1596 @@
+# 合并_全书知识条目.yaml
+# 跨书去重后的全局知识条目索引
+# 总计：211条（SP×64 / LR×40 / MT×93 / PM×14）
+# 去重详情见：提炼汇总报告.md
+# 生成日期：2026-03-15
+
+# ============================================================
+# 说明：
+# - 本文件为全局索引，A级条目包含摘要内容
+# - B/C级条目仅列标题和来源，详情见原始文件
+# - 被去重删除的条目在保留条目的merged_from字段中标注
+# - 全局ID格式：类型-序号（SP-001/LR-001/MT-001/PM-001）
+# ============================================================
+
+# ============================================================
+# SP 结构原则（共64条）
+# ============================================================
+
+entries_sp:
+
+  # --- SP-001 to SP-008: 李忠秋《结构化写作》---
+
+  - global_id: SP-001
+    orig_id: "SP-001"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "结论先行原则"
+    importance: A
+    summary: |
+      一次表达只支持一个核心观点，必须放在开头。标题、序言、段落均要结论第一时间呈现。
+      错误：先罗列细节，最后才"总之"。正确：开篇即给出核心结论，再展开。
+
+  - global_id: SP-002
+    orig_id: "SP-002"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "以上统下原则"
+    importance: A
+    summary: "上层结论是对下层信息的概括；下层信息是对上层结论的解释。论点与论据必须同一范畴。"
+
+  - global_id: SP-003
+    orig_id: "SP-003"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "归类分组（MECE）原则"
+    importance: A
+    summary: "相似信息归为同一逻辑范畴，须满足MECE：相互独立（不重叠）+ 完全穷尽（不遗漏）。"
+
+  - global_id: SP-004
+    orig_id: "SP-004"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "逻辑递进（有序排列）原则"
+    importance: A
+    summary: "同一范畴信息按时间/结构/重要性顺序排列，同一分支中不可混用不同排序方式。"
+
+  - global_id: SP-005
+    orig_id: "SP-005"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "金字塔结构核心模型"
+    importance: A
+    summary: "顶端=唯一中心思想；纵向=结论先行+以上统下；横向=归类分组+逻辑递进。构建顺序：先纵后横。"
+
+  - global_id: SP-006
+    orig_id: "SP-006"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "演绎与归纳信息组区分"
+    importance: B
+    summary: "演绎：从普遍到特殊（大前提→小前提→结论）；归纳：从特殊到普遍（多个相似论据→共同结论）。"
+
+  - global_id: SP-007
+    orig_id: "SP-007"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "现象-原因-方案须一一对应"
+    importance: A
+    summary: "问题分析三层次须严格对应：有几个现象就找几个原因，有几个原因就给几个方案，不可跳层。"
+
+  - global_id: SP-008
+    orig_id: "SP-008"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "四种信息关系模式分类"
+    importance: B
+    summary: "并列关系/层进关系/因果关系/总分关系——识别段落间关系类型，决定连接词和排列方式。"
+
+  # --- SP-009 to SP-020: 胡森林《公文写作底层心法》---
+
+  - global_id: SP-009
+    orig_id: "SP-001"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文种选择决策规则（请示/报告/通知/函）"
+    importance: A
+    summary: |
+      请示：需上级批准，一文一事，结尾"请批示"；报告：陈述告知，不含请求，结尾"特此报告"；
+      通知：下行布置工作；函：平行机关协商。核心：请示需批复，报告不需要。
+
+  - global_id: SP-010
+    orig_id: "SP-002"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "请示与报告的六大本质区别"
+    importance: A
+    summary: "性质/内容/结尾/答复/时间/禁止混用——请示事前，报告事中事后；请示必须回复，报告只需知晓。"
+
+  - global_id: SP-011
+    orig_id: "SP-003"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "行文规范三原则（一文一事/逐级行文/不越级）"
+    importance: A
+    summary: "一文一事；逐级行文不越级（紧急情况须抄送被越级机关）；行文范围与保密等级匹配。"
+
+  - global_id: SP-012
+    orig_id: "SP-004"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "一文一题原则（主题统摄全篇）"
+    importance: A
+    summary: "一篇公文只能有一个核心主题。主题来源：关注点（最受关心）+ 闪光点（最有价值）+ 不同点（创新处）。"
+
+  - global_id: SP-013
+    orig_id: "SP-005"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文内容以'实'为要四标准"
+    importance: A
+    summary: "判断内容是否'实'的四个维度：是否说明问题/是否反映工作/是否揭示规律/是否提出对策。"
+
+  - global_id: SP-014
+    orig_id: "SP-006"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "结构不板不乱浑然一体原则"
+    importance: B
+    summary: "不板：结构不僵硬，因文制宜；不乱：层次清晰，逻辑严密；浑然一体：形散神不散。"
+
+  - global_id: SP-015
+    orig_id: "SP-007"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "结构四层次模型"
+    importance: B
+    summary: "公文结构四层次：篇章级（总体框架）→ 段落级（段间关系）→ 句子级（句间衔接）→ 词汇级（精准用词）。"
+
+  - global_id: SP-016
+    orig_id: "SP-008"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "层次顺序三维逻辑"
+    importance: B
+    summary: "公文层次的三种基本排列逻辑：①时序（先后）②重要性（主次）③逻辑（因果/总分）。"
+
+  - global_id: SP-017
+    orig_id: "SP-009"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "同一律与矛盾律（逻辑一致性原则）"
+    importance: A
+    summary: "同一律：全文对同一概念的表述须一致；矛盾律：不得在同一文中出现自相矛盾的表述。"
+
+  - global_id: SP-018
+    orig_id: "SP-010"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文'及物'性本质（研究事不研究字）"
+    importance: A
+    summary: "公文的核心是'事'，写作时应把主要精力放在研究事（事情本身）而非研究字（表达形式）。"
+
+  - global_id: SP-019
+    orig_id: "SP-011"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "观点提炼源于实践高于实践"
+    importance: B
+    summary: "好观点的提炼标准：来自实际工作（有依据），但不能停留在事实层面（必须升华为规律性认识）。"
+
+  - global_id: SP-020
+    orig_id: "SP-012"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文以载道价值观优先原则"
+    importance: A
+    summary: "公文须有正确价值导向。写作者的价值观决定文章的高下：有公心/正气/责任感，才能写出有灵魂的公文。"
+
+  # --- SP-021 to SP-025: 胡森林《公文写作心法·笔杆》---
+
+  - global_id: SP-021
+    orig_id: "SP-001"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文五定特征"
+    importance: A
+    summary: "法定作者 + 既定程序 + 法定效力 + 特定格式 + 规定文种——公文区别于一般文章的五个法定属性。"
+
+  - global_id: SP-022
+    orig_id: "SP-002"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "结构三层次"
+    importance: B
+    summary: "总体架构（大纲层）→ 逻辑层次（段落层）→ 语言层（词句层），三层次缺一不可。"
+
+  - global_id: SP-023
+    orig_id: "SP-003"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "结构三要点"
+    importance: B
+    summary: "内容决定结构（不套模板）/结构务求清晰（层次分明）/完整性（有头有尾不缺要素）。"
+
+  - global_id: SP-024
+    orig_id: "SP-004"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "内容决定结构原则"
+    importance: A
+    summary: "先有内容再定结构，不因套模板而削足适履。公文结构须服务于要表达的内容，而非相反。"
+
+  - global_id: SP-025
+    orig_id: "SP-005"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文六要素框架（二八法则应用）"
+    importance: B
+    summary: "公文内容六要素：背景/依据/目标/措施/效果/要求。核心20%内容（目标+措施）承载80%价值。"
+
+  # --- SP-026 to SP-044: 新编常用公文写作---
+
+  - global_id: SP-026
+    orig_id: "SP-001"
+    source_file: "新编常用公文写.yaml"
+    title: "法定公文15种及适用范围"
+    importance: A
+    merged_from: "笔杆子炼成.yaml BG-018（已去重）"
+    summary: |
+      决议/决定/命令(令)/公报/公告/通告/意见/通知/通报/报告/请示/批复/议案/函/纪要
+      各种文种的性质、适用场合和行文方向（上行/下行/平行）。
+
+  - global_id: SP-027
+    orig_id: "SP-002"
+    source_file: "新编常用公文写.yaml"
+    title: "公文18格式要素"
+    importance: B
+    summary: "版头/主体/版记三部分共18个格式要素及其规范位置，按GB/T 9704-2012标准。"
+
+  - global_id: SP-028
+    orig_id: "SP-003"
+    source_file: "新编常用公文写.yaml"
+    title: "公文标题三要素规则"
+    importance: A
+    summary: "标题=发文机关+事由+文种（三要素）。省略规则：联合发文可省发文机关；简短文件可省事由。"
+
+  - global_id: SP-029
+    orig_id: "SP-004"
+    source_file: "新编常用公文写.yaml"
+    title: "报告结构规范（工作报告）"
+    importance: A
+    summary: "报告标准结构：标题+主送机关+正文（情况综述+主要工作+存在问题+下步打算）+结尾语+落款。"
+
+  - global_id: SP-030
+    orig_id: "SP-005"
+    source_file: "新编常用公文写.yaml"
+    title: "请示结构规范"
+    importance: A
+    summary: "请示结构：标题+主送机关+正文（请示缘由+请示事项+请示结语）。一文一事，结语须含请求批复表述。"
+
+  - global_id: SP-031
+    orig_id: "SP-006"
+    source_file: "新编常用公文写.yaml"
+    title: "请示三禁原则"
+    importance: A
+    summary: "①不得多头请示（只送一个上级）；②不得越级请示；③报告中不得夹带请示事项。"
+
+  - global_id: SP-032
+    orig_id: "SP-007"
+    source_file: "新编常用公文写.yaml"
+    title: "讲话稿结构规范"
+    importance: A
+    summary: "讲话稿标准框架：开场（点题/致谢）+ 主体（分层展开各议题）+ 结尾（号召/展望/结语）。"
+
+  - global_id: SP-033
+    orig_id: "SP-008"
+    source_file: "新编常用公文写.yaml"
+    title: "工作总结结构规范"
+    importance: A
+    summary: "工作总结框架：概述+成绩与主要做法+存在问题+下步打算（四段式）或按工作专题分组。"
+
+  - global_id: SP-034
+    orig_id: "SP-009"
+    source_file: "新编常用公文写.yaml"
+    title: "调查报告结构规范"
+    importance: A
+    summary: "调查报告框架：标题+前言（目的+过程）+正文（调查情况+问题分析+对策建议）+结语。"
+
+  - global_id: SP-035
+    orig_id: "SP-010"
+    source_file: "新编常用公文写.yaml"
+    title: "计划正文结构规范"
+    importance: B
+    summary: "计划框架：背景依据+目标任务+步骤措施+时间节点+保障措施（五段式）。"
+
+  - global_id: SP-036
+    orig_id: "SP-011"
+    source_file: "新编常用公文写.yaml"
+    title: "规划格式规范"
+    importance: C
+    summary: "规划区别于计划：时间跨度长（3-5年），内容更宏观，须包含愿景目标、战略路径、重点工程。"
+
+  - global_id: SP-037
+    orig_id: "SP-012"
+    source_file: "新编常用公文写.yaml"
+    title: "预案主体内容七要素"
+    importance: B
+    summary: "应急预案七要素：总则+组织体系+预防预警+应急响应+后期处置+保障措施+附则。"
+
+  - global_id: SP-038
+    orig_id: "SP-013"
+    source_file: "新编常用公文写.yaml"
+    title: "简报报头六要素"
+    importance: C
+    summary: "简报报头：名称+期号+编发机关+报送单位+印发日期+密级（保密级别）。"
+
+  - global_id: SP-039
+    orig_id: "SP-014"
+    source_file: "新编常用公文写.yaml"
+    title: "行文规则（上行文）"
+    importance: A
+    summary: "上行文（请示/报告）：只写一个主送机关，其他抄送。须注明联系人和联系方式。禁多头请示。"
+
+  - global_id: SP-040
+    orig_id: "SP-015"
+    source_file: "新编常用公文写.yaml"
+    title: "行文规则（下行文）"
+    importance: A
+    summary: "下行文（通知/通报/决定）：须明确主送范围；抄送机关须在版记中标注；紧急公文须注明时限。"
+
+  - global_id: SP-041
+    orig_id: "SP-016"
+    source_file: "新编常用公文写.yaml"
+    title: "会议记录结构规范"
+    importance: B
+    summary: "会议记录六要素：时间地点主持人出席人+议题+各议题讨论情况+决议事项+记录人签名。"
+
+  - global_id: SP-042
+    orig_id: "SP-017"
+    source_file: "新编常用公文写.yaml"
+    title: "公文起草七要求"
+    importance: A
+    summary: "符合政策/实事求是/一文一事/简洁精炼/格式规范/用语准确/按时完成——公文起草的七项基本要求。"
+
+  - global_id: SP-043
+    orig_id: "SP-018"
+    source_file: "新编常用公文写.yaml"
+    title: "公文审核五重点"
+    importance: A
+    summary: "公文审核须重点检查：①内容合规性②格式规范性③数字准确性④引文完整性⑤授权合法性。"
+
+  - global_id: SP-044
+    orig_id: "SP-019"
+    source_file: "新编常用公文写.yaml"
+    title: "整改措施/建议文种结构"
+    importance: B
+    summary: "整改报告/建议结构：问题指出（来源/性质）+原因分析+整改措施+落实责任+完成时限。"
+
+  # --- SP-045 to SP-047: 王群《公文写作大手笔》---
+
+  - global_id: SP-045
+    orig_id: "SP-立纲四种基本结构"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "立纲四种基本结构形态"
+    importance: A
+    summary: "公文纲要四种基本形态：总分式/并列式/递进式/综合式——根据内容性质选择对应结构。"
+
+  - global_id: SP-046
+    orig_id: "SP-层次组合四原则"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "层次组合四原则"
+    importance: A
+    summary: "层次组合的四个原则：相互对应（上下层逻辑对应）/彼此照应（前后呼应）/轻重适当/繁简得宜。"
+
+  - global_id: SP-047
+    orig_id: "SP-公文层次横纵两式"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "公文层次横纵两式"
+    importance: B
+    summary: "纵式：递进/因果/时序（有发展关系）；横式：条款/总分/并列（无先后之分）。按内容逻辑选择。"
+
+  # --- SP-048 to SP-056: 笔杆子炼成---
+
+  - global_id: SP-048
+    orig_id: "BG-002"
+    source_file: "笔杆子炼成.yaml"
+    title: "文稿起草本质——深度研究四要素"
+    importance: A
+    summary: |
+      写好材料离不开四个深度研究：
+      ①深度研究事（从上情/下情/内情/外情四维梳理）
+      ②深度研究人（讲者角色意识+受众关注点）
+      ③深度研究体（权威范文→照猫画虎定体例）
+      ④深度研究景（画面意识+发展眼光+"现挂"技巧）
+
+  - global_id: SP-049
+    orig_id: "BG-010"
+    source_file: "笔杆子炼成.yaml"
+    title: "工作报告/汇报/总结三种文体区别"
+    importance: B
+    summary: "工作报告=综合性最强（成绩+经验+部署）；工作汇报=上行陈述（侧重情况）；工作总结=回顾提炼（侧重规律）。"
+
+  - global_id: SP-050
+    orig_id: "BG-016"
+    source_file: "笔杆子炼成.yaml"
+    title: "好公文三要素——言之有序·有物·有心"
+    importance: A
+    summary: "有序：结构清晰，层次分明；有物：内容实在，有干货有数据；有心：有思想，有价值观，有感染力。"
+
+  - global_id: SP-051
+    orig_id: "BG-019"
+    source_file: "笔杆子炼成.yaml"
+    title: "部署动员讲话共性框架"
+    importance: A
+    summary: "部署/动员讲话三段式：①定调（意义/形势/重要性）②部署（目标+举措）③要求（组织/保障/纪律）。"
+
+  - global_id: SP-052
+    orig_id: "BG-020"
+    source_file: "笔杆子炼成.yaml"
+    title: "工作汇报两种共性模板"
+    importance: A
+    summary: |
+      模板一（按工作维度）：总体情况+各项工作进展+下步打算；
+      模板二（按成效维度）：背景+主要成效+经验做法+存在问题+下步建议。
+
+  - global_id: SP-053
+    orig_id: "BG-021"
+    source_file: "笔杆子炼成.yaml"
+    title: "工作总结两种共性模板"
+    importance: A
+    summary: |
+      模板一（时序式）：总体评价+各阶段工作回顾+总结经验+下步打算；
+      模板二（主题式）：帽段总述+按工作专题分述（各专题含做法+成效）+问题+计划。
+
+  - global_id: SP-054
+    orig_id: "BG-022"
+    source_file: "笔杆子炼成.yaml"
+    title: "政策部署类意见/通知共性框架"
+    importance: A
+    summary: "政策文件标准结构：背景依据+总体要求（指导思想+原则+目标）+主要任务（分项）+保障措施+附则。"
+
+  - global_id: SP-055
+    orig_id: "BG-005"
+    source_file: "笔杆子炼成.yaml"
+    title: "定盘子三步骤——吃准材料基本盘"
+    importance: B
+    summary: "①读懂要求（把握领导意图）→②梳理内容（把所有素材归类）→③定好框架（确定提纲骨架）。"
+
+  - global_id: SP-056
+    orig_id: "BG-025"
+    source_file: "笔杆子炼成.yaml"
+    title: "总结帽段两类高质量表达"
+    importance: B
+    summary: "量上取胜式：用数字+具体成效概括；质上取胜式：用亮点提炼+高度总结概括。两种写法均有效。"
+
+  # --- SP-057 to SP-064: 公文高手自我修炼---
+
+  - global_id: SP-057
+    orig_id: "SP-001"
+    source_file: "公文高手自我修炼.yaml"
+    title: "讲话稿六宜六忌框架"
+    importance: A
+    summary: |
+      立意宜高忌平/主题宜明忌杂/结构宜紧忌散/内容宜实忌空/语言宜活忌陈/文气宜通忌断
+      六维检查框架，可作为改稿的完整质量检验清单。
+
+  - global_id: SP-058
+    orig_id: "SP-002"
+    source_file: "公文高手自我修炼.yaml"
+    title: "工作报告五大写作难点"
+    importance: A
+    summary: "提炼主题难/布局结构难/表达切实准确难/平衡全面与重点难/持续创新难——五难指向五个重点改进方向。"
+
+  - global_id: SP-059
+    orig_id: "SP-003"
+    source_file: "公文高手自我修炼.yaml"
+    title: "调研报告四要素写法"
+    importance: B
+    summary: "坚持问题导向+全面辩证分析+抓'真'字（客观反映本来面貌）+对策措施须有坚实基础。"
+
+  - global_id: SP-060
+    orig_id: "SP-004"
+    source_file: "公文高手自我修炼.yaml"
+    title: "总结报告三特点五注意"
+    importance: B
+    summary: "三特点：自我性/概括性/启发性；五注意：调研充分/实事求是/找规律/发掘亮点/点面结合。"
+
+  - global_id: SP-061
+    orig_id: "SP-005"
+    source_file: "公文高手自我修炼.yaml"
+    title: "公文三大本质属性"
+    importance: A
+    summary: "实效性（达到预期目的为标准）/论断性（断=结论+论=依据，上行重论下行重断）/针对性（了解受众）。"
+
+  - global_id: SP-062
+    orig_id: "SP-006"
+    source_file: "公文高手自我修炼.yaml"
+    title: "经验介绍材料四大要求"
+    importance: B
+    summary: "立意新颖独到/素材真实充分（点+面）/结构合理（为什么→是什么→怎么样）/文字生动形象。"
+
+  - global_id: SP-063
+    orig_id: "SP-007"
+    source_file: "公文高手自我修炼.yaml"
+    title: "会议纪要三核心要求"
+    importance: B
+    summary: "真实准确（不演绎，不编造）/精练概括（抓要点，去冗余）/清楚明白（结论明确，责任清晰，要快）。"
+
+  - global_id: SP-064
+    orig_id: "SP-008"
+    source_file: "公文高手自我修炼.yaml"
+    title: "工作方案合理可行三标准"
+    importance: B
+    summary: "目标现实合理/工作要求具体可行（尽量量化）/措施切实可行（任务分解到人、有评价标准）。"
+
+# ============================================================
+# LR 语言规范（共40条）
+# ============================================================
+
+entries_lr:
+
+  # --- 李忠秋（6条）---
+
+  - global_id: LR-001
+    orig_id: "LR-001"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "标题SPA三原则"
+    importance: A
+    summary: "标题须满足：简洁（Simple）/有力（Powerful）/准确（Accurate）。避免模糊宏大的空话标题。"
+
+  - global_id: LR-002
+    orig_id: "LR-002"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "标题字数限制16字"
+    importance: B
+    summary: "标题不超过16字，超出则需重新提炼或拆分，确保一眼即可理解核心意思。"
+
+  - global_id: LR-003
+    orig_id: "LR-003"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "语言清晰明确具体三要求"
+    importance: A
+    summary: "清晰：结构简单，一句一意；明确：表述唯一，无歧义；具体：用具体事实/数据替代模糊描述。"
+
+  - global_id: LR-004
+    orig_id: "LR-004"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "成果描述用数字避模糊词"
+    importance: A
+    summary: "禁止使用：有所提升/大幅增加/取得了一定成效等——必须替换为具体数字或可衡量指标。"
+
+  - global_id: LR-005
+    orig_id: "LR-005"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "观点须含措施与预期成果"
+    importance: A
+    summary: "完整的观点句式：做什么（措施）+ 怎么做（方法）+ 达到什么效果（预期成果）。三者不可缺。"
+
+  - global_id: LR-006
+    orig_id: "LR-006"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "序言SCQA各项须完整对应"
+    importance: B
+    summary: "序言的SCQA四要素须完整且相互对应：情境须为读者已知；冲突是打破情境的变化；问题由冲突引出；答案须直接回应问题。"
+
+  # --- 胡森林底层心法（4条）---
+
+  - global_id: LR-007
+    orig_id: "LR-001"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文语言准确第一原则"
+    importance: A
+    summary: "准确是公文语言第一要求：概念准确/判断准确/推理准确。宁可表述繁琐，不可表述模糊。"
+
+  - global_id: LR-008
+    orig_id: "LR-002"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文语言'十个不写'规则"
+    importance: A
+    summary: |
+      不写空话/套话/废话/假话/大话/官话/旧话/虚话/客套话/辞藻堆砌话。
+      核心：每句话必须有实质内容，去掉后若不影响意思则必须删除。
+
+  - global_id: LR-009
+    orig_id: "LR-003"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "说人话/对象意识原则"
+    importance: A
+    summary: "公文用语须让受文者读得懂。避免行话/专业术语/翻译腔；用符合受众认知水平的表达方式。"
+
+  - global_id: LR-010
+    orig_id: "LR-004"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "量体裁衣语体原则（不同文种不同语体）"
+    importance: B
+    summary: "讲话稿→口语化、节奏感；报告→书面语、简洁准确；方案→条理化、可操作；通知→直接明确。"
+
+  # --- 胡森林笔杆（12条）---
+
+  - global_id: LR-011
+    orig_id: "LR-务实管用"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "务实管用第一原则"
+    importance: A
+    summary: "公文语言以'管用'为最高标准：能推动工作、解决问题、影响受众行为，即为好语言。"
+
+  - global_id: LR-012
+    orig_id: "LR-公文文风三弊"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文文风三弊"
+    importance: A
+    summary: "文山（篇幅过长）/会海（会议泛滥）/套话（模板化表达）——三弊相互关联，须系统治理。"
+
+  - global_id: LR-013
+    orig_id: "LR-公文四个实"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文四个实的标准"
+    importance: A
+    summary: "实事求是（反映真实情况）/实用（对工作有指导价值）/实践（可执行操作）/实效（产生预期效果）。"
+
+  - global_id: LR-014
+    orig_id: "LR-说人话三要求"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "说人话三要求"
+    importance: A
+    summary: "①去翻译腔（从外文直译的别扭表达）②去行话（只有本圈子懂的术语）③去官话（无实质内容的套路话）。"
+
+  - global_id: LR-015
+    orig_id: "LR-消极修辞"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "消极修辞技法"
+    importance: B
+    summary: "通过删减（去冗余）/替换（换简洁词）/调整语序（主语前置）三类技法压缩文字，提升公文表达密度。"
+
+  - global_id: LR-016
+    orig_id: "LR-简洁文风三方法"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "简洁文风三方法"
+    importance: A
+    summary: "①一意一句（每句只表达一个意思）②主语明确（不用无主句）③动词精准（少用'进行'等弱动词）。"
+
+  - global_id: LR-017
+    orig_id: "LR-公文长文成因"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文长文成因三条"
+    importance: B
+    summary: "①无法提炼（对内容理解不深，只能堆砌）②习惯保险（多写总比少写好的惰性心理）③格式要求（某些场合约定俗成）。"
+
+  - global_id: LR-018
+    orig_id: "LR-奥卡姆原则"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "奥卡姆原则——废话三类禁令"
+    importance: A
+    summary: "三类废话须禁止：①重复（换个方式说同一句话）②套话（没人不知道的正确废话）③水词（凑字数的过渡语）。"
+
+  - global_id: LR-019
+    orig_id: "LR-修改五字诀"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "修改五字诀"
+    importance: A
+    summary: "增（补充缺失要素）/删（去掉废话冗余）/移（调整段落位置）/改（换更准确的表达）/换（替换不当词汇）。"
+
+  - global_id: LR-020
+    orig_id: "LR-修改四境界"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "修改四境界"
+    importance: B
+    summary: "初境：只能找错别字；二境：能发现语病；三境：能发现逻辑问题；四境：能发现立意不足并重构。"
+
+  - global_id: LR-021
+    orig_id: "LR-驾驭矛盾三法"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "驾驭矛盾三法"
+    importance: B
+    summary: "公文中处理矛盾（如成绩vs问题/全面vs重点）的三法：①对立统一（两点论）②辩证分析③有序排列（主次分明）。"
+
+  - global_id: LR-022
+    orig_id: "LR-开头首因策略"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "开头首因策略"
+    importance: A
+    summary: "开头三禁：①不得拖沓（直奔主题）②不得套话（不用固定开头套路）③不得空洞（不写无实质内容的背景）。"
+
+  # --- 新编常用公文写（5条）---
+
+  - global_id: LR-023
+    orig_id: "LR-报告四条语言规范"
+    source_file: "新编常用公文写.yaml"
+    title: "报告四条语言规范"
+    importance: A
+    summary: "①不得使用第一人称（要用机关名称）②数据须标注来源③引文须注明出处④时态用过去时（总结报告）。"
+
+  - global_id: LR-024
+    orig_id: "LR-讲话稿语言规范"
+    source_file: "新编常用公文写.yaml"
+    title: "讲话稿语言规范"
+    importance: A
+    summary: "①有节奏感（适合朗读）②短句为主③多用数字和例子④开头不用第一人称④结尾须有号召性。"
+
+  - global_id: LR-025
+    orig_id: "LR-调查报告三条规范"
+    source_file: "新编常用公文写.yaml"
+    title: "调查报告三条规范"
+    importance: B
+    summary: "①数据须来自实地调查（不得引用二手资料）②客观陈述不加主观评判③建议须有充分依据。"
+
+  - global_id: LR-026
+    orig_id: "LR-工作总结四条规范"
+    source_file: "新编常用公文写.yaml"
+    title: "工作总结四条规范"
+    importance: B
+    summary: "①成绩用数字（可量化）②问题要实（不回避）③经验可复制（有规律性）④计划要具体（有时间节点）。"
+
+  - global_id: LR-027
+    orig_id: "LR-公文语言五项原则"
+    source_file: "新编常用公文写.yaml"
+    title: "公文语言五项原则（条例规定）"
+    importance: A
+    summary: "准确规范/简短平实/庄重严谨/用语得体/禁止使用歧义词和方言——《党政机关公文处理工作条例》明确规定。"
+
+  # --- 王群大手笔（6条）---
+
+  - global_id: LR-028
+    orig_id: "LR-简洁四要求"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "简洁四要求（凝/实/广/简）"
+    importance: A
+    summary: "凝（高度概括）/实（内容充实）/广（覆盖全面）/简（文字精炼）——四者平衡才是真正的简洁。"
+
+  - global_id: LR-029
+    orig_id: "LR-公文语言四特点"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "公文语言四特点（准确/庄重/简要/平实）"
+    importance: A
+    summary: "准确：一义性，无歧义；庄重：严肃正式，不口语化；简要：言简意赅；平实：直陈事实，不用华丽辞藻。"
+
+  - global_id: LR-030
+    orig_id: "LR-公文表达三主法"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "公文表达三主法（叙述/议论/说明）"
+    importance: B
+    summary: "叙述（陈述事实）/议论（阐明观点）/说明（解释方法）——三种表达方式各有适用场合，工作报告叙议结合。"
+
+  - global_id: LR-031
+    orig_id: "LR-开头三要求"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "开头三要求与四种冗长表现"
+    importance: A
+    summary: "要求：简洁/切题/引人。四种冗长：①交代背景过长②大段引用②反复铺垫④重复题目意思。"
+
+  - global_id: LR-032
+    orig_id: "LR-标题四戒"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "标题四戒"
+    importance: A
+    summary: "①戒空：不写无实质内容的大话标题；②戒大：不超出内容涵盖的范围；③戒虚：须与正文对应；④戒俗：不用陈词滥调。"
+
+  - global_id: LR-033
+    orig_id: "LR-领导讲稿开头五法"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导讲稿开头五法"
+    importance: B
+    summary: "①直入主题法②背景情境法③引用名言法④提问引入法⑤情感共鸣法——视场合和受众选择最合适的开篇方式。"
+
+  # --- 笔杆子炼成（4条）---
+
+  - global_id: LR-034
+    orig_id: "BG-023"
+    source_file: "笔杆子炼成.yaml"
+    title: "公文常用'性'字词组汇编"
+    importance: B
+    summary: "公文高频'性'字词组：重要性/紧迫性/必要性/可行性/系统性/创新性/规范性/协调性等（约30个常用词组）。"
+
+  - global_id: LR-035
+    orig_id: "BG-024"
+    source_file: "笔杆子炼成.yaml"
+    title: "公文常用'感'字词组汇编"
+    importance: B
+    summary: "公文高频'感'字词组：责任感/使命感/获得感/幸福感/安全感/荣誉感/紧迫感/危机感等（约20个常用词组）。"
+
+  - global_id: LR-036
+    orig_id: "BG-核心逻辑三元"
+    source_file: "笔杆子炼成.yaml"
+    title: "公文核心逻辑三元——是什么·为什么·怎么办"
+    importance: A
+    summary: "任何公文都可归结为三个核心问题：是什么（定义/事实）+ 为什么（原因/意义）+ 怎么办（措施/方案）。"
+
+  - global_id: LR-037
+    orig_id: "BG-领导文稿8/2法则"
+    source_file: "笔杆子炼成.yaml"
+    title: "领导文稿8分共性2分个性法则"
+    importance: B
+    summary: "领导文稿80%内容遵循文种共性框架（套路/模板），20%内容体现领导个人风格和文稿特色。先掌握80%共性，再处理20%个性。"
+
+  # --- 公文高手（3条）---
+
+  - global_id: LR-038
+    orig_id: "LR-001"
+    source_file: "公文高手自我修炼.yaml"
+    title: "公文校核四原则"
+    importance: A
+    summary: "逢文必校（无论长短）/每字必核（一字一标点）/急文稳校（越急越要沉住气）/校写分离（起草和校核须不同人）。"
+
+  - global_id: LR-039
+    orig_id: "LR-002"
+    source_file: "公文高手自我修炼.yaml"
+    title: "五类重点校核错误"
+    importance: A
+    summary: |
+      ①政治性差错（最严重，党和国家文件标准表述须慎之又慎）
+      ②同音错别字（发轫/杂糅/沧桑/宣泄/抑或/原动力等）
+      ③成语错用（炙手可热/望其项背/首当其冲等）
+      ④标点符号错误（九类常见错误）
+      ⑤禁用词慎用词（参照新华社禁用词第一批及修订版）
+
+  - global_id: LR-040
+    orig_id: "LR-003"
+    source_file: "公文高手自我修炼.yaml"
+    title: "标点符号九类常见错误"
+    importance: B
+    summary: |
+      ①并列书名号/引号之间不加顿号 ②括号不同形式套用（外用方括号）
+      ③阿拉伯数字次序语用圆心点（非顿号）④图表说明末尾无句号
+      ⑤发文年号用六角括号〔〕 ⑥书名号内并列用空格
+      ⑦附件名称后无标点 ⑧二级标题换行无句号 ⑨日期事件只标引数字部分
+
+# ============================================================
+# MT 方法论（共93条）
+# ============================================================
+
+entries_mt:
+
+  # --- 李忠秋（17条）: MT-001 to MT-017 ---
+
+  - global_id: MT-001
+    orig_id: "MT-001"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "SCQA序言四要素框架"
+    importance: A
+    summary: "情境(S)+冲突(C)+疑问(Q)+解答(A)——完整序言须包含四要素，缺一会导致读者无法定位文章意图。"
+
+  - global_id: MT-002
+    orig_id: "MT-002"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "SCQA四种顺序变体"
+    importance: B
+    summary: "标准式(SCQA)/直接式(QA→SC)/突出忧虑(CS→QA)/突出信心(SA→CQ)——按不同沟通目的选择变体。"
+
+  - global_id: MT-003
+    orig_id: "MT-003"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "并列式内容展开（2W1H）"
+    importance: A
+    summary: "每个要点用2W1H展开：是什么（What）+为什么（Why）+怎么做（How）。三要素完整，观点才站得住。"
+
+  - global_id: MT-004
+    orig_id: "MT-004"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "层进式内容展开（现象-原因-方案）"
+    importance: A
+    summary: "解决问题三层展开：现象（是什么）→原因（为什么）→方案（怎么办）。三层必须严格一一对应。"
+
+  - global_id: MT-005
+    orig_id: "MT-005"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "工作总结三步法"
+    importance: A
+    summary: "①列出行动（做了什么）②描述成果（做出了什么结果）③说明意义（为什么重要）——避免只陈述行动。"
+
+  - global_id: MT-006
+    orig_id: "MT-006"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "行动-成果表工具"
+    importance: B
+    summary: "用矩阵记录：行动→直接成果→最终成果，帮助从行动中提炼有意义的结果，防止写成行动清单。"
+
+  - global_id: MT-007
+    orig_id: "MT-007"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "开放式与封闭式分类"
+    importance: B
+    summary: "开放式分类：按自定义标准分组（适合创新内容）；封闭式分类：按已知维度穷尽分析（适合已知体系）。"
+
+  - global_id: MT-008
+    orig_id: "MT-008"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "信息摘要法与逻辑推论法"
+    importance: B
+    summary: "信息摘要法：从一组信息中找共同点总结出规律；逻辑推论法：通过演绎推理得出必然结论。"
+
+  - global_id: MT-009
+    orig_id: "MT-009"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "WA目标法确定说服目标"
+    importance: B
+    summary: "写作前明确：读者初始想法（W）→ 读者读后期望的行动或想法（A）。WA目标决定内容选取和结构方向。"
+
+  - global_id: MT-010
+    orig_id: "MT-010"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "疑问-回答法构建说服框架"
+    importance: B
+    summary: "从读者视角预设疑问，用文章内容逐一回答。每一层级都应能回答上层提出的疑问。"
+
+  - global_id: MT-011
+    orig_id: "MT-011"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "5W2H设想读者疑问"
+    importance: B
+    summary: "What/Why/Who/When/Where/How/How much——从7个维度全面预设读者可能提出的问题，确保内容无盲区。"
+
+  - global_id: MT-012
+    orig_id: "MT-012"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "演绎推理三段论应用"
+    importance: A
+    summary: "大前提（普遍规律）+小前提（特殊情况）+结论（必然推断）。公文中常用于政策论证和工作部署依据。"
+
+  - global_id: MT-013
+    orig_id: "MT-013"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "归纳推理简单枚举法"
+    importance: B
+    summary: "列举多个相似案例/事实，归纳共同规律，得出结论。适用于经验总结、问题分析。注意避免以偏概全。"
+
+  - global_id: MT-014
+    orig_id: "MT-014"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "五步方案写作法"
+    importance: A
+    summary: "①确认目标②分析现状③找差距④提出方案⑤预期成果——方案类公文的标准思维路径。"
+
+  - global_id: MT-015
+    orig_id: "MT-015"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "纵向框架两种构建路径"
+    importance: B
+    summary: "自上而下（先确定结论，再找支撑论据）和自下而上（先收集信息，再归纳结论）——根据信息完备程度选择。"
+
+  - global_id: MT-016
+    orig_id: "MT-016"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "结构罗盘'配得上'三步法"
+    importance: B
+    summary: "检验文章结构是否合理的三步：①结论'配得上'疑问？②每层论点'配得上'上层结论？③每层论据'配得上'论点？"
+
+  - global_id: MT-017
+    orig_id: "MT-017"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "说服三维度综合检验"
+    importance: A
+    summary: "综合检验说服力的三个维度：逻辑（论证是否严密）+ 情感（是否引起共鸣）+ 公信（是否可信可靠）。"
+
+  # --- 胡森林底层心法（24条，已去重2条）: MT-018 to MT-039 ---
+
+  - global_id: MT-018
+    orig_id: "MT-001"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "七步成文法"
+    importance: A
+    summary: "接受任务→调查研究→拟定提纲→起草初稿→修改打磨→领导审改→定稿印发——公文写作七步标准流程。"
+
+  - global_id: MT-019
+    orig_id: "MT-004"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "把握领导意图三步递进法"
+    importance: A
+    summary: "①吃透上级文件（政策层面）→②了解领导日常关注（风格层面）→③领悟具体指示（任务层面）——三步逐层递进。"
+
+  - global_id: MT-020
+    orig_id: "MT-005"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "换位思考四维角度法"
+    importance: A
+    summary: "写作时从四个维度换位思考：领导角度（站位）+受文机关角度（需求）+执行者角度（可行性）+群众角度（接受度）。"
+
+  - global_id: MT-021
+    orig_id: "MT-006"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "类因果法（公文内容四种逻辑要素）"
+    importance: B
+    summary: "类（类比）/因（原因）/果（结果）/法（方法）——分析公文内容时，用这四个逻辑要素检验内容是否完整。"
+
+  - global_id: MT-022
+    orig_id: "MT-007"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "八种逻辑关系（段落与段落间）"
+    importance: B
+    summary: "并列/递进/总分/因果/转折/条件/假设/目的——识别并明确段落间的逻辑关系，使用准确的连接词。"
+
+  - global_id: MT-023
+    orig_id: "MT-008"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "段头撮要法（段首点明核心观点）"
+    importance: A
+    summary: "每段开头第一句须是本段核心观点的概括（段首句=段落主旨句），后续句子只负责展开和论证。"
+
+  - global_id: MT-024
+    orig_id: "MT-009"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "常见五种结构类型选择法"
+    importance: B
+    summary: "根据内容性质选择：并列式（各点平等）/递进式（层层深入）/总分式（先总后分）/因果式/问题式（提问→解答）。"
+
+  - global_id: MT-025
+    orig_id: "MT-010"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "标题制作四种常用写法"
+    importance: B
+    summary: "动宾结构/主谓结构/名词偏正结构/问句结构——四种最常用的标题写法，动宾结构最有力量感。"
+
+  - global_id: MT-026
+    orig_id: "MT-011"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "起承转合行文技法"
+    importance: B
+    summary: "起（引入）/承（展开）/转（深化/转折）/合（收束）——传统行文四步骤，适用于叙事性和论述性公文。"
+
+  - global_id: MT-027
+    orig_id: "MT-012"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "四情三脉情况研究法"
+    importance: A
+    summary: "四情：上情（政策要求）+下情（基层实际）+内情（本单位情况）+外情（同类单位情况）；三脉：历史脉络/现状脉络/趋势脉络。"
+
+  - global_id: MT-028
+    orig_id: "MT-013"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文为事作·写前六类研究对象"
+    importance: A
+    summary: "写前须研究：事（工作本身）/人（领导和受众）/体（文种格式）/景（场合情境）/史（历史沿革）/策（政策依据）。"
+
+  - global_id: MT-029
+    orig_id: "MT-014"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "问题意识写作法（围绕问题写公文）"
+    importance: A
+    summary: "以'问题'为核心组织公文：明确要解决什么问题→分析问题→提出解决方案。全文始终围绕问题展开。"
+
+  - global_id: MT-030
+    orig_id: "MT-015"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "运思四法（公文构思的四种思维模式）"
+    importance: B
+    summary: "发散思维（头脑风暴）/收敛思维（筛选聚焦）/逆向思维（反向验证）/系统思维（整体协调）——四种思维交替运用。"
+
+  - global_id: MT-031
+    orig_id: "MT-016"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "调查研究前序工作法"
+    importance: B
+    summary: "调研前须完成：①明确调研目的②设计调研提纲③预读背景资料④确定调研对象和方式——四项前序工作。"
+
+  - global_id: MT-032
+    orig_id: "MT-017"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "统稿八看法（多人协作文稿质量检查）"
+    importance: A
+    summary: "看主题/看结构/看内容/看观点/看数据/看语言/看格式/看政治——统稿时的八个检查维度，不漏项。"
+
+  - global_id: MT-033
+    orig_id: "MT-018"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "五种公文创新路径"
+    importance: B
+    summary: "立意创新/结构创新/内容创新/语言创新/角度创新——永远的重复+持续的创新，在稳定中求突破。"
+
+  - global_id: MT-034
+    orig_id: "MT-019"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "思维导图辅助构思三步法"
+    importance: C
+    summary: "①主题写中心→②发散联想（各分支）→③整理筛选（删掉不相关）——用思维导图梳理写作思路。"
+
+  - global_id: MT-035
+    orig_id: "MT-020"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文气三要素写作法（文以气胜）"
+    importance: B
+    summary: "文气=气势（整体力度感）+气韵（节奏流畅感）+气场（感染力和说服力）——三者合一文章才有气场。"
+
+  - global_id: MT-036
+    orig_id: "MT-021"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "六项基本功（公文写作六种能力）"
+    importance: B
+    summary: "政策理解力/信息收集力/逻辑思维力/结构组织力/语言表达力/自我修改力——公文写作者需修炼的六项基本功。"
+
+  - global_id: MT-037
+    orig_id: "MT-022"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "论据三类型及使用原则"
+    importance: B
+    summary: "事实论据（最有力）/数据论据（最精确）/理论论据（最权威）——三类论据配合使用，事实为主，数据为辅。"
+
+  - global_id: MT-038
+    orig_id: "MT-023"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "写作四阶段升维模型"
+    importance: A
+    summary: "叙事（记录发生了什么）→辅政（帮助领导分析决策）→鼎新（推动创新变革）→立言（形成思想理论）——写作境界的四个层次。"
+
+  - global_id: MT-039
+    orig_id: "MT-024"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文字工作者三大机会"
+    importance: C
+    summary: "文字工作者的三个成长机会：高层次文稿（锻炼站位）/重大事件（锻炼应变）/跨领域写作（拓展视野）。"
+
+  # --- 胡森林笔杆（10条）: MT-040 to MT-049 ---
+
+  - global_id: MT-040
+    orig_id: "MT-论从事出"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "论从事出原则"
+    importance: A
+    summary: "观点（论）须从实际（事）中自然产生，不能先有观点再找素材。公文的核心要从工作实际出发，而非从理论出发。"
+
+  - global_id: MT-041
+    orig_id: "MT-观点转化五途径"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "观点转化五途径"
+    importance: B
+    summary: "将素材转化为观点的五种路径：提炼（找规律）/类比（找相似）/因果（找原因）/反例（找对立面）/升华（找价值意义）。"
+
+  - global_id: MT-042
+    orig_id: "MT-领导满意四标准"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "领导满意四标准"
+    importance: A
+    summary: "领导审稿时的四个满意标准：①站位对了（符合政策导向）②思路对了（逻辑清晰）③内容全了（无遗漏）④表达好了（语言准确流畅）。"
+
+  - global_id: MT-043
+    orig_id: "MT-目标思维双维度"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "目标思维双维度（靶向+他者）"
+    importance: B
+    summary: "靶向思维：明确要打的靶（文章目标）；他者思维：站在受文者角度思考（他们的需求和接受方式）。"
+
+  - global_id: MT-044
+    orig_id: "MT-刻意学习与复盘"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "刻意学习与复盘机制"
+    importance: B
+    summary: "刻意练习：在弱项上刻意突破（不只做擅长的）；复盘：每次写完后分析得失，形成可沉淀的经验。"
+
+  - global_id: MT-045
+    orig_id: "MT-循序渐进路径"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "循序渐进写作学习路径"
+    importance: B
+    summary: "写作学习路径：读懂范文→拆解结构→模仿套路→局部创新→全面创新——从模仿到创造的五个阶段。"
+
+  - global_id: MT-046
+    orig_id: "MT-言之有理有据有物"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "言之有理有据有物三维检验"
+    importance: A
+    summary: "言之有理：逻辑成立；言之有据：有事实/数据/政策依据；言之有物：有实质内容，非空话。三维缺一不可。"
+
+  - global_id: MT-047
+    orig_id: "MT-短实新三字"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "短实新三字文风标准"
+    importance: A
+    summary: "短（篇幅精简）/实（内容务实）/新（表达创新）——公文文风改进的三个核心方向，新华社倡导的文风要求。"
+
+  - global_id: MT-048
+    orig_id: "MT-三重修炼境界"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文写作三重修炼境界"
+    importance: B
+    summary: "初境：掌握格式套路（写得出）→中境：掌握思维方法（写得好）→高境：内化为职业素养（写得活）。"
+
+  - global_id: MT-049
+    orig_id: "MT-事实论据四要求"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "事实论据四要求"
+    importance: B
+    summary: "典型性（代表普遍规律）/准确性（数据事实无误）/新颖性（不用陈旧案例）/关联性（与论点严格对应）。"
+
+  # --- 新编常用公文写（2条）: MT-050 to MT-051 ---
+
+  - global_id: MT-050
+    orig_id: "MT-公文起草七要求"
+    source_file: "新编常用公文写.yaml"
+    title: "公文处理五原则"
+    importance: A
+    summary: "集中统一（统一管理）/分级负责（各级职责清晰）/严格保密（分级保密）/精简高效（减少环节）/安全便捷（信息化手段）。"
+
+  - global_id: MT-051
+    orig_id: "MT-调查报告前言"
+    source_file: "新编常用公文写.yaml"
+    title: "调查报告前言三种写法"
+    importance: B
+    summary: "①说明式（交代调查目的/时间/对象）②提问式（直接提出核心问题）③结论式（先给结论再解释调查）。"
+
+  # --- 王群大手笔（18条）: MT-052 to MT-069 ---
+
+  - global_id: MT-052
+    orig_id: "WQ_MT_001"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "写作高手三种能力论"
+    importance: A
+    summary: "认识能力（第一位，决定思想深度）>公务处理能力（抓住工作轻重）>文字表述能力（准确表达）。写不出往往是认识能力不足。"
+
+  - global_id: MT-053
+    orig_id: "WQ_MT_002"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "立意三番来者法（陈言→正语→精语）"
+    importance: A
+    summary: "第一番：脑海第一反应（陈词套话，扔掉）；第二番：深入思考触及本质（正语，还不够）；第三番：高角度思考所得（精语，方可用）。"
+
+  - global_id: MT-054
+    orig_id: "WQ_MT_003"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "立意能力提升三法（高·新·尖）"
+    importance: B
+    summary: "高（站位高）：从更高角度看问题；新（角度新）：换一个视角；尖（观点尖锐）：一针见血，有针对性。"
+
+  - global_id: MT-055
+    orig_id: "WQ_MT_004"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "立纲两种方法（发散法与归纳法）"
+    importance: B
+    summary: "发散法：先广泛列举所有可写点，再筛选组合；归纳法：从收集的素材中归纳共同规律形成框架。"
+
+  - global_id: MT-056
+    orig_id: "WQ_MT_006"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "材料综合横纵四法"
+    importance: A
+    summary: "横向整合（不同来源同类材料合并）/纵向深化（同一材料不断挖掘延伸）/横纵结合/去粗取精——材料加工的四种技法。"
+
+  - global_id: MT-057
+    orig_id: "WQ_MT_007"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "JK三级综合法（处理大量材料的提纲生成法）"
+    importance: A
+    summary: "K（归类）：将材料按主题归类→J（精炼）：每类提炼核心观点→提纲：将核心观点组织为层次结构。"
+
+  - global_id: MT-058
+    orig_id: "WQ_MT_009"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导讲稿起草五步准备法"
+    importance: A
+    summary: "①了解会议背景②明确领导角色③收集相关材料④了解受众情况⑤明确讲话目标——起草前的五步准备。"
+
+  - global_id: MT-059
+    orig_id: "WQ_MT_010"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导意图融会贯通两要求"
+    importance: A
+    summary: "①领会精神实质（不只是照搬原话，要理解背后意图）②转化为文章语言（领导的想法转化为可读可用的表达）。"
+
+  - global_id: MT-060
+    orig_id: "WQ_MT_011"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导讲稿主体四性要求"
+    importance: A
+    summary: "鲜明性（观点立场清晰）/生动性（有案例有形象感）/鼓动性（能激励听众）/通俗性（听懂就能做）——四性平衡。"
+
+  - global_id: MT-061
+    orig_id: "WQ_MT_012"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导意图三种受命类型"
+    importance: B
+    summary: "①有明确指示（照单落笔）②有思路无框架（辅助成型）③只有方向（主动构建）——三种不同工作状态的应对方法。"
+
+  - global_id: MT-062
+    orig_id: "WQ_MT_013"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "公文被动写作适应三情形"
+    importance: C
+    summary: "领导临时指派/紧急任务/不熟悉的领域——三种被动情形下快速适应的方法：快速调研+借鉴范文+请示确认。"
+
+  - global_id: MT-063
+    orig_id: "WQ_MT_014"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "工作总结五忌（豆腐账五种表现）"
+    importance: A
+    summary: "①罗列流水账（只说做了什么）②成绩泡沫化（夸大粉饰）③问题蜻蜓点水（回避关键问题）④经验无提炼（只有事实无规律）⑤计划空洞（无实质内容）。"
+
+  - global_id: MT-064
+    orig_id: "WQ_MT_015"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "工作总结不足部分三有要求"
+    importance: B
+    summary: "不足部分须做到：有问题（明确指出具体问题）/有原因（分析根本成因）/有对策（提出解决方案）——三有缺一不可。"
+
+  - global_id: MT-065
+    orig_id: "WQ_MT_016"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "用材四原则（鉴材筛选标准）"
+    importance: A
+    summary: "真实性（事实准确）/典型性（有代表性）/新鲜性（不用陈旧素材）/有力性（与观点高度匹配）——四原则筛选材料。"
+
+  - global_id: MT-066
+    orig_id: "WQ_MT_017"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "用材三技法（合并/角度/详略）"
+    importance: B
+    summary: "合并同类项（相似材料合并为一点）/多角度运用（同一材料从不同维度论述）/详略有别（重点详写，次要略写）。"
+
+  - global_id: MT-067
+    orig_id: "WQ_MT_018"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "材料消化三步法（筛选→定位→编织提炼）"
+    importance: A
+    summary: "①筛选（去掉无关和重复素材）→②定位（确定每个素材在文章哪个部分使用）→③编织提炼（将素材有机组合，提炼升华为观点）。"
+
+  - global_id: MT-068
+    orig_id: "WQ_MT_024"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "领导讲稿三类型"
+    importance: B
+    summary: "政论型（阐述政策理论）/意见型（提出工作要求）/礼仪型（仪式性讲话）——三种类型各有写法侧重。"
+
+  - global_id: MT-069
+    orig_id: "WQ_MT_025"
+    source_file: "王群_公文写作大手笔.yaml"
+    title: "公文主旨定义"
+    importance: A
+    summary: "公文主旨=行文用意+行文目的。用意是内在的写作动机，目的是对受文者期望产生的具体效果。主旨统摄全文。"
+
+  # --- 笔杆子炼成（11条，已去重1条MT）: MT-070 to MT-080 ---
+
+  - global_id: MT-070
+    orig_id: "BG-001"
+    source_file: "笔杆子炼成.yaml"
+    title: "写手三个层次与三个对应关系"
+    importance: A
+    summary: "出词句（以文叙事/写得像）→出框架（以文辅政/写得是）→出思想（以文鼎新/写得好）——写手成长三层次与三种水准。"
+
+  - global_id: MT-071
+    orig_id: "BG-003"
+    source_file: "笔杆子炼成.yaml"
+    title: "平时磨刀五字法——要搜读合练"
+    importance: A
+    summary: "要（找好素材）+搜（系统搜集）+读（精读范文）+合（综合归纳）+练（实战练习）——平时积累的五字方法论。"
+
+  - global_id: MT-072
+    orig_id: "BG-004"
+    source_file: "笔杆子炼成.yaml"
+    title: "上情下情内情外情四维情况积累法"
+    importance: A
+    summary: "上情（上级方向政策）+下情（基层实际反映）+内情（本单位现状问题）+外情（同类单位经验对标）——四维全方位掌握情况。"
+
+  - global_id: MT-073
+    orig_id: "BG-006"
+    source_file: "笔杆子炼成.yaml"
+    title: "平时把握领导意图七查法"
+    importance: A
+    summary: "查领导日常讲话/查历次文件批示/查工作重点安排/查工作会议记录/查领导用词偏好/查个人文风特点/查汇报后的反馈意见——七查全面掌握领导意图。"
+
+  - global_id: MT-074
+    orig_id: "BG-007"
+    source_file: "笔杆子炼成.yaml"
+    title: "领导说的公文逻辑七维"
+    importance: B
+    summary: "领导讲话背后的七个逻辑维度：政治站位/全局视野/工作重点/历史沿革/问题导向/目标导向/落实路径。"
+
+  - global_id: MT-075
+    orig_id: "BG-009"
+    source_file: "笔杆子炼成.yaml"
+    title: "列提纲三要：研究事·研究体·实战技巧"
+    importance: A
+    summary: "列提纲时须同时做到：①研究事（把工作情况吃透）②研究体（参照同类权威范文的框架）③掌握实战技巧（快速成型的方法）。"
+
+  - global_id: MT-076
+    orig_id: "BG-011"
+    source_file: "笔杆子炼成.yaml"
+    title: "行文敲键子四步法"
+    importance: A
+    summary: "套（先套用同类范文框架）→摘（摘取可用的素材和表述）→归（归入对应段落）→堆通读打磨（读通顺后精炼）。"
+
+  - global_id: MT-077
+    orig_id: "BG-012"
+    source_file: "笔杆子炼成.yaml"
+    title: "'抄'材料六条法则"
+    importance: B
+    summary: "①只抄骨架不抄血肉②换个说法③结合实际④适当取舍⑤注意时效（不用旧材料）⑥不照抄同级单位（防雷同）。"
+
+  - global_id: MT-078
+    orig_id: "BG-013"
+    source_file: "笔杆子炼成.yaml"
+    title: "交稿有方——不仅要写好更要汇报好"
+    importance: B
+    summary: "交稿时须主动汇报：①此稿思路（为何这样写）②难点处理（如何处理棘手内容）③未确定处（请领导定夺）。"
+
+  - global_id: MT-079
+    orig_id: "BG-014"
+    source_file: "笔杆子炼成.yaml"
+    title: "写后复盘五维提炼法"
+    importance: B
+    summary: "每次写完后复盘：①结构是否最优②内容有无遗漏③表达是否到位④领导修改了什么⑤下次可改进的地方——五维复盘积累经验。"
+
+  - global_id: MT-080
+    orig_id: "BG-015"
+    source_file: "笔杆子炼成.yaml"
+    title: "写作四阶段升维模型"
+    importance: B
+    summary: "写得出（掌握基本格式）→写得像（符合文种规范）→写得是（思路正确有内容）→写得好（有思想有感染力）。"
+
+  # --- 公文高手自我修炼（14条）: MT-081 to MT-093 ---
+
+  - global_id: MT-081
+    orig_id: "MT-001"
+    source_file: "公文高手自我修炼.yaml"
+    title: "写作素养金字塔：情怀>见识>文字"
+    importance: A
+    merged_from: "笔杆子炼成.yaml BG-017（已去重）"
+    summary: "写作者素养三层：文字（术）→见识（识）→情怀（道）；以道驭术——情怀与见识是根基，文字技法是外显。"
+
+  - global_id: MT-082
+    orig_id: "MT-002"
+    source_file: "公文高手自我修炼.yaml"
+    title: "观世音菩萨五字写作心法"
+    importance: B
+    summary: "观（察事为先）+世（通达世事）+音（音韵铿锵）+菩（菩提智慧/思维清晰）+萨（菩萨心肠/为民情怀）。"
+
+  - global_id: MT-083
+    orig_id: "MT-003"
+    source_file: "公文高手自我修炼.yaml"
+    title: "公文写作者三有三无"
+    importance: A
+    summary: "三有：有公心/有正气/有热情；三无：无邪/无私/无偏。价值观决定公文的根本取向。"
+
+  - global_id: MT-084
+    orig_id: "MT-004"
+    source_file: "公文高手自我修炼.yaml"
+    title: "破题时事势三字经"
+    importance: A
+    merged_from: "胡森林_公文写作底层心法.yaml MT '时事势三字立意法'（已去重）"
+    summary: |
+      时（时代背景+党的最新方针政策）+事（所要传达的核心事物/问题，须全方位把事吃透）
+      +势（发展趋势，顺势而为，应势而动）——确定立意的三维框架。
+
+  - global_id: MT-085
+    orig_id: "MT-005"
+    source_file: "公文高手自我修炼.yaml"
+    title: "立意四思法：高度深度角度尺度"
+    importance: A
+    merged_from: "胡森林_公文写作底层心法.yaml MT '四思立意法'（已去重）"
+    summary: "首思高度（全局视野）→再思深度（揭示本质规律）→三思角度（新颖切入点）→四思尺度（把握分寸）。"
+
+  - global_id: MT-086
+    orig_id: "MT-006"
+    source_file: "公文高手自我修炼.yaml"
+    title: "四步成文法：领悟构思布局炼字"
+    importance: A
+    summary: "领悟（虚己应物，清空成见深入理解）→构思（神与物游，自由演化思路）→布局（胸有丘壑，搭建骨架）→炼字（语意两工，语言意义同步精炼）。"
+
+  - global_id: MT-087
+    orig_id: "MT-007"
+    source_file: "公文高手自我修炼.yaml"
+    title: "为文三悟：悟上级悟领导悟听众"
+    importance: A
+    summary: "悟上级精神（政策高度）+悟领导意图（扩展/挖掘/完善三维度）+悟听众心理（靶向换位思考）——三悟缺一不可。"
+
+  - global_id: MT-088
+    orig_id: "MT-008"
+    source_file: "公文高手自我修炼.yaml"
+    title: "功夫在诗外：学好三门课"
+    importance: A
+    summary: "哲学（怎么看/认识论/立意高度）+逻辑学（怎么办/方法论/论证结构）+心理学（为谁写/对象论/表达效果）——三门基础课。"
+
+  - global_id: MT-089
+    orig_id: "MT-009"
+    source_file: "公文高手自我修炼.yaml"
+    title: "练好三门功做好三件事"
+    importance: B
+    summary: "三门功：问题意识+调查研究+思维训练；三件事：善于学习（源头活水）+勤于练笔（本领恐慌意识）+乐于总结（提炼规律）。"
+
+  - global_id: MT-090
+    orig_id: "MT-010"
+    source_file: "公文高手自我修炼.yaml"
+    title: "公文写作成长三阶段模型"
+    importance: A
+    summary: "新手（迂直激切：有热情但不接地气）→熟手（务实老到：经挫折后变得实在）→高手（劲道有力：内外兼修，举重若轻）。"
+
+  - global_id: MT-091
+    orig_id: "MT-011"
+    source_file: "公文高手自我修炼.yaml"
+    title: "道术相济内外兼修"
+    importance: A
+    summary: "道（情怀修为/大局观）为里，术（技法格式）为表，内外兼修才能真正提升。写作能力的突破依赖思想境界的提升。"
+
+  - global_id: MT-092
+    orig_id: "MT-012"
+    source_file: "公文高手自我修炼.yaml"
+    title: "写作充电站：以写促学"
+    importance: B
+    summary: "写作能培养：观察力/思考力/分析力/判断力/办事能力/管理能力。写作是能力充电站，机会垂青有准备的人。"
+
+  - global_id: MT-093
+    orig_id: "MT-014"
+    source_file: "公文高手自我修炼.yaml"
+    title: "调研报告写作十要点"
+    importance: B
+    summary: "准备提纲→预了解情况→先看现场后座谈→准备好发言→引导气氛善于提问→领会领导意图→注意形象→致谢→保持联系→认真总结。"
+
+# ============================================================
+# PM 短语素材（共14条，来自rule书）
+# ============================================================
+
+entries_pm:
+
+  # --- 李忠秋（6条）: PM-001 to PM-006 ---
+
+  - global_id: PM-001
+    orig_id: "PM-001"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "'论证类比'四原则口诀"
+    importance: B
+    summary: "论证四原则口诀（结论先行+以上统下+归类分组+逻辑递进），可直接作为写作自查清单使用。"
+
+  - global_id: PM-002
+    orig_id: "PM-002"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "工作总结核心公式"
+    importance: A
+    summary: "工作总结句式公式：通过[做了什么行动]，实现了[什么成果]，为[什么目标]奠定了基础。三要素缺一不可。"
+
+  - global_id: PM-003
+    orig_id: "PM-003"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "标题万能公式"
+    importance: B
+    summary: "标题公式：[范围]+[角度]+[核心概念]；或：关于[主题]的[文种]。确保标题简洁明确具体。"
+
+  - global_id: PM-004
+    orig_id: "PM-004"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "写作自检三连问"
+    importance: B
+    summary: "写完后自问：①这篇文章的核心观点是什么？②读者读完会有什么行动？③我给出了足够的理由吗？"
+
+  - global_id: PM-005
+    orig_id: "PM-005"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "写作失败四大根源诊断"
+    importance: B
+    summary: "四大根源：①没有明确结论②论点论据不对应③同一层级分类不MECE④排列无逻辑顺序——诊断后对症下药。"
+
+  - global_id: PM-006
+    orig_id: "PM-006"
+    source_file: "李忠秋_结构化写作.yaml"
+    title: "PPT本义与制作标准"
+    importance: C
+    summary: "PPT应满足：每页一个核心观点（标题即结论）/图文配合/层次对应文字结构/放映无歧义。"
+
+  # --- 胡森林底层心法（5条）: PM-007 to PM-011 ---
+
+  - global_id: PM-007
+    orig_id: "PM-001"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文写作六个'言之'金句"
+    importance: A
+    summary: "言之有理（逻辑）/言之有据（依据）/言之有物（内容）/言之有序（结构）/言之有法（方法）/言之有心（情怀）——六维质量标准。"
+
+  - global_id: PM-008
+    orig_id: "PM-002"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "研究者意识三句话"
+    importance: B
+    summary: "三句指导语：①我在研究什么事？②这件事的本质规律是什么？③我的文章能帮助解决什么问题？"
+
+  - global_id: PM-009
+    orig_id: "PM-003"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "公文创新辩证法"
+    importance: B
+    summary: "'永远的重复·持续的创新'：公文写作须在保持基本规范（重复）的基础上不断探索新思路新表达（创新）。"
+
+  - global_id: PM-010
+    orig_id: "PM-004"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "文气与价值观名句集"
+    importance: C
+    summary: "可用于讲话稿的文气金句（示例）：'笔墨当随时代''文章合为时而著''铁肩担道义，妙手著文章'等。"
+
+  - global_id: PM-011
+    orig_id: "PM-005"
+    source_file: "胡森林_公文写作底层心法.yaml"
+    title: "四种角色跃迁（文字工作者成长路径）"
+    importance: B
+    summary: "文字执行者→思路设计者→策略参谋者→决策影响者——文字工作者的四种不同角色层次，是职业发展路径。"
+
+  # --- 胡森林笔杆（3条）: PM-012 to PM-014 ---
+
+  - global_id: PM-012
+    orig_id: "PM-001"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "领导满意四标准"
+    importance: A
+    summary: "领导审稿满意的四个标准句式：'站位对！'（符合政策）/'思路对！'（逻辑清晰）/'内容全！'（无遗漏）/'表达好！'（语言准确）。"
+
+  - global_id: PM-013
+    orig_id: "PM-002"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "公文写作六个'言之'金句"
+    importance: B
+    summary: "言之有理/有据/有物/有序/有法/有心——六维检验公文质量的精炼口诀（与胡森林底层心法PM-007同源，此为精简版）。"
+
+  - global_id: PM-014
+    orig_id: "PM-003"
+    source_file: "胡森林_公文写作心法笔杆.yaml"
+    title: "短实新三字文风金句"
+    importance: B
+    summary: "新华社倡导文风：'短实新'——短（篇幅精简）/实（内容务实）/新（表达创新）。可作为文风自检三字标准。"

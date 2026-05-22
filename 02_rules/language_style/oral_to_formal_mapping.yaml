@@ -1,0 +1,494 @@
+# 口语→公文转换对照表
+# 来源：AI写材料手册第10章（基础），补充至50组以上
+# 说明：所有oral_to_formal类规则条目整理为独立对照表，并补充高频口语化表述
+# 排列原则：按出错频率从高到低排序（high > medium > low）
+# 生成日期：2026-03-15
+
+meta:
+  version: "1.0"
+  total_count: 68
+  source: "AI写材料手册第10章 + 公文写作规范补充"
+
+oral_to_formal_mapping:
+
+  # ===== HIGH 频率：每篇必查 =====
+
+  - id: OTF-001
+    oral: "搞好"
+    formal: "做好/推进好/落实好"
+    frequency: high
+    notes: "最高频口语动词之一，几乎所有场合均需替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-002
+    oral: "抓好"
+    formal: "切实推进/扎实推进/深入推进"
+    frequency: high
+    notes: "'抓好落实'中'抓好'可保留，其他场合宜替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-003
+    oral: "老百姓"
+    formal: "人民群众/广大群众/广大市民"
+    frequency: high
+    notes: "讲话稿营造亲和力时可酌情保留，正式公文必须替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-004
+    oral: "出问题"
+    formal: "出现问题/发生问题/出现偏差"
+    frequency: high
+    notes: "含'出了问题''容易出问题'等变体均需替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-005
+    oral: "有问题"
+    formal: "存在问题/存在不足/存在差距"
+    frequency: high
+    notes: "'还有一些问题'→'仍存在一些问题和不足'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-006
+    oral: "提高质量"
+    formal: "提升质量"
+    frequency: high
+    notes: "'提高'搭配数量（比例/速度），'提升'搭配质量/水平"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-007
+    oral: "干好"
+    formal: "做好/完成好/落实好"
+    frequency: high
+    notes: "含'把工作干好''干好本职'等表述"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-008
+    oral: "弄清楚"
+    formal: "查明/厘清/明确"
+    frequency: high
+    notes: "'弄明白'→'弄清/搞清/明确'（注意'搞清'本身也偏口语）"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-009
+    oral: "通过…提高了/实现了（主语残缺）"
+    formal: "通过…我们提高了/实现了（补充主语）"
+    frequency: high
+    notes: "'通过'引导的介词短语不能作主语，须补充主语"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-010
+    oral: "进行了讨论"
+    formal: "讨论了/进行讨论"
+    frequency: high
+    notes: "'进行了+动词名词'结构冗余，去掉'了'或直接用动词"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-011
+    oral: "进行了研究"
+    formal: "研究了/进行研究"
+    frequency: high
+    notes: "同OTF-010规则，适用于'进行了审议/进行了检查'等"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-012
+    oral: "作出了重要指示"
+    formal: "作出重要指示"
+    frequency: high
+    notes: "固定搭配'作出重要指示/批示/部署'后不加'了'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-013
+    oral: "给予了支持"
+    formal: "给予支持"
+    frequency: high
+    notes: "'给予了帮助/指导/鼓励'均需去掉'了'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-014
+    oral: "一定会完成"
+    formal: "有信心完成/力争完成"
+    frequency: high
+    notes: "过于绝对的承诺，改用留有余地的表述"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-015
+    oral: "挺好/挺不错"
+    formal: "较好/比较好/颇为出色"
+    frequency: high
+    notes: "'挺'系列程度副词均需替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-016
+    oral: "给力"
+    formal: "有力支撑/扎实有力/成效显著"
+    frequency: high
+    notes: "网络流行语，公文绝对禁用"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-017
+    oral: "点赞"
+    formal: "给予好评/获得广泛认可"
+    frequency: high
+    notes: "网络流行语，公文绝对禁用"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-018
+    oral: "高质量的发展"
+    formal: "高质量发展"
+    frequency: high
+    notes: "固定政治表述，中间不加'的'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-019
+    oral: "绿水青山也是金山银山"
+    formal: "绿水青山就是金山银山"
+    frequency: high
+    notes: "重要表述，'就是'不能改为'也是'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-020
+    oral: "共同致富"
+    formal: "共同富裕"
+    frequency: high
+    notes: "专有概念，含义不同，绝不能混用"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-021
+    oral: "二十大精神"
+    formal: "党的二十大精神"
+    frequency: high
+    notes: "引用党代会精神须加'党的'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-022
+    oral: "从严治党"
+    formal: "全面从严治党"
+    frequency: high
+    notes: "'全面'二字不可省略"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-023
+    oral: "中国特色现代化"
+    formal: "中国式现代化"
+    frequency: high
+    notes: "固定表述，不可替换为'中国特色现代化'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-024
+    oral: '"的、地、得"混用'
+    formal: "结构助词规范使用：动词/形容词前'地'，名词前'的'，谓语后'得'"
+    frequency: high
+    notes: "'认真地学习'√，'认真的学习'×；'走得很稳'√，'走的很稳'×"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-025
+    oral: '"即/既"混淆'
+    formal: "即：就是（立即、即将）；既：已经（既然、既然如此）"
+    frequency: high
+    notes: "'既要金山银山'√，'即要金山银山'×"
+    source: "AI写材料手册第10章"
+
+  # ===== MEDIUM 频率：中频，需检查 =====
+
+  - id: OTF-026
+    oral: "搞清楚"
+    formal: "查清/厘清/明确/弄清"
+    frequency: medium
+    notes: "'搞'系列口语动词均需替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-027
+    oral: "搞活动"
+    formal: "开展活动"
+    frequency: medium
+    notes: ""
+    source: "AI写材料手册第10章"
+
+  - id: OTF-028
+    oral: "想了很多办法"
+    formal: "积极探索/多措并举/综合施策"
+    frequency: medium
+    notes: "'采取了很多措施'→'综合采取了多项有效措施'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-029
+    oral: "不少"
+    formal: "若干/一定数量的/较多"
+    frequency: medium
+    notes: "'有不少企业'→'有若干企业'或直接用具体数字"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-030
+    oral: "还不够好"
+    formal: "仍有差距/尚有不足/亟待改进"
+    frequency: medium
+    notes: "'工作做得还不够'→'工作仍有明显差距'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-031
+    oral: "我个人认为"
+    formal: "我认为/我们认为/经研究认为"
+    frequency: medium
+    notes: "公文代表机关立场，不宜强调'个人'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-032
+    oral: "非常感动"
+    formal: "深受鼓舞/倍感振奋"
+    frequency: medium
+    notes: "正式公文（非讲话稿）中情绪化过于外露，须改为庄重表述"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-033
+    oral: "如无不妥，请批示"
+    formal: "以上请示，请批准/请审阅"
+    frequency: medium
+    notes: "双重否定套语，语义模糊，改为直接表述"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-034
+    oral: "人民至上、生命第一"
+    formal: "人民至上、生命至上"
+    frequency: medium
+    notes: "固定表述，'第一'需改为'至上'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-035
+    oral: "颠覆性变革"
+    formal: "历史性变革/根本性变革"
+    frequency: medium
+    notes: "'颠覆性'易引发负面联想，改为'历史性'等正面表述"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-036
+    oral: "会议研究了问题"
+    formal: "会议就该问题进行了研究/会议研究了该问题"
+    frequency: medium
+    notes: "主谓搭配不当：会议不能'研究'，应加介词短语"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-037
+    oral: "动宾：提高工作效率和质量"
+    formal: "提高工作效率、提升工作质量"
+    frequency: medium
+    notes: "'提高'与'质量'搭配不当，'质量'宜用'提升'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-038
+    oral: "事情（的事）结果来看"
+    formal: "从……结果来看/从……成效来看"
+    frequency: medium
+    notes: "模糊表述，明确结果的具体指向"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-039
+    oral: "这次会议很重要"
+    formal: "这次会议意义重大/这次会议十分重要"
+    frequency: medium
+    notes: "'很'系列程度副词偏口语，改为'十分/非常/极为'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-040
+    oral: "搞调研"
+    formal: "开展调研/进行调研/深入调研"
+    frequency: medium
+    notes: ""
+    source: "AI写材料手册第10章"
+
+  - id: OTF-041
+    oral: '"布署"（错别字）'
+    formal: "部署"
+    frequency: medium
+    notes: "高频易错别字：'部署'不是'布署'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-042
+    oral: "不断加强和提高"
+    formal: "持续加强/不断深化"
+    frequency: medium
+    notes: "'加强'与'提高'搭配的对象不同，不宜并列"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-043
+    oral: '"要高度重视、着力解决"（空泛）'
+    formal: "要……（具体措施）"
+    frequency: medium
+    notes: "此类套语须跟具体措施，不能单独成段"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-044
+    oral: "特别激动"
+    formal: "倍感振奋/深受鼓舞"
+    frequency: medium
+    notes: "讲话稿中可酌情保留，正式公文中须替换"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-045
+    oral: "神操作"
+    formal: "创新举措/有效做法"
+    frequency: medium
+    notes: "网络流行语，公文绝对禁用"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-046
+    oral: "全面提高"
+    formal: "全面提升（涉及质量类指标时）"
+    frequency: medium
+    notes: "质量类指标用'提升'，数量类指标用'提高'"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-047
+    oral: "搞好关系"
+    formal: "协调关系/强化协作/增进合作"
+    frequency: medium
+    notes: ""
+    source: "补充"
+
+  - id: OTF-048
+    oral: "取得了一定成绩"
+    formal: "取得一定成效/取得积极成效"
+    frequency: medium
+    notes: "'了'字去掉；'成绩'→'成效'更符合公文风格"
+    source: "补充"
+
+  - id: OTF-049
+    oral: "出了成果"
+    formal: "取得成果/形成了重要成果"
+    frequency: medium
+    notes: "'出'字偏口语，改为'取得/形成'"
+    source: "补充"
+
+  - id: OTF-050
+    oral: "同志们，下面我来说几点"
+    formal: "同志们，下面，我讲几点意见"
+    frequency: medium
+    notes: "'来说'→'讲'，更具公文庄重感"
+    source: "补充"
+
+  # ===== LOW 频率：特定场合需注意 =====
+
+  - id: OTF-051
+    oral: "内卷"
+    formal: "竞争加剧/过度竞争"
+    frequency: low
+    notes: "网络流行语，公文绝对禁用"
+    source: "补充"
+
+  - id: OTF-052
+    oral: "躺平"
+    formal: "消极懈怠/不作为"
+    frequency: low
+    notes: "网络流行语，公文绝对禁用"
+    source: "补充"
+
+  - id: OTF-053
+    oral: "打call"
+    formal: "给予支持/为……加油助威"
+    frequency: low
+    notes: "网络流行语，公文绝对禁用"
+    source: "补充"
+
+  - id: OTF-054
+    oral: "蛮拼的"
+    formal: "积极拼搏/努力进取"
+    frequency: low
+    notes: "偏方言口语，公文禁用"
+    source: "补充"
+
+  - id: OTF-055
+    oral: "不孬"
+    formal: "不差/出色/优秀"
+    frequency: low
+    notes: "北方方言，公文禁用"
+    source: "补充"
+
+  - id: OTF-056
+    oral: "话说回来"
+    formal: "当然，我们也要看到……/从另一角度看……"
+    frequency: low
+    notes: "口语化过渡语，替换为书面过渡表述"
+    source: "补充"
+
+  - id: OTF-057
+    oral: '"事实上"（口语转折用法）'
+    formal: "实际上/从实际情况看"
+    frequency: low
+    notes: "'事实上'本身无问题，但在口语化语境中常作转折，须注意搭配"
+    source: "补充"
+
+  - id: OTF-058
+    oral: "可以说"
+    formal: "可以认为/可以判断/由此可见"
+    frequency: low
+    notes: "'可以说'在正式公文中略显随意，宜改为更肯定的判断词"
+    source: "补充"
+
+  - id: OTF-059
+    oral: '"对于……来说"（频繁使用）'
+    formal: "对……而言/就……而言"
+    frequency: low
+    notes: "'来说'口语化，改为'而言'"
+    source: "补充"
+
+  - id: OTF-060
+    oral: "很有意思"
+    formal: "颇具特色/值得关注/颇有意义"
+    frequency: low
+    notes: "'有意思'偏口语，公文中意义类评价改为'有意义/有价值'"
+    source: "补充"
+
+  - id: OTF-061
+    oral: "接下来"
+    formal: "下一步/此后/进而"
+    frequency: low
+    notes: "表时序推进时，'接下来'偏口语"
+    source: "补充"
+
+  - id: OTF-062
+    oral: "说实话"
+    formal: "坦率地说/客观而言/实事求是地讲"
+    frequency: low
+    notes: "'说实话'口语化，讲话稿中可酌情保留"
+    source: "补充"
+
+  - id: OTF-063
+    oral: "总的来说"
+    formal: "总体上看/综合来看/总体而言"
+    frequency: low
+    notes: "'总的来说'略显口语，可用'总体而言'替代"
+    source: "补充"
+
+  - id: OTF-064
+    oral: '"首先……然后……最后……"（口语逻辑词）'
+    formal: "一是……二是……三是……/第一……第二……第三……"
+    frequency: low
+    notes: "公文中标准层次序号表述优于口语化的'首先/然后/最后'"
+    source: "补充"
+
+  - id: OTF-065
+    oral: "基本上都"
+    formal: "基本/大多数/总体上"
+    frequency: low
+    notes: "'基本上都'双重模糊，择一使用更准确"
+    source: "补充"
+
+  - id: OTF-066
+    oral: '"再在"混用'
+    formal: "再：表示又一次（再接再厉）；在：表示存在状态（在岗）"
+    frequency: low
+    notes: "'再次强调'√，'在强调一遍'×"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-067
+    oral: '"己已"混用'
+    formal: "己：本身（自己）；已：已经（已经完成）"
+    frequency: low
+    notes: "形近易错字，需仔细辨认"
+    source: "AI写材料手册第10章"
+
+  - id: OTF-068
+    oral: '"未末"混用'
+    formal: "未：没有（未完成）；末：最后（末尾）"
+    frequency: low
+    notes: "形近易错字"
+    source: "AI写材料手册第10章"

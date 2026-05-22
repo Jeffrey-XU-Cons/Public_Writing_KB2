@@ -1,0 +1,813 @@
+# 烟草行业业务术语库
+# 说明：覆盖技术研发、原料保障、生产制造、市场营销、物流五大业务领域
+# 生成日期：2026-03-15
+# 条目数：85条（TT-BIZ-001 ~ TT-BIZ-085）
+
+meta:
+  version: '"1.0"'
+  category: biz_term
+  total_entries: 85
+  domains:
+    - name: "技术研发类"
+      id_range: '"TT-BIZ-001 ~ TT-BIZ-018"'
+      count: 18
+    - name: "原料保障类"
+      id_range: '"TT-BIZ-019 ~ TT-BIZ-033"'
+      count: 15
+    - name: "生产制造类"
+      id_range: '"TT-BIZ-034 ~ TT-BIZ-050"'
+      count: 17
+    - name: "市场营销类"
+      id_range: '"TT-BIZ-051 ~ TT-BIZ-067"'
+      count: 17
+    - name: "物流管理类"
+      id_range: '"TT-BIZ-068 ~ TT-BIZ-085"'
+      count: 18
+  format_note: '"每条含 id/category/term/definition/context/example/notes 字段"'
+
+# ===== 技术研发类 =====
+
+biz_terms:
+
+  - id: TT-BIZ-001
+    category: biz_term
+    domain: 技术研发
+    term: 自主创新
+    definition: 依靠自身力量，通过原始创新、集成创新或引进消化吸收再创新，形成具有自主知识产权的核心技术和产品。
+    context: 烟草行业技术政策，强调核心技术不依赖外部，推动行业高质量发展。
+    example: '"坚持自主创新导向，持续攻克卷烟关键技术难关"'
+    notes: '与"技术引进""仿制"相对，是行业技术战略的核心方向'
+
+  - id: TT-BIZ-002
+    category: biz_term
+    domain: 技术研发
+    term: 科技创新体系
+    definition: 由研发主体（工业公司、科研院所、技术中心）、创新平台、创新机制、资金保障等要素构成的系统性科技创新架构。
+    context: 行业十四五/十五五规划中的核心建设任务。
+    example: '"持续完善科技创新体系，提升行业整体创新能力"'
+    notes: 包含体制机制创新和技术本身创新两个层面
+
+  - id: TT-BIZ-003
+    category: biz_term
+    domain: 技术研发
+    term: 技术攻关
+    definition: 针对行业关键共性技术难题，集中力量组织开展的有目标、有计划的科研突破活动。
+    context: 多用于重大科技项目立项、阶段性报告、成果汇报等场合。
+    example: '"组织行业内多家单位联合开展烟叶调制关键技术攻关"'
+    notes: '强调"集中力量""有计划"，区别于日常研发'
+
+  - id: TT-BIZ-004
+    category: biz_term
+    domain: 技术研发
+    term: 行业技术中心
+    full_form: 烟草行业技术中心
+    definition: 设在工业企业的行业级技术创新平台，承担卷烟产品开发、工艺研究、质量提升等核心研发职能。
+    context: 行业技术创新体系的核心节点，分国家级、省级。
+    example: '"该企业行业技术中心荣获国家认定，承担多项行业重大科研项目"'
+    notes: '区别于"企业技术中心"（企业自身认定）'
+
+  - id: TT-BIZ-005
+    category: biz_term
+    domain: 技术研发
+    term: 新产品开发
+    definition: 在已有技术积累和市场研究基础上，开展新卷烟品规的配方设计、工艺验证、市场测试和规模推广的全过程活动。
+    context: 工业企业核心业务之一，与品牌建设密切关联。
+    example: '"本年度完成新产品开发立项12个，其中3个品规进入市场推广阶段"'
+    notes: 包含概念开发、小试、中试、批量投产等阶段
+
+  - id: TT-BIZ-006
+    category: biz_term
+    domain: 技术研发
+    term: 卷烟配方
+    definition: 决定卷烟产品风格特征的烟叶原料组合方案，包括烟叶产地、类型、比例及加香加料方案的系统设计。
+    context: 工业企业的核心技术机密，是品牌差异化的根本所在。
+    example: '"该品牌配方经过多年优化，已形成稳定独特的产品风格"'
+    notes: 配方稳定性是保障卷烟品质一致性的基础
+
+  - id: TT-BIZ-007
+    category: biz_term
+    domain: 技术研发
+    term: 工艺研究
+    definition: 针对卷烟生产制造过程中的制丝、卷包等工序，开展以提升产品质量和降低原材料消耗为目标的工艺优化研究活动。
+    context: 技术研发与生产制造的交叉领域。
+    example: '"通过工艺研究优化，该产品感官质量评分提升0.5分"'
+    notes: 工艺研究成果直接体现在工艺规范和操作标准中
+
+  - id: TT-BIZ-008
+    category: biz_term
+    domain: 技术研发
+    term: 减害降焦
+    definition: 通过原料改良、配方优化、滤嘴技术和工艺改进等手段，降低卷烟焦油量、有害成分释放量，减少对吸烟者的健康危害。
+    context: 行业履行社会责任的重要技术方向，受国家政策导向约束。
+    example: '"坚持减害降焦技术方向，持续开展低焦油卷烟研发"'
+    notes: '"降焦减害"也是常用表述顺序，两者含义相同'
+
+  - id: TT-BIZ-009
+    category: biz_term
+    domain: 技术研发
+    term: 新型烟草制品
+    abbreviation: 新型烟草
+    definition: 区别于传统卷烟的烟草消费品，主要包括电子烟（含烟草加热型）、口含烟等，采用不燃烧方式传递烟草活性物质。
+    context: 行业近年重要战略布局方向，国际烟草巨头竞争焦点。
+    example: '"加快布局新型烟草制品，积极参与国际市场竞争"'
+    notes: 我国新型烟草受专卖法规管理，工业企业须持有相应许可
+
+  - id: TT-BIZ-010
+    category: biz_term
+    domain: 技术研发
+    term: 烟草专利
+    definition: 烟草行业企业或科研机构就卷烟产品、生产工艺、原料处理、包装设计等取得的发明专利、实用新型专利或外观设计专利。
+    context: 衡量企业技术创新能力的重要指标。
+    example: '"累计获得国家授权专利156项，其中发明专利48项"'
+    notes: 国际专利布局是行业走出去战略的重要内容
+
+  - id: TT-BIZ-011
+    category: biz_term
+    domain: 技术研发
+    term: 感官质量评价
+    definition: 由经过培训的评吸专家组成评委会，按照统一标准，对卷烟产品的香气、烟气、口感等感官指标进行系统评分的质量评估方式。
+    context: 工业企业产品研发和质量管控的核心方法之一。
+    example: '"新品上市前须经过感官质量评价，达到既定分值方可批量生产"'
+    notes: 感官评价具有主观性，须配合理化指标检测综合判断
+
+  - id: TT-BIZ-012
+    category: biz_term
+    domain: 技术研发
+    term: 烟草科研成果转化
+    definition: 将烟草科研成果（新技术、新工艺、新产品）从研究开发阶段推进到生产应用、市场化推广的全过程活动。
+    context: 行业科技管理和创新政策的重要议题。
+    example: '"建立健全科研成果转化机制，提升科研投入产出效益"'
+    notes: 成果转化率是衡量科研有效性的关键指标
+
+  - id: TT-BIZ-013
+    category: biz_term
+    domain: 技术研发
+    term: 联合研发
+    definition: 两家及以上烟草工业企业、科研机构或高校，围绕共同目标开展的合作研究开发活动，共担风险、共享成果。
+    context: 行业整合创新资源、解决共性技术问题的重要方式。
+    example: '"与高校联合研发烟叶醇化新技术，有效降低产品刺激性"'
+    notes: 技术创新联合体是行业推动联合研发的重要组织形式
+
+  - id: TT-BIZ-014
+    category: biz_term
+    domain: 技术研发
+    term: 技术标准
+    definition: 由技术机构或行业主管部门制定，对产品质量、生产工艺、检测方法等作出统一规定的规范性文件，包括国家标准、行业标准和企业标准。
+    context: 技术管理和质量管控的基础性工具。
+    example: '"修订完善卷烟主要原材料行业技术标准，促进供应链质量提升"'
+    notes: 行业标准代号为YC，企业标准须不低于国家标准
+
+  - id: TT-BIZ-015
+    category: biz_term
+    domain: 技术研发
+    term: 品牌技术平台
+    definition: 支撑某一卷烟品牌产品系列稳定生产和持续创新的技术体系，包括专属配方体系、工艺技术路线和质量控制标准。
+    context: 品牌建设与技术研发深度融合的概念。
+    example: '"持续夯实品牌技术平台，保障重点品牌产品风格稳定性"'
+    notes: 品牌技术平台是品牌核心竞争力的技术支撑
+
+  - id: TT-BIZ-016
+    category: biz_term
+    domain: 技术研发
+    term: 智能制造关键技术
+    definition: 支撑烟草行业制造过程智能化转型的核心技术群，包括工业互联网、大数据分析、机器视觉、智能控制等在制造场景的应用技术。
+    context: 行业数字化转型和智能制造战略的技术基础。
+    example: '"攻克智能制造关键技术，推动制造过程少人化、无人化"'
+    notes: '与"两化融合""数字化转型"政策高度关联'
+
+  - id: TT-BIZ-017
+    category: biz_term
+    domain: 技术研发
+    term: 研发投入强度
+    definition: 企业研发经费支出占主营业务收入的比例，是衡量企业创新投入水平的核心指标。
+    context: 行业科技创新评价和绩效考核的常用指标。
+    example: '"全系统研发投入强度持续提升，达到行业历史新高"'
+    notes: 国际上一般以2%为创新型企业的基准线
+
+  - id: TT-BIZ-018
+    category: biz_term
+    domain: 技术研发
+    term: 绿色制造技术
+    definition: 在卷烟生产制造过程中，以节能、降耗、减排为目标，通过工艺改进、设备升级和废弃物回收利用，实现环境友好型生产的技术体系。
+    context: 双碳目标背景下，行业绿色低碳发展的重要支撑。
+    example: '"推广绿色制造技术，单箱卷烟综合能耗较上年下降3.2%"'
+    notes: 与碳达峰碳中和政策导向高度关联
+
+# ===== 原料保障类 =====
+
+  - id: TT-BIZ-019
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶收购
+    definition: 烟草商业公司依据国家计划，按照国家规定收购价格，向烟叶种植农户或基地收购初烤烟叶的经营活动。
+    context: 烟草商业公司的核心业务之一，受国家计划严格管控。
+    example: '"按照国家烟叶收购计划，保质保量完成本辖区烟叶收购任务"'
+    notes: 烟叶收购须持有烟草专卖许可证，严禁无证收购
+
+  - id: TT-BIZ-020
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶调拨
+    definition: 在行业内部，按照工业企业原料需求计划，将库存烟叶从产地仓库调配至工业企业使用地的内部流通活动。
+    context: 工业与商业协调配合的核心业务环节。
+    example: '"依托工商协同机制，合理安排跨区域烟叶调拨，保障原料均衡供应"'
+    notes: 调拨计划须报国家烟草专卖局审批
+
+  - id: TT-BIZ-021
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶醇化
+    definition: 将初烤或复烤后的烟叶，在特定温湿度条件下储存一定时期，使其自然发生化学变化、改善吸味品质的处理过程。
+    context: 原料保障和产品质量提升的关键工序。
+    example: '"建立醇化质量追踪机制，确保入库烟叶醇化效果达标"'
+    notes: 一般醇化期为2-3年，高档卷烟原料醇化期更长
+
+  - id: TT-BIZ-022
+    category: biz_term
+    domain: 原料保障
+    term: 原料库存
+    definition: 工业企业持有的可用于生产的烟叶原料存量，通常以万箱卷烟的生产保障天数或万担来计量。
+    context: 生产计划和原料采购的基础数据。
+    example: '"动态监控原料库存水平，合理确定安全库存下限"'
+    notes: 原料库存过高占用资金，过低影响生产，须动态平衡
+
+  - id: TT-BIZ-023
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶质量等级
+    definition: 按照国家烟叶分级标准（GB 2635），依据烟叶部位、颜色、成熟度、叶片结构等物理特征，对烟叶进行的分类定级体系。
+    context: 烟叶收购定价和原料配方使用的基础依据。
+    example: '"严格执行烟叶质量等级标准，确保收购质量纯正"'
+    notes: 目前执行的是2008年修订版国家标准
+
+  - id: TT-BIZ-024
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶产区
+    definition: 具有特定气候、土壤条件，适合种植特定类型烟叶的地理区域，如云南、贵州、河南、福建等主要烟叶产区。
+    context: 原料配方设计和产区特色保护的重要概念。
+    example: '"保护核心产区特色烟叶资源，建立稳定的原料供应基地"'
+    notes: 不同产区烟叶风格特点不同，是配方多样化的基础
+
+  - id: TT-BIZ-025
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶基地建设
+    full_form: 现代烟草农业基地建设
+    definition: 烟草商业公司在主要产烟区投资建设的，集优质烟叶种植、技术服务、农业基础设施于一体的现代化原料生产基地。
+    context: 原料保障战略和乡村振兴政策的结合点。
+    example: '"持续加大烟叶基地建设投入，稳定优质烟叶原料来源"'
+    notes: 基地建设涉及土地流转、农业补贴等政策配合
+
+  - id: TT-BIZ-026
+    category: biz_term
+    domain: 原料保障
+    term: 打叶复烤
+    definition: 将收购的烟叶经过打叶（去除烟茎，分离叶片）和复烤（进一步干燥定性）加工处理，制成标准化片烟的工业加工过程。
+    context: 原料从初级农产品向工业原料转化的关键环节。
+    example: '"打叶复烤加工能力持续提升，片烟加工质量稳定可靠"'
+    notes: 打叶复烤企业的加工质量直接影响最终产品品质
+
+  - id: TT-BIZ-027
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶计划管理
+    definition: 国家烟草专卖局对全国烟叶种植面积、收购数量实行总量控制的计划管理制度，按省区下达种植收购计划。
+    context: 烟草行业计划经济特征的重要体现。
+    example: '"严格执行烟叶计划管理，确保种植规模与市场需求相适应"'
+    notes: 超计划种植和收购均为违规行为
+
+  - id: TT-BIZ-028
+    category: biz_term
+    domain: 原料保障
+    term: 烟叶市场化改革
+    definition: 在保留烟叶专卖制度框架下，引入竞争机制，逐步赋予工业企业和商业公司更多市场化自主权的改革方向。
+    context: 行业改革发展的重要议题，尚在探索推进中。
+    example: '"稳步推进烟叶市场化改革，激活原料保障体系内生动力"'
+    notes: 改革须在法律框架内推进，不得突破专卖制度底线
+
+  - id: TT-BIZ-029
+    category: biz_term
+    domain: 原料保障
+    term: 特色优质烟叶
+    definition: 具有独特地域风格特征、香气质量优异、适合卷烟配方使用的高品质烟叶，通常来自特定产区、特定品种和特定栽培方式。
+    context: 差异化原料策略和品牌特色塑造的核心资源。
+    example: '"保护开发特色优质烟叶资源，提升配方原料竞争力"'
+    notes: 特色优质烟叶是高档卷烟配方的核心支撑
+
+  - id: TT-BIZ-030
+    category: biz_term
+    domain: 原料保障
+    term: 辅料管理
+    definition: 对卷烟生产所用辅助材料（卷烟纸、嘴棒、内衬纸、商标纸、包装材料等）的采购、质量检验、库存控制和供应商管理的总称。
+    context: 生产保障体系的重要组成部分。
+    example: '"强化辅料质量管理，严格供应商准入和质量考核"'
+    notes: 辅料质量直接影响卷烟感官品质和外观品质
+
+  - id: TT-BIZ-031
+    category: biz_term
+    domain: 原料保障
+    term: 集中采购
+    abbreviation: 集采
+    definition: 通过行业集中采购平台，对通用性强的原辅材料、设备、备品配件等进行统一招标、集中采购的管理方式，以降低采购成本。
+    context: 行业降本增效和规范采购行为的重要举措。
+    example: '"扩大集中采购范围，实现本年度采购成本降低2.3亿元"'
+    notes: 集中采购须严格执行招投标程序，防止廉洁风险
+
+  - id: TT-BIZ-032
+    category: biz_term
+    domain: 原料保障
+    term: 原料配方验证
+    definition: 在推出新产品或调整配方时，通过小规模生产试验验证原料配方设计是否达到预期感官和理化指标的过程。
+    context: 新产品开发和品质稳定控制的关键环节。
+    example: '"完成新品原料配方验证，各项指标均达到设计要求"'
+    notes: 配方验证是产品正式投产前的必要程序
+
+  - id: TT-BIZ-033
+    category: biz_term
+    domain: 原料保障
+    term: 供应商准入管理
+    definition: 对供应烟草原辅材料和生产设备的供应商，按照资质条件、产品质量、供货能力、信誉记录等标准进行资格审查和动态管理的制度。
+    context: 采购管理和质量保障体系的基础性制度。
+    example: '"建立供应商准入负面清单，严格落实供应商动态退出机制"'
+    notes: 关键原辅材料供应商须经行业主管部门备案认可
+
+# ===== 生产制造类 =====
+
+  - id: TT-BIZ-034
+    category: biz_term
+    domain: 生产制造
+    term: 卷烟生产计划
+    definition: 根据市场需求和原料库存，由工业企业编制的年度/月度卷烟产量计划，须在国家下达的生产总量指标范围内执行。
+    context: 生产管理的核心文件，须与销售计划协调平衡。
+    example: '"结合市场需求变化，滚动调整月度卷烟生产计划"'
+    notes: 生产计划须经国家烟草专卖局批准，不得超计划生产
+
+  - id: TT-BIZ-035
+    category: biz_term
+    domain: 生产制造
+    term: 制丝
+    definition: 卷烟生产的前道工序，包括烟叶贮存、回潮、切丝、烘丝、加香加料等工序，将片烟加工成适合卷制的烟丝的过程。
+    context: 工艺研究和质量控制的重要对象。
+    example: '"优化制丝工艺参数，提升烟丝质量均匀性"'
+    notes: 制丝质量决定卷烟烟气的基本特征
+
+  - id: TT-BIZ-036
+    category: biz_term
+    domain: 生产制造
+    term: 卷包
+    definition: 卷烟生产的后道工序，包括卷烟成型、过滤嘴接装、小盒包装、条盒包装等，将烟丝加工成最终销售产品的过程。
+    context: 生产效率和外观质量控制的重点工序。
+    example: '"引进高速卷包设备，卷包生产效率提升至每分钟1.2万支"'
+    notes: 卷包速度和质量稳定性是设备技术水平的核心指标
+
+  - id: TT-BIZ-037
+    category: biz_term
+    domain: 生产制造
+    term: 质量控制
+    abbreviation: QC
+    definition: 在生产过程中，通过在线检测、抽样检验、过程监控等手段，确保卷烟产品各项质量指标符合标准要求的管理活动。
+    context: 生产管理的核心职能之一。
+    example: '"强化质量控制，全年产品合格率保持在99.8%以上"'
+    notes: 质量控制须覆盖原料、过程和成品三个阶段
+
+  - id: TT-BIZ-038
+    category: biz_term
+    domain: 生产制造
+    term: 智能工厂
+    definition: 运用物联网、大数据、人工智能等技术，实现生产过程自动化、信息化、智能化的现代化烟草生产工厂。
+    context: 行业智能制造战略的核心载体。
+    example: '"加快推进智能工厂建设，实现制造过程少人化、数据可视化"'
+    notes: 行业对智能工厂建设有统一的标准规范指导
+
+  - id: TT-BIZ-039
+    category: biz_term
+    domain: 生产制造
+    term: 精益生产
+    definition: 以消除浪费为核心，通过持续改进生产流程、优化作业组织、降低在制品库存，提升生产效率和产品质量的管理方法体系。
+    context: 制造企业管理提升的重要方法论，行业广泛推广应用。
+    example: '"深入推进精益生产，制造费用同比下降5.1%"'
+    notes: 源自丰田生产方式，含5S、看板、持续改善等核心工具
+
+  - id: TT-BIZ-040
+    category: biz_term
+    domain: 生产制造
+    term: 单箱卷烟综合能耗
+    definition: 生产一箱（50000支）卷烟所消耗的综合能源量（折算为标准煤），是衡量生产节能水平的核心指标。
+    context: 行业节能考核和绿色制造评价的核心指标。
+    example: '"通过能源管控系统优化，单箱综合能耗降至5.6千克标准煤"'
+    notes: 行业有单箱能耗考核标准，是合格工厂评定条件之一
+
+  - id: TT-BIZ-041
+    category: biz_term
+    domain: 生产制造
+    term: 烟草行业MES
+    full_form: 制造执行系统（Manufacturing Execution System）
+    definition: 连接企业管理层ERP系统与生产现场控制层的中间件系统，实现生产计划执行、质量追溯、设备管理和物料消耗的实时管控。
+    context: 行业数字化制造的核心信息系统。
+    example: '"MES系统上线后，生产过程透明度显著提升，质量问题追溯时间缩短80%"'
+    notes: 行业MES系统有统一的数据接口规范
+
+  - id: TT-BIZ-042
+    category: biz_term
+    domain: 生产制造
+    term: 设备综合效率
+    abbreviation: OEE
+    full_form: 设备综合效率（Overall Equipment Effectiveness）
+    definition: 衡量生产设备实际运行效率的综合指标，由时间开动率、性能开动率和合格品率三个维度相乘计算。
+    context: 设备管理和精益生产的核心评价指标。
+    example: '"主要卷烟机组OEE提升至85%以上，达到行业领先水平"'
+    notes: 世界级制造企业OEE基准一般在85%以上
+
+  - id: TT-BIZ-043
+    category: biz_term
+    domain: 生产制造
+    term: 条烟追溯
+    definition: 利用赋码（印刷或贴附条码）技术，对每条卷烟建立唯一身份标识，实现从生产到销售全链条的追溯管理，用于打假防伪和市场监管。
+    context: 行业市场监管和打击假冒伪劣的技术手段。
+    example: '"条烟追溯系统全面上线，实现全品规卷烟100%赋码追溯"'
+    notes: 行业统一建设了烟草商品追溯系统
+
+  - id: TT-BIZ-044
+    category: biz_term
+    domain: 生产制造
+    term: 安全生产
+    definition: 在卷烟生产过程中，通过制度保障、设备维护、隐患排查和安全培训，防止人员伤亡和财产损失事故发生的管理活动。
+    context: 企业安全管理和社会责任的基本要求。
+    example: '"深化安全生产专项整治，连续保持安全生产零事故记录"'
+    notes: 烟草生产涉及易燃物料，防火防爆是安全管理重点
+
+  - id: TT-BIZ-045
+    category: biz_term
+    domain: 生产制造
+    term: 生产能力
+    definition: 工业企业在既有设备、人员和工艺条件下，单位时间内（通常为年度）能够生产的最大卷烟数量，以万箱为单位。
+    context: 生产规划和产能布局的基础数据。
+    example: '"通过技术改造，年度卷烟生产能力提升至220万箱"'
+    notes: 生产能力须在国家批准规模内，超规模建设须报批
+
+  - id: TT-BIZ-046
+    category: biz_term
+    domain: 生产制造
+    term: 生产集中度
+    definition: 衡量全国卷烟生产向优势品牌集中程度的指标，通常以前若干品牌产量占全行业总产量的比例表示。
+    context: 行业品牌整合政策的核心考核指标。
+    example: '"全行业生产集中度持续提升，重点品牌产量占比超过85%"'
+    notes: 提高生产集中度是行业品牌战略的核心目标之一
+
+  - id: TT-BIZ-047
+    category: biz_term
+    domain: 生产制造
+    term: 库存管理
+    definition: 对工业企业产成品库存和商业公司卷烟库存进行动态监控、合理调控的管理活动，防止库存过高或过低影响运营。
+    context: 工商协同管理的重要内容。
+    example: '"建立工商联动库存预警机制，确保渠道库存保持在合理区间"'
+    notes: 卷烟库存水平是市场供需平衡的重要观测指标
+
+  - id: TT-BIZ-048
+    category: biz_term
+    domain: 生产制造
+    term: 环保达标
+    definition: 烟草工业企业烟气排放、废水处理、固体废物处置等环境指标，达到国家和地方环境保护法规标准要求的管理目标。
+    context: 双碳背景下企业环境合规管理的基本要求。
+    example: '"完成老旧锅炉超低排放改造，全部环保指标实现稳定达标"'
+    notes: 环保不达标将面临处罚甚至停产，是刚性合规要求
+
+  - id: TT-BIZ-049
+    category: biz_term
+    domain: 生产制造
+    term: 工艺规程
+    definition: 规定卷烟生产各工序操作方法、工艺参数、质量标准和设备要求的技术文件，是生产操作的基本依据。
+    context: 质量管理体系文件的核心组成部分。
+    example: '"及时修订工艺规程，将技术攻关成果固化为标准作业要求"'
+    notes: 工艺规程的修订须经严格的技术审查和审批程序
+
+  - id: TT-BIZ-050
+    category: biz_term
+    domain: 生产制造
+    term: 全面质量管理
+    abbreviation: TQM
+    definition: 以全员参与、全过程控制、全要素优化为特征的质量管理理念和方法体系，追求顾客满意和持续改进。
+    context: 烟草工业企业质量管理的基础理念。
+    example: '"深化全面质量管理，建设具有行业特色的质量文化"'
+    notes: 行业推行质量奖评定，鼓励企业对标卓越绩效模式
+
+# ===== 市场营销类 =====
+
+  - id: TT-BIZ-051
+    category: biz_term
+    domain: 市场营销
+    term: 卷烟品牌
+    definition: 具有独特名称、标志、产品特征和消费者认知的卷烟商品品牌，是工业企业市场竞争的核心资产。
+    context: 行业品牌建设战略的核心对象。
+    example: '"持续提升重点卷烟品牌市场竞争力，巩固品牌市场份额"'
+    notes: 行业品牌整合方向是培育若干具有全国影响力的大品牌
+
+  - id: TT-BIZ-052
+    category: biz_term
+    domain: 市场营销
+    term: 重点品牌
+    definition: 纳入国家烟草专卖局重点培育计划，在产量规模、市场份额、品牌价值等方面达到或正在向行业领先水平迈进的卷烟品牌。
+    context: 行业品牌战略的核心培育对象。
+    example: '"全力保障重点品牌原料和生产计划，支持其扩大市场份额"'
+    notes: 重点品牌名单定期调整，须持续达到相应绩效标准
+
+  - id: TT-BIZ-053
+    category: biz_term
+    domain: 市场营销
+    term: 品牌培育
+    definition: 通过产品研发、品质提升、市场推广、消费者沟通等手段，增强卷烟品牌市场竞争力和消费者认知度的系统性工作。
+    context: 工业企业市场战略的核心任务。
+    example: '"制定品牌培育五年规划，明确品牌发展路径和市场目标"'
+    notes: 品牌培育须品质、营销双轮驱动
+
+  - id: TT-BIZ-054
+    category: biz_term
+    domain: 市场营销
+    term: 市场订单
+    definition: 商业公司根据市场需求向工业企业提出的卷烟采购需求计划，是工业企业安排生产的基本依据。
+    context: 工商协同的核心信息流。
+    example: '"商业公司按月上报市场订单，工业公司据此排产确保及时供货"'
+    notes: 订单与实际供货的及时响应率是工商协同评价指标
+
+  - id: TT-BIZ-055
+    category: biz_term
+    domain: 市场营销
+    term: 卷烟零售
+    definition: 持有烟草专卖零售许可证的经营主体（零售客户），向消费者销售卷烟的终端经营活动。
+    context: 市场流通的最终环节，也是市场信息的第一来源。
+    example: '"持续优化零售终端服务，提升零售客户满意度"'
+    notes: 零售价格须执行行业建议零售价，不得擅自加价
+
+  - id: TT-BIZ-056
+    category: biz_term
+    domain: 市场营销
+    term: 市场份额
+    definition: 特定卷烟品牌或品规在特定市场区域的销量，占该区域卷烟总销量的百分比。
+    context: 品牌竞争力评价和销售绩效考核的核心指标。
+    example: '"重点品牌在目标市场的份额同比提升1.8个百分点"'
+    notes: 市场份额由价格段市场份额和整体市场份额两类指标衡量
+
+  - id: TT-BIZ-057
+    category: biz_term
+    domain: 市场营销
+    term: 品规结构
+    definition: 品牌产品线中，各价格档次品规的构成比例关系，反映品牌的价格定位和产品覆盖广度。
+    context: 品牌策略和收入结构优化的重要分析维度。
+    example: '"优化品规结构，加大高档品规开发力度，提升品牌整体价值"'
+    notes: 品规结构升级（价格档次提升）是行业增收的核心路径
+
+  - id: TT-BIZ-058
+    category: biz_term
+    domain: 市场营销
+    term: 卷烟价格管理
+    definition: 国家烟草专卖局对卷烟出厂价格、批发价格和建议零售价格的统一管控机制，是专卖制度的重要组成部分。
+    context: 维护市场秩序和保障税收的基础性制度。
+    example: '"严格执行卷烟价格管理规定，坚决查处价格违规行为"'
+    notes: 出厂价须向主管部门备案，不得擅自变动
+
+  - id: TT-BIZ-059
+    category: biz_term
+    domain: 市场营销
+    term: 订货会
+    definition: 商业公司定期组织的、面向零售客户的卷烟品牌展示和产品订购活动，是重要的市场营销和客户服务场合。
+    context: 传统卷烟营销渠道管理的重要环节。
+    example: '"举办春季订货会，向零售客户重点推介新品和应季品规"'
+    notes: 订货会也是市场信息采集和客户关系维护的重要机会
+
+  - id: TT-BIZ-060
+    category: biz_term
+    domain: 市场营销
+    term: 市场监测
+    definition: 运用信息系统和人工调研手段，对卷烟销售动态、库存变化、价格波动、竞品动态进行持续跟踪分析的管理活动。
+    context: 营销决策和生产计划调整的重要信息来源。
+    example: '"建立健全市场监测体系，实现重点品规价格异动实时预警"'
+    notes: 市场监测结果是工商协同的重要决策依据
+
+  - id: TT-BIZ-061
+    category: biz_term
+    domain: 市场营销
+    term: 客户服务
+    definition: 商业公司通过客户经理团队，向零售客户提供订货服务、经营指导、信息推送、问题处理等系列服务的总称。
+    context: 商业公司提升渠道满意度和市场竞争力的重要手段。
+    example: '"深化客户服务体系建设，零售客户满意度测评连续三年居全国前列"'
+    notes: 客户服务质量直接影响品牌推广效果和市场信息质量
+
+  - id: TT-BIZ-062
+    category: biz_term
+    domain: 市场营销
+    term: 专卖许可证管理
+    definition: 烟草专卖行政主管部门对烟草制品生产、批发、零售经营主体资格进行审查、发证、年审和监管的行政管理活动。
+    context: 烟草专卖制度的核心执法内容。
+    example: '"依法开展专卖许可证年审，严格查处无证经营行为"'
+    notes: 许可证分生产许可证、批发许可证和零售许可证三类
+
+  - id: TT-BIZ-063
+    category: biz_term
+    domain: 市场营销
+    term: 品牌整合
+    definition: 通过兼并、授权生产、停产低端品规等方式，减少品牌数量、提升品牌集中度的战略行动。
+    context: 行业从做大向做强转型的重要市场战略。
+    example: '"深化品牌整合，逐步淘汰市场认可度低的尾部品规"'
+    notes: 十四五期间品牌数量已从高峰期大幅缩减
+
+  - id: TT-BIZ-064
+    category: biz_term
+    domain: 市场营销
+    term: 高端卷烟
+    definition: 出厂价格（或零售价格）处于行业较高档次区间的卷烟品规，是品牌价值体现和高利润来源的核心产品。
+    context: 行业增收增效和品牌升级的战略重点。
+    example: '"加快高端卷烟品规研发推广，高端品规销量占比同比提升2个百分点"'
+    notes: 不同机构对高端卷烟价格区间的定义略有差异
+
+  - id: TT-BIZ-065
+    category: biz_term
+    domain: 市场营销
+    term: 网络销售管理
+    definition: 对通过互联网平台（电商平台、社交媒体等）进行卷烟交易行为的监管和规范，以维护专卖秩序。
+    context: 行业应对数字化营销环境的监管职能。
+    example: '"加强网络销售管理，会同互联网平台严厉打击非法网售行为"'
+    notes: 我国法律明确禁止网络销售卷烟
+
+  - id: TT-BIZ-066
+    category: biz_term
+    domain: 市场营销
+    term: 市场投放
+    definition: 工业企业将卷烟产品按品规、按区域、按节奏向市场投放销售的计划管理活动。
+    context: 生产计划、物流配送和市场策略的协同结合点。
+    example: '"合理安排旺季市场投放节奏，避免价格大幅波动"'
+    notes: 市场投放须与库存水平和市场容量相匹配
+
+  - id: TT-BIZ-067
+    category: biz_term
+    domain: 市场营销
+    term: 消费者研究
+    definition: 通过问卷调查、焦点访谈、消费行为分析等方法，了解消费者对卷烟产品的偏好、购买行为和满意度，为产品开发和营销策略提供依据。
+    context: 市场导向产品开发的重要基础工作。
+    example: '"开展消费者研究，深入了解目标消费群体的产品偏好和价值取向"'
+    notes: 须注意消费者研究的法规合规性（不得针对未成年人）
+
+# ===== 物流管理类 =====
+
+  - id: TT-BIZ-068
+    category: biz_term
+    domain: 物流管理
+    term: 卷烟物流
+    definition: 卷烟产品从工业企业仓库，经商业公司物流中心，到达零售客户门店的全链条运输、储存、配送服务活动。
+    context: 工商协同的重要基础设施，影响服务水平和运营效率。
+    example: '"优化卷烟物流网络布局，提升全链条配送时效和服务质量"'
+    notes: 行业物流体系由商业公司主导，已实现较高程度专业化
+
+  - id: TT-BIZ-069
+    category: biz_term
+    domain: 物流管理
+    term: 物流中心
+    definition: 商业公司设立的、集卷烟集中收货、分拣加工、区域配送功能于一体的区域物流节点，覆盖辖区内零售客户的配送服务。
+    context: 卷烟物流网络的核心基础设施。
+    example: '"物流中心自动化改造完成，分拣效率提升40%，出货差错率降至万分之一以下"'
+    notes: 行业对物流中心有统一的功能规划和技术标准
+
+  - id: TT-BIZ-070
+    category: biz_term
+    domain: 物流管理
+    term: 配送频次
+    definition: 商业公司向辖区内零售客户提供卷烟配送服务的频率，通常按周计算（如每周2次），是客户服务水平的重要指标。
+    context: 客户服务优化和物流成本平衡的关键决策变量。
+    example: '"根据客户规模和经营特点，实行差异化配送频次管理"'
+    notes: 提升配送频次能改善客户体验，但会增加物流成本
+
+  - id: TT-BIZ-071
+    category: biz_term
+    domain: 物流管理
+    term: 自动化分拣
+    definition: 利用条码扫描、自动化输送线、自动分拣机器人等技术设备，实现卷烟按订单自动拣选、分类、输出的物流作业方式。
+    context: 物流中心现代化改造的核心内容。
+    example: '"自动化分拣系统投入运行后，分拣人员减少60%，作业效率大幅提升"'
+    notes: 自动化分拣是降低物流人工成本的主要途径
+
+  - id: TT-BIZ-072
+    category: biz_term
+    domain: 物流管理
+    term: 冷链物流
+    definition: 为保障特定烟草产品（如高档雪茄等有特殊储存要求的产品）品质，提供全程温湿度控制的特殊物流服务。
+    context: 高端烟草产品流通的专项保障措施。
+    example: '"针对高档雪茄品规，建立冷链物流配送专项方案"'
+    notes: 目前卷烟主流产品一般不需要冷链，但高档特殊产品有需求
+
+  - id: TT-BIZ-073
+    category: biz_term
+    domain: 物流管理
+    term: 调度管理
+    definition: 对卷烟运输车辆、配送路线、作业人员进行统筹协调和实时指挥的管理活动，以确保配送任务按时按量完成。
+    context: 物流运营管理的核心职能。
+    example: '"依托智能调度系统，实现运力动态调配和车辆轨迹实时监控"'
+    notes: 行业建有统一的调度管理系统规范
+
+  - id: TT-BIZ-074
+    category: biz_term
+    domain: 物流管理
+    term: 库存周转率
+    definition: 一定时期内，商业公司卷烟库存被销售消耗的次数，即销售额（或销量）与平均库存额（或库存量）之比，反映库存管理效率。
+    context: 商业公司运营效率评价的重要指标。
+    example: '"优化库存管理机制，全年库存周转率同比提升0.3次"'
+    notes: 库存周转率越高，说明库存占用资金越少，运营效率越高
+
+  - id: TT-BIZ-075
+    category: biz_term
+    domain: 物流管理
+    term: 信息化物流管理系统
+    abbreviation: WMS/TMS
+    definition: 支撑卷烟物流运营的仓储管理系统（WMS）和运输管理系统（TMS），实现物流全过程数字化管控和可视化追踪。
+    context: 物流运营信息化的核心支撑系统。
+    example: '"WMS/TMS系统深度集成，实现订单-分拣-装车-配送全流程无缝衔接"'
+    notes: 行业物流信息系统须与商业管理信息系统互联互通
+
+  - id: TT-BIZ-076
+    category: biz_term
+    domain: 物流管理
+    term: 物流成本管控
+    definition: 通过优化物流网络、提升自动化水平、降低运输空驶率等手段，控制和降低卷烟物流各环节费用的管理活动。
+    context: 商业公司降本增效的重要举措。
+    example: '"实施物流成本精细化管控，单件配送成本同比下降4.2%"'
+    notes: 物流成本约占商业公司运营成本的20-30%
+
+  - id: TT-BIZ-077
+    category: biz_term
+    domain: 物流管理
+    term: 绿色物流
+    definition: 在卷烟物流运营中，通过推广新能源车辆、优化运输路线、减少包装废弃物等措施，降低碳排放和环境影响的物流模式。
+    context: 行业绿色发展战略在物流领域的具体实践。
+    example: '"新能源配送车辆占比达到40%，绿色物流建设取得阶段性成效"'
+    notes: 与行业双碳目标和绿色发展规划直接挂钩
+
+  - id: TT-BIZ-078
+    category: biz_term
+    domain: 物流管理
+    term: 物资供应保障
+    definition: 对烟草生产所需设备、备品配件、生产材料及行政办公用品等物资，实施集中采购、储备管理和按需配送的供应链管理活动。
+    context: 生产保障体系的重要组成部分。
+    example: '"完善物资供应保障机制，关键备件库存周转天数缩短至15天"'
+    notes: 物资供应保障涉及采购、仓储、分发三个主要环节
+
+  - id: TT-BIZ-079
+    category: biz_term
+    domain: 物流管理
+    term: 运输管理
+    definition: 对卷烟运输活动（承运商选择、合同管理、运输计划、在途监控、到货验收等）进行系统化管理的职能领域。
+    context: 物流管理的核心组成部分。
+    example: '"加强运输管理，货物在途损耗率控制在0.01‰以下"'
+    notes: 须建立承运商准入和绩效评价机制
+
+  - id: TT-BIZ-080
+    category: biz_term
+    domain: 物流管理
+    term: 订单满足率
+    definition: 在约定时间内，商业公司实际向零售客户供货量与订单需求量之比，是衡量供货服务水平的核心指标。
+    context: 客户服务水平和市场保障能力的核心指标。
+    example: '"全年订单满足率保持在98.5%以上，货源保障能力显著增强"'
+    notes: 订单满足率低会导致客户满意度下降和市场机会损失
+
+  - id: TT-BIZ-081
+    category: biz_term
+    domain: 物流管理
+    term: 供应链协同
+    definition: 工业企业、商业公司、物流服务商之间通过信息共享、计划协同和流程互联，实现端到端供应链效率最优化的管理模式。
+    context: 工商协同深化和物流体系优化的前沿方向。
+    example: '"推进工商供应链协同，提升全链条计划预测精准度和库存效率"'
+    notes: 需要打通工业和商业的信息系统数据壁垒
+
+  - id: TT-BIZ-082
+    category: biz_term
+    domain: 物流管理
+    term: 配送时效
+    definition: 从零售客户下单到商业公司完成货物配送签收的时间周期，是客户服务的关键质量指标。
+    context: 客户满意度管理和物流能力评价的重要维度。
+    example: '"城区配送时效达到次日达标准，农村网点配送时效保障在48小时以内"'
+    notes: 配送时效须与配送频次配合评价
+
+  - id: TT-BIZ-083
+    category: biz_term
+    domain: 物流管理
+    term: 烟叶物流
+    definition: 烟叶从收购站（基地）到打叶复烤厂、再到工业企业原料仓库的全链条运输和仓储管理活动，区别于卷烟成品物流。
+    context: 原料保障和商业公司物流职能的交叉领域。
+    example: '"优化烟叶物流网络，降低烟叶调拨运输损耗"'
+    notes: 烟叶物流涉及原料计划、调拨审批、质量追溯等多个管理环节
+
+  - id: TT-BIZ-084
+    category: biz_term
+    domain: 物流管理
+    term: 逆向物流
+    definition: 处理退货、残损卷烟回收、包装废弃物回收等反向物流流动的管理活动，是物流体系的组成部分。
+    context: 物流管理规范化和绿色物流发展的重要内容。
+    example: '"建立健全逆向物流管理流程，规范残损品处理和包装废弃物回收"'
+    notes: 逆向物流管理须建立台账，防止产品外流
+
+  - id: TT-BIZ-085
+    category: biz_term
+    domain: 物流管理
+    term: 智慧物流
+    definition: 运用物联网、大数据、人工智能等技术，实现物流全过程智能感知、智能决策和自动化执行的新一代物流运营模式。
+    context: 行业物流现代化建设的方向性目标。
+    example: '"加快推进智慧物流建设，构建高效智能的烟草物流服务体系"'
+    notes: 智慧物流是精益物流和数字化物流发展的高级阶段

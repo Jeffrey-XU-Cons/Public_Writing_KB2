@@ -1,0 +1,5038 @@
+metadata:
+  name: 公文写作规则总库 (Rules Master)
+  version: '1.0'
+  generated_at: '2026-03-18'
+  description: 整合所有规则来源，按FORMAT/TERM/LOGIC/STYLE/GENRE五大类组织。A级规则为必查项，B级为建议检查项，C级为参考项。execution字段：code=可程序化检测，agent_prompt=需LLM判断。
+  total_rules: 345
+  rule_counts:
+    FORMAT: 28
+    TERM: 82
+    LOGIC: 154
+    STYLE: 80
+    GENRE: 5
+  source_files:
+  - 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - 02_rules/book_principles/公文高手自我修炼.yaml
+  - 02_rules/book_principles/笔杆子炼成.yaml
+  - 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - 02_rules/format_compliance/format_rules.yaml
+  - 02_rules/language_style/language_rules.yaml
+  - 02_rules/language_style/oral_to_formal_mapping.yaml
+  - 02_rules/content_quality/quality_rules.yaml
+  last_dedup: '2026-03-18'
+  dedup_notes: 2026-03-18 去重处理：删除STYLE中与TERM重复的政治术语规则；删除LOGIC中与SP-006完全重复的PM-001；为空话套话系列、数据支撑系列添加see_also关联；为5处冲突规则添加context_note适用边界说明；修复跨书同名ID冲突。
+FORMAT:
+  description: 格式合规类规则——针对公文格式、标点、编号、行文方向等可自动检测的规范问题。主要由Agent 4（格式审核）code节点执行。
+  rule_count: 28
+  rules:
+  - id: LR-001
+    title: 公文校核四原则
+    importance: A
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文校核是否遵循四原则：
+
+      （1）逢文必校——不管篇幅长短，是否一概认真校核，是否因文短内容简单而放松；
+
+      （2）每字必核——是否一个标点一个标点地校，一个字一个字地核；
+
+      　　  人名、地名、时间、数字、引文是否特别注意准确规矩严谨；
+
+      （3）急文稳校——急件是否沉住气稳住劲，是否因为急就放松了校核；
+
+      （4）校写分离——起草和校核是否由不同的人进行；
+
+      　　  是否出现起草人自校导致"视而不见"的问题。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: FC-001
+    title: 上行文禁止使用下行文语气
+    importance: A
+    execution: code
+    applicable_types:
+    - 请示
+    - 报告
+    - 汇报
+    content_summary: '上行文（向上级机关行文）不得使用命令、要求、部署类语气，
+
+      应使用"请"字句或商请式表述。上行文包括请示、报告、意见（向上报送时）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-002
+    title: 下行文禁止使用请示性语言
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 决定
+    - 批复
+    - 方案
+    content_summary: '下行文（向下级机关或所属部门行文）不得出现"请批示""请审批""请审阅"
+
+      等请示性语言，下行文应使用"通知""要求""部署"等主动语气。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-003
+    title: 平行文应使用商洽式语气
+    importance: A
+    execution: code
+    applicable_types:
+    - 函
+    content_summary: '平行文（向同级机关或不相隶属机关行文）应使用商洽、协作式语气，
+
+      不得使用命令口吻，也不得使用卑谦的请示口吻。函是最常见的平行文文种。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-004
+    title: 文号格式三要素完整性
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    - 函
+    content_summary: '正式公文文号由"机关代字+年份+顺序号"三部分组成。
+
+      年份用六角括号〔〕括注，不得使用圆括号（）或方括号[]；
+
+      年份必须写全四位数字；顺序号不编虚位（如"1"不写成"001"）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-005
+    title: 联合行文文号规范
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 意见
+    - 方案
+    content_summary: '两个以上机关联合行文时，文号只标注主办机关的文号，
+
+      不得出现多个文号并列。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-006
+    title: 公文标题三要素完整性
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    - 意见
+    - 方案
+    content_summary: '正式公文标题一般由"发文机关+事由+文种"三部分组成。
+
+      报告、请示、通知等正式公文标题不得缺少文种要素。
+
+      讲话稿、汇报材料等非正式公文标题可灵活处理。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-007
+    title: 标题中不得使用标点符号
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    - 意见
+    - 方案
+    content_summary: '公文标题中除书名号《》外，一般不使用标点符号。
+
+      逗号、句号、顿号、感叹号等均不得出现在公文标题中。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-009
+    title: 落款机关名称与文号机关名称一致性
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    content_summary: '公文落款处的发文机关名称必须与文号中的机关代字所代表的机关名称一致，
+
+      不得使用简称（法定简称除外），不得与文号机关不符。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-010
+    title: 联合行文落款机关顺序规范
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 意见
+    - 方案
+    - 决定
+    content_summary: '联合行文落款时，各联合机关应按照级别高低或惯例顺序排列，
+
+      党委机关排在政府机关前，上级机关排在下级机关前。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-011
+    title: 请示文须有明确请求事项
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 请示
+    content_summary: '请示必须有明确的请示事项，即具体请求批准、批复或指示的内容。
+
+      请示事项要具体，不得以"请批示"代替具体请求内容。
+
+      一件请示只能写一个主要请求事项（一文一事原则）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-012
+    title: 报告不得夹带请示事项
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    content_summary: '报告是向上级汇报工作、反映情况的文种，不得在报告中夹带请示事项，
+
+      不得出现"请批示""请审批""请拨付"等请示性请求。
+
+      如需请示，应单独行文。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-014
+    title: 讲话稿结构完整性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: '领导讲话稿应包含：开场（点明会议主题/感谢/定调）、
+
+      主体（分点论述，一般2-4个层次）、
+
+      结尾（提要求/表态/号召）三大部分。
+
+      结构应头尾呼应，不得虎头蛇尾或仅有结论无论据。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-016
+    title: 附件序号与附件标题一致性
+    importance: A
+    execution: code
+    applicable_types:
+    - 通知
+    - 报告
+    - 方案
+    - 请示
+    content_summary: '正文中提及的附件序号必须与附件说明处的序号完全对应，
+
+      不得出现正文提及"附件3"但附件说明只列到"附件2"的情况，
+
+      反之亦然。附件名称也须前后保持一致。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-019
+    title: 重要政治表述不得简化缩写
+    importance: A
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    - 决定
+    content_summary: '党的重要理论、路线、方针、政策表述必须字字准确、不得任意简化。
+
+      如"高质量发展"不得写成"高质发展"或"高品质发展"；
+
+      "习近平新时代中国特色社会主义思想"不得随意缩写；
+
+      "全面深化改革"不得写成"全面改革"。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-021
+    title: 会议及文件名称准确引用
+    importance: A
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '引用上级会议名称、文件名称须准确，不得张冠李戴、混淆年份或简化名称。
+
+      党代会、全国两会等重大会议名称须使用规范全称。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: WQ_LR_005
+    title: 标题四戒
+    importance: B
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文标题是否违反以下四戒：
+
+      1. 戒不准确——标题与正文内容是否相符，是否存在名不副实、表述有偏差；
+
+      2. 戒不具体——标题是否过于笼统模糊，是否缺乏实质信息量；
+
+      3. 戒不精炼——标题是否过长，是否可简缩而未简缩，是否包含不必要成分；
+
+      4. 戒不规范——是否符合公文标题格式要求，结构是否残缺，文种位置是否不当。
+
+      注意：简报标题另有三要——时新（报道最新动态）、具体（有具体数字和事实）、
+
+      形象（文字生动让人有画面感）。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: LR-003
+    title: 标点符号九类常见错误
+    importance: B
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文标点符号是否存在以下九类常见错误：
+
+      （1）并列书名号/引号之间是否加了顿号 → 须去掉顿号，直接并列；
+
+      　　  错：《A》、《B》、《C》 → 正：《A》《B》《C》
+
+      （2）是否存在同一形式括号套用 → 外层须改用方括号 [ ]；
+
+      　　  错：（各镇（街道）） → 正：[各镇（街道）]
+
+      （3）阿拉伯数字次序语是否用顿号 → 须改用下角点（圆心点）；
+
+      　　  错：1、督促…… → 正：1.督促……；带括号时后面是否加了任何标点（须删除）；
+
+      （4）图表说明文字末尾是否用了句号 → 须去掉句号；
+
+      （5）发文年号是否用了圆括号 → 须改用六角括号〔〕；…'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: FC-008
+    title: 标题事由表述准确性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    - 意见
+    - 方案
+    content_summary: '公文标题中的事由应当概括准确、简洁明了，
+
+      不得使用过于笼统的表述（如"若干问题""有关工作"），
+
+      也不得使用口语化表述。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-013
+    title: 通知正文结构完整性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 通知
+    content_summary: '通知正文应包含：发文缘由（依据/背景）、通知事项（具体要求）、
+
+      执行要求（时限/责任单位）三个基本要素。
+
+      转发性通知还须包含转发说明和执行要求。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-015
+    title: 方案正文六要素完整性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    content_summary: '工作方案/实施方案正文应包含：背景目的、工作目标、
+
+      主要任务（工作措施）、组织领导（职责分工）、
+
+      时间节点（工作步骤）、保障措施六个基本要素。
+
+      缺少任何一项均应提示补充。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-017
+    title: 附件另起页排版规范
+    importance: B
+    execution: code
+    applicable_types:
+    - 通知
+    - 报告
+    - 方案
+    - 请示
+    content_summary: '附件应另起一页排版，附件首页左上角应标注"附件X："字样，
+
+      不得将附件与公文正文连排在同一页末尾。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-018
+    title: 首页不排版面页码
+    importance: B
+    execution: code
+    applicable_types:
+    - 通知
+    - 请示
+    - 报告
+    - 决定
+    - 批复
+    content_summary: '公文首页不得排印版面页码（页码标注从第二页开始，或全文单页时不排页码）。
+
+      内部材料（汇报、讲话稿等非正式公文）页码规则可按单位惯例执行。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-020
+    title: 领导职务称谓规范
+    importance: B
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 通知
+    content_summary: '文中提及领导职务时须使用规范全称，不得使用非标准简称。
+
+      第一次出现时须写全称，同一文中再次出现可使用规范简称。
+
+      "书记"前须带单位名称，不得单独称"书记"（第一次出现时）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-022
+    title: 标题层级逻辑一致性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    content_summary: '正文层级划分应逻辑清晰，层级使用应前后一致。
+
+      同一级别的标题应使用相同的序号格式；
+
+      不得跳级使用（如从"一、"直接跳到"（1）"）；
+
+      不得在同一层级中混用不同序号格式（如"一"与"1."并用）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-023
+    title: 结构头重脚轻问题检测
+    importance: B
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: '公文结构应当详略得当，重心分配合理。
+
+      常见问题：成绩总结篇幅过长（占全文60%以上）而下步打算仅一句话；
+
+      或问题分析过于简短（一带而过）而措施部署过于详细（比例失衡）。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-024
+    title: 正文逻辑关系自洽性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '正文中的因果关系、并列关系、递进关系须符合逻辑。
+
+      常见错误：因果关系倒置、并列项目不在同一层级、
+
+      论点与论据不对应、总结句与详述内容不一致。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+  - id: FC-025
+    title: 极端表述使用规范
+    importance: B
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '"最""第一""唯一""全市最""全省率先"等极端或排他性表述须慎用，
+
+      使用时须有充分依据支撑，不得随意堆砌以示工作成效。'
+    source_file: 02_rules/format_compliance/format_rules.yaml
+TERM:
+  description: 术语规范类规则——口语词汇替换为公文规范表述，禁用词识别，术语统一。主要由Agent 5（术语校对）code节点执行。
+  rule_count: 82
+  rules:
+  - id: LR-002
+    title: 五类重点校核错误
+    importance: A
+    execution: code
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文是否存在以下五类重点错误：
+
+      （1）政治性差错——党和国家文件的标准表述是否慎之又慎，是否出现政治性错误；
+
+      （2）错别字——是否存在同音错别字，特别检查以下常见错误：
+
+      　　  发轫（误：发韧）、杂糅（误：杂揉）、沧桑（误：苍桑）、
+
+      　　  宣泄（误：渲泄）、抑或（误：亦或）、挖墙脚（误：挖墙角）、原动力（误：源动力）；
+
+      （3）成语错用——公文成语是否准确使用，特别检查以下易错成语：
+
+      　　  炙手可热（贬义，是否误用于褒义）、望其项背（是否只用否定形式）、
+
+      　　  一蹴而就（含贬义，是否误当中性词）、首当其冲（是否误作"首先"用）；
+
+      （4）标点符号错…'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: LS-001
+    title: 禁用"搞"字口语用法
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"搞"是典型的口语动词，在公文中应根据语义替换为"做好""推进""开展"
+
+      "落实""推动"等规范表述。"搞好"→"做好"，"搞清楚"→"明确/理清"，
+
+      "搞活动"→"开展活动"。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-002
+    title: 禁用"弄"字口语用法
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"弄"在公文中通常为口语化表达，应替换为具体的规范动词。
+
+      "弄清楚"→"查明/厘清"，"弄好"→"做好/办好"，"弄明白"→"搞清/明确"。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-006
+    title: '"出问题"→"出现问题/发生问题"'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"出问题"是典型口语，公文中应使用"出现问题""存在问题""产生问题"
+
+      "发生问题"等规范表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-009
+    title: 主语残缺："通过……使/提高/达到"句式
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"通过……提高了/实现了/使……"是典型的主语残缺句式，
+
+      "通过"后的介词短语不能作主语，需补充主语或改变句式结构。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-012
+    title: '"挺好/挺不错"等程度副词口语化'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"挺""蛮""还挺""挺不错""很给力"等口语程度副词不得出现在公文中，
+
+      应改为"较为""比较""相当""颇为"等书面程度副词。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: OTF-001
+    title: 搞好 → 做好/推进好/落实好
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 最高频口语动词之一，几乎所有场合均需替换
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-002
+    title: 抓好 → 切实推进/扎实推进/深入推进
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''抓好落实''中''抓好''可保留，其他场合宜替换'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-003
+    title: 老百姓 → 人民群众/广大群众/广大市民
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 讲话稿营造亲和力时可酌情保留，正式公文必须替换
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-004
+    title: 出问题 → 出现问题/发生问题/出现偏差
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 含'出了问题''容易出问题'等变体均需替换
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-005
+    title: 有问题 → 存在问题/存在不足/存在差距
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''还有一些问题''→''仍存在一些问题和不足'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-006
+    title: 提高质量 → 提升质量
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''提高''搭配数量（比例/速度），''提升''搭配质量/水平'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-007
+    title: 干好 → 做好/完成好/落实好
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 含'把工作干好''干好本职'等表述
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-008
+    title: 弄清楚 → 查明/厘清/明确
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''弄明白''→''弄清/搞清/明确''（注意''搞清''本身也偏口语）'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-009
+    title: 通过…提高了/实现了（主语残缺） → 通过…我们提高了/实现了（补充主语）
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''通过''引导的介词短语不能作主语，须补充主语'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-010
+    title: 进行了讨论 → 讨论了/进行讨论
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''进行了+动词名词''结构冗余，去掉''了''或直接用动词'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-011
+    title: 进行了研究 → 研究了/进行研究
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 同OTF-010规则，适用于'进行了审议/进行了检查'等
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-012
+    title: 作出了重要指示 → 作出重要指示
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 固定搭配'作出重要指示/批示/部署'后不加'了'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-013
+    title: 给予了支持 → 给予支持
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''给予了帮助/指导/鼓励''均需去掉''了'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-014
+    title: 一定会完成 → 有信心完成/力争完成
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 过于绝对的承诺，改用留有余地的表述
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-015
+    title: 挺好/挺不错 → 较好/比较好/颇为出色
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''挺''系列程度副词均需替换'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-016
+    title: 给力 → 有力支撑/扎实有力/成效显著
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-017
+    title: 点赞 → 给予好评/获得广泛认可
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-018
+    title: 高质量的发展 → 高质量发展
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 固定政治表述，中间不加'的'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-019
+    title: 绿水青山也是金山银山 → 绿水青山就是金山银山
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 重要表述，'就是'不能改为'也是'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-020
+    title: 共同致富 → 共同富裕
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 专有概念，含义不同，绝不能混用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-021
+    title: 二十大精神 → 党的二十大精神
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 引用党代会精神须加'党的'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-022
+    title: 从严治党 → 全面从严治党
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''全面''二字不可省略'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-023
+    title: 中国特色现代化 → 中国式现代化
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 固定表述，不可替换为'中国特色现代化'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-024
+    title: '"的、地、得"混用 → 结构助词规范使用：动词/形容词前''地''，名词前''的''，谓语后''得'''
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''认真地学习''√，''认真的学习''×；''走得很稳''√，''走的很稳''×'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-025
+    title: '"即/既"混淆 → 即：就是（立即、即将）；既：已经（既然、既然如此）'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''既要金山银山''√，''即要金山银山''×'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: LS-003
+    title: '"老百姓"→"人民群众/广大群众"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"老百姓"是口语化说法，正式公文中应使用"人民群众""广大群众"
+
+      "广大人民""广大市民"等规范表述。
+
+      注意：在讲话稿中营造亲和力时，可酌情保留，但须经审核确认。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-004
+    title: '"抓好"后不接宾语的不规范用法'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"抓好"可单独用作谓语，但在正式公文中宜用更庄重的表述。
+
+      "切实抓好"可以保留，但单独的"抓好XX工作"在行文较庄重时
+
+      应改为"切实推进""深入推进""扎实推进""有力推进"等。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-005
+    title: '"干好"→"做好/完成好"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"干好"是偏口语化动词，公文中应用"做好""完成好""推进好""落实好"等替代。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-007
+    title: '"有问题"→"存在问题/存在不足"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '表述客观存在的不足时，"有问题"应改为"存在问题""存在不足""存在差距"，
+
+      更符合公文庄重严谨的风格。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-008
+    title: '"提高质量"→"提升质量"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"提高"与"质量"的搭配不够准确，"质量"应用"提升"，
+
+      "水平"可用"提升"，数量类指标用"提高"（如"提高比例""提高速度"）。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-010
+    title: '"想了很多办法"→"积极探索多元路径"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '模糊、口语化的"想了很多办法/采取了很多措施"在公文中应改为
+
+      具体的"积极探索""多措并举""综合施策"等规范表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-011
+    title: '"不少"→"一定数量/若干"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"不少"是口语化量词，公文中应使用"一定数量""若干""较多""相当数量"等表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-013
+    title: '"还不够"→"仍有差距/尚需提升"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '表述工作不足时，"还不够""做得还不好"等口语化表述应改为
+
+      "仍有差距""尚有不足""还需加强""亟待改进"等规范表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: OTF-026
+    title: 搞清楚 → 查清/厘清/明确/弄清
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''搞''系列口语动词均需替换'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-027
+    title: 搞活动 → 开展活动
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: ''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-028
+    title: 想了很多办法 → 积极探索/多措并举/综合施策
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''采取了很多措施''→''综合采取了多项有效措施'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-029
+    title: 不少 → 若干/一定数量的/较多
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''有不少企业''→''有若干企业''或直接用具体数字'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-030
+    title: 还不够好 → 仍有差距/尚有不足/亟待改进
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''工作做得还不够''→''工作仍有明显差距'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-031
+    title: 我个人认为 → 我认为/我们认为/经研究认为
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 公文代表机关立场，不宜强调'个人'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-032
+    title: 非常感动 → 深受鼓舞/倍感振奋
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 正式公文（非讲话稿）中情绪化过于外露，须改为庄重表述
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-033
+    title: 如无不妥，请批示 → 以上请示，请批准/请审阅
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 双重否定套语，语义模糊，改为直接表述
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-034
+    title: 人民至上、生命第一 → 人民至上、生命至上
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 固定表述，'第一'需改为'至上'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-035
+    title: 颠覆性变革 → 历史性变革/根本性变革
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''颠覆性''易引发负面联想，改为''历史性''等正面表述'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-036
+    title: 会议研究了问题 → 会议就该问题进行了研究/会议研究了该问题
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 主谓搭配不当：会议不能'研究'，应加介词短语
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-037
+    title: 动宾：提高工作效率和质量 → 提高工作效率、提升工作质量
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''提高''与''质量''搭配不当，''质量''宜用''提升'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-038
+    title: 事情（的事）结果来看 → 从……结果来看/从……成效来看
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 模糊表述，明确结果的具体指向
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-039
+    title: 这次会议很重要 → 这次会议意义重大/这次会议十分重要
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''很''系列程度副词偏口语，改为''十分/非常/极为'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-040
+    title: 搞调研 → 开展调研/进行调研/深入调研
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: ''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-041
+    title: '"布署"（错别字） → 部署'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 高频易错别字：'部署'不是'布署'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-042
+    title: 不断加强和提高 → 持续加强/不断深化
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''加强''与''提高''搭配的对象不同，不宜并列'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-043
+    title: '"要高度重视、着力解决"（空泛） → 要……（具体措施）'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 此类套语须跟具体措施，不能单独成段
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-044
+    title: 特别激动 → 倍感振奋/深受鼓舞
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 讲话稿中可酌情保留，正式公文中须替换
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-045
+    title: 神操作 → 创新举措/有效做法
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-046
+    title: 全面提高 → 全面提升（涉及质量类指标时）
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 质量类指标用'提升'，数量类指标用'提高'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-047
+    title: 搞好关系 → 协调关系/强化协作/增进合作
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: ''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-048
+    title: 取得了一定成绩 → 取得一定成效/取得积极成效
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''了''字去掉；''成绩''→''成效''更符合公文风格'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-049
+    title: 出了成果 → 取得成果/形成了重要成果
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''出''字偏口语，改为''取得/形成'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-050
+    title: 同志们，下面我来说几点 → 同志们，下面，我讲几点意见
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''来说''→''讲''，更具公文庄重感'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-051
+    title: 内卷 → 竞争加剧/过度竞争
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-052
+    title: 躺平 → 消极懈怠/不作为
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-053
+    title: 打call → 给予支持/为……加油助威
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 网络流行语，公文绝对禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-054
+    title: 蛮拼的 → 积极拼搏/努力进取
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 偏方言口语，公文禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-055
+    title: 不孬 → 不差/出色/优秀
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 北方方言，公文禁用
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-056
+    title: 话说回来 → 当然，我们也要看到……/从另一角度看……
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 口语化过渡语，替换为书面过渡表述
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-057
+    title: '"事实上"（口语转折用法） → 实际上/从实际情况看'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''事实上''本身无问题，但在口语化语境中常作转折，须注意搭配'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-058
+    title: 可以说 → 可以认为/可以判断/由此可见
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''可以说''在正式公文中略显随意，宜改为更肯定的判断词'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-059
+    title: '"对于……来说"（频繁使用） → 对……而言/就……而言'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''来说''口语化，改为''而言'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-060
+    title: 很有意思 → 颇具特色/值得关注/颇有意义
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''有意思''偏口语，公文中意义类评价改为''有意义/有价值'''
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-061
+    title: 接下来 → 下一步/此后/进而
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 表时序推进时，'接下来'偏口语
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-062
+    title: 说实话 → 坦率地说/客观而言/实事求是地讲
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''说实话''口语化，讲话稿中可酌情保留'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-063
+    title: 总的来说 → 总体上看/综合来看/总体而言
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''总的来说''略显口语，可用''总体而言''替代'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-064
+    title: '"首先……然后……最后……"（口语逻辑词） → 一是……二是……三是……/第一……第二……第三……'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 公文中标准层次序号表述优于口语化的'首先/然后/最后'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-065
+    title: 基本上都 → 基本/大多数/总体上
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''基本上都''双重模糊，择一使用更准确'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-066
+    title: '"再在"混用 → 再：表示又一次（再接再厉）；在：表示存在状态（在岗）'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '''再次强调''√，''在强调一遍''×'
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-067
+    title: '"己已"混用 → 己：本身（自己）；已：已经（已经完成）'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 形近易错字，需仔细辨认
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+  - id: OTF-068
+    title: '"未末"混用 → 未：没有（未完成）；末：最后（末尾）'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: 形近易错字
+    source_file: 02_rules/language_style/oral_to_formal_mapping.yaml
+LOGIC:
+  description: 逻辑结构类规则——结构完整性、论点论据一致性、层次逻辑、段落组织等。主要由Agent 4/5 LLM节点执行。
+  rule_count: 153
+  rules:
+  - id: SP-003
+    title: 行文规范三原则（一文一事/逐级行文/不越级）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否符合行文三原则： ①一文一事原则——一份公文只办一件事，不得同时处理多个事项； ②逐级行文原则——向上级行文须经本级，不得越级；如有紧急情况越级，须同时抄送被越级机关； ③范围原则——行文范围须与文件保密等级及受众范围相匹配。
+      违反以上规范将导致公文效力下降或被退回。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-004
+    title: 一文一题原则（主题统摄全篇）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否存在多主题并存的情况：一篇公文只能有一个核心主题，全部内容须服从该主题。 检查主题来源是否合理：应来自关注点（领导和受众最关心的）、闪光点（最有价值的素材点） 或不同点（体现创新之处），不得游离主题。
+      必须包含主题统摄选材、结构、语言的逻辑贯穿，不得出现与主题无关的段落。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-005
+    title: 公文内容以"实"为要四标准
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文内容是否满足四个实质性标准： ①真实——检查是否有据可查，有事实支撑，不得虚构或夸大； ②完整——检查是否遗漏关键信息，主要工作、重要数据、关键举措须俱全； ③准确——检查数据、时间、人名、职称等细节是否无误；
+      ④具体——检查是否空泛，观点须有具体事实支撑，不得以形容词代替事实。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-006
+    title: 结构不板不乱浑然一体原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文结构是否满足三个标准： 【不板】检查结构是否为内容服务，不得强套固定模板导致呆板僵化； 【不乱】检查各部分之间是否有清晰的逻辑关联，不得出现内容散乱失控； 【浑然一体】检查开头、主体、结尾是否相互照应，一气贯通。
+      检查一级提纲是否扣紧主题，二级提纲是否扣紧一级提纲，各级层次是否环环相扣、首尾相顾。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-008
+    title: 层次顺序三维逻辑
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文内容排列顺序是否与内容性质匹配： ①时间顺序——工作进展类内容须按时间节点排列（过去→现在→未来）； ②空间顺序——地域或层级类内容须按空间展开（全局→局部；宏观→微观）； ③意义顺序——按重要性或逻辑关系排列的内容须遵循（重要→次要；原因→结果；问题→措施）。
+      必须检查所选顺序与内容性质是否匹配，不得混乱使用。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-009
+    title: 同一律与矛盾律（逻辑一致性原则）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否违反同一律：同一篇文章中同一概念在不同位置使用时内涵必须一致， 不得出现概念偷换，例如"工作质量"在不同段落不得指代不同内涵。 检查是否违反矛盾律：文章各部分的观点、数据、表述之间不得相互矛盾，
+      前后提到同一事实必须一致，不得自相矛盾。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-001
+    title: 七步成文法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文写作流程是否经历了关键步骤： ①定调子——是否已确定文章基调（积极/务实/紧迫等）； ②理路子——是否已理清写作思路，明确主题和大致框架； ③搭架子——是否已搭建结构提纲，确定各级标题和内容板块；
+      ④填肚子——是否已填充具体内容，含事实、数据、观点、措施； ⑤梳辫子——是否已梳理段落和句子，各部分衔接是否流畅； ⑥戴帽子——开头结尾是否完善，首尾是否呼应，整体是否完整； ⑦过稿子——是否已检查逻辑、事实、格式、文字。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-004
+    title: 把握领导意图三步递进法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否准确理解并提升了领导意图： ①充实完善——是否将领导的初步意图补充完整，填补逻辑空白； ②凝练提高——是否对领导的想法进行了提炼升华，使表述更精准、站位更高； ③延伸挖掘——是否在领导意图基础上进行延伸，挖掘更深层内涵。
+      不得机械执行领导原话而不理解精神实质，也不得将写作者自己的意图强加于领导。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-005
+    title: 换位思考四维角度法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查写作前是否从四个角度进行了换位思考： ①领导角度——是否考虑了领导关注什么、最担心什么、希望强调什么； ②受众角度——是否考虑了受众需要什么信息、能接受什么表达方式； ③工作角度——内容是否符合工作实际和操作逻辑；
+      ④对象角度——是否考虑了文件执行对象的实际情况和可操作性。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-006
+    title: 类因果法（公文内容四种逻辑要素）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文内容是否合理运用了四种基本逻辑要素： 【类】——分类/类别是否合理，内容维度是否清晰； 【因】——原因/背景是否阐述清楚，依据是否充分； 【果】——结果/成效是否说明，预期结果是否明确； 【法】——方法/措施是否具体，路径是否可操作。
+      检查文种与侧重点是否匹配：汇报侧重"果"，方案侧重"法"，分析侧重"因"，规划侧重"类+法"。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-008
+    title: 段头撮要法（段首点明核心观点）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查每个段落的首句是否为该段的核心观点句：段首句须是判断句/观点句， 不得是描述句或背景句，其余内容须是对首句的阐述、例证或数据支撑。 检查读者只读段首能否掌握全文要点，若不能则须修改段首句。 必须包含段首概括观点的结构，为领导快速审阅和定位修改提供入口。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-011
+    title: 起承转合行文技法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文行文是否符合起承转合的基本技法： 【起】——开头是否开门见山、直奔主题，让读者快速进入核心； 【承】——各部分之间过渡是否自然平顺，不得生硬； 【转】——内容转换、对比或递进是否处理得当； 【合】——结尾是否呼应开头，干净利落，不得拖沓或强行总结。
+      须在整篇文章、各大部分之间、段落内部、句与句之间四个层次上逐一检查。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-013
+    title: 文为事作·写前六类研究对象
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: 检查起草综合报告/汇报前是否已研究六类内容： ①职能职责——本单位应做什么、能做什么的法定边界是否已明确； ②历史沿革——近五年本单位的工作历程、固定模式和典型成就是否已梳理； ③工作规划——年度计划、五年规划和重点工作安排是否已查阅；
+      ④运作机制——内部组织架构、议事制度的频率和主要议程是否已了解； ⑤上级要求——上级对本单位工作的指示、批示和期望是否已提取； ⑥外部经验——兄弟单位的典型做法和创新举措是否已参考。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-002
+    title: 结构三层次
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文结构是否在三个层次上保持一致：
+
+      1. 浅层结构——章节、段落、标题的物理排列是否清晰合理；
+
+      2. 表层结构——内容板块之间的逻辑关联与组织方式是否明确；
+
+      3. 深层结构——文章内在的思维逻辑框架是否体现对事物本质的认识。
+
+      必须检查三层结构是否一致：外在排列服从逻辑关联，逻辑关联服从思维框架。
+
+      不得出现浅层结构清晰但深层结构混乱的情况。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: SP-003_胡森林公文写
+    title: 结构三要点
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文结构是否同时满足三个要点：
+
+      1. 完整——该有的内容是否都有，是否存在缺项或跑题；
+
+      2. 连贯——各部分之间过渡是否自然，前后是否呼应，上下是否贯通；
+
+      3. 严密——逻辑是否严谨，各部分之间关系是否经得起推敲，是否存在矛盾和漏洞。
+
+      提纲确定后，须用"完整-连贯-严密"三标准逐一审查。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: SP-004_胡森林公文写
+    title: 内容决定结构原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否先明确"写什么"再决定"怎么排"：不得先套结构再填内容，
+
+      不得出现内容与结构不匹配的情况。
+
+      检查结构类型是否与内容匹配，属于以下四类之一：
+
+      1. 总分式——是否先总后分，先提论点再展开；
+
+      2. 并列式——各部分地位是否平等，横向展开；
+
+      3. 递进式——是否层层深入，逐步推进；
+
+      4. 问题导向式——是否遵循提出问题→分析问题→解决问题的顺序。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+    context_note: 【适用边界】本原则适用于经验材料、调研报告等内容驱动型文体，鼓励因内容灵活设计结构。标准化文种（通知、请示、批复等）应遵循GB/T 9704规定的固定格式，不适用本原则。
+  - id: SP-005_胡森林公文写
+    title: 公文六要素框架（二八法则应用）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文是否覆盖六个核心要素：
+
+      1. 立意——是否解决了"言之有方"的问题，方向是否正确；
+
+      2. 主题——是否解决了"言之有核"的问题，中心是否明确；
+
+      3. 结构——是否解决了"言之有序"的问题，逻辑是否清晰；
+
+      4. 内容——是否解决了"言之有物"的问题，材料是否充实；
+
+      5. 语言——是否解决了"言之有味"的问题，表达是否得体；
+
+      6. 文气——是否解决了"言之有脉"的问题，气韵是否贯通。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+    context_note: 【适用边界】本框架适用于方案/计划类文体的完整性检查。与CQ-013（面面俱到问题）不冲突：六要素是文档级完整性要求，CQ-013是段落级深度要求。
+  - id: LR-008
+    title: 论从事出原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否符合"论从事出"原则：观点须从事实中提炼，结论须从实践中得出。
+
+      不得先有结论再找例子（倒推式论证）；论点必须能从所列事实中自然导出。
+
+      检查方法：遮住观点段，只看事实段，读者能否自己得出同样结论？
+
+      能→论从事出合格；不能→观点与事实脱节，须修改。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-009
+    title: 事实论据四要求
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文中使用的事实论据是否满足四个要求：
+
+      1. 真实——事实是否准确无误，是否存在夸大、虚构、失真；
+
+      2. 准确——时间、地点、数字、名称等细节是否精确可核实；
+
+      3. 典型——是否选用最能说明问题、最具代表性的事实，是否堆砌平庸案例；
+
+      4. 切题——事实与所论证的观点是否直接相关，是否牵强附会。
+
+      选材原则：宁少勿滥——一个典型事实胜过十个平庸例子。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-011
+    title: 意群概念与段落组织
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查段落组织是否符合意群原则：
+
+      - 检查是否存在一个段落包含多个不同意思的情况，须拆分；
+
+      - 检查是否存在相同意思被拆成多个段落的情况，须合并；
+
+      - 检查段首句是否为该意群的概括句。
+
+      必须包含以下操作步骤：
+
+      ① 列出所有材料要点；
+
+      ② 按意群归类（相同意思归一组）；
+
+      ③ 为每个意群写段首概括句；
+
+      ④ 以段首句为骨，展开段落。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-003
+    title: 目标思维双维度（靶向+他者）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文写作是否建立了两种目标思维：\n1. 靶向思维——是否明确了写作目标，所有内容取舍是否以\"服务于靶心目标\"为标准；\n   须检查：这篇文章要达到什么效果？读者看完后应有什么改变？\n2.\
+      \ 他者思维——是否从读者（使用者、接收者）的立场写作，\n   检查是否存在\"我想说什么\"而非\"读者需要知道什么\"的问题。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-004_胡森林公文写
+    title: 修改五字诀
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查文稿修改是否运用了五种操作：增、删、整、调、换。
+
+      1. 增——是否增加了缺失的内容，补充论据，丰富论证；
+
+      2. 删——是否删去了冗余内容，去掉废话、重复、偏题部分；
+
+      3. 整——是否整理了结构，调整了段落内部的逻辑顺序；
+
+      4. 调——是否调换了段落或层次的前后顺序，优化整体结构；
+
+      5. 换——是否替换了不恰当的词语、句式或论据。
+
+      修改顺序须遵循：先整体（调/整/增/删），再局部（换）；先结构，再内容，再语言。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-010
+    title: 言之有理有据有物三维检验
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文内容是否通过三维检验：\n1. 言之有理——是否有明确的论点，逻辑是否成立，推理是否合理；\n2. 言之有据——是否有支撑论点的依据（事实依据、数据依据、政策依据），\n   不得只有观点而无论据；\n\
+      3. 言之有物——内容是否具体，是否有实质内容，不得空泛表述。\n三者缺一则文稿要么空洞，要么无据，要么抽象，须逐一检查确保具备。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: WQ_MT_001
+    title: 写作高手三种能力论（认识/公务处理/文字表述）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文写作能力是否在三个层次上均有体现：\n1. 认识能力（第一位）——是否具备对事物的分析概括能力，是否体现了思想深度；\n   检查是否存在\"意不逮物\"问题：写不出往往不是文字表述力不行，而是认识能力不足；\n\
+      2. 公务处理能力——是否熟悉行政管理和机关工作程序，是否能抓住工作轻重主次；\n3. 文字表述能力——是否将正确认识准确完美地表达出来，是否符合公文规则格式方法技巧。\n三者排序：认识能力 > 公务处理能力 > 文字表述能力，不得本末倒置只追求文字技巧。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_003
+    title: 立意能力提升三法（高·新·尖）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文立意是否满足高、新、尖三个维度：\n1. 挖本质（高）——是否从材料中跳出来，站在领导机关高度观察问题；\n   是否先深思再落笔，把平凡问题概括升华，挖掘本质；\n2. 找新角度（新）——是否运用了新视角切入，从相反方向或不同侧面立意；\n\
+      \   是否避免\"千佛一面\"，选择最有意义的侧面；\n3. 集中突出（尖）——是否只围绕一个核心问题展开，是否做到重点突出、主旨集中。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_004
+    title: 立纲四种基本结构形态
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文结构形态是否与文种和内容匹配，属于以下四种之一：
+
+      1. 总分式——各分项须为并列关系，不可有包容从属；意见/通知/决定/领导讲话最常用；
+
+      2. 递进式（因果式）——各段间是否为因果或进层关系，各段顺序是否不可调换；工作部署/经验总结常用；
+
+      3. 承接式（时序式）——是否按事物发展先后顺序排列；信息/简报/会议纪要常用；
+
+      4. 单层式（一段式）——内容是否单一，是否为简短文书如任免通知。
+
+      不得出现结构形态与内容逻辑不符的情况。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_009
+    title: 领导讲稿起草五步准备法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: '检查领导讲稿起草前是否完成了五项准备：
+
+      1. 把握领导意图——是否弄清精神实质，是否做到两个融贯通（与上级精神融贯+与领导一贯思想融贯）；
+
+      2. 摸清领导特点——是否了解领导职务性质/性格类型/文化修养/年龄特点/讲话风格；
+
+      3. 弄清讲话对象——是否明确了与听众的上下平关系，是否了解听众基本情况和切身关切；
+
+      4. 弄清讲话场合——是否判断了场合类型（开幕式/中间报告/闭幕式）及对应要求；
+
+      5. 确定讲稿提纲——提纲是否详细到大小标题和每层次中心意思，把握不大时是否准备了2-3套方案。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_010
+    title: 领导意图融会贯通两要求
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 报告
+    content_summary: "检查起草领导讲稿时是否做到了两个融贯通：\n1. 与上级方针政策融贯——领导意图是否与上级指示精神一致，是否保证政策连续性；\n2. 与该领导一贯思想融贯——是否掌握了该领导的思维方式和历次讲话/批示精神，\n\
+      \   使讲稿延续其一贯主张，保证前后一致性。\n同时须检查：是否发扬独立思考，将领导原则性意见化为系统深刻的见解，而非机械呆板执行。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_SP_001
+    title: 公文主旨定义（行文用意和目的）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文主旨是否明确为"行文用意和目的"：
+
+      即这篇公文为什么而写，要达到什么目标，对收文者产生什么效果。
+
+      检查主旨是否统帅全文：一切材料、结构、语言是否均服从行文用意和目的。
+
+      必须检查：主旨是否单一（一文一旨），是否存在与主旨无关的材料被保留；
+
+      检查主旨的出发点是否来自：领导的决策意图 + 实际工作中亟待解决的问题。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: MT-004_公文高手自我
+    title: 破题时事势三字经
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: '检查公文立意（破题）是否具备三个维度：
+
+      （1）时——是否体现了时代背景、当前形势、党的最新路线方针政策；
+
+      　　  是否弄清楚了时代要求，本单位本行业有何新变化；
+
+      （2）事——是否全方位把事情吃透，是否研究了"事"而非只研究"字"；
+
+      　　  是否涵盖哲学层（理论高度）→逻辑层（因果推断）→心理层（靶向思维）三个维度；
+
+      （3）势——是否顺应事物发展的趋势和方向，是否违背了发展规律。
+
+      立意宜高不宜平，必须紧扣时、事、势，才能让文章有理论高度、论述深度、独特角度。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-005_公文高手自我
+    title: 立意四思法：高度深度角度尺度
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: '检查公文立意是否经过"四思"检验：
+
+      （1）首思高度——是否从理论、政策层面审视，是否在全局中定位，站位是否足够高；
+
+      　　  是否存在就事论事、未能跳出自身层面的问题；
+
+      （2）再思深度——是否深入独到，是否能揭示事物本质和规律，是否具有哲理性理论性；
+
+      （3）三思角度——是否找到最能说明问题本质的切入角度，是否求"新"不落俗套；
+
+      　　  求新是否未"跑题"，是否清楚主要矛盾；
+
+      （4）四思尺度——分寸是否适度，材料多寡、详写略写、藏锋露锋是否把握恰当。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-006_公文高手自我
+    title: 四步成文法：领悟构思布局炼字
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查从接到写作任务到完稿是否经历了四个核心步骤：
+
+      （1）领悟（虚己应物）——是否清空成见，是否深入理解了任务要求，
+
+      　　  领悟力是否兼顾颖悟（举一反三）和通达（通晓世事）；
+
+      （2）构思（神与物游）——是否让思维充分展开，是否已形成写作思路，
+
+      　　  是否过于急于落笔而未充分构思；
+
+      （3）布局（胸有丘壑）——动笔前结构框架是否已清晰，是否仍在边写边想结构；
+
+      （4）炼字（语意两工）——是否同时精炼了语言和意义两个维度，
+
+      　　  炼字是否仅停留于词汇替换而未炼逻辑、炼意思。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-007
+    title: 为文三悟：悟上级悟领导悟听众
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: '检查写作前是否深度领悟了三个层次：
+
+      （1）悟上级精神——是否学懂弄通党和国家最新路线方针政策，文稿是否与上级精神高度契合；
+
+      （2）悟领导意图——是否透彻理解了出题领导的想法，是否做到：
+
+      　　  ①扩展（领导想说的帮助展开充实）；
+
+      　　  ②挖掘（领导没想到的帮助深化发现）；
+
+      　　  ③完善（领导说不全面的帮助补充平衡）；
+
+      （3）悟听众心理——是否了解文稿受众，是否进行了靶向思维换位思考；
+
+      　　  是否思考了：受众是谁，有何特点，什么观点才能引起共鸣。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-008_公文高手自我
+    title: 功夫在诗外：学好三门课
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作功力是否在三门基础课上有所体现：
+
+      （1）哲学——是否解决了"怎么看"的认识论问题，立意是否具有理论高度；
+
+      （2）逻辑学——是否解决了"怎么办"的方法论问题，
+
+      　　  是否遵循逻辑推理规律（归纳/演绎/类比），是否存在逻辑错误；
+
+      （3）心理学——是否解决了"为谁写"的对象论问题，
+
+      　　  是否了解受众心理，是否做到顺情入机，动言中务。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-001
+    title: 讲话稿六宜六忌框架
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: '检查公文（以讲话稿为核心）是否满足六宜六忌的要求：
+
+      （1）立意宜高，忌平——是否具有理论高度和全局视野，是否存在站位低平的问题；
+
+      （2）主题宜明，忌杂——主题是否鲜明集中，是否存在多主题并立相互干扰；
+
+      （3）结构宜紧，忌散——各部分是否紧密围绕主题，层次是否清晰，逻辑是否严密；
+
+      （4）内容宜实，忌空——是否用事实、数据说话，是否存在空喊口号、虚化套话；
+
+      （5）语言宜活，忌陈——语言是否鲜活，表达方式是否多样，是否陈词滥调；
+
+      （6）文气宜通，忌断——行文是否流畅，前后衔接是否自然，读来是否一气呵成。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-002_公文高手自我
+    title: 工作报告五大写作难点
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    content_summary: '检查工作报告是否妥善处理了五个核心难点：
+
+      （1）提炼主题难——主题是否突出了当前工作重点，是否有针对性和指导性，是否能解决突出问题；
+
+      （2）布局结构难——谋篇布局是否充分，提纲是否含主要观点和素材而非干巴巴一句话；
+
+      　　  是否做到了越是鸿篇巨制越大道至简，逻辑结构是否清晰简明；
+
+      （3）表达切实准确难——是否切实准确不体现个人风格，是否兼顾了当前与长远；
+
+      （4）平衡全面与重点难——是否做到全面不失重点、重点不忽视全面；
+
+      　　  是否重点讲了中央部署和领导群众关心的热点难点；
+
+      （5）持续创新难——是否实现了"永远的重复，持续的创新"，
+
+      　　  是否有新思想、新论断、新提法、新举措。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-005_公文高手自我
+    title: 公文三大本质属性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文是否体现三大本质属性：
+
+      （1）实效性——是否以解决实际问题为目的，是否能达到预期目标；
+
+      　　  检查公文发出后是否会达到预期目的，这是最重要的评价尺度；
+
+      （2）论断性——是否将论述（论）和决定（断）有机结合；
+
+      　　  断=要办什么事（结论）；论=办这事的理由（前提）；
+
+      　　  上行文是否侧重于"论"（充分的理由和说服力）；
+
+      　　  下行文是否侧重于"断"（权威性）；
+
+      （3）针对性——是否有明确的受文对象，是否针对特定受众；
+
+      　　  是否了解受文者是谁，是否揣摩其心理，是否有的放矢；
+
+      　　  是否做到顺情入机，动言中务（顺着受文者感情心理，触及工作关键）。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: BG-001
+    title: 写手三个层次与三个对应关系
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '写手成长三个层次：
+
+      （1）领导出框架，写手能出词句 → 对应水准：以文叙事 → 对应等级：写得像
+
+      （2）领导出思想，写手能出框架 → 对应水准：以文辅政 → 对应等级：写得是
+
+      （3）领导画个圈，写手能出思想 → 对应水准：以文鼎新 → 对应等级：写得好
+
+
+      路径要求：先从词句积累入手（语感+常用词语），再练谋篇布局（体例+提纲），最终向出思想迈进（深度研究工作+增强方法论）。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-002
+    title: 文稿起草本质——深度研究四要素
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '文稿起草的本质：将深入提出问题、分析问题、解决问题的过程用文字呈现。
+
+
+      写好材料离不开四个深度研究：
+
+      （1）深度研究事：把工作搞透是基本前提（从上情、下情、内情、外情四维梳理历史沿革/现状/问题/对策）
+
+      （2）深度研究人：把讲者（角色意识/站位思维/文风特点）和受众（关注点/互动点）搞透是写得好的关键
+
+      （3）深度研究体：搞清体例结构是最基础工作（广搜权威范文，照猫画虎定体例）
+
+      （4）深度研究景：主动研究具体场景背景（画面意识+发展眼光+"现挂"技巧）
+
+
+      一篇材料的深度/广度/温度，取决于对事研究程度；能否写得出彩，取决于对人的研究程度；是否对路，取决于体例研究程度。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-003
+    title: 平时磨刀五字法——要搜读合练
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '写好材料的平时积累五字法：
+
+      （1）要：多主动调度，动态兜清情况。平时多要现成的数据统计、汇报总结讲话等成形材料，做到"一调多用"；固化掌握上情/下情/内情/外情四维度。
+
+      （2）搜：四处寻媒介，广泛储备素材。重点看权威报刊（《人民日报》《求是》等）、政府网站文件，搜集常写体例范文。
+
+      （3）读：静心深阅读，注重实际占有。泛读+精读相结合，精读不留痕=读了白读；精读要做好固化（标注/笔记/汇总词句集锦）。
+
+      （4）合：分类萃与合，随时揣摩备用。材料分类储存，汇集总结类小标题，形成可随时调取的素材库。
+
+      （5）练：沙场秋点兵，实战靶向储备。建立几个文稿模板，通过投稿练兵。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-004
+    title: 上情下情内情外情四维情况积累法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '素材积累四维度及各自作用：
+
+      （1）上情：掌握各级重要讲话、批示、指示精神 → 增加文章高度（决定材料的下线）
+
+      （2）下情：挖掘基层可复制可传播的亮点做法、共性问题 → 增加文章温度（接地气、务实、有操作性）
+
+      （3）内情：本单位重点业务工作进展数据、历次成形材料 → 决定材料的个性和针对性（集大成）
+
+      （4）外情：前沿理论、先进地区经验、学界文章 → 决定材料的上线（视野思维、务虚谋划）
+
+
+      战时梳理四情的标准动作：接到任务后分别建立临时档案夹，汇聚各维素材后边汇集边消化边酝酿框架。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-005
+    title: 定盘子三步骤——吃准材料基本盘
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '接到写作任务时，需要"定盘子"的三步操作：
+
+      （1）捋清任务来龙去脉：追溯任务来源（是否来自更高层级），逐一研究相关通知/方案/批示/讲话的共性要求和个性要求，必要时直接向上级通话确认具体意图。
+
+      （2）吃准领导意图（"变量"）：写材料的变量=意图，定量=对工作的深度研究。难在意图把握，累在格物致知，贵在两者结合。意图不清时，先拉出不超过一页纸的提纲，由领导审定后再展开写。
+
+      （3）敲定总体写法和素材支撑：采取务虚务实结合，多渠道酝酿框架、主要基调、支撑素材、大致篇幅、起草人员、交稿时间。
+
+
+      盘子敲好后才能正式动笔，可大大降低推倒重来的风险。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-007
+    title: 领导说的公文逻辑七维
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '领导批评材料"没有逻辑性"时，通常指以下七种逻辑的欠缺：
+
+      （1）领导意图逻辑：是否准确把握领导的关注点和意图（最重要的变量）
+
+      （2）工作内在逻辑：是否符合工作本身历史沿革/发展现状/存在问题/面临形势/下步措施的内在顺序
+
+      （3）唯物辩证逻辑：是否符合马克思主义哲学基本原理（认识论/实践论/矛盾论等）
+
+      （4）文种体例逻辑：是否符合各文种的基本体例框架（总结"三步曲"、专题讲话"三为什么"等）
+
+      （5）段落结构逻辑：各段各部分与主题相关性，起承转合是否顺畅
+
+      （6）语句逻辑：主谓宾定状补是否运用得当
+
+      （7）形式逻辑：概念不交叉，判断科学，推理严谨'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-009
+    title: 列提纲三要：研究事、研究体、实战技巧
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "搭架子（列提纲）三个维度：\n（1）列提纲前重中之重——深度研究事：从上情（站位）/内情（集大成）/下情（接地气）/外情（辅政价值）四维梳理情况，是持续酝酿提纲和拟出厚实材料的关键步骤\n（2）列提纲前基础要件——深度研究体：先找权威高层级范文确定基本体例，再找相近层级范文确定具体框架，最多找10篇左右研究共性特点\n\
+      （3）实战技巧：\n   - 一稿过诀窍：将领导反复说的关键词/观点放到提纲里\n   - \"性感\"法则：用\"×性\"\"×感\"的词语组合概括工作特点和成效\n   - 快速列成效类提纲：梳理量上取胜（数据指标）+ 质上取胜（获批示/获排名/获表彰）…"
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-010
+    title: 工作报告/汇报/总结三种文体区别
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '三种文体的核心特征对比：
+
+
+      工作报告——"端庄专业年年见"
+
+      - 频次：一年一次（如政府/部门年度工作报告）
+
+      - 受众：参会代表 + 社会大众
+
+      - 体例：主题 + 过去一年工作回顾（成效/做法/经验/问题）+ 未来一年工作建议（指导思想/目标/措施）
+
+
+      工作汇报——"灵活通俗天天见"
+
+      - 频次：随时（督查巡察/专项会议/领导约谈）
+
+      - 受众：督查巡察主体/有关会议参会人员（听者比讲者更重要）
+
+      - 体例：灵活，可详可简，口语化为主；三段式（基本情况+存在问题+下步打算）最常见
+
+
+      工作总结——"三段固定时时见"
+
+      - 频次：月/季/半年/年度
+
+      - 受众：各级领导…'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-011
+    title: 行文敲键子四步法——套摘归堆通读打磨
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "文稿起草（敲键子）的四步流程：\n（1）套摘堆砌：摘现成段落，先摞到一起\n   - 按提纲小标题，从上情/下情/内情/外情文件夹中摘录可用段落，按匹配性排序摞在各小标题下\n   - 一般稿摞到够用即可；想出彩则摞到穷尽处（统统榨干，发现出彩素材）\n\
+      \   - 摞的本质：深度熟悉各方面情况，化学反应式融合而非物理叠加\n（2）撮要归堆：合并同类项，向主题聚敛\n   - \"为什么\"（意义/必要性/紧迫性/重要性）归堆、\"是什么\"归堆、\"怎么办\"（措施对策）归堆\n\
+      \   - 按匹配性排序，最匹配信息量最大的摞在前面\n（3）通读权衡：查补缺漏项，增新意亮点\n   - 检…"
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-012
+    title: '"抄"材料六条法则'
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '体制内材料写作如社科学术论文——需文献综述+有机抄录，六条法则：
+
+      （1）形神兼顾"抄"：抄体例之形（照猫画虎定框架）；更要"抄"公文核心逻辑之神（是什么+为什么+怎么办）；所有机关公文都逃不出这一逻辑链
+
+      （2）上下结合"抄"：抄上情（指示要求/重要意义/目标举措）+ 抄下情（基层亮点/实际情况），上下有机结合；汇报材料研究听者比讲者更重要
+
+      （3）新旧对照"抄"：优先抄最新材料，但新材料不一定全面，需新旧比对，汲取精华，做到大集成且新且全
+
+      （4）"抄"多不"抄"少：从多篇文章摘录，包罗上/下/内/外情，成稿才有深度/厚度/鲜度；切忌连地名单位名数据都不改的…'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-013
+    title: 公文核心逻辑三元——是什么·为什么·怎么办
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '所有机关公文都离不开"是什么、为什么、怎么办"这一核心逻辑链：
+
+      - 是什么：定义/概念/背景阐述（耳熟能详时可省略）
+
+      - 为什么：好事→讲重要性/必要性/紧迫性；坏事→讲危害/紧迫性
+
+      - 怎么办：对策/措施/要求/部署
+
+
+      讲话稿的全篇、每个部分，甚至每一段基本都是一个完整的三元逻辑链。
+
+      精读名篇时要有意识地"练功"——揣摩每段语句分别属于哪一块，建构自身写作技法库。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-016
+    title: 好公文三要素——言之有序·有物·有心
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "一篇好公文的三个核心要求（版本B核心框架）：\n（1）言之有序——画\"骨\"：确定文章的框架结构、组织形式、排列次序和内部构造（谋篇布局）\n   - 结构类型：总—分式/总—分—总式/递进式/并列式/对比式\n\
+      \   - 关键：结构稳，才能立得住\n（2）言之有物——填\"肉\"：填充文章基础内容，充实饱满，实在管用\n   - 包含：常用段落套件 + 常用句子 + 高频词语\n   - 这是写文章的难点，也是成熟公文的重点\n（3）言之有心——点\"\
+      魂\"：文章点睛之笔，主要指两方面：\n   - 为文章确立主题，给骨架血肉注入灵魂\n   - 作者一定要走心，素材须反复雕琢化为…"
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-017
+    title: 为文三个层次——情怀·见识·文字
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '写出的最好文章，写得最好的部分，一定是情怀/见识/文字三者相辅相成的产物：
+
+      （1）情怀（道）："铁肩担道义，妙手著文章"的文胆——价值观是道，方法技巧是术；唯有以道驭术才是写好文章第一法宝
+
+      （2）见识（识）："文章寸心事，得失千古知"的文心——包括视野/经验/思维方式，责任感是这些要素的承载和升华
+
+      （3）文字（技）："别人怀宝剑，我有笔如刀"的文字功夫——运笔如刀，激浊扬清；新时代还要探索科技手段，增强脚力/眼力/脑力/笔力
+
+
+      境界由高到低：先情怀，次见识，后文字。许多人倒序练习，导致文字工夫不错但材料毫无灵魂。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-018
+    title: 法定公文15种类型及行文规范
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '《党政机关公文处理工作条例》（中办发〔2012〕14号）规定的15种法定公文：
+
+
+      指令性文件：决议、决定、命令（令）
+
+      公开发布类：公报、公告、通告
+
+      工作联系类：通知、通报、议案、报告、请示、批复、意见、函
+
+      会议记录类：会议纪要
+
+
+      法定公文特点：权威性、政策性、规范性、程序性、实效性强，可独立行文，具有统一格式。
+
+
+      关键规范示例：
+
+      - 请示：必须向上级机关行文，一文一事，主送一个上级机关
+
+      - 函：应用广泛，含征求意见类、修改意见类、邀请类等3种主要子类型
+
+      - 批复：必须针对请示作出，与请示一一对应'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-019
+    title: 部署动员讲话共性框架
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: '部署动员讲话标准结构（适用于各类工作动员部署会议）：
+
+
+      帽段：说明会议任务和安排（"今天召开××会，主要任务是……下面我讲几点意见"）
+
+      一、为什么干（论述重要性/必要性/紧迫性，可正反两面）
+
+      二、主要问题（列举当前存在的问题，可省略）
+
+      三、部署内容（核心：安排部署工作内容，重点突出）
+
+      四、怎么干（具体要求和措施）
+
+      结尾：号召鼓劲段（鼓舞士气、发出号召）
+
+
+      "为什么干"常用表达模式：
+
+      - 从上级指示切入（权威性）
+
+      - 从正反两面对比切入（危害/机遇并举）
+
+      - 用"性"字组概括（紧迫性/重要性/必要性/战略性/系统性/艰巨性等）'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-020
+    title: 工作汇报两种共性模板
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    content_summary: '工作汇报模板1（四段详细型）：
+
+      标题：关于××工作进展情况的汇报
+
+      帽段：总体概括（以××为指导，强化四项举措，取得重大进展）
+
+      一、基本情况/重点工作情况（3-4条，各标题含成效动词：奠定坚实基础/持续扎实开展/稳步推进）
+
+      二、亮点工作（创新/突破/特色3-4条）
+
+      三、主要问题（客观指出2-3条存在不足）
+
+      四、下一步工作总体思路和主要措施（3-4条具体安排）
+
+
+      工作汇报模板2（三段简洁型）：
+
+      标题：关于××工作情况的汇报/汇报提纲
+
+      按照××要求，现将××工作情况汇报如下：
+
+      一、××工作基本情况（3-5条成效/做法）
+
+      二、当前工作中存在的主要问题（2-3条）
+
+      三、下一步工作打算（3-4条措施）'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-021
+    title: 工作总结两种共性模板
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '工作总结模板1（成效措施合一型，最常用）：
+
+      标题：××年××工作总结
+
+      帽段：总体概括（以××为指导，在××领导下，围绕××目标，取得明显成效）
+
+      一、××（工作成效1，标题含成效动词）
+
+      二、××（工作成效2）
+
+      三、××（工作成效3）……（成效与措施融合，各条既有数据又有做法）
+
+      问题段：虽取得成绩，但对比××，还有差距。主要是×；×；×（简写，不必另立标题）
+
+      下步段：下一步将重点抓好以下几个方面（简写）
+
+
+      工作总结模板2（成效措施分开型）：
+
+      帽段 → 主要成绩列举（直接叙述成效） → 主要措施（另起一段，分条列举采取了哪些举措）→ 问题+下步
+
+
+      帽段亮点表达…'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-022
+    title: 政策部署类意见/通知共性框架
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 报告
+    content_summary: "政策部署类文件（意见/实施意见/指导意见/通知）标准结构：\n\n帽段：概念界定 / 强调必要性意义 / 总结近期成效不足（三选一或省略）\n经××同意，现提出如下意见（就有关事项通知如下）：\n\n\
+      一、总体要求\n   （一）指导思想：以××为指导，深入贯彻……坚持××，加快/加强/健全……确保……\n   （二）基本原则：坚持××，……（通常3-4条原则，\"坚持+名词短语\"格式）\n   （三）工作目标：到××年，实现……达到……确保……\n\
+      \n二、主要任务（核心内容部分，3-6条，每条均有明确措施主体、时限、量化目标）\n三、保障措施（组织领导/资金保障/监督考核/宣传引导，通常4条）"
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: SP-001_李忠秋结构化
+    title: 结论先行原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 邮件
+    - 工作总结
+    - 讲话
+    content_summary: '一次表达只支持一个核心观点或中心思想，且必须放在开头位置。
+
+      无论是标题、序言还是段落，结论都要第一时间呈现。
+
+      金字塔结构中，除最底层事实/数据外，每一层都必须是"结论"。
+
+      错误示例：先罗列细节，最后才用"总之"点出结论。
+
+      正确示例：开篇即给出"从选、育、留三方面着手"，再展开具体措施。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-002_李忠秋结构化
+    title: 以上统下原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 汇报
+    - 工作总结
+    content_summary: '上一层结论是对下一层信息的概括和总结；下一层信息是对上一层结论的解释和支撑。
+
+      包含三个方向：
+
+      1. 概括——不能只罗列，要对信息进行总结并得出结论；
+
+      2. 论证——有观点必须给出充分依据；
+
+      3. 对应——论点与论据必须在同一范畴内，不能"以偏概全"或"各说各话"。
+
+      错误示例：结论说"三大工具"，下层却混入"关系"和"作用"等不同层次的内容。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-003_李忠秋结构化
+    title: 归类分组（MECE）原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 汇报
+    - 工作总结
+    content_summary: '具有相似性或相互关联的信息要按照一定标准归为同一逻辑范畴，且须满足MECE原则：
+
+      - 相互独立（Mutually Exclusive）：同一分类中各信息之间不能重叠；
+
+      - 完全穷尽（Collectively Exhaustive）：相对于上层结论，下层信息不能有所遗漏。
+
+      信息达到3项及以上，首先考虑分类和排序。
+
+      错误示例：将"职业发展""生活""个人爱好"并列，概念层次不齐。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-004_李忠秋结构化
+    title: 逻辑递进（有序排列）原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 工作总结
+    - 讲话
+    content_summary: '同一逻辑范畴的信息必须按照一定的逻辑顺序排列，三种常用顺序：
+
+      1. 时间顺序——按事情发生先后排列（前、中、后；阶段一、二、三）；
+
+      2. 结构顺序——按整体的组成部分排列，各部分间为并列关系；
+
+      3. 重要顺序——按轻重缓急排列，重点突出、主次分明。
+
+      规则：同一分支中相同层级只能使用同一种排序方式，不可混用。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-005_李忠秋结构化
+    title: 金字塔结构核心模型
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 工作总结
+    content_summary: '条理清晰的文章背后必有金字塔结构：
+
+      - 顶端：唯一的中心思想/总结论；
+
+      - 横向：从不同维度展开（广度），各分支MECE；
+
+      - 纵向：逐层向下延伸（深度），上下论证对应。
+
+      四个原则对应两个方向：
+
+      - 纵向：结论先行 + 以上统下；
+
+      - 横向：归类分组 + 逻辑递进。
+
+      构建顺序：先纵向（分层）→再横向（定序）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-001
+    title: 标题SPA三原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 邮件
+    - 汇报
+    - 工作总结
+    content_summary: '职场写作标题须同时满足三项标准：
+
+      S（Simple，简单明确）：形式简洁，控制字数（16字以内），标题本身是一个明确的"结论"。
+
+      P（Profit，利益相关）：突出与读者切身相关的利益点，从对方角度出发（换位思考）。
+
+      A（Accurate，准确客观）：实事求是，不夸大，不过多表达主观情绪；标题须是全文的终极提炼。
+
+      错误示例：《积分贷产品介绍》——言之无物。
+
+      正确示例：《大力推广积分贷产品，实现多方共赢》——结论+利益。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-003
+    title: 语言清晰明确具体三要求
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 报告
+    - 说服性写作
+    - 汇报
+    content_summary: '说服性写作对语言使用有三项基本准则：
+
+      清晰——不使用模糊不清、模棱两可的词语；必要时对概念进行说明澄清。
+
+      明确——观点鲜明，表明立场和态度，避免言之无物、流于形式。
+
+      具体——用细致准确的事实和数据说话，避免过于抽象和笼统；细节描述能增强说服力。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-001_李忠秋结构化
+    title: SCQA序言四要素框架
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 邮件
+    - 讲话
+    content_summary: '职场写作序言采用SCQA模式构建背景导入：
+
+      S（Situation，情境）：对原本稳定状态的描述，是读者认可的已知事实，建立共情与代入感。
+
+      C（Complication，冲突）：打破稳定状态的因素，制造矛盾张力，触发读者心中的疑问。
+
+      Q（Question，疑问）：由冲突引发的问题，引导读者思考方向（若疑问明显，可隐去）。
+
+      A（Answer，回答）：解答疑问，即文章的核心结论/主题。
+
+      A与标题须保持对应，SCQA序言实质是用SCQ导出主题A（结论先行在序言层的体现）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-003_李忠秋结构化
+    title: 并列式内容展开（2W1H）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 邮件
+    content_summary: '传递信息/描述说明类写作，采用2W1H并列框架展开核心内容：
+
+      WHAT——是什么（描述事物本身）；
+
+      WHY——为什么（说明原因/价值）；
+
+      HOW——怎么做（操作方法/实施路径）。
+
+      三者顺序可根据场合灵活调整，也可选择性只展开其中部分。
+
+      若对方已接受前提，可着重HOW；若需先说服，可先说WHY；若需说清楚内容，先说WHAT。
+
+      适用于：向领导汇报工作进展、向同事介绍项目、向客户介绍产品。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-004_李忠秋结构化
+    title: 层进式内容展开（现象-原因-方案）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 汇报
+    content_summary: '澄清问题/解决问题类写作，采用层进式框架：
+
+      现象（是什么问题）→原因（为什么出现）→解决方案（怎么解决）。
+
+      格式固定，有明确先后顺序：先发现问题，再分析，再解决。
+
+      层进式具有强说服力，因为它隐含逻辑推理（三段论演绎形式）。
+
+      注意：现象、原因、解决方案须一一对应（见SP-007）。
+
+      与并列式的区别：并列式灵活，层进式固定；并列式侧重描述，层进式侧重问题解决。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-005_李忠秋结构化
+    title: 工作总结三步法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    - 汇报
+    content_summary: '写出有思想、有高度的工作总结，分三步：
+
+      第一步 成果分类：用"行动-成果"表梳理主要工作事项及对应成果；区分"行为结果"和"成就结果"，重点突出成就；对成果进行开放式或封闭式分类。
+
+      第二步 排序整理：按时间顺序、结构顺序或重要顺序对工作成果进行排列；同层级只用一种顺序。
+
+      第三步 概括总结：用信息摘要法或逻辑推论法对每一层级进行概括，形成明确的结论；结论须体现措施与成效，不可仅是类名。
+
+      核心公式：工作总结 = 总结工作成果（而非罗列工作内容）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-008_李忠秋结构化
+    title: 信息摘要法与逻辑推论法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    - 报告
+    - 汇报
+    - 方案
+    content_summary: '两种向上层概括结论的方法：
+
+      信息摘要法——从多个具体信息中提炼共同的本质属性，形成上层抽象概念。
+
+      示例：龙猫、仓鼠、蜥蜴、兔子、乌龟→消费者需要小动物做宠物养。
+
+      逻辑推论法——根据多个前提推导出它们共同导向的判断/结果。
+
+      示例：财产共有可能增加税、妨碍遗嘱、使离婚复杂……→财产共有将使你的家庭受到损害。
+
+      区别：摘要法提取共同属性；推论法找共同导向的结果。
+
+      实践中逻辑推论法更常用，难度也更大，需要深度思考。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-009
+    title: WA目标法确定说服目标
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 申请
+    - 汇报
+    content_summary: '说服性写作前，用WA法设定明确目标：
+
+      W（Who）——说服的对象是谁（具体到人或群体，不能只说"公司"）；
+
+      A（Achievement）——希望对方看完后做到什么（同意/认可/采纳/接受……，并采取哪些行动）。
+
+      完整表述：希望[W]在看完我写的内容之后，能够[A]。
+
+      同一内容面对不同W时，目标不同，观点切入点也不同。
+
+      目标与观点须区分：目标是期望的行动结果；观点是说服内容的核心思想。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-010_李忠秋结构化
+    title: 疑问-回答法构建说服框架
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 申请
+    - 汇报
+    content_summary: '在明确观点后，站在读者（对方）立场设想其可能产生的疑问，逐一回答，以此构建说服框架。
+
+      操作步骤：
+
+      1. 明确观点（结论）；
+
+      2. 设想对方针对此观点会问哪些问题（换位思考）；
+
+      3. 逐一回答，回答本身也形成新的观点，可继续设想下一层问题；
+
+      4. 横向覆盖越广，纵向越深入，说服力越强。
+
+      最难之处在于"设想问题"——问题必须是对方真正关心的，而非自己掌握的信息的反向推导。
+
+      可配合5W2H模型确保问题覆盖全面（见MT-011）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-014
+    title: 五步方案写作法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    content_summary: '完整方案写作分五步（基于结构思考力三层次模型）：
+
+      第一步 描述问题定方向——用5W2H全面描述问题，弄清"问题是什么"后再动手；
+
+      第二步 基于目标定主题——用WA法确定目标，用SPA原则设计标题，用SCQA写序言；
+
+      第三步 纵向结构分层次——自上而下（疑问-回答展开）或自下而上（罗列→分类→概括）建立框架；
+
+      第四步 横向结构选顺序——明确信息组为演绎型或归纳型，选定排序逻辑；
+
+      第五步 形象表达做演示——用结构罗盘"配得上"三步（配关系→得图示→上包装）进行视觉化处理。
+
+      总原则：先框架再细节，先整体再局部。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-017
+    title: 说服三维度综合检验
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 申请
+    - 汇报
+    content_summary: '一次有效说服须通过三个层面的检验：
+
+      1. 目标明确——读者能看懂、抓住核心诉求（对方知道你要什么）；
+
+      2. 换位思考——读者能看到自己的利益被考虑（对方感到被尊重）；
+
+      3. 有理有据——充分且合理的理由与逻辑支撑（对方能被说服）。
+
+      三步写作过程中的三次视角切换：
+
+      设定目标时——自问自答（我为何要说服？预期是什么？）；
+
+      确定观点时——想象自己与对方沟通（核心诉求是什么？）；
+
+      疑问回答时——完全代入对方立场（对方会关心哪些问题？）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: PM-001
+    title: '""论证类比"四原则口诀"'
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 工作总结
+    content_summary: '结构化写作四个核心原则的速记口诀：
+
+      论——结论先行（一次表达一个核心观点，放在最前）；
+
+      证——以上统下（上层统领下层，下层支撑上层）；
+
+      类——归类分组（相似信息归为同一逻辑范畴）；
+
+      比——逻辑递进（同层信息按逻辑顺序排列）。
+
+      可用于自检：写完一篇文章，逐条对照"论证类比"验证是否合格。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: PM-002
+    title: 工作总结核心公式
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    - 汇报
+    content_summary: '工作总结 = 总结工作成果（而非罗列工作内容）。
+
+      受众关注的是成果，不是过程。
+
+      工作写完后，须追问自己："然后呢？"——如果回答不出来，说明只有行为，没有成就。
+
+      "功劳"是成就，"苦劳"是行为；多数绩效考核以成就为主。
+
+      领导的反馈升级路径：踏实勤恳→有思想有高度→高级职业经理人（靠概括能力实现跨越）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: PM-003
+    title: 标题万能公式
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 邮件
+    - 汇报
+    - 工作总结
+    content_summary: '职场写作标题设计公式：谁 + 做了什么事 + 得到什么结果。
+
+      应用示例：
+
+      《积分贷产品介绍》→《大力推广积分贷产品，实现多方共赢》
+
+      《春节内部推荐政策》→《春节期间内推奖励翻翻》
+
+      《4G终端产品营销方案》→《加大资源投入，提升4G客户份额》
+
+      《××公司战略规划报告》→《改革创新，降本增效，提升经营业绩》
+
+      核心逻辑：让读者一眼看到"对你有什么好处"（利益点）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: CQ-004
+    title: 总分结构对应性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中的总说和分说是否完全对应？总括句提到几项，下文是否逐一展开？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-016
+    title: 数据来源可追溯性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中引用的数据是否可以追溯来源？是否存在来源不明的数据？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: MT-010（言之有理有据有物三维检验）为数据支撑的综合规则
+  - id: CQ-017
+    title: 同一数据前后一致性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 同一份材料中，同一事项的数据在不同位置出现时是否完全一致？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-019
+    title: 数据时效性检验
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中引用的数据是否为最新有效数据？是否存在使用过时数据的情况？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: MT-010（言之有理有据有物三维检验）为数据支撑的综合规则
+  - id: CQ-021
+    title: 政策表述与原文一致性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中引用的政策内容是否与原文件一致？是否存在断章取义或曲解原意的情况？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-022
+    title: 政策有效性确认
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中引用的政策是否仍然有效？是否存在引用已废止或已被新政策替代的内容？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-023
+    title: 层级政策引用规范
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    content_summary: 引用上级精神的层级逻辑是否正确？是否出现层级混乱（地方在上、中央在下）的情况？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-024
+    title: 人物职务信息时效性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中涉及领导职务和人员信息是否为当前现行的准确信息？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-025
+    title: AI生成数据地方性核查
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 材料中是否存在AI可能将其他地区的政策/数据误安在本地的情况？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: SP-007
+    title: 结构四层次模型
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文结构是否在四个层次上均保持清晰逻辑： ①文种层次——检查所选文种是否正确，决定整体格式框架； ②篇章层次——检查整体谋篇布局，各大部分关系和顺序是否合理； ③段落层次——检查每段是否围绕一个意义单元，段内结构是否清晰；
+      ④句子层次——检查句与句之间是否有逻辑衔接，起承转合是否自然。 不得在任何一个层次上出现混乱。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-011
+    title: 观点提炼源于实践高于实践
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查公文观点是否满足两个条件： ①源于实践——观点须从实际工作、真实数据、具体案例中提炼，不得出现空洞主观臆断； ②高于实践——观点须能揭示规律、概括本质，不得仅停留在事实描述层面。 检查观点是否具备四个标准：鲜明（立场清晰）、深刻（揭示本质规律）、
+      新颖（有独到见解而非人云亦云）、实用（对工作有指导价值）。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-002
+    title: 时事势三字立意法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查公文立意是否具备三字框架的高度： 【时】——检查是否体现时代背景和当前时点特征，立意是否体现时代性（当前形势、政策导向）； 【事】——检查立意是否紧扣具体事项，从实际工作出发，具有针对性； 【势】——检查立意是否顺应发展趋势，具有前瞻性，能体现方向感。
+      必须包含时代背景+具体事项+发展趋势三者的有机结合。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-003_胡森林公文写
+    title: 四思立意法（高度深度角度尺度）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查公文立意是否经过四个维度深化： ①高度——是否站在全局和宏观层面审视问题，具有党和国家层面或行业层面的站位； ②深度——是否挖掘到事物本质规律和深层原因，而非停留于表象； ③角度——是否具有新的切入点，避免老生常谈；
+      ④尺度——表达分寸是否准确，是否把握政策边界，不超出应有范围。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-007_胡森林公文写
+    title: 八种逻辑关系（段落与段落间）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文各部分之间的逻辑关系是否清晰，属于以下八种之一： ①并列——各点地位平等，可互换顺序； ②递进——各点层层深入，有先后递进关系，不可互换； ③因果——前者是后者的原因； ④条件——在某条件下才会产生某结果；
+      ⑤转折——前后意思相反或对比； ⑥假设——假定某条件成立的推断； ⑦解说——后面是对前面的阐述说明； ⑧总分——前面总述，后面分述（或先分后总）。 必须包含与逻辑关系对应的连接词和结构形式。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-009_胡森林公文写
+    title: 常见五种结构类型选择法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查所选结构类型是否与内容性质匹配： ①并列式——各部分内容是否平行地位相当，适合工作部署/经验总结； ②递进式——各部分是否层层深入，适合分析类论证类文章； ③倒金字塔式——是否结论先行再展开，适合需要快速传递核心信息的报告；
+      ④总分式——是否先总述再分述，适合综合汇报类文章； ⑤自由式——是否根据内容灵活组合，适合复杂综合性文章。 不得出现结构类型与内容逻辑不匹配的情况。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-010_胡森林公文写
+    title: 标题制作四种常用写法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查各部分标题的类型是否符合内容需要，属于以下四种之一： ①陈述式短语——仅概括该部分内容，无观点； ②观点性祈使句——带有明确指向，最常用； ③词语统领式——用同一词组开头统领各标题，形式整齐； ④自然承接式——能准确概括段落大意的句子。
+      不得出现过度追求对仗工整而与内容不符、辞不达意的标题。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-012
+    title: 四情三脉情况研究法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: 检查起草综合性公文前是否已研究四情三脉： 【四情】——上情（上级政策和要求）、下情（基层执行和实际困难）、 内情（本单位工作现状）、外情（同类单位做法和经验）是否均已掌握； 【三脉】——时间脉络（工作发展历程）、工作脉络（各项工作的逻辑关联）、
+      逻辑脉络（问题-原因-措施的内在逻辑）是否均已梳理清楚。 避免以偏概全或遗漏关键背景。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-014_胡森林公文写
+    title: 问题意识写作法（围绕问题写公文）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查公文是否符合问题意识的五步要求： ①是否提出了一个新问题，有的放矢； ②是否有自己悟到的新思想，体现对问题的独到理解； ③是否有精心挑选的事例，能理论联系实践； ④是否有合适的比喻、典故或数据，深入浅出；
+      ⑤是否有与惯例不同的表述或新语言，避免照搬文件。 必须包含：公文能回答的真实问题，且问题须重要而具体。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-015
+    title: 运思四法（公文构思的四种思维模式）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 方案
+    - 报告
+    content_summary: 检查公文构思是否运用了与文种匹配的思维方式： ①辩证思维——讲话/分析报告是否做到"一分为二"，避免片面； ②战略思维——方案/规划是否从全局和长远角度思考，具备前瞻性； ③全局思维——重要公文是否正确处理全局与局部、未来与现实的关系；
+      ④创新思维——需要出新意的文章是否打破常规，提出新见解。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-016
+    title: 调查研究前序工作法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: 检查高质量公文写作前是否完成了调查研究的标准流程： ①是否精心准备了调研提纲，明确调研目的和核心问题； ②是否提前了解调研单位和相关问题背景； ③调研中是否先看现场再开座谈会； ④座谈中是否善于追问，获取深层信息；
+      ⑤调研后是否认真梳理，去粗取精，将零碎材料系统化。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-017_胡森林公文写
+    title: 统稿八看法（多人协作文稿质量检查）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查统稿修改阶段是否完成八个维度的检查： ①检查各部分与主题的联系——是否存在"开小差"偏离主题的内容； ②检查各部分是否形成有机整体——起承转合是否顺畅，前后是否照应； ③检查各部分内容是否大体均衡——是否存在详略不一的情况；
+      ④检查层次衔接配合——是否存在交叉重复，脉络是否清楚； ⑤检查主次是否分明——重点是否突出，是否存在喧宾夺主； ⑥检查标题逻辑是否严密，制作质量是否一致； ⑦检查关键词/关键数据是否前后一致，是否存在相互矛盾； ⑧检查行文习惯和风格是否统一，是否存在拼凑感。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-019
+    title: 思维导图辅助构思三步法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文构思是否经历了系统化的三步流程： ①发散——是否以核心主题为中心，辐射发散，写出所有相关联的想法和素材线索； ②归类整理——是否将发散内容进行了系统化整理，归入各主要板块，明确主次和层次关系；
+      ③形成提纲——是否将思维逻辑转化为文字提纲，确定一级二级标题，标注主要内容要点。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-022
+    title: 论据三类型及使用原则
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 检查公文论据是否符合三种类型的使用要求： ①事实论据——是否真实、有代表性、能直接支撑观点； ②数字论据——来源是否可靠，是否标注时间，是否有纵向/横向对比； ③引用论据——引用是否准确，来源是否可查，是否断章取义。
+      检查是否遵循选用原则：能用数字不得用形容词（"提高50%"优于"大幅提高"）； 事实论据须有细节，不得只有空泛概括。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-001_胡森林公文写
+    title: 观点转化五途径
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文观点是否来源于以下五个渠道之一：
+
+      1. 书本——是否从理论著作、经典文献中汲取了理论支撑；
+
+      2. 上级精神——是否将上级文件、领导讲话要求转化为本单位的具体观点；
+
+      3. 领导意图——是否将领导的想法、思路转化为成文的观点表述；
+
+      4. 他人智慧——是否从同行经验、调研访谈、讨论交流中提炼了观点；
+
+      5. 实践感悟——是否从一线工作实践和个人思考中凝练了独特观点。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-006_胡森林公文写
+    title: 驾驭矛盾三法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 方案
+    content_summary: '检查公文处理内容矛盾和张力时是否运用了合适的方法：
+
+      1. 上下结合——宏观论断与具体数据事实是否相印证，是否存在只高屋建瓴无细节或只有细节无论断；
+
+      2. 刚柔相济——是否兼顾明确要求（刚）与工作空间（柔），是否过于刚硬或过于模糊；
+
+      3. 情理交融——是否在逻辑论证的同时兼顾情感共鸣，特别是讲话稿。
+
+      适用场景：政治性文件用上下结合，部署性文件用刚柔相济，讲话稿用情理交融。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-007_胡森林公文写
+    title: 开头首因策略
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查重要场合的公文开头是否满足首因效应要求：\n1. 重要场合须特别用心开头——第一次提交工作成果、给新领导准备文稿时，\n   开头段落是否先声夺人，能否留下良好的第一印象；\n2. 开头段落是否高质量——文章第一页、第一段是否具备：\n\
+      \   主题鲜明、语言精练、有吸引力（问题感或结论感）。\n不得出现开头段落一塌糊涂而后文写得好的情况。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则
+  - id: MT-008_胡森林公文写
+    title: 刻意学习与复盘机制
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查是否建立了刻意学习与复盘的提升机制：\n1. 刻意学习——是否有意识地钻研，带着问题学，学后即用；\n2. 深度复盘——每次写作后是否回顾哪里写得好、哪里写得差、为什么；\n   是否复盘他人优秀文稿，总结规律，提出方法论；\n\
+      3. 学用结合——是否将学到的方法立即运用到下一篇文稿中，形成正向循环。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: PM-001_胡森林公文写
+    title: 公文写作六个"言之"金句
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文是否覆盖六个"言之"维度：
+
+      立意→言之有方（方向是否正确）；主题→言之有核（中心是否明确）；
+
+      结构→言之有序（逻辑是否清晰）；内容→言之有物（材料是否充实）；
+
+      语言→言之有味（表达是否得体）；文气→言之有脉（气韵是否贯通）。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: WQ_MT_005
+    title: 立纲两种方法（发散法与归纳法）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: "检查立纲方法是否与行文方向匹配：\n1. 发散法（适用下行文）——是否先确定领导意图/观点，再向外发散展开；\n   是否参照上级文件和该领导历次讲话进行发散；\n2. 归纳法（适用上行文）——是否先掌握大量材料，再从中提炼观点；\n\
+      \   是否用多级综合归纳（小标题→中级标题→大标题）；\n   最终是否按因果/承接/意义轻重排序形成完整提纲。\n下行文须\"定方向→填内容\"，上行文须\"看材料→提观点\"，不得混用。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_006
+    title: 材料综合横纵四法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: "检查公文综合整理材料是否运用了合适的方法：\n横向综合：\n  - 堆积法——各单位情况是否各有千秋，不能千人一面；\n  - 归纳法——是否先归纳出几个观点，各观点下举2-3单位情况，脉络是否清楚；\n\
+      纵向综合：\n  - 累积法——是否将一段时期情况进行数量叠加汇总；\n  - 阶段法——是否找出不同阶段的特点，将材料分类放入各阶段特点之下。\n检查观点提炼是否准确新颖，这是综合质量高低的核心。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_007
+    title: JK三级综合法（处理大量材料的提纲生成法）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: "检查处理大量材料时是否运用了三级综合方法：\n第一步（J卡）——是否逐一阅读每份材料，提炼1-2个最突出内容，归纳为小标题；\n第二步（Q卡）——是否将意思相近的内容码成一堆，用一个新标题概括每堆的共同规律；\n\
+      第三步（K卡）——是否对Q卡进一步归纳，合并带有共同点的Q卡，产生K级大标题，\n                并按因果/意义轻重排序；若K卡仍过多是否继续合并。\n结果须形成K→Q→J的三级提纲层次，结构清晰、提炼准确。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_008
+    title: 层次组合四原则
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查多层级公文结构组合是否遵循四原则：
+
+      1. 内涵相称原则——同一层级各层次内涵是否大体相称（"辈分相等"），是否存在越级；
+
+      2. 层级从属原则——较低层级各层次是否从属于对应上一层次，是否存在"血统不清"（内容交叉混乱）；
+
+      3. 标准唯一原则——层次划分是否依据单一标准，同一层级是否只用横式或纵式，不得混用；
+
+      4. 排列有序原则——横式结构是否按问题大小/意义深浅排，纵式结构是否按时间/因果/阶段排序。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_012
+    title: 领导意图三种受命类型
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 报告
+    content_summary: '检查代拟讲稿时是否正确识别并应对了领导意图的类型：
+
+      1. 完全受命型——领导意图详细明确时，是否逐条完整准确体现；
+
+      2. 有限受命型——领导给出原则框架时，是否在框架内创造性补充了具体内容，向深处挖掘；
+
+      3. 无限受命型（意图模糊型）——领导仅指明方向时，是否全面研究，自主设计内容结构后提请审定。
+
+      三种情形均须：听关键几句话悟出领导本意和真意，不得机械呆板。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_015
+    title: 工作总结不足部分三有要求
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '检查工作总结中谈问题和不足的部分是否满足"三有"要求：
+
+      1. 有不足的具体表现——是否为具体描述而非原则性套话（如"成效尚不理想"等）；
+
+      2. 有对主客观原因的深入分析——是否为深入分析而非泛论（如"领导水平有限"等）；
+
+      3. 有改进不足的具体举措——是否提出了具体措施，使总结对未来工作有实际指导价值。
+
+      同时须检查报送对象：上报须突出规律性认识和经验；下发时须多担责任少批评下面。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_016
+    title: 用材四原则（鉴材筛选标准）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文材料筛选是否符合四大原则：
+
+      1. 相关性——材料与公文主旨是否关联，是否选用了"一个顶俩"的最能说明主旨的材料；
+
+      2. 真实性——材料来源是否可靠，来源有疑问的材料是否经过核实；
+
+      3. 典型性——材料是否有普遍意义和代表意义，是否选用了带偶然性、缺乏说服力的材料；
+
+      4. 新颖性——材料是否新近发生，是否使用了陈旧的众所周知的情况。
+
+      检查是否存在只取对己有利的一面、偏颇不全面的情况。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_017
+    title: 用材三技法（合并/角度/详略）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: '检查公文材料运用是否合理，并注意三种技法：
+
+      1. 合并同类——是否将数个相关材料综合成一个整体，避免单摆浮搁；
+
+      2. 调整角度——同一材料是否从最有效的角度使用，服务于当前主旨；
+
+      3. 详略之法——是否遵循"久则论略，近则论详；略则举大，详则举小"的原则。
+
+      必须检查以下三种错误是否存在：
+
+      ①观点材料打架（讲一回事材料讲另一回事）；
+
+      ②貌合神离（强行对应，拉郎配）；
+
+      ③以偏概全（仅2个事例代替全局情况，须先有综合概述再举例）。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_018
+    title: 材料消化三步法（筛选→定位→编织提炼）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: "检查将原始材料消化成文是否经历了三个阶段：\n1. 筛选补充——是否按写作目的挑选有用材料，剔除陈旧/无关材料，并对不足方面进行了补充；\n2. 归纳定位——是否按写作意图将材料分类归纳，按逻辑关系排序，每类内部是否按层次排好位置；\n\
+      3. 编织提炼——零散材料是否综合拼接成连贯系统材料；庞杂材料是否概括提炼后写入文章，\n              须避免过分概括变成概念化。\n特别检查：上级精神是否融会贯通后用自己的话讲出，不得大段照搬。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_SP_003
+    title: 公文层次横纵两式（条款/总分/递进/因果/时序）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文段落层次的组合方式是否合理：\n横式结构：\n  - 条款式——各层次是否平行互补，犹如多枝鲜花集成一束；法规类公文是否使用；\n  - 总分式——是否有总写和分写两部分，分写各层次是否并列（可互换顺序）；\n\
+      纵式结构：\n  - 递进式——各层次是否环环相扣逐层深入，顺序是否不可调换；\n  - 因果式——层次是否由原因与结果构成，是否由因到果或由果溯因；\n  - 时序式——是否按事情发生的时间先后安排。\n必须检查：同一层级是否存在横式与纵式混用的情况，若有则须修改。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: MT-002_公文高手自我
+    title: 观世音菩萨五字写作心法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作是否具备五种核心能力：
+
+      （1）观——是否通过深入调研，察事为先，掌握了第一手材料；
+
+      （2）世——是否通达世事，了解社会、政策、行业动态，不脱离实际；
+
+      （3）音——语言是否有力量，节奏感是否强，读来是否朗朗上口；
+
+      （4）菩——思维是否清晰，是否善于分析，是否找到了问题本质；
+
+      （5）萨——是否体现了为人民服务的情怀，是否心系群众，是否有人文关怀。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-009_公文高手自我
+    title: 练好三门功做好三件事
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否具备三门功并落实了三件事：
+
+      【三门功】
+
+      （1）问题意识——是否时刻带着问题思考，是否有问题导向；
+
+      （2）调查研究——是否重视第一手材料，是否存在形式主义调研；
+
+      （3）思维训练——是否把复杂问题简单化，是否平时储备观点；
+
+      【三件事】
+
+      （1）善于学习——是否广泛阅读，博采众长；
+
+      （2）勤于练笔——是否有怀疑精神，每写一稿是否反问"还能更好吗"；
+
+      （3）乐于总结——是否及时反思总结，是否将经验提炼为规律，形成认知积累。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-013_公文高手自我
+    title: 上行公文五种沟通场景
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '检查上行公文是否正确识别并运用了对应沟通场景的技法：
+
+      （1）建言献策场景——是否通过反映社情民意和积极建言，展现了才干和见解；
+
+      （2）借势做大场景——是否充分利用了上级授权和平台资源；
+
+      （3）树立权威场景——是否通过公文为执行争取了支持，解决了内部阻力；
+
+      （4）周旋博弈场景——是否既达到了目的，又避免了不必要冲突；
+
+      （5）提出创意场景——是否通过奏报提出了设想，推动上级形成决策。
+
+      检查上行公文是否具备三性：针对性（针对特定受文者）、
+
+      论断性（断=要做什么，论=为什么）、实效性（是否达到预期目的）。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-014_公文高手自我
+    title: 调研报告写作十要点
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    content_summary: '检查调研工作是否完成了完整执行清单：
+
+      （1）是否精心准备了调研提纲；
+
+      （2）是否提前了解了调研单位及调研问题的情况；
+
+      （3）调研中是否先看现场后开座谈会；
+
+      （4）是否认真准备了座谈会发言，让被调研方清楚调研目的和要求；
+
+      （5）调研中是否引导气氛，善于提问，不轻易发表个人意见；
+
+      （6）是否注意领会了调研组领导意思，必要时提出合理化建议；
+
+      （7）是否注意自身形象，尽量未给被调研单位添麻烦；
+
+      （8）调研结束后是否及时联系调研单位并致谢；
+
+      （9）是否与调研中帮助的人保持联系；
+
+      （10）调研后是否认真总结经验。
+
+      必须检查：是否存在形式主义调研、走过场、数据造假的情…'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-003_公文高手自我
+    title: 调研报告四要素写法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    content_summary: '检查调研报告是否满足四个核心要求：
+
+      （1）方向明确——是否坚持问题导向，直奔解决问题而去；
+
+      （2）分析方法——是否全面辩证地分析，由表及里、由此及彼、去伪存真；
+
+      　　  是否存在事实简单罗列、人云亦云、受既往定论约束的问题；
+
+      　　  是否抓住"真"字：客观反映事物本来面貌，不夸大不缩小，不捏造不掩饰；
+
+      （3）结构要求——是否做到：主题鲜明、重点突出、语言精练、论证严密、建议切实、措施可行；
+
+      （4）对策措施——是否提出了有坚实基础的对策，是否在遣词造句上注意分寸，
+
+      　　  是否坚持两分法、两点论，是否把话说过头。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-004_公文高手自我
+    title: 总结报告三特点五注意
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 汇报
+    content_summary: '检查总结报告是否体现三个本质特点：
+
+      （1）自我性——是否以第一人称叙述，是否是主体自身活动实践的产物；
+
+      （2）概括性——是否已梳理、提炼、归纳，是否仍停留在流水账层面；
+
+      （3）启发性——是否提出了深刻而具有普遍意义的见解，是否揭示了规律性。
+
+      检查是否遵循写好总结的五点注意：
+
+      （1）是否重视调查研究，是否以偏概全；
+
+      （2）是否坚持实事求是，是否存在只写成绩不写错误；
+
+      （3）是否重点在出经验、找规律，是否停留在表面现象；
+
+      （4）是否发掘了亮点，是否总结了可积累和推广的经验；
+
+      （5）是否点面结合，是否定性与定量结合，是否用数据和典型事例说明。
+
+      不得出现以下三类…'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-006_公文高手自我
+    title: 经验介绍材料四大要求
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 汇报
+    content_summary: '检查经验介绍材料是否满足四大要求：
+
+      （1）立意要新颖独到——是否发现了他人未发现的东西，是否给人启发而非照本宣科；
+
+      （2）素材要真实充分——是否做到点面结合：
+
+      　　  点（典型事例）+面（综合情况）是否兼顾，有点无面是否缺说服力，有面无点是否缺感染力；
+
+      （3）结构要合理完整——每个问题是否包含三要素：
+
+      　　  为什么（提出问题）→ 是什么（回答问题/做法）→ 怎么样（运用结果/效果）；
+
+      （4）文字要生动形象——是否接地气、形象化，是否力求精练，是否三言两语切入正题。
+
+      检查：是否存在"活材料写死"的情况，须突出典型性。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-007_公文高手自我
+    title: 会议纪要三核心要求
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    content_summary: '检查会议纪要是否满足三核心要求：
+
+      （1）真实准确——内容是否来自会议本身，是否存在随意增减、擅自篡改；
+
+      　　  是否出现演绎式、推理式、编造式纪要；意见不一致时是否写多数人的意见；
+
+      （2）精练概括——是否抓中心抓要点，是否存在面面俱到、堆砌材料；
+
+      　　  是否将口头语转化为书面语，认识性文字是否简略，结论性文字是否明确；
+
+      （3）清楚明白——是否有明确结论，是/否/何时办/怎么办是否言之凿凿；
+
+      　　  涉及责任划分、经费额度、完成时限是否全面准确清晰记录。
+
+      检查时效性：一般会议是否3-5天内印发；重要紧急会议是否当天或隔天印发。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: SP-008_公文高手自我
+    title: 工作方案合理可行三标准
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    content_summary: '检查工作方案是否满足合理可行的三个标准：
+
+      （1）目标要现实合理——目标是否既不太容易也不好高骛远；
+
+      （2）工作要求要具体可行——时间、步骤、进度、质量是否尽可能量化；
+
+      　　  不能量化的是否有质的要求，是否明确了指标；
+
+      （3）措施要切实可行——是否针对实际有可操作性；
+
+      　　  是否对各项任务进行了分解落实，是否明确了责任单位和责任人，
+
+      　　  是否明确了工作进度和工作结果的评价标准。
+
+      检查常规要素是否按需包含：指导思想、目标任务、组织机构、实施步骤、工作要求。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: BG-006
+    title: 平时把握领导意图七查法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: '平时动态把握领导意图的七个渠道：
+
+      （1）查领导讲话：系统搜集梳理各内部载体（简报/内刊/工作通报/政务信息）中的领导讲话材料
+
+      （2）查领导指示批示：收集领导批示原文，揣摩关注点和用词习惯
+
+      （3）查领导的调度记录：平时的工作部署会/碰头会纪要等
+
+      （4）查领导走访调研情况：陪同调研或调研后的相关材料
+
+      （5）查领导读书关注点：领导阅读的书报、订阅的公众号、关注的热点
+
+      （6）查领导的专业背景和工作经历：有助于预判其思维特点和语言习惯
+
+      （7）查多研究领导相关的政务信息和上级材料：通读一年以来相关材料后"找到感觉"再动笔'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-014
+    title: 交稿有方——不仅要写好更要汇报好
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: '写好稿子只是第一步，交稿的姿势同样重要：
+
+      （1）主动向领导简报写作思路：若提纲有创新或与惯例不同，提前口头说明框架逻辑，引导领导形成预期
+
+      （2）对关键段落加以说明：告知领导哪些是核心观点/亮点/需重点关注的修改点
+
+      （3）面对修改意见保持谦卑：第一稿被修改是正常现象，关键是从领导修改的"花脸稿"中快速学习领导偏好，为下次积累个性化数据
+
+      （4）让领导做选择题而非填空题：不清楚时提供2-3个框架方案供领导选择，而非空着来问"您觉得怎么写"'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-015
+    title: 写后复盘五维提炼法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '材料写完后的即时复盘是提升悟性的关键：
+
+      （1）复盘框架：这次为什么列了这样的提纲？换一种思路会更好吗？
+
+      （2）复盘素材：哪些素材用上了？哪些遗漏了？平时如何补上这类短板？
+
+      （3）复盘词句：哪些表述让领导眼前一亮？哪些被删掉了？删的逻辑是什么？
+
+      （4）复盘意图：这次是否真正吃透了领导意图？有没有偏差？下次如何更准？
+
+      （5）复盘体例：这个文种有哪些可固化的框架规律？下次遇到同类任务如何直接迁移？
+
+
+      精读→吸收→输出→复盘，形成正向循环后，写作悟性会在不知不觉中大幅提升。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: SP-006_李忠秋结构化
+    title: 演绎与归纳信息组区分
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 说服性写作
+    content_summary: "金字塔结构中的信息组分两类：\n1. 演绎信息组——下层各项之间是\"前因后果\"的因果逻辑，可用\"因为……所以……\"连接；\n   常见形式：大前提→小前提→结论（标准式三段论）；\n   或：现象→原因→解决方案（常见式三段论）。\n\
+      2. 归纳信息组——下层各项之间是\"并列\"关系，共同支撑上层结论；\n   须满足MECE原则；需选择合适的排列顺序。\n注意：演绎信息组中，三段论的\"结论\"与上层概括形成的\"结论\"是两个不同概念。"
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-007_李忠秋结构化
+    title: 现象-原因-方案须一一对应
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 报告
+    - 汇报
+    content_summary: '采用"现象→原因→解决方案"的层进式演绎结构时，解决方案须与原因一一对应。
+
+      若原因列出3条，解决方案也应对应3条，不可数量错位。
+
+      错误示例：原因列3项，解决方案提4项，读者无法判断对应关系。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: SP-008_李忠秋结构化
+    title: 四种信息关系模式分类
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 汇报
+    - PPT演示
+    content_summary: '信息要素之间的关系可归为四种模式（共16种关系），用于形象化呈现：
+
+      1. 流动模式：线性、流程、循环、关联——体现信息的流向与指向；
+
+      2. 作用模式：对立、合力、平衡、阻碍——体现力量对比与相互作用；
+
+      3. 关系模式：并列、重叠、包含、分割——体现结构与空间层次；
+
+      4. 比较模式：成分、排序、序列、关联——体现数据间的比较关系。
+
+      配套图示：成分→饼图；排序→条形图；序列→柱形图/折线图；关联→散点图。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-002
+    title: 标题字数限制16字
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 报告
+    - 方案
+    - 邮件
+    - 汇报
+    content_summary: '职场正式写作标题应控制在16个字以内。
+
+      不可照搬公众号文章的长标题风格——公众号标题是特殊商业逻辑的产物，不适用于商务写作。
+
+      标题字数过多是无效信息堆砌的表现。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-004
+    title: 成果描述用数字避模糊词
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    - 汇报
+    - 报告
+    content_summary: '描述工作成果时，务必做到清晰、明确，尽量使用数据说话。
+
+      须避免的模糊词：加大、初步实现、有效提升、基本上、大概、加到多大、何为初步。
+
+      错误示例：加大宣传力度，有效提升了品牌知名度。
+
+      正确示例：新增渠道3个，品牌曝光量提升47%，新增客户超500人。
+
+      若暂无数据，可用预期目标替代（说明"做这件事期望达到的目的是什么"）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-005
+    title: 观点须含措施与预期成果
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 汇报
+    content_summary: '说服性写作中，观点（核心结论）须具备两个要素：措施（做什么）+ 成效（预期效果如何）。
+
+      仅有措施没有成效，观点显得空洞；仅有成效没有措施，缺乏可操作性。
+
+      错误示例：观点为"商务礼仪是门实操课程"——含糊，未体现措施和结果。
+
+      正确示例：观点为"申请更多资源，加大通信网络建设，提升市场占有率至50%"。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: LR-006
+    title: 序言SCQA各项须完整对应
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 邮件
+    content_summary: '序言写作中，SCQA四要素各项信息须描述完整，且前后须逻辑衔接顺畅。
+
+      常见错误：
+
+      1. S、C、Q、A信息描述不完整或表述混乱；
+
+      2. S与C之间过渡生硬；
+
+      3. Q为提问而提问，不能引导读者思考正确方向；
+
+      4. A与核心结论不对应（跑偏）；
+
+      5. S描述过于简单，缺乏代入感；
+
+      6. C冲突点不突出、不深刻；
+
+      7. 内容隐含的逻辑经不起推敲。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-002_李忠秋结构化
+    title: SCQA四种顺序变体
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    - 邮件
+    content_summary: 'SCQA四要素可按不同顺序排列，形成不同风格：
+
+      1. 标准式（S→C→Q→A）：平稳铺陈，适合多数正式场合；
+
+      2. 开门见山式（A→S→C）：先抛结论，适合对方已熟悉背景时；
+
+      3. 突出忧虑式（C→S→A）：先呈冲突，适合需要引起重视时；
+
+      4. 突出信心式（Q→S→C→A）：先抛问题，适合需展示解决能力时。
+
+      同一问题还可分为三种结构类型：
+
+      恢复原状型（原有稳定→被破坏→如何恢复）；
+
+      预防隐患型（稳定状态→潜在风险→如何预防）；
+
+      追求理想型（现有基础→不足之处→如何升级）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-006_李忠秋结构化
+    title: 行动-成果表工具
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    content_summary: '梳理工作成果的基础工具，含两列：
+
+      行动列——填写主要工作事项（"我做了什么"，即行为）；
+
+      成果/目的列——填写对应的"成就结果"（取得了什么成效/价值）。
+
+      使用要点：
+
+      1. 若工作尚未完成，用预期目标代替成果；
+
+      2. 一项行动有多个成果时，分"成果1/成果2"列出；
+
+      3. 日常坚持记录，避免年终总结时无素材可写。
+
+      思考指引：看完"行动"后追问自己"然后呢？"以逼出真正的成果。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-007_李忠秋结构化
+    title: 开放式与封闭式分类
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 工作总结
+    - 方案
+    - 报告
+    content_summary: '对信息进行分类有两种方式：
+
+      开放式分类——自行选定标准进行分类，无固定模型，但必须遵循MECE原则；适合构建个性化框架。
+
+      封闭式分类——直接套用成熟模型（5W1H、SWOT、4P、PDCA、选育用留、ASK等），拿来主义；模型经过实践检验，更容易被对方接受。
+
+      两者本质相通：都是建立结构化、框架性的思维方式。
+
+      选择原则：优先考虑是否有合适的封闭式模型；没有或不适用时再开放式构建。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-011_李忠秋结构化
+    title: 5W2H设想读者疑问
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 汇报
+    content_summary: '运用5W2H模型从七个维度设想读者可能提出的问题，保证问题覆盖全面：
+
+      What——是什么（对象/内容是什么）；
+
+      Who——谁（相关人员是谁）；
+
+      Why——为什么（原因/必要性）；
+
+      Where——在哪里（发生地点/适用范围）；
+
+      When——何时（时间节点/持续时间）；
+
+      How——如何（实施方式/操作步骤）；
+
+      How much——程度/量（范围/影响/费用/数量）。
+
+      注：5W2H是问题引导框架，不代表具体问题本身，需结合实际设想真实疑问。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-012_李忠秋结构化
+    title: 演绎推理三段论应用
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 汇报
+    content_summary: '演绎推理是从一般原理推导到特殊结论（从一般到特殊），最常用形式为三段论：
+
+      大前提：某个已知的一般性原理/规律/法则；
+
+      小前提：当前研究的特殊情况；
+
+      结论：由大前提对小前提推导出的判断。
+
+      三段论成立的必要条件：
+
+      1. 前提必须真实（大、小前提内容符合客观事实）；
+
+      2. 推理形式有效（严格遵循逻辑规则）。
+
+      注意：大前提须能"包含"小前提，二者不可割裂；大前提方向错误则一切后续均无效。
+
+      写作应用：大前提描述标准/规律，小前提描述自身情况，结论即观点。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-013_李忠秋结构化
+    title: 归纳推理简单枚举法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 说服性写作
+    - 报告
+    content_summary: '归纳推理从个别事物推导出一般结论（从特殊到一般），日常最常用的是简单枚举法：
+
+      列举多个具有相同属性的个体，推导出该类事物的普遍规律。
+
+      应用于写作：将多个并列信息项归纳为共同的上层结论（与信息摘要法/逻辑推论法配合）。
+
+      注意：枚举对象越多，结论可靠性越大；枚举对象过少容易"以偏概全"。
+
+      演绎与归纳的关系：两者相辅相成，归纳形成的结论可成为演绎的大前提；
+
+      在复杂方案中，上层常用归纳，下层常用演绎，或交替使用。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-015_李忠秋结构化
+    title: 纵向框架两种构建路径
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 报告
+    - 工作总结
+    content_summary: "根据写作起点不同，纵向建立框架有两种路径：\n自上而下（有明确主题时）：\n  第一步 设定主题；\n  第二步 针对主题换位思考，设想对方会提哪些问题；\n  第三步 回答这些问题，形成初步框架（可配合2W1H/5W2H）。\n\
+      自下而上（手头有大量素材时）：\n  第一步 罗列所有信息；\n  第二步 对信息进行分类（找共性：静态属性类或动态行动类）；\n  第三步 对信息概括形成结论（信息摘要法或逻辑推论法），逐层向上。\n两种路径可交替使用，不是截然割裂的。"
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: MT-016_李忠秋结构化
+    title: '"结构罗盘"配得上"三步法"'
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 方案
+    - 汇报
+    - PPT演示
+    content_summary: '对信息进行形象化（视觉化）呈现，分三步：
+
+      第一步 配关系——深入探寻信息要素之间实际的逻辑关系（参考四种模式16种关系，见SP-008）；
+
+      第二步 得图示——选择与该关系对应的图示（流程图、矩阵图、饼图、柱形图等）直观展现；
+
+      第三步 上包装——用简化、类比、整合、引用等方式对信息进行高度提炼，使其形象易记。
+
+      简化：一段话→一句话→一个字；类比：将关系比喻为熟悉的事物；
+
+      整合：用词语/字母/数字/颜色统一归拢；引用：借用广告语/歌词/名言。
+
+      四种包装方式常组合使用，"简化"往往是起点。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: PM-004
+    title: 写作自检三连问
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 工作总结
+    content_summary: '写作或梳理信息时的三个自检问题：
+
+      1."然后呢？"——逼迫自己从行为上升到成果，从现象上升到结论。
+
+      2."你到底想说什么？"（What''s your point）——检验结论是否清晰明确。
+
+      3."如果我是对方，还可能提哪些问题？"——推动换位思考，扩大疑问覆盖面。
+
+      适用于：写完初稿后的自查；卡壳时的思维突破；概括结论前的逼迫式追问。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: PM-005
+    title: 写作失败四大根源诊断
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 工作总结
+    content_summary: '读者对一篇文章/邮件/方案产生的三类负面反馈：
+
+      不愿看——标题/开头无利益点，无吸引力；
+
+      看不懂——结构松散，观点不清，逻辑混乱；
+
+      记不住——缺乏分类和概括，信息零散堆砌。
+
+      四大根源：
+
+      1. 没有结论先行（让读者猜意图）；
+
+      2. 缺乏分类（信息凌乱，无规律可循）；
+
+      3. 没有概括观点（有分类但没结论，读者仍不明白）；
+
+      4. 缺乏顺序（各类之间没有逻辑关系）。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+  - id: CQ-001
+    title: 段落主题句明确性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文档各段落是否有明确的主题句？主题句与段落内容是否吻合？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-002
+    title: 因果关系成立性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中的因果关系是否成立？"因此""由于"等连接词前后逻辑是否自洽？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-003
+    title: 并列项目同层级检验
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中并列排列的事项（一是…二是…/首先…其次…等）是否属于同一层级的概念？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-005
+    title: 论点与论据匹配性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中的每个主要观点是否都有充分的论据支撑？观点与支撑材料是否匹配？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-006
+    title: 结构比例合理性（头重脚轻问题）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 文章各部分的比例是否合理？是否存在'头重脚轻'或'虎头蛇尾'问题？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-007
+    title: 层次标题与内容匹配性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 各层级标题是否准确概括了该部分的实际内容？标题与正文是否存在'名实不符'？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-015
+    title: 成效表述须有数据支撑
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中'大幅提升''显著改善''明显增长''大幅度进步'等成效表述是否均有数据支撑？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: MT-010（言之有理有据有物三维检验）为数据支撑的综合规则
+  - id: CQ-018
+    title: 排他性表述须有依据
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 文中'全国领先''全省首家''全市率先''历史最好'等排他性表述是否有客观依据？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: MT-010（言之有理有据有物三维检验）为数据支撑的综合规则
+  - id: CQ-020
+    title: 政策文件引用完整性
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    content_summary: 文中引用上级政策文件时，文件名称是否完整准确？是否使用了规范的全称？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: MT-021
+    title: 六项基本功（公文写作六种能力）
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文写作是否具备六种基础处理能力： ①扩写——是否能将简短的材料或提纲展开详述，补充细节和逻辑； ②缩写——是否能将长篇内容压缩提炼，保留核心去除冗余； ③改写——是否能在保持核心意思不变的前提下调整文体和表达方式；
+      ④续写——是否能在已有内容基础上保持风格一致地延续； ⑤串写——是否能将多份不同来源的材料整合串联成统一连贯的文章； ⑥补写——是否能对文章空白处、逻辑缺口、内容不完整处进行补充完善。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-023
+    title: 写作四阶段升维模型
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查当前写作是否已超越初级阶段： ①盲人摸象阶段——是否仅关注文章外在要素拼凑； ②就事论事阶段——是否仅着眼单篇文章无法迁移经验； ③庖丁解牛阶段——是否已掌握写作规律，能以不变应万变； ④运用自如阶段——是否已把握写作本质原理，无心为文却篇篇中的。
+      检查是否在"总结方法"、"寻找规律"、"抓本质"上用力，而非仅积累技巧。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-006
+    title: PPT本义与制作标准
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 方案
+    - PPT演示
+    content_summary: 'PPT全称PowerPoint：先有清晰的Point（观点），再用Power（图示/形象化）增强。
+
+      一份好的PPT最基本的要求：形成清晰明确的Point，然后让Point更有Power。
+
+      用大段文字直接复制粘贴到PPT，违背了PPT的本意。
+
+      形象化核心：不是配图片，而是用"配得上"三步法呈现信息之间的逻辑关系。'
+    source_file: 02_rules/book_principles/李忠秋_结构化写作.yaml
+STYLE:
+  description: 语言风格类规则——文风简练、避免套话废话、语体适当、语气匹配等。主要由Agent 6（润色）和Agent 5执行。
+  rule_count: 77
+  rules:
+  - id: SP-010
+    title: 公文"及物"性本质（研究事不研究字）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否存在"研究字"而非"研究事"的倾向：内容不得只在文字技巧和辞藻上下功夫， 而忽视对实际工作的深入反映。 检查是否符合"及物"性原则：公文必须真实反映现实工作和客观事物， 不得出现脱离实际的花团锦簇表述，写作质量须来自对实际工作的深入研究。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-001
+    title: 公文语言准确第一原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否存在用词不精准的问题：必须选择最贴切的词，不得使用模糊词。 检查是否存在歧义表述：同一表达必须只有唯一理解方式。 检查数据/事实细节是否精确：数字、时间、职名、地名等细节须无误。 不得出现以下失准问题：概念混淆（如"汇报"和"报告"混用）、
+      程度词滥用（"极大地""充分"等未经核实即使用）、数据未核实直接引用。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-002
+    title: 公文语言"十个不写"规则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查是否存在以下十类禁止表达： ①假话——不得虚报、夸大、缩小； ②废话——不得重复啰嗦，每句须有信息量； ③套话——不得堆砌套路词汇和无意义短语； ④空话——不得空泛，须有具体内容支撑； ⑤大话——不得言过其实；
+      ⑥不得体的话——语体须与场合相符； ⑦超范围的话——不得泄露不应公开的信息； ⑧未经核实的话——数据和事实须经查证； ⑨模糊话——不得出现让人产生不同理解的表述； ⑩重复的话——信息不得重复出现。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-001_胡森林公文写
+    title: 务实管用第一原则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文是否符合"务实管用"的最高标准：
+
+      - 务实——内容是否真实、具体、可操作，是否存在空洞套话；
+
+      - 管用——对实际工作是否有指导价值，是否能解决问题、推动工作。
+
+      必须检查：这篇文章对执行者是否有实际帮助？
+
+      不得以语言华丽或篇幅完整为由忽视"管用"标准。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-002_胡森林公文写
+    title: 公文文风三弊
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否存在以下三种文风弊病：
+
+      1. 长篇大论——篇幅是否冗长，废话连篇，重要信息是否被淹没；
+
+      2. 空洞无物——是否存在概念堆砌，缺乏事实依据，读了等于没读；
+
+      3. 缺乏新意——是否千篇一律，套话连句，照搬照抄，没有思想。
+
+      检查方法：删掉此段，意思有无损失？有损失→保留；无损失→删除。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则；CQ-012（措施可操作性）
+  - id: LR-003
+    title: 公文四个实的标准
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否符合务实文风的四个具体标准：
+
+      1. 真实准确——数据、事实、引语是否真实可查，是否存在估数、夸大；
+
+      2. 充实丰富——内容是否有足够支撑，是否空洞，是否有干货；
+
+      3. 切实可行——措施、方案是否有可操作性，是否落地不落空；
+
+      4. 朴实简洁——语言是否平实，是否存在卖弄或堆砌。
+
+      在四个标准有冲突时：真实准确＞切实可行＞充实丰富＞朴实简洁。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-004
+    title: 说人话三要求
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文语言是否符合\"说人话\"的三个层次要求：\n1. 深入浅出——是否将复杂抽象问题用简单具体的语言表达清楚，\n   不得以\"内容复杂\"为借口写艰涩文字；\n2. 短实新——句子是否精炼，内容是否实在，表达是否新鲜不落套；\n\
+      3. 准确简洁生动——用词是否精准无歧义，是否去掉多余成分，是否有画面感。\n检查是否满足：能听懂、能记住、想继续读。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-005
+    title: 消极修辞技法
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否存在以下五类可删除的冗余成分：
+
+      1. 语义重复——如"十分非常重要"须删减为"非常重要"；
+
+      2. 无实义虚词——多余的"的""地""了""着"须删除；
+
+      3. 无效修饰语——修饰成分与中心词无实质区分的须删除；
+
+      4. 过渡性废语——显而易见时"下面我来谈谈……""综上所述……"须删去；
+
+      5. 重复交代——同一信息在文中多次出现时须保留最必要的一次。
+
+      检查方法：此词/此句删掉后意思是否完整？完整→删；不完整→留。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-012
+    title: 奥卡姆原则——废话三类禁令
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否存在以下三类废话，须坚决删除：
+
+      1. 正确的废话——内容没有错，但读了没收获，如"要高度重视……"；
+
+      2. 没用的空话——脱离实际，只说应该但不说怎么做；
+
+      3. 好听的套话——用套路化表达替代具体思考，如年年相同的开场白。
+
+      识别方法：把这段话换成任何一个同类文件还能用吗？能→套话，删。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则；CQ-012（措施可操作性）
+  - id: MT-002
+    title: 领导满意四标准
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    content_summary: '检查为领导起草的文稿是否达到四个满意标准：
+
+      1. 正确领会意图——是否准确理解领导想要表达什么、强调什么、忌讳什么；
+
+      2. 升华想法——是否在领导原意基础上提炼升华，使表达更有高度、更有力度；
+
+      3. 扮演角色——是否以领导的身份、立场、语气来写，而非以自我视角；
+
+      4. 体现风格——是否把握并还原领导的个人表达风格、习惯用语。
+
+      优先顺序：宁可准确朴素，不可误解意图却文字华丽。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: PM-002
+    title: 短实新三字文风标准
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否符合"短实新"三字文风标准：
+
+      短——句子是否精炼，篇幅是否简洁，能短是否已短；
+
+      实——内容是否充实，是否言之有物，是否有具体事实和数据；
+
+      新——表达是否新鲜，观点是否有新意，是否落套路，是否炒冷饭。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: WQ_MT_002
+    title: 立意三番来者法（陈言→正语→精语）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文立意是否经历了三番思考，避免停留在第一番：
+
+      第一番——陈言：脑海最先浮现的套话陈词，必须扫去不用，不得以第一番作为最终立意；
+
+      第二番——正语：深入思考后触及事物本质的表述，但仍停留在表层，不得满足于此；
+
+      第三番——精语：从更高角度思考所得，发人所未发、想人所未想，须追求此层次。
+
+      检查：立意是否已至少经过三轮思考，是否仍停留在陈词滥调层次。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_MT_011
+    title: 领导讲稿主体四性要求（鲜明/生动/鼓动/通俗）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: "检查领导讲话稿的主体部分是否体现\"四性\"：\n1. 鲜明性——主旨是否鲜明，是否抓住主线围绕一个主要问题展开；\n2. 生动性——是否恰当引用了文学形象/成语典故/名言佳句，深入浅出，用典是否贴切；\n\
+      3. 鼓动性——是否注入了饱满感情，是否旗帜鲜明；\n   不得是高呼口号，须把话说到点子上、道理讲在实处，找到与听众共同点引发共鸣；\n4. 通俗性——是否将抽象道理讲得浅显通俗，是否善用身边事例阐明理论。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+    context_note: 【适用边界】本规则适用于现场宣读的领导讲话稿，强调口语化、情感感染力。正式存档公文（报告/方案）应遵循LR-002（公文语言四特点：准确/庄重/简要/平实）。
+  - id: WQ_MT_014
+    title: 工作总结五忌（"豆腐账"五种表现）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: "检查工作总结是否存在以下五种禁忌：\n1. 光摆工作——是否将总结写成大事记/成绩簿，是否忽视经验体会；应集中笔墨写经验体会；\n2. 套用计划——是否照搬年初计划改时态，是否忽视全年出现的新情况新做法；\n\
+      3. 上下不分——上报总结是否站在领导高度提炼规律性认识；\n               下发总结是否全面列举基层事例，多做自我批评；\n4. 面面俱到——是否存在事无巨细平均用力，导致重点不突出；\n5. 老调旧腔——是否存在\"\
+      领导重视\"\"层层落实\"\"健全制度\"等套话年年雷同。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_LR_002
+    title: 公文语言四特点（准确/庄重/简要/平实）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文语言是否符合四个基本特点：\n1. 准确——词句内涵与表达意图是否完全一致，是否存在歧义，时间方位表述是否有严密限定；\n2. 庄重——语调是否端庄严肃，是否出现网络语言和感情色彩浓重词汇；\n\
+      \   检查是否使用了规范用语（称谓语/开端语/经办语/引文语/承启语/期请语/结尾语）；\n   检查行文方向语气是否匹配：上行文是否谦虚恳切，下行文是否庄重坚决，平行文是否平和；\n3. 简要——用词是否简洁明快，是否适当用缩略语和成语，是否尽量使用短句；\n\
+      4. 平实——是否如实叙述事物本来面目，是否存在艺术夸张和渲染烘托。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+    context_note: 【适用边界】本规则适用于正式存档公文（报告/方案/通知等）。领导现场讲话稿另有语言要求（见WQ_MT_011：讲稿主体四性要求：生动/鼓动/通俗）。
+  - id: MT-001
+    title: 写作素养金字塔：情怀>见识>文字
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作是否体现了正确的素养层次：
+
+      （1）文字层（术）——遣词造句、格式规范、语言技巧是否扎实；
+
+      （2）见识层（识）——对事物的判断力、政策理解力、宏观视野是否体现；
+
+      （3）情怀层（道）——对工作的热情、对公共事务的责任感、价值观是否彰显。
+
+      必须检查：是否存在只在文字层打磨而缺乏见识与情怀支撑的情况，
+
+      这是写作到达瓶颈无法突破的根本原因。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-003
+    title: 公文写作者三有三无
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作者是否具备正确的精神气质：
+
+      【三有】
+
+      （1）有公心——行文是否以公共利益为出发点，是否存在谋私利的倾向；
+
+      （2）有正气——是否传播了正能量，是否弘扬主旋律，是否出现阿谀奉承；
+
+      （3）有热情——对公文工作是否保持激情，是否存在敷衍了事的情况。
+
+      【三无】
+
+      （1）无邪——是否传递了错误导向，是否存在歪风邪气之文；
+
+      （2）无私——是否在公文中夹带了私货，是否以文谋私；
+
+      （3）无偏——是否客观公正，是否存在偏袒失衡的情况。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-010
+    title: 公文写作成长三阶段模型
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查当前写作是否已超越初级阶段的典型问题：
+
+      【新手阶段问题（须避免）】
+
+      文辞是否迂阔不接地气、言辞是否尖锐不知收敛、是否缺乏大局意识；
+
+      【熟手阶段标准（须达到）】
+
+      是否更接地气、更务实，是否已脱去青涩高蹈之气，经过实践历练；
+
+      【高手阶段目标（须追求）】
+
+      文字是否劲道有力、举重若轻，是否道术兼备。
+
+      规律检查：写作能力瓶颈是否来自思想修为不足，须通过提升思想境界突破写作瓶颈。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: MT-011
+    title: 道术相济内外兼修
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作是否做到道术相济：
+
+      （1）道（内功）——是否具备情怀修为、大局观、战略眼光、民生情怀、担当精神；
+
+      　　  是否存在缺乏道的"花拳绣腿"表现；
+
+      （2）术（表层）——是否掌握写作技巧、手法、格式规范、结构方法；
+
+      　　  是否存在只练术不修道导致到达瓶颈无法突破的情况。
+
+      检查写作水平提升路径：是否在技法纯熟的同时，思想是否变化、性情是否成长、
+
+      对世事人情的认识是否加深。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: BG-008
+    title: 领导文稿8分共性2分个性法则
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: '领导讲话等材料通常是8分共性、2分个性：
+
+      - 80%是通用的（共性思维/套路/表达），可花80%的时间研究广义技法
+
+      - 20%是个性化的（领导个人风格/关注点/文风习惯），需花20%的时间研究领导本人
+
+
+      实操：研究广义技法 → 动态跟进多个不同层级领导的讲话材料（锤炼共性思维、开拓视野、增强语感）；研究个性特点 → 多收集本单位领导以前材料，从讲话/谈话/批示/书报关注中悟其文风、悟其关切。
+
+
+      适用于例行类会议材料时：9分按历史惯例，1分揣摩领导个人特点。
+
+      适用于领导根据新情况新问题召开的会议材料：切记吃透领导意图，没有吃透时不要贸然动笔。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: LS-018
+    title: '"大力大力"等动词副词重复删减'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '同一句子中连续出现相同的副词或动词（如"大力大力""继续继续""深入深入"），
+
+      属于明显的冗余错误，应删除重复项。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-027
+    title: 禁止使用网络流行语
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '公文中严禁出现网络流行语，包括但不限于：
+
+      "给力""点赞""神操作""YYDS""绝绝子""破防""全网""刷屏"
+
+      "打call""内卷""躺平""卷王""整活"等。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-028
+    title: 禁止使用方言俚语
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '公文中不得出现地域性方言词汇和俚语，如"搞搞"（闽南语）、
+
+      "蛮拼的"（偏口语）、"不孬"（北方方言）等。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-031
+    title: 禁止"颠覆性"等易产生负面联想的词语
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '描述改革成就时，"颠覆性变革""颠覆式创新"等词语容易引发负面联想，
+
+      应改用"历史性变革""根本性变革""革命性变化"等规范表述。
+
+      此外，"革命性"在改革成就表述中需慎用，只有重大程度才可使用。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-032
+    title: 禁止"如无不妥""未有不可"等否定式套语
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"如无不妥，请批示""如无异议，请确认"等双重否定套语语义模糊，
+
+      措辞软弱，在现代公文中不宜使用，应改为直接明确的表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-036
+    title: '"共同致富"→"共同富裕"'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"共同富裕"是专有表述，不能写成"共同致富"。
+
+      "致富"强调个体行为，"富裕"是整体状态，两者含义有根本区别。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-038
+    title: '"人民至上、生命第一"→"人民至上、生命至上"'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '表述抗疫或公共安全理念时，"人民至上、生命至上"是规范表述，
+
+      "生命第一"是不规范的变体，易与其他概念混淆。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-039
+    title: 新发展理念顺序不得颠倒
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '新发展理念的顺序为"创新、协调、绿色、开放、共享"，
+
+      五个理念的排列顺序不得颠倒或遗漏，这是党中央确定的规范表述顺序。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-040
+    title: '"二十大精神"须加"党的"'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '引用党代会精神时，必须加"党的"前缀，如"党的二十大精神"，
+
+      不能简写为"二十大精神"（省略"党的"二字）。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-041
+    title: '"全面从严治党"不得省略"全面"'
+    importance: A
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"全面从严治党"中的"全面"二字不可省略，不能写成"从严治党"。
+
+      "全面"体现的是全方位、全过程的要求，省略后含义有重大差别。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: CQ-012
+    title: 措施部分可操作性
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    content_summary: 文中的工作措施是否具体可操作？是否都是模糊的方向性表述？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: SP-012
+    title: 文以载道价值观优先原则
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文写作是否体现正确的价值取向：情怀（价值观）须优先于见识（视野逻辑）， 见识须优先于文字（笔法语感），不得本末倒置只追求文字华丽。 检查是否具备三项价值观要求：一片公心（胸怀全局、一心为公）、 一股正气（坚持真理、实事求是）、一腔热情（对工作有投入）。
+      不得出现假公济私、因个人好恶影响判断、被不良风气侵染的表述。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-003_胡森林公文写
+    title: 说人话/对象意识原则
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 汇报
+    - 报告
+    content_summary: 检查是否具备明确的对象意识：语言风格须根据受众的身份、知识背景和阅读习惯选择， 不得使用晦涩艰深的表达。 检查是否符合以下四点： ①已明确受众是谁（领导/同行/基层）； ②使用对方熟悉的语言框架； ③不得卖弄术语和生僻词汇；
+      ④讲话稿须口语化，便于现场理解和记忆。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-004_胡森林公文写
+    title: 量体裁衣语体原则（不同文种不同语体）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查文种与语体是否匹配： 【汇报材料】须语气谦逊、陈述客观、偏书面体； 【领导讲话稿】须口语化、有激情、便于现场理解，有层次感，不得写成总结口吻； 【工作总结】须客观平实、有事实有数据，不得过度形容；
+      【调研报告】须分析性强，有观点有论据，适当有学术感； 【方案计划】须逻辑严密，操作性强，时间节点清晰。 不得出现语体与文种不符的情况。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-018
+    title: 五种公文创新路径
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文是否具备以下至少一种创新元素： ①立意创新——是否提炼了与众不同但揭示本质的观点； ②框架结构创新——是否在局部或整体调整了结构，打破固定段落模式； ③阐述角度创新——同一内容是否换了新视角切入，避免老生常谈；
+      ④文字表达创新——是否有令人印象深刻的表达，语言是否生动接地气； ⑤观点论断创新——是否提出了有思想价值的新见解、新论断。 不得完全照搬套路，须在保持必要重复的同时包含创新元素。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: MT-020
+    title: 文气三要素写作法（文以气胜）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文是否具备三个文气要素： ①意气——是否体现思想高度和情怀格局，文章是否充满正气和感召力； ②气势——内容是否充实（言之有物），是否适当运用短句（简洁明快）， 是否运用修辞，是否贯以真情； ③气脉——思维脉络是否连贯通畅，结构是否紧凑，语言是否流利，首尾是否一体。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-002_胡森林公文写
+    title: 研究者意识三句话
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查写作者是否保持了"研究者意识"，避免陷入形式主义： 检查是否"研究事"而非"研究字"——内容质量来自对工作实际的深入研究； 检查文章是否服务于工作目标——公文须为工作服务，工作就是为了解决问题； 检查是否偏离写作初衷——不忘"为什么出发"，防止形式大于内容。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: LR-006
+    title: 简洁文风三方法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查是否运用了以下三种方法实现简洁文风：\n1. 压缩句子——长句是否变为短句，复合句是否拆分为简单句，从句嵌套是否去掉；\n2. 合并同类项——相同或相近含义的表述是否已合并为一句，避免重复展开；\n\
+      3. 删繁就简——冗长表述是否已提炼为核心词、关键短语，\n   能用列举（①②③）替代的冗长叙述段是否已替代。\n目标：每段删去20%的字后信息量不减。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-007
+    title: 公文长文成因三条
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查文稿是否因以下三种原因而产生冗长问题：
+
+      1. 思想认识不到位——是否误以为篇幅长等于内容丰富等于态度认真；
+
+      2. 写作能力欠缺——是否存在铺陈堆砌，缺乏提炼概括能力；
+
+      3. 敷衍了事——是否以篇幅填充代替深度思考，以数量掩盖质量不足。
+
+      不得出现冗长文稿：改稿时须主动压缩篇幅10%~30%，短而精胜于长而冗。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: LR-010
+    title: 理论论据三要点
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查公文引用理论、政策、上级精神作为论据时是否符合三点：\n1. 融会——是否真正理解并消化，是否存在生搬硬套；\n2. 得体——引用场合和对象是否恰当，政治性表述是否与文件保持一致；\n3. 适度——引用是否为论证服务，是否铺天盖地堆引语，\n\
+      \   引用之后是否有自己的阐释和应用。\n不得直接大段复制上级文件作为正文——这是引用，不是论证。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: MT-005
+    title: 修改四境界
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文修改是否达到了较高境界：
+
+      1. 辨境——是否能辨别文章好坏，知道哪里不好（有眼光，无手段为低级）；
+
+      2. 正境——是否能改正错误，把明显的问题纠正（能纠错但难锦上添花）；
+
+      3. 佳境——是否能提升表达质量，不只改错，还能优化（有提升能力）；
+
+      4. 悟境——是否能从修改中悟出规律，形成原则性认识，指导今后写作（最高境界）。
+
+      检查当前修改处于哪个境界，下一步努力方向是什么。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: WQ_MT_013
+    title: 公文被动写作适应三情形
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否正确处理了认识与领导意图之间的关系：
+
+      1. 完全一致情形——是否正常推进写作；
+
+      2. 不完全一致情形——是否进一步领会意图，努力使二者达到一致；
+
+      3. 很不一致情形——是否立即调整心态，站到领导高度重新思考，找出差距后再动笔。
+
+      必须检查：是否从领导交代的话语中抓取了本意和真意，不得以自己的认识代替领导意图。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_LR_001
+    title: 简洁四要求（凝/实/广/简）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文语言是否符合简洁的四个层面要求：
+
+      1. 凝而不泛——语言是否凝练，是否存在空洞泛泛而谈；
+
+      2. 实而不空——内容是否实在，是否虚浮空洞；
+
+      3. 广而不滥——覆盖面是否广但不滥用词汇和例子；
+
+      4. 简而不赘——文字是否简短，是否存在重复啰嗦，是否删去了与中心无关文字。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_LR_003
+    title: 公文表达三主法（叙述/议论/说明）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: "检查公文语言表达方式是否运用恰当：\n1. 叙述（主）——是否兼顾概括叙述（反映全面情况）与具体叙述（展现典型细节），\n   叙述是否简明，是否出现文学式的详尽叙述；\n2. 议论（主）——是否少而精穿插在关键段落，是否存在全篇铺开论述；\n\
+      3. 说明（主）——是否言简意赅，是否把主要情况和特点说清；\n4. 描写（辅）——描写是否仅用于调查报告/总结/简报等，法定公文是否未使用描写；\n5. 抒情（辅）——抒情是否仅用于在公开场合宣读的重要文件，是否做到庄重内敛\"\
+      冷抒情\"。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_LR_004
+    title: 开头三要求与四种冗长表现
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文开头是否符合三条原则：
+
+      1. 开门见山——是否直接点明主题，是否存在绕弯子或空话套语；
+
+      2. 紧扣全文——开头是否能提示全篇内容，与文章主体是否紧密相连；
+
+      3. 概括凝练——是否用最少的文字概括了最核心的内容。
+
+      检查是否存在以下四种冗长开头（须避免）：
+
+      ①大段交代背景缘由拖沓冗长；
+
+      ②大量引用上级文件精神才进入正文；
+
+      ③大篇幅表决心表态度；
+
+      ④将正文内容在开头先提一遍（先声明后重复）。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: WQ_LR_006
+    title: 领导讲稿开头五法
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: '检查领导讲话稿开头是否运用了合适的方法，属于以下五种之一：
+
+      1. 开门见山——一两句直接点明讲话内容或会议主题，是否庄重简洁，是否迅速控制场面；
+
+      2. 概括说明——是否用几句话概括讲话缘由和要点，引起听众注意和期待；
+
+      3. 设问启发——是否在开头提出发人深省的问题，自问自答，突出主旨；
+
+      4. 介绍背景——是否简要介绍了多数听众尚不了解的背景材料；
+
+      5. 曲转入题——是否先讲几句"题外话"自然吸引注意力，再话锋一转进入正题。
+
+      不得出现讲话稿开头拖沓冗长、迟迟不进入主题的情况。'
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+    context_note: 【适用边界】本规则适用于现场宣读的领导讲话稿，强调口语化、情感感染力。正式存档公文（报告/方案）应遵循LR-002（公文语言四特点：准确/庄重/简要/平实）。
+  - id: MT-012
+    title: 写作充电站：以写促学
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查写作是否同时发挥了提升综合能力的作用：
+
+      （1）观察能力——写作是否锻炼了细察周围的感知力；
+
+      （2）思考能力——写作是否促使深入分析，避免浅层浮想；
+
+      （3）分析能力——是否将现象提炼为规律，是否锻炼了逻辑分析；
+
+      （4）判断能力——取舍材料、权衡立意是否培养了决断力；
+
+      （5）办事能力——是否通过写作加深了对工作机理的理解；
+
+      （6）管理能力——写作中的综合协调、统筹兼顾思维是否迁移到了管理实践。'
+    source_file: 02_rules/book_principles/公文高手自我修炼.yaml
+  - id: BG-023
+    title: 公文常用"性"字词组汇编
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '聚焦工作特点、着力增强工作的……性（常用于"为什么干"和总体要求部分）：
+
+
+      必要性 | 长期性 | 创造性 | 复杂性 | 方向性 | 兜底性 | 鼓动性 | 高效性 | 紧迫性 | 计划性 | 艰巨性 | 坚定性 | 积极性 | 精准性 | 基础性 | 可行性 | 民族性 | 普惠性 | 前瞻性 | 全局性
+      | 思想性 | 时代性 | 实效性 | 时效性 | 系统性 | 现实性 | 原则性 | 预见性 | 有效性 | 引领性 | 政治性 | 战略性 | 重要性 | 主动性 | 针对性 | 指导性 | 自觉性 | 战斗性
+
+
+      常用句式：聚焦××，着力增强工作的××性、××性、××性。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-024
+    title: 公文常用"感"字词组汇编
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 报告
+    content_summary: '牢记××理念，着力提高人民群众××感、××感、××感：
+
+
+      获得感 | 满足感 | 幸福感 | 安全感 | 喜悦感 | 胜利感 | 自豪感 | 归属感 | 成就感 | 紧迫感 | 忧患感 | 使命感 | 方向感 | 责任感 | 危机感 | 压力感 | 认同感 | 敬畏感 | 参与感 | 荣誉感
+      | 神圣感 | 崇敬感
+
+
+      常用于以下场合：强调民生工作时用"获得感/幸福感/安全感"；党建教育时用"使命感/责任感/紧迫感"；廉政建设时用"敬畏感/危机感"。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: BG-025
+    title: 总结帽段两类高质量表达——量上取胜与质上取胜
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: '工作总结帽段最能抓眼球的两类开门见山写法：
+
+
+      量上取胜（数据说话）：
+
+      - 截至×月底，共办理××事项×万余件，其中网上办件×万件
+
+      - 累计收缴××亿元，发放贷款××亿元，实现增值收益××亿元
+
+      - 完成××项目××个，交易额××亿元，节约财政性资金××亿元
+
+      - ××项重点攻坚任务全部完成
+
+
+      质上取胜（荣誉排名）：
+
+      - 获得主要领导肯定性批示×次
+
+      - ××给××部门记集体一/二/三等功
+
+      - ××工作获得全国第一/先进/优秀
+
+      - 在全国率先推出××做法，获国务院/省政府肯定推广
+
+
+      建议：帽段同时采用"量+质"两种方式，既有厚度又有高度。'
+    source_file: 02_rules/book_principles/笔杆子炼成.yaml
+  - id: LS-014
+    title: '"进行了+动词"冗余结构简化'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"进行了讨论/研究/检查/整改/部署"等"进行了+动词名词"结构冗余，
+
+      可直接用动词表达："讨论了/研究了/检查了/整改了/部署了"。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-015
+    title: '"给予了支持"→"给予支持"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"给予了支持/给予了帮助/给予了指导"中的"了"字冗余，
+
+      公文中"给予"通常不加"了"，直接用"给予支持"即可。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-016
+    title: '"作出了重要指示"→"作出重要指示"'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '固定搭配"作出重要指示/批示/部署"后不加"了"，
+
+      这是公文规范用法，加"了"显得不规范。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-017
+    title: 重复叠加的程度副词删减
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"非常十分重要""极为非常关键""十分非常紧迫"等双重程度副词叠加属于冗余，
+
+      应删除其中一个，保留语气更强的即可。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-019
+    title: 正文段落内容重复检测
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '同一份材料中，不同段落出现高度相似的表述（意思重复），
+
+      会使材料显得臃肿、逻辑混乱。典型表现：第二部分与第三部分
+
+      内容高度重叠，或开头总述后各分项重复叙述相同内容。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-020
+    title: '"充分认识……的重要性/必要性"套话检测'
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"充分认识……的重要性""深刻认识……的必要性"等句式作为引导语，
+
+      如果后续正文并未展开深度分析，则属于虚头巴脑的套话冗余。'
+    source_file: 02_rules/language_style/language_rules.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则；CQ-012（措施可操作性）
+  - id: LS-021
+    title: 排比句各项须同层级概念
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '排比句中的各项要素必须属于同一概念层级，不能将上位概念与下位概念
+
+      并列排列。如"党建工作、基层治理、支部建设"中，"支部建设"属于"党建工作"
+
+      的下位概念，不能并列。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-022
+    title: 排比句结构须平行对称
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '排比各项应使用相同的句法结构，不能"动宾结构"与"主谓结构"混用。
+
+      如"加强党建、提升服务能力、领导班子团结"结构不平行
+
+      （前两项动宾，最后一项主谓）。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-023
+    title: 递进式排比须体现层层深入
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '使用"不仅……而且……更是……"或"从……到……再到……"的递进排比时，
+
+      各项必须体现层次的深入或范围的扩大，不能是同等程度的并列关系。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-024
+    title: 四字格词组应语义明确、搭配恰当
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '公文中使用四字格词组要语义明确，不能生造晦涩词汇。
+
+      "动力引擎""定盘星""压舱石""牛鼻子""主战场"等有固定用法的比喻性四字格
+
+      须用在合适的语境。不能将"压舱石"用于轻量级工作，不能将"牛鼻子"泛化使用。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-025
+    title: 四字格使用不宜过度堆砌
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '公文中四字格词组可以增强文采和节奏感，但过度堆砌会导致内容空泛、
+
+      形式大于内容。通常同一段落中连续出现5个以上四字格时，
+
+      应检查是否每个四字格都有实质内容支撑。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-026
+    title: 标题使用四字格对仗要求
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '层级标题使用四字格时，同级各标题应在字数和结构上保持一致，
+
+      体现对仗美感。不能同级标题有的四字格、有的七八个字，参差不齐。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-029
+    title: 禁止过于绝对化的表述
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"一定会""肯定能""绝对没有问题""必然实现"等过于绝对的表述
+
+      在公文中应避免，宜改为"有信心""将努力""力争""力求"等留有余地的表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-030
+    title: 禁止情绪化主观表述
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"非常感动""特别激动""深受鼓舞"等情绪化过于外露的表述
+
+      在正式公文（通知、报告、方案等）中应避免；
+
+      在讲话稿中可适度使用，但不宜过于频繁。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-033
+    title: 禁止在公文中使用"我个人认为"
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"我个人认为""本人觉得"等强调"个人"的表述在公文中不妥，
+
+      公文代表机关立场，不宜强调个人观点。
+
+      讲话稿中可保留"我认为"，但不宜加"个人"。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: LS-042
+    title: 工作报告结尾语模板化问题
+    importance: B
+    execution: code
+    applicable_types:
+    - 通用
+    content_summary: '"以上汇报如有不当之处，请批评指正"等模板化结尾语过于陈套，
+
+      在汇报类材料中应根据实际情况使用更具体的结尾语，
+
+      或使用"以上汇报，请审阅""以上意见，供参考"等简洁表述。'
+    source_file: 02_rules/language_style/language_rules.yaml
+  - id: CQ-008
+    title: '"高度重视"类套话检测'
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    - 通知
+    content_summary: 文中是否频繁使用'高度重视''充分认识''深刻认识'等套话，且后续无实质内容？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则；CQ-012（措施可操作性）
+  - id: CQ-009
+    title: 千篇一律开头检测
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 文章开头是否使用了毫无针对性的套话开头，如'在新形势下''众所周知''近年来……在……领导下'？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-010
+    title: 公式化结尾检测
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文章结尾是否使用了无差别的套话结尾，可以套用于任何同类材料？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-011
+    title: '"正确的废话"检测'
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 文中是否存在大量正确但无信息量的套话，虽然正确却没有针对性？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+    see_also: CQ-011（'正确的废话'检测）为套话废话的综合规则；CQ-012（措施可操作性）
+  - id: CQ-013
+    title: 面面俱到但无深度问题
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    content_summary: 文章是否面面俱到地提到了各个方面，但每个方面都只是蜻蜓点水，缺乏深度分析？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: CQ-014
+    title: 机械化过渡语检测
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 文中是否频繁使用套路化、无实质信息的过渡语？
+    source_file: 02_rules/content_quality/quality_rules.yaml
+  - id: MT-024
+    title: 公文四境界进阶法（叙事→辅政→鼎新→立言）
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文是否至少达到"以文辅政"的境界： ①以文叙事——是否能真实客观记述客观事物过程； ②以文辅政——是否能准确表达决策层意图，为政务活动提供文字支撑； ③以文鼎新——是否提出了新理念、新思路、新举措；
+      ④以文立言——是否提出了具有历史价值和深远启迪的思想观点。 每篇文章至少须追求"以文辅政"的层次，有条件时力争"以文鼎新"。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-003
+    title: 公文创新辩证法（永远的重复·持续的创新）
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: 检查公文是否在遵循规范的同时包含创新元素： 不得完全套用模板而无创新，须做到"永远的重复，持续的创新"； 检查是否出现年年相同的套路化表述，应做到"套路是相对的、暂时的，创新是绝对的、永恒的"； 模仿借鉴时须向高层次迈进：不得停留在抄字层次，应追求抄意、抄气的境界。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-004
+    title: 文字工作者三大机会
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: 检查面向文字工作者的讲话材料是否涵盖三个激励维度： ①发展机会——是否提及好材料让人脱颖而出、进入领导视野的价值； ②锻炼机会——是否提及写材料锻炼逻辑思维、分析判断、思想高度等综合素质； ③学习机会——是否提及参会跟研、阅读文件、接受领导指点的学习价值。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-005
+    title: 文气与价值观名句集
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    - 报告
+    content_summary: 检查引用的经典表述是否准确，可选用以下名句： "从喷泉里出来的都是水，从血管里流出的都是血。"（鲁迅，强调价值观决定文章品格）； "铁肩担道义，妙手著文章。"（李大钊，写作者的使命）； "文章千古事，得失寸心知。"（杜甫，文章是传之久远的事业）；
+      "行于所当行，止于所不可不止。"（苏轼，写作的最高境界）； "不谋全局者，不足谋一域；不谋万世者，不足谋一时。"（陈澹然，全局思维）。 不得错误引用或张冠李戴。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: PM-003_胡森林公文写
+    title: 公文写作三重修炼境界
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查公文写作是否体现了三重修炼境界的进阶追求：
+
+      修炼——是否掌握了方法和技能，提升了职场写作能力；
+
+      修养——是否具备分析判断、洞察、运筹等综合素质；
+
+      修为——是否达到笃定自信、宠辱不惊的写作心理状态。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+GENRE:
+  description: 文种规范类规则——各文种特有的结构要求、禁止事项、适用场景。主要由Agent 1（意图识别）和Agent 3（起草）参考。
+  rule_count: 5
+  rules:
+  - id: SP-001
+    title: 文种选择决策规则（请示/报告/通知/函）
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 方案
+    content_summary: 检查是否正确选用文种：需要上级批准才能执行的事项必须使用【请示】而非报告， 结尾须含"请批示/请审批"；向上级汇报工作情况只陈述不含请求事项时须使用【报告】， 结尾用"请阅示/特此报告"；向下级布置工作须使用【通知】；
+      与不相隶属机关协商询问须使用【函】。 不得将请示与报告混用：请示需要批复，报告只需知晓，二者性质不可互换。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-002
+    title: 请示与报告的六大本质区别
+    importance: A
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    content_summary: 检查是否混淆请示与报告： ①请示为呈请批准性质，报告为陈述告知性质，不得互换； ②请示内容须一文一事，报告可涉多事； ③请示结尾须含请求批准语，报告结尾为告知收阅语； ④请示必须获得批复，报告无需批复；
+      ⑤请示须事前行文，报告为事后或事中行文； ⑥不得在请示中夹带报告事项，不得在报告中夹带请求批准事项。
+    source_file: 02_rules/book_principles/胡森林_公文写作底层心法.yaml
+  - id: SP-001_胡森林公文写
+    title: 公文五定特征
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: '检查是否符合公文的五个法定性特征：
+
+      1. 检查法定作者——发文机关是否为依法成立并能以自身名义行使职权的机关或组织；
+
+      2. 检查既定程序——公文的起草、审核、签发、印制是否遵循规定程序；
+
+      3. 检查法定效力——是否具备其他文体不具备的强制性约束力；
+
+      4. 检查固定格式——是否符合国家标准规定的格式要求；
+
+      5. 检查特定功能——是否以传递公务信息、处理公务事项为核心功能。
+
+      起草公文前须先确认文种的"五定"属性，确保文稿合规合法合程序。'
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml
+  - id: WQ_SP_002
+    title: 领导讲稿三类型（政论型/意见型/礼仪型）
+    importance: B
+    execution: agent_prompt
+    applicable_types:
+    - 讲话
+    content_summary: "检查领导讲话稿类型判断是否正确，并验证写作要求是否与类型匹配：\n1. 政论型讲话稿——用于大型会议/重大问题，语言是否庄重书面化，篇幅是否有充分论证；\n2. 意见型讲话稿——用于一般工作会议或座谈会，是否语言通俗口语化，结构是否较灵活；\n\
+      3. 礼仪型讲话稿——用于剪彩/开幕式/欢迎会等礼仪活动，是否有祝贺性内容，\n   语言是否热烈，是否适当运用感情色彩词汇。\n不得将不同类型的讲稿写作要求混用。"
+    source_file: 02_rules/book_principles/王群_公文写作大手笔.yaml
+  - id: MT-009
+    title: 循序渐进写作学习路径
+    importance: C
+    execution: agent_prompt
+    applicable_types:
+    - 汇报
+    - 报告
+    - 讲话
+    - 方案
+    content_summary: "检查写作学习是否遵循由易到难的三条递进路径：\n路径一（文体复杂度）：通知→公告→大事记→工作意见→工作规划→工作汇报，是否按序推进；\n路径二（规范化程度）：是否先从规范化强易借鉴的办法/规定/条例入手，\n\
+      \                       再迁移到综合性强的领导讲话/调查报告/经验材料；\n路径三（内容熟悉度）：是否先写自己熟悉的业务领域，再迁移至其他领域。\n不得一开始就尝试最难的文体或陌生领域，避免无话可说、挫伤信心。"
+    source_file: 02_rules/book_principles/胡森林_公文写作心法笔杆.yaml

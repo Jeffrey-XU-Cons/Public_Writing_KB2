@@ -1,0 +1,868 @@
+metadata:
+  file: 开头结尾句式库.yaml
+  description: 公文写作文稿开头、结尾及年终总结句式库，含开头结构范例、结尾金句词语、讲话结束语、年终总结诗词及贺词
+  source: 公文写作词句应用大全（530页25万字）.docx · 文稿开头篇/文稿结尾篇/年终总结篇
+  total_entries: 112
+  id_prefix: OC
+  categories:
+    - 文稿开头结构
+    - 结尾词语词句
+    - 结尾金句
+    - 讲话结束语
+    - 结尾诗词锦句
+    - 年终总结诗词
+    - 年终贺词句式
+
+entries:
+  # ===== 文稿开头结构实例 =====
+
+  - id: OC-001
+    category: 文稿开头结构
+    structure: 形势概括+概念定义+总的政策思路
+    content: 被旱魃重创的西南大地禾苗干枯，土焦石裂，滴水成金，既让百姓揪心，也暴露出我国农田水利基础设施建设长年存在的问题，凸显了提高水资源保障能力的重要性。水资源保障能力，包括工程保障、生产生活保障和环境保障能力等，对稳定农业生产和实现可持续发展具有重要意义。
+    usage_note: 形势描述→概念界定→政策引出，适用于政策报告或调研报告开篇
+    applicable_types: [报告, 方案]
+    applicable_position: 开头
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 文稿开头篇·实例1
+
+  - id: OC-002
+    category: 文稿开头结构
+    structure: 当前形势+引申分析+指导思想
+    content: 在党中央的大力倡导下，全党抓文风建设取得很大成绩。改革开放30多年来，党的优良文风逐渐得到恢复。当前，在一些党政机关文件、领导干部讲话和理论文章，文风上存在的问题仍然很突出，主要表现为长、空、假。文风不是小事。
+    usage_note: 成绩+问题+定性，适用于作风建设类报告或讲话开篇
+    applicable_types: [讲话, 报告]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例2
+
+  - id: OC-003
+    category: 文稿开头结构
+    structure: 权威观点+明确意义+发展方向
+    content: '"忧民之忧者，民亦忧其忧；乐民之乐者，民亦乐其乐。"领导干部在不同的系统、不同的岗位上工作，都有一个共同的追求，就是全心全意为人民服务；都有一个共同的目标，就是让人民满意。'
+    usage_note: 引用古语→共同目标→要求，适用于民生工作或党建类讲话开篇
+    applicable_types: [讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例3
+
+  - id: OC-004
+    category: 文稿开头结构
+    structure: 提出问题+说明意义+指导思想
+    content: 面对社会转型期群体事件频发、政府需要处理的复杂问题增多的趋势，能否对百姓出真心、动真情、讲真话，成为测量责任政府、服务政府建设水平和领导干部素质能力的一根标尺。实践证明，坚持群众路线、做好群众工作，这是妥善处理涉及群众利益和社会矛盾的复杂问题的关键所在。
+    usage_note: 问题引入→意义阐明→工作思路，适用于群众工作类报告开篇
+    applicable_types: [报告, 讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例4
+
+  - id: OC-005
+    category: 文稿开头结构
+    structure: 引用名言+面临问题+工作思路
+    content: '李斯在名篇《谏逐客书》中指出："却客而不纳，疏士而不用，是使国无富利之实，而秦无强大之名也。"城市的繁荣发展离不开农民工，离不开外来的新市民，但一些城市却通过设置种种政策限制，对外来人员下了逐客令。'
+    usage_note: 历史名言引入→类比现实问题→工作方向，适用于人才政策类报告
+    applicable_types: [报告]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例5
+
+  - id: OC-006
+    category: 文稿开头结构
+    structure: 现象描述+原因分析
+    content: '近年来，外资企业非正常撤离成为我国经济生活中一个引人注目的现象。过去五年有206家韩资企业从山东非正常撤离。这些企业落地却未生根，像候鸟一样在中国各地"飞"来"飞"去，显示出部分外资的投机性。"候鸟现象"折射的深层问题是：招商引资工作中的深层次矛盾。'
+    usage_note: 现象描述→数据佐证→原因深析，适用于经济调研报告开篇
+    applicable_types: [报告]
+    applicable_position: 开头
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 文稿开头篇·实例8
+
+  - id: OC-007
+    category: 文稿开头结构
+    structure: 意义+面临问题+工作思路
+    content: 发展，是科学发展观的第一要义，是人民群众的迫切要求，是各级政府的首要任务。但现实中一些地区不顾环境影响和人民呼声，谋求片面发展和短期效益，搞焚林而田、竭泽而渔，给当地生态环境造成了毁灭性的破坏，这是违背科学发展观要求的。
+    usage_note: 意义定位→问题描述→引出思路，适用于生态发展类报告开篇
+    applicable_types: [报告, 讲话]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例9
+
+  - id: OC-008
+    category: 文稿开头结构
+    structure: 重要作用+实例意义+工作思路
+    content: 预算公开一小步，政治文明一大步。四川白庙乡公开财政支出的举措，给各级政府预算公开立下了一个具有参照意义的标杆。要顺天应时，顺应社会舆论的呼声和政府改革的规律，以预算信息的进一步公开作为提升财政信息透明度的最佳切入点和突破口。
+    usage_note: 典型案例引入→意义提炼→工作方向，适用于财政政务公开类报告
+    applicable_types: [报告]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿开头篇·实例10
+
+  # ===== 结尾词语词句（300词汇集）=====
+
+  - id: OC-009
+    category: 结尾词语词句
+    sub_category: 奋进类
+    content: 爬坡过坎、滚石上山、凝聚力量、谱写华章、斗志昂扬、奋力迈进、重塑辉煌、再铸伟业、只争朝夕、豪迈干劲、众志成城、强大合力、不忘初心、牢记使命、蓄势待发、永不懈怠、凝心聚力、锐意进取、埋头苦干、同心同德、积极作为、奋力赶超、抢抓机遇、开拓进取
+    usage_note: 领导讲话结束语通用激励词汇，选取若干组合使用
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·300个用于领导讲话稿结束语的词句
+
+  - id: OC-010
+    category: 结尾词语词句
+    sub_category: 担当类
+    content: 主动作为、砥砺奋进、蓝图绘就、扬帆破浪、重任在肩、策马加鞭、排难而进、再接再厉、抓铁有痕、踏石留印、一往无前、锐意拼搏、开拓奋进、使命在肩、责任重大、勤勉尽责、夙兴夜寐、不负重托、不辱使命、蓬勃向上、奋发有为、披荆斩棘、勇往直前、砥砺前行
+    usage_note: 结尾担当责任类词汇
+    applicable_types: [讲话, 汇报]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·300个用于领导讲话稿结束语的词句
+
+  - id: OC-011
+    category: 结尾词语词句
+    sub_category: 攻坚类
+    content: 坚定信心、乘势而上、勇于变革、勇于创新、永不僵化、永不停滞、功崇惟志、业广惟勤、勠力同心、令人鼓舞、催人奋进、守望相助、团结奋斗、砥砺前行、撸起袖子、扑下身子、和衷共济、务实拼搏、满怀激情、乘势而上、中流击水、闯关夺隘、重振雄风、再创辉煌
+    usage_note: 攻坚克难类结尾词汇
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·300个用于领导讲话稿结束语的词句
+
+  - id: OC-012
+    category: 结尾词语词句
+    sub_category: 落实类
+    content: 精准出击、招招致敌、善始善终、善做善成、不妥协、不畏缩、不服输、抓重点、抓要害、抓关键、展望新蓝图、开启新征程、谋求新发展、实现新跨越、不驰于空想、不骛于虚声
+    usage_note: 强调落实执行的结尾词汇
+    applicable_types: [讲话, 方案]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·300个用于领导讲话稿结束语的词句
+
+  # ===== 结尾金句（精选）=====
+
+  - id: OC-013
+    category: 结尾金句
+    content: 不忘初心、牢记使命，勇挑时代赋予的重任，不负人民寄予的厚望，以永不懈怠的精神状态和一往无前的奋斗姿态。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-014
+    category: 结尾金句
+    content: 新思想引领新征程，新时代呼唤新作为！
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-015
+    category: 结尾金句
+    content: 新时代开启新征程，新使命呼唤新作为。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-016
+    category: 结尾金句
+    content: 蓝图绘就，正当扬帆破浪；重任在肩，更须策马加鞭。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-017
+    category: 结尾金句
+    content: 使命重在担当，实干铸就未来。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-018
+    category: 结尾金句
+    content: 路虽远行则将至，事虽难做则必成。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-019
+    category: 结尾金句
+    content: 只有干出来的精彩，没有等出来的辉煌；只有一步一步干在实处，才能昂首阔步走在前列。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-020
+    category: 结尾金句
+    content: 历史只会眷顾坚定者、奋进者、搏击者，而不会等待犹豫者、懈怠者、畏难者。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-021
+    category: 结尾金句
+    content: 进入新时代、实现新目标，政府使命在肩、责任重大，唯有勤勉尽责、夙兴夜寐，才能不负重托、不辱使命。
+    applicable_types: [讲话, 报告]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-022
+    category: 结尾金句
+    content: 不忘初心，方得始终。以开拓进取、争先创优的锐气，攻坚克难、奋勇争先的豪气，蓬勃向上、奋发有为的朝气，披荆斩棘、勇往直前的士气，奋力夺取全面胜利！
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-023
+    category: 结尾金句
+    content: 征程万里风正劲，重任千钧再奋蹄。新时代绘织新蓝图，新征程吹响新号角。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-024
+    category: 结尾金句
+    content: 不忘初心，鞭策我们永不懈怠；牢记使命，激励我们一往无前。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-025
+    category: 结尾金句
+    content: '以"功成不必在我"的为民情怀，"舍我其谁"的使命担当。'
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-026
+    category: 结尾金句
+    content: 踏上新征程，我们信心满怀；展望新未来，我们豪情澎湃。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-027
+    category: 结尾金句
+    content: 回首过去，成就令人鼓舞；展望未来，蓝图催人奋进。新时代孕育新希望，新征程承载新梦想。
+    applicable_types: [讲话, 汇报]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-028
+    category: 结尾金句
+    content: 雄心不与岁月老，激情常伴事业新。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-029
+    category: 结尾金句
+    content: 以本色不变得始终的初心、咬定青山不放松的决心、长风破浪会有时的信心！
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-030
+    category: 结尾金句
+    content: 以蓬勃向上、克难求进的精神状态，以只争朝夕、全力跨越的豪迈干劲，以披荆斩棘、雷厉风行的顽强作风。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-031
+    category: 结尾金句
+    content: 使命呼唤担当，奋斗铸就辉煌！
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-032
+    category: 结尾金句
+    content: 百舸争流，奋楫者先；千帆竞发，勇进者胜。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-033
+    category: 结尾金句
+    content: 集众智可定良策，合众力必兴伟业。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-034
+    category: 结尾金句
+    content: 节点决定起点，开局关系全局。干事创业，精气神最宝贵；战胜困难，信心态度最关键。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-035
+    category: 结尾金句
+    content: 心中有梦想，行动才会有力量。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-036
+    category: 结尾金句
+    content: 蓝图已经绘就，前景无限光明；号角催人奋进，责任重于泰山。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-037
+    category: 结尾金句
+    content: '一年之计在于春，全年工作看开局。"开局就是决战、起步就是冲刺"。'
+    usage_note: 年初第一次会议结尾常用
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-038
+    category: 结尾金句
+    content: 喊破嗓子，不如做出样子，上下同欲者胜。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-039
+    category: 结尾金句
+    content: 千忙万忙，不抓落实就是瞎忙；千招万招，不抓落实就是没招；千条万条，不抓落实就是白条。
+    usage_note: 强调落实的三段式金句
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-040
+    category: 结尾金句
+    content: 大争之世，非优即汰；崛起之时，不进则退。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-041
+    category: 结尾金句
+    content: 发展未有穷期，我们任重道远。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  # ===== 文稿最后一段开头诗词锦句 =====
+
+  - id: OC-042
+    category: 结尾诗词锦句
+    sub_category: 最新鲜
+    content: 只争朝夕，不负昭华。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-043
+    category: 结尾诗词锦句
+    sub_category: 最正统
+    content: |
+      新使命催人奋进，新征程任重道远。
+      梦想照亮前方，奋进正当其时。
+      使命需要担当，实干成就未来。
+      一步一个脚印，一年一个台阶，一届一份答卷。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-044
+    category: 结尾诗词锦句
+    sub_category: 最围绕核心
+    content: |
+      撸起袖子加油干，不忘初心向前走！
+      翻篇归零再出发，撸起袖子加油干。
+      不忘初心，继续前进。
+      干在实处、走在前列、勇立潮头。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-045
+    category: 结尾诗词锦句
+    sub_category: 最受欢迎
+    content: |
+      潮平两岸阔，风正一帆悬。
+      雄关漫道真如铁，而今迈步从头越。
+      任重道远须策马，风正潮平好扬帆。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-046
+    category: 结尾诗词锦句
+    sub_category: 最文艺
+    content: |
+      道阻且长，行则必至。功崇惟志，业广惟勤。
+      及时当勉励，岁月不待人。苟日新，日日新。
+      星垂平野阔，月涌大江流。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-047
+    category: 结尾诗词锦句
+    sub_category: 最霸气
+    content: |
+      咬定青山不放松、不破楼兰终不还。
+      长风破浪会有时，直挂云帆济沧海。
+      千磨万击还坚劲，任尔东西南北风。
+      弄潮儿向涛头立，风起正是扬帆时。
+      审视当下，人间正道是沧桑。展望未来，长风破浪会有时！
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-048
+    category: 结尾诗词锦句
+    sub_category: 最奋进
+    content: |
+      百舸争流千帆竞，攻坚克难奋者先。
+      路漫漫其修远兮，吾将上下而求索。
+      老牛亦解韶光贵，不待扬鞭自奋蹄。
+      铁肩担重任，丹心谱华章。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  - id: OC-049
+    category: 结尾诗词锦句
+    sub_category: 最艰辛
+    content: |
+      筚路蓝缕，以启山林。行百里者半九十。
+      看似寻常最奇崛，成如容易却艰辛。
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·文稿最后一段开头诗词锦句
+
+  # ===== 领导讲话结束语完整段落 =====
+
+  - id: OC-050
+    category: 讲话结束语
+    content: '发展是靠苦干、实干干出来的。今年全市改革发展的任务艰巨繁重，面临的挑战非常严峻，要求我们把"目标"刻在心上、把"执行"视为铁律、把"担当"作为自觉，铁肩担责、奋发竞进，拿出逢山开路的冲劲、闯劲和拼劲，不松气、不泄气，憋足一口气，聚焦聚神聚力把各项工作抓实、抓好。'
+    usage_note: 工作部署会结束语，三把+三劲结构
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-051
+    category: 讲话结束语
+    content: '同志们，使命召唤落实、责任系于实干，一分布置、九分落实。让我们在市委的坚强领导下，以求实务实落实的优良作风干事创业，以"钉钉子"的精神推进改革发展的各项工作，确保完成全年各项目标任务。'
+    usage_note: 简洁结束语，强调落实，适用于年度工作会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-052
+    category: 讲话结束语
+    content: '同志们，越是时间紧、任务重、压力大，越要统筹协调、突出重点、精准推进。以"钉钉子"精神抓落实，以"啃硬骨头"精神抓攻坚，以锲而不舍精神抓协调，以一丝不苟精神抓管理。坚定信心、迎难而上，做到目标不变，速度不减，力度不降，奋力完成全年重点工作任务。'
+    usage_note: 四精神抓工作结束语，适用于年中工作会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-053
+    category: 讲话结束语
+    content: '同志们，喊破嗓子，不如做出样子，上下同欲者胜。面对艰巨复杂的工作任务，各地、各有关部门要做到"稳"有举措、"进"有标尺，振奋精神、心无旁骛、真抓实干，多出实招、硬招、新招，确保年底全面"交账"。'
+    usage_note: 年终前攻坚结束语，强调落实交账
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-054
+    category: 讲话结束语
+    content: 同志们，风劲潮涌，自当扬帆破浪；任重道远，更需策马加鞭！让我们以这次会议为契机，统一思想、坚定信心、振奋精神、扎实工作，让一切有益于富民强市的新鲜思想充分涌现，让一切有志于建功立业的能人志士充分施展，让一切有利于加快发展的生产要素充分活跃，全面完成今年各项任务。
+    usage_note: 三让+发展要素结束语，适用于综合性大会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-055
+    category: 讲话结束语
+    content: 同志们，方向已经明确，任务贵在落实。实现既定的奋斗目标，我们必须要有虎口夺食的拼劲、重锤钉钉的狠劲、拧准螺丝的巧劲、蚂蚁啃骨的韧劲，直面各种矛盾和问题，逐级分解任务，层层压实责任，确保圆满完成全年目标。
+    usage_note: 四劲结束语，适用于任务攻坚类会议
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-056
+    category: 讲话结束语
+    content: 同志们，攻坚的冲锋号已经吹响，让我们树立必胜的信心、大胜的决心、全胜的雄心，始终保持干事的激情，始终保持创业的热情，始终保持攻坚的豪情，只争朝夕、紧张快干、克难奋进，全力冲刺年度目标任务！
+    usage_note: 三心三情结束语，适用于年中下半年冲刺动员
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-057
+    category: 讲话结束语
+    content: 同志们，新的目标激励我们承前启后、继往开来；新的征程需要我们开拓进取、拼搏奋进。让我们以更饱满的热情、更昂扬的斗志、更务实的作风，创造无愧于党、无愧于人民、无愧于时代的新业绩，共同谱写加快建设的新篇章！
+    usage_note: 三更+三无愧结束语，适用于年度工作会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-058
+    category: 讲话结束语
+    content: '同志们，推动**新一轮发展，使命光荣，责任重大。全市上下要勇于担当，奋发有为，以百倍的信心、百倍的努力、百倍的干劲，推动**新一轮大发展大跨越，在推进"两个率先"的征程上创出新的辉煌业绩。'
+    usage_note: 三百倍结束语，适用于发展攻坚动员会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-059
+    category: 讲话结束语
+    content: '同志们，让我们拿出"而今迈步从头越"的豪情，激扬"事事当争第一流"的斗志，振奋"不待扬鞭自奋蹄"的精神，同心协力，拼搏攻坚，共同谱写建设新时代的崭新篇章！'
+    usage_note: 三诗词喻三精神结束语
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-060
+    category: 讲话结束语
+    content: '"凡事成之，必在干之"。让我们顺应时代潮流，不负群众所托，以时不我待的干劲、静水流深的稳劲、久久为功的韧劲，全身心地投入到工作中，为加快推动经济社会转型发展、绿色发展、创新发展多做贡献、再立新功！'
+    usage_note: 引用格言+三劲结束语
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-061
+    category: 讲话结束语
+    content: 空谈误国，实干兴邦。只有真抓才能攻坚克难，只有实干才能梦想成真。经济特区要坚定舍我其谁的信念、勇当尖兵的决心，保持爬坡过坎的压力感、奋勇向前的使命感、干事创业的责任感，积极培育崇尚实干的环境，务实求变、务实求新、务实求进，为实干者撑腰，为干事者鼓劲。
+    usage_note: 空谈实干对比+三感结束语
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-062
+    category: 讲话结束语
+    content: '同志们，一年之计在于春，全年的目标任务已经明确，希望大家迅速把思想和行动统一到决策部署上来，先人一步谋发展，快人一拍抢机遇，胜人一筹抓落实，激情干事、担当干事、团结干事、干净干事，确保各项工作实现"开门红""季季红""全年红"和"全面红"。'
+    usage_note: 四红目标结束语，适用于年初工作会
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  - id: OC-063
+    category: 讲话结束语
+    content: '高扬"不破楼兰终不还"的精神、"狭路相逢勇者胜"的斗志、"千磨万击还坚劲"的韧劲，破除重重阻碍，闯过道道难关。'
+    usage_note: 三诗词+三品质结束语，适用于攻坚讲话
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 文稿结尾篇·金句
+
+  - id: OC-064
+    category: 讲话结束语
+    content: '同志们，荣誉只能代表过去，未来发展需要我们继续保持斗志、抖擞精神，一切从零开始、从头开始，"万里长征"再出发、而今迈步从头越。要大力弘扬"店小二"精神，撸起袖子、甩开膀子、迈开步子，以实干苦干加巧干，推动发展不断迈上新台阶。'
+    usage_note: 归零出发+三步子结束语
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 文稿结尾篇·四、领导讲话结尾
+
+  # ===== 年终总结诗词 =====
+
+  - id: OC-065
+    category: 年终总结诗词
+    sub_category: 感叹时光飞逝
+    content: |
+      逝者如斯夫，不舍昼夜。——孔子《论语》
+      流光容易把人抛，红了樱桃，绿了芭蕉。——蒋捷《一剪梅》
+      及时当勉励，岁月不待人。——陶渊明《杂诗》
+      老去光阴速可惊。——欧阳修《采桑子》
+    usage_note: 年终总结开篇感叹岁月流逝，引出回顾
+    applicable_types: [汇报, 报告]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 年终总结篇·一、年终总结必备古诗词
+
+  - id: OC-066
+    category: 年终总结诗词
+    sub_category: 回首是非功绩
+    content: |
+      有志者事竟成，破釜沉舟，百二秦关终属楚。
+      苦心人天不负，卧薪尝胆，三千越甲可吞吴。——蒲松龄
+      古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。——苏轼《晁错论》
+    usage_note: 年终总结回顾成绩时引用，增强说服力
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·一、年终总结必备古诗词
+
+  - id: OC-067
+    category: 年终总结诗词
+    sub_category: 今后继续努力
+    content: |
+      路漫漫其修远兮，吾将上下而求索。——屈原《离骚》
+      千淘万漉虽辛苦，吹尽狂沙始到金。——刘禹锡
+      千磨万击还坚劲，任尔东西南北风。——郑燮《竹石》
+      黄沙百战穿金甲，不破楼兰终不还。——王昌龄《从军行》
+    usage_note: 年终展望未来、表达奋斗决心时引用
+    applicable_types: [汇报, 报告]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·一、年终总结必备古诗词
+
+  # ===== 年终贺词句式 =====
+
+  - id: OC-068
+    category: 年终贺词句式
+    content: |
+      这一年，经济实力再上台阶。
+      这一年，产业转型步伐加快。
+      这一年，战略地位日益凸显。
+      这一年，基础支撑更加坚实。
+      这一年，改革开放深入推进。
+      这一年，民生福祉持续增加。
+    usage_note: '"这一年"排比式年终贺词，列举年度重点成就'
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·四、有新意的年终贺词语句
+
+  - id: OC-069
+    category: 年终贺词句式
+    content: |
+      这是凝心聚力的一年。
+      这是昂首阔步的一年。
+      这是锐意改革的一年。
+      这是共生共赢的一年。
+      这是成果丰硕的一年。
+    usage_note: '"这是...的一年"排比式年度定性句，适用于年终总结开篇'
+    applicable_types: [汇报, 报告]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·四、有新意的年终贺词语句
+
+  - id: OC-070
+    category: 年终贺词句式
+    content: |
+      这里有一份满盈盈的荣誉感。
+      这里有一份暖融融的获得感。
+      这里有一份真切切的存在感。
+      这里有一份响当当的成就感。
+      这里有一份沉甸甸的责任感。
+      这里还有一份雄赳赳的奋进感。
+    usage_note: 六感排比，适用于年会或颁奖典礼讲话
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 年终总结篇·四、有新意的年终贺词语句
+
+  - id: OC-071
+    category: 年终贺词句式
+    content: |
+      回眸201*年，是浓墨重彩、硕果盈枝的一年。
+      回眸201*年，是改革发展、励精图治的一年。
+      回眸201*年，是凝聚力量、勇创佳绩的一年。
+      回眸201*年，是锐意进取、拼搏奋进的一年。
+    usage_note: '"回眸XX年"排比式年度总结，适用于年终报告或讲话'
+    applicable_types: [讲话, 汇报]
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·四、有新意的年终贺词语句
+
+  - id: OC-072
+    category: 年终贺词句式
+    content: |
+      这一年，我们积蓄发展力量再度出发。
+      这一年，我们夯实工作基础砥砺前行。
+      这一年，我们推进内涵建设又创佳绩。
+      这一年，我们激发创新活力共享发展。
+    usage_note: '"这一年，我们..."行动主语排比式，适用于年会发言'
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·四、有新意的年终贺词语句
+
+  - id: OC-073
+    category: 年终贺词句式
+    content: 回首过去，我们思绪纷飞，感慨万千；立足今日，我们胸有成竹，信心百倍；展望未来，我们一路欢笑，引吭高歌！
+    usage_note: 三段式时间轴贺词，适用于年会或庆典讲话
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 年终总结篇·二、用于公司总结的句子
+
+  - id: OC-074
+    category: 年终贺词句式
+    content: |
+      这一年，我们坚持发展第一要务，稳中求进、稳中奋进，综合实力迈上新台阶；
+      这一年，我们主动适应和引领新常态，迎难而上、危中寻机，项目建设实现新突破；
+      这一年，我们紧紧围绕统筹发展，聚焦重点、协调推进，城乡发展呈现新面貌；
+      这一年，我们瞄准全面小康目标，以人为本、发展惠民，民生改善达到新水平。
+    usage_note: 新年贺词展开版，每段含工作主题+工作方式+具体成效，高度模板化
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·三、年底写材料最需要的句子荟萃
+
+  # ===== 年终总结实用套句 =====
+
+  - id: OC-075
+    category: 年终总结诗词
+    sub_category: 实用套句
+    content: 年关将近，各级领导干部要收好关、结好账、画好圆，回头看、查漏补缺，争取交上一份满意的答卷，要尽早谋划开好局、迈好步，明年再上新台阶！
+    usage_note: 年底督查类讲话或通知用句
+    applicable_types: [讲话]
+    applicable_position: 结尾
+    applicable_direction: 下行文
+    formality_level: 较正式
+    source: 年终总结篇·三、年底写材料最需要的句子荟萃
+
+  - id: OC-076
+    category: 年终总结诗词
+    sub_category: 实用套句
+    content: '明年总的工作思路是："三个不变"：坚持全面冲刺年度任务目标不变；狠抓招商引资和项目建设的力度不变；保持干事创业的昂扬精气神不变。"三个转变"：真正转到有转型与创新含金量的发展上来；真正转到自觉践行主题年活动上来；真正转到全面从严治党的更高要求上来。'
+    usage_note: 三不变三转变年度展望套路，可按需替换具体内容
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 年终总结篇·三、年底写材料最需要的句子荟萃
+
+  - id: OC-077
+    category: 年终总结诗词
+    sub_category: 实用套句
+    content: 我们要抓出一批有影响、牵全局的大项目，啃掉一批久拖未办、制约发展的硬骨头，办成一批群众看得见、摸得着的实事情，不断实现各项工作的新突破。
+    usage_note: 三批工作句，适用于年度工作部署讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 年终总结篇·三、年底写材料最需要的句子荟萃
+
+  - id: OC-078
+    category: 年终总结诗词
+    sub_category: 实用套句
+    content: '要大力推行"一线工作法"，确保领导在一线指挥、情况在一线了解、矛盾在一线处理、问题在一线解决、工作在一线推进。特别是在当前发展遇到困难的情况下，各级干部不能当甩手掌柜、大而化之，要站到发展最前沿。'
+    usage_note: 五在一线工作法要求，适用于干部作风建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 年终总结篇·三、年底写材料最需要的句子荟萃

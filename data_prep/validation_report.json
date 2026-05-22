@@ -1,0 +1,141 @@
+{
+  "validation_summary": {
+    "files_checked": 6,
+    "total_records": 1915,
+    "valid_records": 1915,
+    "invalid_records": 0,
+    "overall_validity_rate": 100.0
+  },
+  "file_details": {
+    "corpus_documents.jsonl": {
+      "file_name": "corpus_documents.jsonl",
+      "file_size_kb": 78.5751953125,
+      "total_records": 285,
+      "valid_records": 285,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 100.0,
+      "errors": [],
+      "statistics": {
+        "total": 285,
+        "by_type": {
+          "document": 285
+        },
+        "by_category": {
+          "待分类": 9,
+          "报告类": 130,
+          "方案类": 44,
+          "汇报类": 3,
+          "规划类": 27,
+          "讲话类": 72
+        },
+        "avg_word_count": 40.9859649122807,
+        "avg_quality_score": 4.8807017543859645
+      }
+    },
+    "corpus_golden_sentences.jsonl": {
+      "file_name": "corpus_golden_sentences.jsonl",
+      "file_size_kb": 0.0,
+      "total_records": 0,
+      "valid_records": 0,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 0,
+      "errors": []
+    },
+    "corpus_paragraphs.jsonl": {
+      "file_name": "corpus_paragraphs.jsonl",
+      "file_size_kb": 225.7939453125,
+      "total_records": 330,
+      "valid_records": 330,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 100.0,
+      "errors": [],
+      "statistics": {
+        "total": 330,
+        "by_type": {
+          "paragraph": 330
+        },
+        "by_category": {
+          "待分类": 4,
+          "报告类": 153,
+          "方案类": 42,
+          "汇报类": 8,
+          "规划类": 49,
+          "讲话类": 74
+        },
+        "avg_word_count": 116.89393939393939,
+        "avg_quality_score": 7.972727272727273
+      }
+    },
+    "corpus_segments.jsonl": {
+      "file_name": "corpus_segments.jsonl",
+      "file_size_kb": 304.369140625,
+      "total_records": 615,
+      "valid_records": 615,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 100.0,
+      "errors": [],
+      "statistics": {
+        "total": 615,
+        "by_type": {
+          "document": 285,
+          "paragraph": 330
+        },
+        "by_category": {
+          "待分类": 13,
+          "报告类": 283,
+          "方案类": 86,
+          "汇报类": 11,
+          "规划类": 76,
+          "讲话类": 146
+        },
+        "avg_word_count": 81.71707317073171,
+        "avg_quality_score": 6.539837398373984
+      }
+    },
+    "dictionary_unified.jsonl": {
+      "file_name": "dictionary_unified.jsonl",
+      "file_size_kb": 115.7236328125,
+      "total_records": 534,
+      "valid_records": 534,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 100.0,
+      "errors": [],
+      "statistics": {
+        "total": 534,
+        "by_type": {
+          "golden_sentence": 395
+        },
+        "by_category": {
+          "官方用语": 139,
+          "金句库": 395
+        },
+        "avg_word_count": 25.876404494382022,
+        "avg_quality_score": 0
+      }
+    },
+    "templates_import.jsonl": {
+      "file_name": "templates_import.jsonl",
+      "file_size_kb": 72.3466796875,
+      "total_records": 151,
+      "valid_records": 151,
+      "invalid_records": 0,
+      "error_count": 0,
+      "validity_rate": 100.0,
+      "errors": [],
+      "statistics": {
+        "total": 151,
+        "by_type": {},
+        "by_category": {},
+        "avg_word_count": 0.0,
+        "avg_quality_score": 0
+      }
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

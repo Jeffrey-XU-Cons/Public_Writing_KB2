@@ -1,0 +1,11 @@
+{
+  "total_processed": 534,
+  "successful": 534,
+  "failed": 0,
+  "by_category": {
+    "官方用语": 139,
+    "金句库": 395
+  },
+  "error_count": 0,
+  "errors": []
+}

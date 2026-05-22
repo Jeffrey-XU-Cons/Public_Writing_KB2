@@ -1,0 +1,39 @@
+{
+  "total_files": 90,
+  "success_files": 90,
+  "failed_files": 0,
+  "total_paragraphs_extracted": 330,
+  "total_golden_sentences_extracted": 394,
+  "by_category": {
+    "待分类": {
+      "files": 1,
+      "paragraphs": 4,
+      "sentences": 5
+    },
+    "报告类": {
+      "files": 43,
+      "paragraphs": 153,
+      "sentences": 192
+    },
+    "方案类": {
+      "files": 11,
+      "paragraphs": 42,
+      "sentences": 55
+    },
+    "汇报类": {
+      "files": 2,
+      "paragraphs": 8,
+      "sentences": 10
+    },
+    "规划类": {
+      "files": 13,
+      "paragraphs": 49,
+      "sentences": 65
+    },
+    "讲话类": {
+      "files": 20,
+      "paragraphs": 74,
+      "sentences": 67
+    }
+  }
+}

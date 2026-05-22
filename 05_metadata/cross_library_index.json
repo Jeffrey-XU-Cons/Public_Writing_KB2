@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "name": "Cross-Library Search Index",
+    "version": "1.0",
+    "generated_at": "2026-03-17"
+  },
+  "keyword_mappings": {
+    "讲话": {
+      "templates": "01_templates/by_usage_index.json#讲话类",
+      "corpus": "04_corpus/个人历史交付物元数据索引_评分版.yaml#讲话类",
+      "terminology": "03_dictionary/official_terms_v2.yaml#COU-104"
+    },
+    "报告": {
+      "templates": "01_templates/by_usage_index.json#报告类",
+      "corpus": "04_corpus/个人历史交付物元数据索引_评分版.yaml#报告类",
+      "rules": "02_rules/content_quality/"
+    },
+    "方案": {
+      "templates": "01_templates/by_usage_index.json#方案类",
+      "corpus": "04_corpus/个人历史交付物元数据索引_评分版.yaml#方案类",
+      "terminology": "03_dictionary/official_terms_v2.yaml#COU-104"
+    },
+    "物流": {
+      "terminology": "03_dictionary/official_terms_v2.yaml#TT-502",
+      "corpus": "04_corpus/高价值文件清单.yaml (多个物流相关)"
+    },
+    "禁用词": {
+      "terminology": "03_dictionary/official_terms_v2.yaml#PW"
+    },
+    "搭配错误": {
+      "terminology": "03_dictionary/official_terms_v2.yaml#MM"
+    }
+  }
+}

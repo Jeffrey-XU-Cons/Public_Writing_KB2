@@ -1,0 +1,1096 @@
+# 公文写作固定句式模板库
+# 来源：公文写作词句应用大全（530页25万字）·句式与固定结构篇
+# 生成日期：2026-03-15
+# 条目数：92条（SP-001 ~ SP-092）
+
+meta:
+  version: '"1.0"'
+  source: '"公文写作词句应用大全_句式与固定结构篇"'
+  total_entries: 92
+  categories:
+    - name: "万能收尾/过渡句式"
+      id_range: '"SP-001 ~ SP-015"'
+      count: 15
+    - name: "问题与不足句式"
+      id_range: '"SP-016 ~ SP-036"'
+      count: 21
+    - name: "部署工作万能句式"
+      id_range: '"SP-037 ~ SP-046"'
+      count: 10
+    - name: "固定式标题结构"
+      id_range: '"SP-047 ~ SP-092"'
+      count: 46
+  usage_note: |
+    template字段中用【XX】标注需填入具体内容的占位符。
+    applicable_position：开头/正文/结尾/标题
+
+sentence_patterns:
+
+# ===== 一、万能收尾/过渡句式 =====
+
+  - id: SP-001
+    category: 万能收尾句
+    template: '"不断提升（提高）【XX】水平。"'
+    usage_note: 万能收尾句，适合段落或全文结尾
+    example: '"不断提升干部队伍专业化、职业化水平。"'
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-002
+    category: 万能收尾句
+    template: '"确保【XX】落到实处（落实到位）。"'
+    usage_note: 常作收尾句，强调落实
+    example: '"确保中央大政方针和省、市决策部署不折不扣落到实处。"'
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-003
+    category: 万能收尾句
+    template: '"以【XX工作】的具体成果体现（检验）【XX】的实际成效。"'
+    usage_note: 常作一段话的收尾句，将成果与检验挂钩
+    example: '"以工作的具体成果体现（检验）学习贯彻的实际成效。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-004
+    category: 承接过渡句
+    template: '"借（乘）【XX】的东风，全面掀起【XX】新高潮。"'
+    usage_note: 借势过渡句，承接某一政策或机遇导入工作部署
+    example: '"要借G20杭州峰会东风，全面掀起城市建设新高潮。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-005
+    category: 总结开头句
+    template: '"面对【困难/问题/挑战】，我们坚持【方针/原则】，取得了【成绩】。"'
+    usage_note: 常作工作总结的开头段，先讲形势再讲成绩
+    example: '"面对世界经济复苏乏力、局部冲突和动荡频发、全球性问题加剧的外部环境，面对我国经济发展进入新常态等一系列深刻变化，我们坚持稳中求进工作总基调，迎难而上，开拓进取，取得了改革开放和社会主义现代化建设的历史性成就。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 开头
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-006
+    category: 排比列举句
+    template: '"从【A】到【B】，从【C】到【D】，【总结句】。"'
+    usage_note: 常用于举例说明，列举典型人物或事迹
+    example: '"从焦裕禄到孔繁森，从杨善洲到廖俊波，这一个个模范人物如同一座座灯塔，为我们照亮了以心许民的前行方向。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-007
+    category: 并列总结句
+    template: '"【动词】的是【A】，【动词】的是【B】，【动词】的是【C】。"'
+    usage_note: 并列结构，用于情感化总结，体现多维收获
+    example: '"收获的是友谊，感悟的是思想，品味的是成长。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-008
+    category: 会议开场句
+    template: '"今天的会议，既是一个【XX】大会、【XX】大会，也是一个【XX】大会、【XX】大会。"'
+    usage_note: 常用于领导讲话开场白，定性会议功能
+    example: '"经县委、县政府研究，决定今天召开XX大会，这既是一个总结大会、表彰大会，也是一个动员大会、誓师大会。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 开头
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-009
+    category: 强调意义句
+    template: '"要坚持把【XX】工作作为【说明意义】的【先导/重点/民心/龙头】工程来抓。"'
+    usage_note: 常用于强调某项工作的重要地位
+    example: '"要坚持把交通设施建设作为缓解交通拥堵、推动城市发展的先导工程来抓。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-010
+    category: 借势推进句
+    template: '"以【XX】为契机（突破口/切入点），（切实）做好【XX】工作，推动【XX】再上新台阶。"'
+    usage_note: 借势推进句，将某一事件/机遇转化为工作动力
+    example: '"要以环保督察组督察我县为契机，切实做好环境保护各项工作，推动生态文明建设水平再上新台阶。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-011
+    category: 承接过渡句
+    template: '"在看到进展和成绩（充分肯定成绩）的同时，我们也要清醒认识到……"'
+    usage_note: 从成绩到问题的标准过渡句
+    example: '"在看到进展和成绩的同时，我们也要清醒认识到，当前工作中还存在这样和那样的问题。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-012
+    category: 承接过渡句
+    template: '"在充分肯定成绩的同时，也要清醒认识到，我们的工作与【XX期待/要求】相比还存在【XX】差距。"'
+    usage_note: 从成绩到问题的过渡变体，语气更具体
+    example: '"在充分肯定成绩的同时，也要清醒认识到，我们的工作与群众期待相比还存在不小差距。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-013
+    category: 强调必要性句
+    template: '"只有【A】，才能【B】。"'
+    usage_note: 强调某项工作必要性的经典句式
+    example: '"只有把基础设施建设水平搞上去，才能吸引更多客商投资兴业。"'
+    applicable_types: '["汇报", "报告", "讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-014
+    category: 强调必要性句
+    template: '"只有坚持和发扬【XX精神】，【具体行动】，才能将【XX任务】真正落到实处。"'
+    usage_note: 只有/才能句式的强调变体
+    example: '"只有坚持和发扬''钉钉子''精神，一锤接着一锤敲，才能将改革的各项任务真正落到实处。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-015
+    category: 战略定位句
+    template: '"把【XX】作为【工作全局】的关键一招。"'
+    usage_note: 突出某项工作战略地位的定位句式
+    example: '"坚持把改革开放作为推动经济社会发展的关键一招。"'
+    applicable_types: '["讲话", "方案", "报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# ===== 二、用于反映问题和不足的句式 =====
+
+  - id: SP-016
+    category: 问题分析句式
+    template: '"从【角度】上看：重【A】，轻【B】；"'
+    usage_note: 从不同维度分析问题的标准句式，可多条并列
+    example: '"从认识上看：重硬件，轻软件；从着眼点上看：重显露的问题，轻潜在的问题；"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-017
+    category: 问题分析句式
+    template: '"重【A】、轻【B】；重【C】、轻【D】。"'
+    usage_note: 对照式问题揭示句式，用于工作不足分析
+    example: '"重物质、轻精神；重形式、轻内容；重讲评、轻落实；重检查、轻效果。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-018
+    category: 问题分析句式
+    template: '"重结果、轻过程；重个别人、轻身边人。"'
+    usage_note: 重/轻对照句式变体
+    example: '"重结果、轻过程；重要求、轻细化；重两头、轻中间。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-019
+    category: 问题分析句式
+    template: '"【A】多、【B】少；【C】多、【D】少。"'
+    usage_note: 多少对照式，揭示工作部署和落实之间的差距
+    example: '"一般号召多、具体指导较少；部署任务较多、跟踪问效较少；下发文电较多、督促检查较少。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-020
+    category: 问题分析句式
+    template: '"【A】抬头，【B】淡化；【C】抬头，【D】淡化。"'
+    usage_note: 用于揭示风气和意识方面的问题倾向
+    example: '"个人主义思想抬头，宗旨意识淡化；享乐主义抬头，艰苦奋斗意识淡化。"'
+    applicable_types: '["报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-021
+    category: 问题分析句式
+    template: '"工作标准不高；创新意识不强；工作作风不够实。"'
+    usage_note: '"不…"句式，直接列举工作缺点'
+    example: '"工作标准不高；创新意识不强；工作作风不够实；思想作风不够牢。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-022
+    category: 问题分析句式
+    template: '"【A】不够坚决，【B】不够明确，【C】不到位。"'
+    usage_note: '问题"不"字句式，用于具体工作问题列举'
+    example: '"执行上级命令指示不够坚决，训练目标不够明确，安全意识较差，工作缺乏科学性和实效性。"'
+    applicable_types: '["汇报", "报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-023
+    category: 成绩总结句式
+    template: '"干（做/改）出了【A】，干（做/改）出了【B】，干（做/改）出了【C】。"'
+    usage_note: 用于成绩总结或评价，动词可替换
+    example: '"干出了经济发展的新气象，干出了城市建设的新风貌，干出了干部队伍的新作风。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-024
+    category: 成绩总结句式
+    template: '"改出了【A】，改出了【B】，改出了【C】。"'
+    usage_note: 干出了/改出了句式变体，用于改革成效总结
+    example: '"改出了领导班子的凝聚力，改出了干部队伍的执行力，改出了攻坚克难的战斗力。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-025
+    category: 成绩总结句式
+    template: '"换届换出了【A】，换出了【B】，换出了【C】。"'
+    usage_note: 换届/某一举措成效的总结句式变体
+    example: '"换届换出了新气象，换出了新干劲，换出了新风貌。"'
+    applicable_types: '["报告", "讲话"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-026
+    category: 部署工作句式
+    template: '"要强化【工作主题】，【具体措施A】，【具体措施B】，努力把【XX】打造成为【目标定位】。"'
+    usage_note: 领导讲话部署工作段落的标准结构：起始句+中间句+收尾句
+    example: '"要强化品牌塑造，大力推动南京产品、南京服务向南京品牌转变，以更优的供给为引领、更强的企业为支撑、更好的服务为保障，努力把''南京品牌''打造成为高品质、高质量的代名词。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-027
+    category: 部署工作句式
+    template: '"要【小标题/核心任务】，【起始句，引出全段】，【中间措施句】，【收尾句，强调成效或目标】。"'
+    usage_note: 部署工作段落三段式结构：起始句+中间句+收尾句
+    example: '"要强化标准引领，牢牢抓住标准化改革试点契机，实施标准化战略，坚持自我''提标''、全力''创标''、强化''用标''，切实以标准引领质量、以质量引领发展。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-028
+    category: 问题分析句式
+    template: '"工作指导思想不端正；对【XX】不重视；对【XX】帮教、控制、防范不得力；对【XX】认识不充分；对【XX】考虑不周到。"'
+    usage_note: 五不教训句式，用于剖析深层原因
+    example: '"工作指导思想不端正；对管理、教育薄弱的地方不重视；对个别重点人帮教、控制、防范不得力；对危险情况认识不充分；对内部关系考虑不周到。"'
+    applicable_types: '["报告"]'
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-029
+    category: 问题分析句式
+    template: '"重【A】，轻【B】；重【C】，轻【D】；重【E】，轻【F】；重【G】，轻【H】。"'
+    usage_note: 重/轻句式四组并列版，用于全面揭示工作偏差
+    example: '"重管理、轻教育；重整顿、轻经常；重两头、轻中间；重经验、轻创新。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-030
+    category: 问题分析句式
+    template: '"一般号召多、具体指导较少；部署任务较多、跟踪问效较少；下发文电较多、督促检查较少；表面了解较多、成果转化较少。"'
+    usage_note: 工作管理不足的多/少对照完整版，可按需删减
+    example: '"一般号召多、具体指导较少；部署任务较多、跟踪问效较少。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-031
+    category: 问题分析句式
+    template: '"能力素质与现实任务要求不相适应。"'
+    usage_note: 能力与任务差距的标准表达，可单独成句也可与其他句式组合
+    example: '"能力素质与现实任务要求不相适应，须进一步加强学习培训。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# ===== 三、部署工作万能句式（起始句+中间句+收尾句结构） =====
+
+  - id: SP-032
+    category: 部署工作句式
+    template: '"聚焦【工作重点】，精准施策、狠抓落实，全面提升【目标】水平。"'
+    usage_note: 部署工作大标题句式，统领下文多条任务
+    example: '"聚焦重点环节，精准施策、狠抓落实，全面提升质量发展水平。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-033
+    category: 部署工作句式
+    template: '"一要【小标题动词+宾语】，二要【小标题动词+宾语】，三要【小标题动词+宾语】，四要【小标题动词+宾语】。"'
+    usage_note: '讲话稿分项部署的标准编号结构，"一二三四要"句式'
+    example: '"一要强化品牌塑造，二要强化标准引领，三要强化质量安全，四要强化支撑能力。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-034
+    category: 部署工作句式
+    template: '"要强化【A】，切实增强对【B核心认识】的认识，加快【C具体措施】，进一步【D收尾目标】。"'
+    usage_note: 部署工作段落四步走：强化→认识→措施→目标
+    example: '"要强化支撑能力，切实增强对''平台高度决定产业高度''的认识，加快打造与发展形势相适应的质量技术基础支撑平台，进一步提升检验检测能力。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-035
+    category: 部署工作句式
+    template: '"以【XX平台/教程/机制】为【平台/抓手/载体】，认真【A行动】，不断【B目标】。"'
+    usage_note: 部署工作段落标准三句式：起始句+中间句+收尾句
+    example: '"以''萌新从零开始写材料''教程为平台，认真学习公文写作知识，不断提高公文写作水平。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-036
+    category: 部署工作句式
+    template: '"只要对照【XX要点/要求】，套用【XX句式结构】，就可以轻松完成【XX工作任务】。"'
+    usage_note: 用于说明工作方法的句式，适合培训材料或工作指导
+    example: '"只要对照领导的讲话要点，套用起始句+中间句+收尾句句式结构，就可以轻松写出工作部署信息的主体段落。"'
+    applicable_types: '["方案", "汇报"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# ===== 四、固定式标题结构 =====
+
+# -- 一字开头类 --
+
+  - id: SP-037
+    category: 固定标题结构_一字开头
+    template: '"【单字动词】+【具体内容】，【成效说明】。"'
+    usage_note: 一字开头标题，动词领起，简洁有力
+    example: '"''点''上强龙头，从引资升级为选资；''线''上抓延伸，从行业升级为产业；''面''上求突破，从单个升级为集群。"'
+    applicable_types: '["讲话", "方案", "汇报"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-038
+    category: 固定标题结构_一字开头
+    template: '"''【字】''住【关键环节】，扛好【责任名称】。"'
+    usage_note: 单字加具体工作的标题结构变体
+    example: '"''扭''住三个环节，扛好党建责任；''做''到四个建设，抓实学习教育。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 两字开头类 --
+
+  - id: SP-039
+    category: 固定标题结构_两字开头
+    template: '"【两字主题词】，要像【比喻A】，要像【比喻B】，要像【比喻C】。"'
+    usage_note: 以比喻展开的两字领起结构，常用于工作要求或精神境界描述
+    example: '"为民，要像山一样坚定务实，要像树一样笃定清廉，要像潭一样淡定。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-040
+    category: 固定标题结构_两字开头
+    template: '"【感官动词】勤，【具体行动】；【感官动词】勤，【具体行动】。"'
+    usage_note: 五官/行为勤字句式，用于干部作风要求
+    example: '"眼勤，多看百姓脸色；嘴勤，多问民间疾苦；手勤，多做惠民实事；腿勤，多跑田间地头。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-041
+    category: 固定标题结构_两字开头
+    template: '"对【A方向】，符合【AA标准】；对【B方向】，符合【BB标准】；对【C方向】，符合【CC标准】。"'
+    usage_note: 三维对照工作标准的结构
+    example: '"对上，符合国家大政方针；对下，符合群众愿望；对内，符合经济社会发展实际。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 三字开头类 --
+
+  - id: SP-042
+    category: 固定标题结构_三字开头
+    template: '"【三字动作词组A】，【成效描述A】；【三字动作词组B】，【成效描述B】。"'
+    usage_note: 三字动作引领的并列结构，用于工作举措与成效对应
+    example: '"清清嗓，发出群众爱听的''好声音''；照照镜，立起群众赞誉的''好形象''；洗洗澡，除去群众厌恶的''坏毛病''；动动身，苦炼群众需要的''真本领''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-043
+    category: 固定标题结构_三字开头
+    template: '"【转/优/强/深】【二字核心工作】，变【现状A】为【目标A】；【转/优/强/深】【二字核心工作】，变【现状B】为【目标B】。"'
+    usage_note: 三字转化型结构，从现状到目标的对比升级
+    example: '"转方式，变瓶颈为抓手；深挖潜，变低效为高效；优布局，变分散为集聚；强监管，变粗放为精细。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-044
+    category: 固定标题结构_三字开头
+    template: '"大【名词】，【动词】+【XX】新【名词】。"'
+    usage_note: 大×系列，用宏大叙事引领愿景描述
+    example: '"大棋局，开启XX新里程；大视野，奠定XX新格局；大引擎，书写XX新速度；大梦想，追逐XX新未来。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四字开头类 --
+
+  - id: SP-045
+    category: 固定标题结构_四字开头
+    template: '"''【四字成语/概括词】''，【具体工作任务/成效】。"'
+    usage_note: 四字领起的标题，引号突出核心词，后接具体内容
+    example: '"''固本培元''，加强思想政治建设；''激浊扬清''，让歪风邪气无所遁形；''立规明矩''，把纪律和规矩挺在前面。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-046
+    category: 固定标题结构_四字开头
+    template: '"【四字动词短语A】，实现【目标A】；【四字动词短语B】，实现【目标B】。"'
+    usage_note: 四字行动+实现目标的对应结构
+    example: '"求实求效，实现思想引领和民众思维合拍共鸣；突破突围，实现传统媒体和新兴媒体同频共振；相生相长，实现文化事业和文化产业整体繁荣。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四三句式 --
+
+  - id: SP-047
+    category: 固定标题结构_四三句式
+    template: '"''【四字核心词A】+【三字行动词B】''【成效说明】；''【四字核心词C】+【三字行动词D】''【成效说明】。"'
+    usage_note: 四字加三字的复合标题结构，适合党建、扶贫等工作
+    example: '"''科学谋划+压实责任''添干劲；''修好房子+建致富路''强基础；''发展产业+培训就业''促增收。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-048
+    category: 固定标题结构_四三句式
+    template: '"【四字工作】''【三字目标词】''；【四字工作】''【三字目标词】''。"'
+    usage_note: 四字工作+三字成效的配对结构，适合脱贫攻坚类材料
+    example: '"壮大产业''摘穷帽''；生态补偿''保家园''；易地搬迁''挪穷窝''；医疗救助''除病魔''；教育就业''绝穷思''。"'
+    applicable_types: '["讲话", "方案", "汇报"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-049
+    category: 固定标题结构_四三句式
+    template: '"常打【工作】''【比喻名词A】''；筑牢【制度】''【比喻名词B】''；强化【监督】''【比喻名词C】''。"'
+    usage_note: 四字行动+三字比喻名词的党风廉政标题结构
+    example: '"常打思想''免疫针''；筑牢制度''防火墙''；强化监督''紧箍咒''；用好法典''杀手锏''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-050
+    category: 固定标题结构_四三句式
+    template: '"围绕【目标】抓落实；明确【责任】抓落实；强化【督查】抓落实；创新【机制】抓落实。"'
+    usage_note: 四字事项+抓落实的重复结构，强调多维度落实
+    example: '"围绕目标抓落实；明确责任抓落实；强化督查抓落实；创新机制抓落实；凝心聚力抓落实。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-051
+    category: 固定标题结构_四三句式
+    template: '"民主监督''【三字动词组】''作风；攻坚克难''【三字动词组】''作风；从严从实''【三字动词组】''作风。"'
+    usage_note: 四字事项+三字方式+作风的结构，用于作风建设
+    example: '"民主监督''晒''作风；攻坚克难''担''作风；从严从实''考''作风；闻风而动''改''作风；以点带面''促''作风。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-052
+    category: 固定标题结构_四三句式
+    template: '"【心理/品格】之心对待''【一字核心词】''。"'
+    usage_note: 五心五态的品格要求结构
+    example: '"淡泊之心对待''名''；知足之心对待''利''；敬畏之心对待''权''；从容之心对待''苦''；进取之心对待''事''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四五句式 --
+
+  - id: SP-053
+    category: 固定标题结构_四五句式
+    template: '"【四字驱动词】，【打造/激发/拓展】【五字目标词】。"'
+    usage_note: 四字行动词+五字目标的结构，常用于经济发展类
+    example: '"创新驱动，打造新引擎；改革促动，激发新活力；开放带动，拓展新空间。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四六句式 --
+
+  - id: SP-054
+    category: 固定标题结构_四六句式
+    template: '"''【字】''字当头（着力/为本/为先），【六字具体内容】。"'
+    usage_note: 单字精髓+六字展开内容的标题结构
+    example: '"''强''字当头，打牢适用根基；''简''字用招，节约司法资源；''快''字着力，提升审判效率；''严''字为本，保障案件质量。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四七句式 --
+
+  - id: SP-055
+    category: 固定标题结构_四七句式
+    template: '"【四字行动词组】，【七字具体目标/行动】。"'
+    usage_note: 四字领起+七字展开，节奏感强
+    example: '"志在必得，激情追梦促发展；破旧立新，甩开膀子放开干；夙兴夜寐，大干快干拼命干。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-056
+    category: 固定标题结构_四七句式
+    template: '"上下同欲，举好发展''【三字比喻词】''；突出重点，做对管理''【三字比喻词】''；融合优化，用足提升''【三字比喻词】''。"'
+    usage_note: 四七句式加比喻名词的变体
+    example: '"上下同欲，举好发展''指挥棒''；突出重点，做对管理''运算符''；融合优化，用足提升''工具箱''；精确谋划，出准制胜''杀手锏''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-057
+    category: 固定标题结构_四七句式
+    template: '"铁拳出击，打出【XX领域】新品质；紧盯【XX难点】，做出【XX领域】新亮点；持续发力，干出【XX局面】新局面。"'
+    usage_note: 打出/做出/干出三字递进变体
+    example: '"铁拳出击，打出城区新品质；紧盯九难，做出民生新亮点；持续发力，干出稳定新局面；党建引领，带出队伍新气象。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四九句式 --
+
+  - id: SP-058
+    category: 固定标题结构_四九句式
+    template: '"''【字】''字当头，【工作/任务名称】是【定性描述】；''【字】''字为先，【工作/任务名称】是【定性描述】。"'
+    usage_note: 单字引领+九字定性的标题结构，庄重正式
+    example: '"''严''字当头，作风建设是永恒课题；''学''字为先，勤奋学习是成事之基；''干''字为重，干事创业是人生追求；''廉''字为荣，清正为官是最高操守。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 六六句式 --
+
+  - id: SP-059
+    category: 固定标题结构_六六句式
+    template: '"关注''【三字人群/领域】''，抓好''【三字政策目标】''；关爱''【三字状态】''，保障''【三字政策类别】''。"'
+    usage_note: 六六对仗句式，用于民生工作分类描述
+    example: '"关注''衣食住行''，抓好''基本民生''；关爱''生老病死''，保障''底线民生''；关切''安居乐业''，强化''热点民生''。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-060
+    category: 固定标题结构_六六句式
+    template: '"拭亮【比喻名词A】，扫除【问题比喻】；常鸣【比喻名词B】，规范【工作领域】；擂起【比喻名词C】，坚持【精神方向】。"'
+    usage_note: 六六拭亮/常鸣/擂起系列标题结构
+    example: '"拭亮心灵之镜，扫除思想灰尘；常鸣警醒之钟，规范行业界限；擂起奋进之鼓，坚持砥砺前行。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 六八句式 --
+
+  - id: SP-061
+    category: 固定标题结构_六八句式
+    template: '"突出''【四字主题词】''，【八字成效描述】。"'
+    usage_note: 六字突出引领+八字成效的标题结构，常用于年度总结
+    example: '"突出''转型升级''，产业实力持续提升；围绕''项目提速''，投资拉动支撑有力；深化''改革提效''，发展活力逐步显现。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 七五句式 --
+
+  - id: SP-062
+    category: 固定标题结构_七五句式
+    template: '"深入【地点/对象】''【动词】''【工作内容】，【五字收获描述】。"'
+    usage_note: 七字行动+五字目标，常用于调研类材料
+    example: '"深入乡村''望''民情，观基层风貌；倾听建议''闻''呼声，查百姓需要；放下身段''问''计策，纳民间良方；把准脉搏''切''症结，解群众难题。"'
+    applicable_types: '["报告", "讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 七七句式 --
+
+  - id: SP-063
+    category: 固定标题结构_七七句式
+    template: '"【七字行动/事件描述A】，【七字成果描述A】；【七字行动/事件描述B】，【七字成果描述B】。"'
+    usage_note: 七七对仗，适合描述成绩亮点的生动标题
+    example: '"塞外荒坡苦创业，丰富连队''菜盘子''；古长城下添新景，建成官兵''小乐园''；深山沟里不寂寞，活跃连队''新生活''。"'
+    applicable_types: '["汇报", "报告"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 二四二四句式 --
+
+  - id: SP-064
+    category: 固定标题结构_二四二四句式
+    template: '"补足【二字精神】之【名词】，开出【四字行动词组】；筑牢【二字思想】之【名词】，高扬【四字精神目标】。"'
+    usage_note: 二四二四节奏，用于党性修养和思想建设
+    example: '"补足精神之钙，开出醒脑良方；筑牢思想之基，高扬信念之帆；坚守为政之本，上紧作风发条；织牢制度牢笼，紧握法纪戒尺。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四四五句式 --
+
+  - id: SP-065
+    category: 固定标题结构_四四五句式
+    template: '"【四字A】、【四字B】，细耕''【五字比喻】''。"'
+    usage_note: 四四五节奏，两个并列动作+一个比喻收束
+    example: '"聚焦主业、突出主责，细耕''责任田''；坚定信仰、提升能力，牵住''牛鼻子''；总结经验、把握规律，把好''方向盘''。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 四四九句式 --
+
+  - id: SP-066
+    category: 固定标题结构_四四九句式
+    template: '"【四字A】，【四字B】，【改善/建设/围绕】【XX领域】''【三字比喻词】''。"'
+    usage_note: 四四九节奏，两个并列动作+九字成效
+    example: '"争取支持，主动作为，改善事业发展''硬环境''；重视基层，延伸触角，争当社会安定''稳压器''；围绕民生，服务大局，充当社会管理''服务器''。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 三三七句式 --
+
+  - id: SP-067
+    category: 固定标题结构_三三七句式
+    template: '"【三字行动A】、【三字行动B】，【七字具体要求】。"'
+    usage_note: 三三七节奏，两个三字行动引领七字具体要求
+    example: '"勤走访、明责任，甩开膀子积极干；重交流、理思路，明确方向大胆干；凭实绩、争先锋，亮出形象示范干。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-068
+    category: 固定标题结构_三三七句式
+    template: '"敢【两字担当词】、勇【两字作为词】，坚决破除（整治/反对）''【四字问题词】''。"'
+    usage_note: 三三七句式的担当整治版，常用于作风建设
+    example: '"敢担当、勇作为，坚决破除''等靠要''；强效能、优服务，坚决整治''庸懒散''；抓落实、重执行，坚决反对''做虚功''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 领导讲话三段式（起始句+中间句+收尾句）综合模板 --
+
+  - id: SP-069
+    category: 部署工作句式
+    template: |
+      【起始句：核心任务/小标题引出，明确工作方向】
+      【中间句：具体措施A，具体措施B，具体措施C】
+      【收尾句：强调目标成效或提出达到标准】
+    usage_note: 领导讲话部署工作段落的万能三段式结构
+    example: |
+      要强化质量安全【起始句】，
+      紧盯事关国计民生、百姓消费重点领域，严之又严地抓好质量安全监管，
+      切实做到重点更突出、方式再创新、底线更牢固，
+      确保让市民群众买得放心、用得放心、吃得放心【收尾句】。
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 补充常用万能句式 --
+
+  - id: SP-070
+    category: 万能收尾句
+    template: '"以更【形容词A】的【XX】为引领、更【形容词B】的【XX】为支撑、更【形容词C】的【XX】为保障，努力把【XX】打造成为【目标定性】。"'
+    usage_note: 三维支撑的收尾句，适合愿景描述
+    example: '"以更优的供给为引领、更强的企业为支撑、更好的服务为保障，努力把''南京品牌''打造成为高品质、高质量的代名词。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-071
+    category: 部署工作句式
+    template: '"坚持自我''提【字】''、全力''创【字】''、强化''用【字】''，切实以【XX】引领【XX】、以【XX】引领【XX】。"'
+    usage_note: 三字结合+以…引领…的复合部署句式
+    example: '"坚持自我''提标''、全力''创标''、强化''用标''，切实以标准引领质量、以质量引领发展。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-072
+    category: 部署工作句式
+    template: '"加快构建与【XX形势/要求】相适应的【XX平台/体系/机制】，进一步提升【A能力】、加强【B建设】。"'
+    usage_note: 构建+提升+加强的三步推进句式
+    example: '"加快打造与发展形势相适应的质量技术基础支撑平台，进一步提升检验检测能力、加强认证认可服务。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-073
+    category: 万能收尾句
+    template: '"瞄准【工作/目标】要害点，破立结合抓【核心任务】。"'
+    usage_note: 问题导向+破立结合的收尾句式
+    example: '"瞄准要害点，破立结合抓转型；聚焦促落实，只争朝夕抓转型；提振精气神，上下同欲抓转型。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-074
+    category: 强调意义句
+    template: '"加强教育，树立''【工作/目标词语】''的【队伍/''岗位''】''【比喻名词】''；建章立制，筑牢''【问题/行为词语】''的制度''【比喻名词】''。"'
+    usage_note: 教育+制度+监督+正风+完善五要素综合句式
+    example: '"加强教育，树立''真抓实干''的队伍''风向标''；建章立制，筑牢''为官不为''的制度''防火墙''；多管齐下，打出''庸懒散拖''的监督''组合拳''。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-075
+    category: 强调意义句
+    template: '"突出''【核心词A】''，【成效描述A】；围绕''【核心词B】''，【成效描述B】；深化''【核心词C】''，【成效描述C】。"'
+    usage_note: 突出/围绕/深化三字引领的成效总结句式
+    example: '"突出''转型升级''，产业实力持续提升；围绕''项目提速''，投资拉动支撑有力；深化''改革提效''，发展活力逐步显现；加快''内涵提标''，城乡面貌深刻变化。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-076
+    category: 问题分析句式
+    template: '"试点创新求突破；强化督察促落实；盯住主业不放手；围绕大局干实事；改革创新动真章；抓好队伍谋后劲。"'
+    usage_note: 六字并列任务列举句，用于工作部署，可单条使用
+    example: '"试点创新求突破，强化督察促落实，盯住主业不放手，围绕大局干实事。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-077
+    category: 会议开场句
+    template: '"引路子，倡导向上的目标；出点子，设计合理的途径；压担子，提供良好的机遇。"'
+    usage_note: 三子句式（引/出/压路/点/担），用于干部培养或工作推进
+    example: '"引路子，倡导向上的目标；出点子，设计合理的途径；压担子，提供良好的机遇。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-078
+    category: 固定标题结构_三字开头
+    template: '"立足''【字/词】''，【六字具体内容A】；筑牢''【字/词】''，【六字具体内容B】；稳步''【字/词】''，【六字具体内容C】。"'
+    usage_note: 三字动词+单字精华+六字展开，党建工作常用
+    example: '"立足''新''，深入开展学习教育；筑牢''规''，规范党员队伍建设；稳步''进''，扎实基层组织建设。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-079
+    category: 固定标题结构_三字开头
+    template: '"实处''抓''，【发挥/落实】【工作功能】；目标''精''，【组织/明确】【工作内容】；倡导''做''，【开展/推动】【工作活动】。"'
+    usage_note: 实/目标/倡导三字引领的党建实践句式
+    example: '"实处''抓''，发挥党建服务功能；目标''精''，组织群众脱贫致富；倡导''做''，开展社会公益活动。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-080
+    category: 固定标题结构_四字开头
+    template: '"立根固本，【使命/信仰相关】，始终做到心中有党；落细落小，【服务/责任相关】，始终做到心中有民；修枝剪叶，【担当/忠诚相关】，始终做到心中有责；修身立德，【监督/自律相关】，始终做到心中有戒。"'
+    usage_note: 四字+内容+心中有X的国企党建四有结构
+    example: '"立根固本，挺起精神脊梁，始终做到心中有党；落细落小，倾情服务民生，始终做到心中有民。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-081
+    category: 固定标题结构_四字开头
+    template: '"践行''责''，严格【A主体责任】；遵守''纪''，坚持【B纪律要求】；守住''线''，深查【C违规行为】。"'
+    usage_note: 责/纪/线三字核心的纪律建设标题结构
+    example: '"践行''责''，严格两个责任；遵守''纪''，坚持挺纪在前；守住''线''，深查违纪案件。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-082
+    category: 固定标题结构_四字开头
+    template: '"突出''实''，【建立/落实/健全了】【工作机制/制度】；体现''效''，【实现/保障了】【工作责任】；把握''质''，【规范/完善了】【工作制度】。"'
+    usage_note: 实/效/质三维质量标准结构
+    example: '"突出''实''，建立了工作机构；体现''效''，落实了工作责任；把握''质''，健全了工作制度。"'
+    applicable_types: '["汇报", "报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-083
+    category: 固定标题结构_四字开头
+    template: '"指向''准''，突出【工作重点方向】；横向''联''，突出【协同方式】；纵向''深''，突出【深化路径】。"'
+    usage_note: 准/联/深三维工作方法结构
+    example: '"指向''准''，突出第一责任；横向''联''，突出以上率下；纵向''深''，突出关键少数。"'
+    applicable_types: '["汇报", "报告", "讲话"]'
+    applicable_position: 标题
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 部署工作补充句式 --
+
+  - id: SP-084
+    category: 部署工作句式
+    template: '"比【A方面】，着力【行动A】；比【B方面】，着力【行动B】；比【C方面】，着力【行动C】。"'
+    usage_note: 比较竞争型工作要求句式，激励争先赶超
+    example: '"比形象，着力挑起担子；比干劲，着力迈好步子；比服务，着力畅通路子。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-085
+    category: 部署工作句式
+    template: '"创新驱动，打造【A成效】；改革促动，激发【B成效】；开放带动，拓展【C成效】。"'
+    usage_note: 创新/改革/开放三轮驱动句式
+    example: '"创新驱动，打造新引擎；改革促动，激发新活力；开放带动，拓展新空间。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-086
+    category: 承接过渡句
+    template: '"从上面这个实例中，我们可以清晰地看出，【规律性总结】。"'
+    usage_note: 案例分析后的规律总结过渡句
+    example: '"从上面这个实例中，我们可以清晰地看出，领导讲话的主体段落遵循起始句+中间句+收尾句三段式结构。"'
+    applicable_types: '["报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+# -- 常见领导讲话结构提示句 --
+
+  - id: SP-087
+    category: 部署工作句式
+    template: '"【核心总任务A】，【核心总任务B】，全面提升【工作/领域】水平。"'
+    usage_note: 领导讲话部署部分大标题的标准结构：问题+方法+目标
+    example: '"聚焦重点环节，精准施策、狠抓落实，全面提升质量发展水平。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 标题
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-088
+    category: 部署工作句式
+    template: '"第一要【核心小标题动词短语】；第二要【核心小标题动词短语】；第三要【核心小标题动词短语】；第四要【核心小标题动词短语】。"'
+    usage_note: 第一/二/三/四要的四点式部署结构
+    example: '"第一要强化品牌塑造；第二要强化标准引领；第三要强化质量安全；第四要强化支撑能力。"'
+    applicable_types: '["讲话"]'
+    applicable_position: 正文
+    applicable_direction: 下行文
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-089
+    category: 部署工作句式
+    template: '"坚持把【XX】作为推动【工作全局/某项工作】的【关键一招/主要抓手/核心举措】。"'
+    usage_note: 坚持把…作为…的强调定位句
+    example: '"坚持把改革开放作为推动经济社会发展的关键一招。"'
+    applicable_types: '["讲话", "方案", "报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-090
+    category: 强调意义句
+    template: '"【具体行动A】，让【受益主体】【切实感受/获得的实惠A】；【具体行动B】，让【受益主体】【切实感受/获得的实惠B】；【具体行动C】，让【受益主体】【切实感受/获得的实惠C】。"'
+    usage_note: 以民为本的成效描述句式，三条并列
+    example: '"确保让市民群众买得放心、用得放心、吃得放心。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 结尾
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-091
+    category: 部署工作句式
+    template: '"明确目标抓关键；强化督查抓落实；创新机制抓执行；压实责任抓推进。"'
+    usage_note: 抓字结尾的四措并举句式
+    example: '"突出重点抓关键；明确责任抓主体；创新机制抓落实。"'
+    applicable_types: '["讲话", "方案"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 公文写作词句应用大全_句式与固定结构篇
+
+  - id: SP-092
+    category: 承接过渡句
+    template: '"所以，如果你【具体条件】，对照【参考框架】，【完成某项工作】就是一件很容易的事情。但是要注意的是，【注意事项】。"'
+    usage_note: 工作方法指导过渡句，含条件+方法+注意事项三要素
+    example: '"所以，如果你有领导讲话原稿，对照写出一篇信息就是一件很容易的事情。但是要注意的是，每一个小标题紧跟着的句子，都要遵循起始句+中间句+收尾句的规范句式结构。"'
+    applicable_types: '["方案", "报告"]'
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 公文写作词句应用大全_句式与固定结构篇

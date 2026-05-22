@@ -1,0 +1,941 @@
+metadata:
+  book: 公文写作底层心法
+  author: 胡森林
+  publisher: 中央党校出版社
+  extraction_date: 2026-03-15
+  extractor: Claude Sonnet 4.6
+  total_entries: 44
+  dedup_against: 李忠秋_结构化写作.yaml
+  notes: >
+    重点提炼SP（结构原则）和MT（方法论）类条目。
+    李忠秋已覆盖：金字塔结构/SCQA/MECE/演绎归纳/结论先行/四种信息关系，本书不重复。
+    本书特色：行文逻辑底层规律、文种选择决策依据、公文写作本质规律、统稿方法、气势文气。
+
+entries:
+
+  # ─────────────────────────────────────────────
+  # SP：结构原则
+  # ─────────────────────────────────────────────
+
+  - id: SP-001
+    type: SP
+    title: 文种选择决策规则（请示/报告/通知/函）
+    rule_type: GENRE
+    execution: agent_prompt
+    content: >
+      检查是否正确选用文种：需要上级批准才能执行的事项必须使用【请示】而非报告，
+      结尾须含"请批示/请审批"；向上级汇报工作情况只陈述不含请求事项时须使用【报告】，
+      结尾用"请阅示/特此报告"；向下级布置工作须使用【通知】；
+      与不相隶属机关协商询问须使用【函】。
+      不得将请示与报告混用：请示需要批复，报告只需知晓，二者性质不可互换。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第1章
+    usage: rule_engine
+
+  - id: SP-002
+    type: SP
+    title: 请示与报告的六大本质区别
+    rule_type: GENRE
+    execution: agent_prompt
+    content: >
+      检查是否混淆请示与报告：
+      ①请示为呈请批准性质，报告为陈述告知性质，不得互换；
+      ②请示内容须一文一事，报告可涉多事；
+      ③请示结尾须含请求批准语，报告结尾为告知收阅语；
+      ④请示必须获得批复，报告无需批复；
+      ⑤请示须事前行文，报告为事后或事中行文；
+      ⑥不得在请示中夹带报告事项，不得在报告中夹带请求批准事项。
+    applicable_types:
+      - 汇报
+      - 报告
+    importance: A
+    source: 胡森林《公文写作底层心法》第1章
+    usage: rule_engine
+
+  - id: SP-003
+    type: SP
+    title: 行文规范三原则（一文一事/逐级行文/不越级）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查是否符合行文三原则：
+      ①一文一事原则——一份公文只办一件事，不得同时处理多个事项；
+      ②逐级行文原则——向上级行文须经本级，不得越级；如有紧急情况越级，须同时抄送被越级机关；
+      ③范围原则——行文范围须与文件保密等级及受众范围相匹配。
+      违反以上规范将导致公文效力下降或被退回。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第1章
+    usage: rule_engine
+
+  - id: SP-004
+    type: SP
+    title: 一文一题原则（主题统摄全篇）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查是否存在多主题并存的情况：一篇公文只能有一个核心主题，全部内容须服从该主题。
+      检查主题来源是否合理：应来自关注点（领导和受众最关心的）、闪光点（最有价值的素材点）
+      或不同点（体现创新之处），不得游离主题。
+      必须包含主题统摄选材、结构、语言的逻辑贯穿，不得出现与主题无关的段落。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第5章
+    usage: rule_engine
+
+  - id: SP-005
+    type: SP
+    title: 公文内容以"实"为要四标准
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文内容是否满足四个实质性标准：
+      ①真实——检查是否有据可查，有事实支撑，不得虚构或夸大；
+      ②完整——检查是否遗漏关键信息，主要工作、重要数据、关键举措须俱全；
+      ③准确——检查数据、时间、人名、职称等细节是否无误；
+      ④具体——检查是否空泛，观点须有具体事实支撑，不得以形容词代替事实。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第8章
+    usage: rule_engine
+
+  - id: SP-006
+    type: SP
+    title: 结构不板不乱浑然一体原则
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文结构是否满足三个标准：
+      【不板】检查结构是否为内容服务，不得强套固定模板导致呆板僵化；
+      【不乱】检查各部分之间是否有清晰的逻辑关联，不得出现内容散乱失控；
+      【浑然一体】检查开头、主体、结尾是否相互照应，一气贯通。
+      检查一级提纲是否扣紧主题，二级提纲是否扣紧一级提纲，各级层次是否环环相扣、首尾相顾。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第9章
+    usage: rule_engine
+
+  - id: SP-007
+    type: SP
+    title: 结构四层次模型
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文结构是否在四个层次上均保持清晰逻辑：
+      ①文种层次——检查所选文种是否正确，决定整体格式框架；
+      ②篇章层次——检查整体谋篇布局，各大部分关系和顺序是否合理；
+      ③段落层次——检查每段是否围绕一个意义单元，段内结构是否清晰；
+      ④句子层次——检查句与句之间是否有逻辑衔接，起承转合是否自然。
+      不得在任何一个层次上出现混乱。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第9章
+    usage: rule_engine
+
+  - id: SP-008
+    type: SP
+    title: 层次顺序三维逻辑
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文内容排列顺序是否与内容性质匹配：
+      ①时间顺序——工作进展类内容须按时间节点排列（过去→现在→未来）；
+      ②空间顺序——地域或层级类内容须按空间展开（全局→局部；宏观→微观）；
+      ③意义顺序——按重要性或逻辑关系排列的内容须遵循（重要→次要；原因→结果；问题→措施）。
+      必须检查所选顺序与内容性质是否匹配，不得混乱使用。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第11章
+    usage: rule_engine
+
+  - id: SP-009
+    type: SP
+    title: 同一律与矛盾律（逻辑一致性原则）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查是否违反同一律：同一篇文章中同一概念在不同位置使用时内涵必须一致，
+      不得出现概念偷换，例如"工作质量"在不同段落不得指代不同内涵。
+      检查是否违反矛盾律：文章各部分的观点、数据、表述之间不得相互矛盾，
+      前后提到同一事实必须一致，不得自相矛盾。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第11章
+    usage: rule_engine
+
+  - id: SP-010
+    type: SP
+    title: 公文"及物"性本质（研究事不研究字）
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查是否存在"研究字"而非"研究事"的倾向：内容不得只在文字技巧和辞藻上下功夫，
+      而忽视对实际工作的深入反映。
+      检查是否符合"及物"性原则：公文必须真实反映现实工作和客观事物，
+      不得出现脱离实际的花团锦簇表述，写作质量须来自对实际工作的深入研究。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第15章
+    usage: rule_engine
+
+  - id: SP-011
+    type: SP
+    title: 观点提炼源于实践高于实践
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文观点是否满足两个条件：
+      ①源于实践——观点须从实际工作、真实数据、具体案例中提炼，不得出现空洞主观臆断；
+      ②高于实践——观点须能揭示规律、概括本质，不得仅停留在事实描述层面。
+      检查观点是否具备四个标准：鲜明（立场清晰）、深刻（揭示本质规律）、
+      新颖（有独到见解而非人云亦云）、实用（对工作有指导价值）。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第8章
+    usage: rule_engine
+
+  - id: SP-012
+    type: SP
+    title: 文以载道价值观优先原则
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查公文写作是否体现正确的价值取向：情怀（价值观）须优先于见识（视野逻辑），
+      见识须优先于文字（笔法语感），不得本末倒置只追求文字华丽。
+      检查是否具备三项价值观要求：一片公心（胸怀全局、一心为公）、
+      一股正气（坚持真理、实事求是）、一腔热情（对工作有投入）。
+      不得出现假公济私、因个人好恶影响判断、被不良风气侵染的表述。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第19章
+    usage: rule_engine
+
+  # ─────────────────────────────────────────────
+  # LR：语言规则
+  # ─────────────────────────────────────────────
+
+  - id: LR-001
+    type: LR
+    title: 公文语言准确第一原则
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查是否存在用词不精准的问题：必须选择最贴切的词，不得使用模糊词。
+      检查是否存在歧义表述：同一表达必须只有唯一理解方式。
+      检查数据/事实细节是否精确：数字、时间、职名、地名等细节须无误。
+      不得出现以下失准问题：概念混淆（如"汇报"和"报告"混用）、
+      程度词滥用（"极大地""充分"等未经核实即使用）、数据未核实直接引用。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第10章
+    usage: rule_engine
+
+  - id: LR-002
+    type: LR
+    title: 公文语言"十个不写"规则
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查是否存在以下十类禁止表达：
+      ①假话——不得虚报、夸大、缩小；
+      ②废话——不得重复啰嗦，每句须有信息量；
+      ③套话——不得堆砌套路词汇和无意义短语；
+      ④空话——不得空泛，须有具体内容支撑；
+      ⑤大话——不得言过其实；
+      ⑥不得体的话——语体须与场合相符；
+      ⑦超范围的话——不得泄露不应公开的信息；
+      ⑧未经核实的话——数据和事实须经查证；
+      ⑨模糊话——不得出现让人产生不同理解的表述；
+      ⑩重复的话——信息不得重复出现。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第10章
+    usage: rule_engine
+
+  - id: LR-003
+    type: LR
+    title: 说人话/对象意识原则
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查是否具备明确的对象意识：语言风格须根据受众的身份、知识背景和阅读习惯选择，
+      不得使用晦涩艰深的表达。
+      检查是否符合以下四点：
+      ①已明确受众是谁（领导/同行/基层）；
+      ②使用对方熟悉的语言框架；
+      ③不得卖弄术语和生僻词汇；
+      ④讲话稿须口语化，便于现场理解和记忆。
+    applicable_types:
+      - 讲话
+      - 汇报
+      - 报告
+    importance: B
+    source: 胡森林《公文写作底层心法》第10章
+    usage: rule_engine
+
+  - id: LR-004
+    type: LR
+    title: 量体裁衣语体原则（不同文种不同语体）
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查文种与语体是否匹配：
+      【汇报材料】须语气谦逊、陈述客观、偏书面体；
+      【领导讲话稿】须口语化、有激情、便于现场理解，有层次感，不得写成总结口吻；
+      【工作总结】须客观平实、有事实有数据，不得过度形容；
+      【调研报告】须分析性强，有观点有论据，适当有学术感；
+      【方案计划】须逻辑严密，操作性强，时间节点清晰。
+      不得出现语体与文种不符的情况。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第10章、第16章
+    usage: rule_engine
+
+  # ─────────────────────────────────────────────
+  # MT：方法论
+  # ─────────────────────────────────────────────
+
+  - id: MT-001
+    type: MT
+    title: 七步成文法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文写作流程是否经历了关键步骤：
+      ①定调子——是否已确定文章基调（积极/务实/紧迫等）；
+      ②理路子——是否已理清写作思路，明确主题和大致框架；
+      ③搭架子——是否已搭建结构提纲，确定各级标题和内容板块；
+      ④填肚子——是否已填充具体内容，含事实、数据、观点、措施；
+      ⑤梳辫子——是否已梳理段落和句子，各部分衔接是否流畅；
+      ⑥戴帽子——开头结尾是否完善，首尾是否呼应，整体是否完整；
+      ⑦过稿子——是否已检查逻辑、事实、格式、文字。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第12章
+    usage: prompt_supplement
+
+  - id: MT-002
+    type: MT
+    title: 时事势三字立意法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文立意是否具备三字框架的高度：
+      【时】——检查是否体现时代背景和当前时点特征，立意是否体现时代性（当前形势、政策导向）；
+      【事】——检查立意是否紧扣具体事项，从实际工作出发，具有针对性；
+      【势】——检查立意是否顺应发展趋势，具有前瞻性，能体现方向感。
+      必须包含时代背景+具体事项+发展趋势三者的有机结合。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第3章
+    usage: prompt_supplement
+
+  - id: MT-003
+    type: MT
+    title: 四思立意法（高度深度角度尺度）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文立意是否经过四个维度深化：
+      ①高度——是否站在全局和宏观层面审视问题，具有党和国家层面或行业层面的站位；
+      ②深度——是否挖掘到事物本质规律和深层原因，而非停留于表象；
+      ③角度——是否具有新的切入点，避免老生常谈；
+      ④尺度——表达分寸是否准确，是否把握政策边界，不超出应有范围。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第3章
+    usage: prompt_supplement
+
+  - id: MT-004
+    type: MT
+    title: 把握领导意图三步递进法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查是否准确理解并提升了领导意图：
+      ①充实完善——是否将领导的初步意图补充完整，填补逻辑空白；
+      ②凝练提高——是否对领导的想法进行了提炼升华，使表述更精准、站位更高；
+      ③延伸挖掘——是否在领导意图基础上进行延伸，挖掘更深层内涵。
+      不得机械执行领导原话而不理解精神实质，也不得将写作者自己的意图强加于领导。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第4章
+    usage: prompt_supplement
+
+  - id: MT-005
+    type: MT
+    title: 换位思考四维角度法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查写作前是否从四个角度进行了换位思考：
+      ①领导角度——是否考虑了领导关注什么、最担心什么、希望强调什么；
+      ②受众角度——是否考虑了受众需要什么信息、能接受什么表达方式；
+      ③工作角度——内容是否符合工作实际和操作逻辑；
+      ④对象角度——是否考虑了文件执行对象的实际情况和可操作性。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第4章
+    usage: prompt_supplement
+
+  - id: MT-006
+    type: MT
+    title: 类因果法（公文内容四种逻辑要素）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文内容是否合理运用了四种基本逻辑要素：
+      【类】——分类/类别是否合理，内容维度是否清晰；
+      【因】——原因/背景是否阐述清楚，依据是否充分；
+      【果】——结果/成效是否说明，预期结果是否明确；
+      【法】——方法/措施是否具体，路径是否可操作。
+      检查文种与侧重点是否匹配：汇报侧重"果"，方案侧重"法"，分析侧重"因"，规划侧重"类+法"。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第11章
+    usage: prompt_supplement
+
+  - id: MT-007
+    type: MT
+    title: 八种逻辑关系（段落与段落间）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文各部分之间的逻辑关系是否清晰，属于以下八种之一：
+      ①并列——各点地位平等，可互换顺序；
+      ②递进——各点层层深入，有先后递进关系，不可互换；
+      ③因果——前者是后者的原因；
+      ④条件——在某条件下才会产生某结果；
+      ⑤转折——前后意思相反或对比；
+      ⑥假设——假定某条件成立的推断；
+      ⑦解说——后面是对前面的阐述说明；
+      ⑧总分——前面总述，后面分述（或先分后总）。
+      必须包含与逻辑关系对应的连接词和结构形式。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第11章
+    usage: prompt_supplement
+
+  - id: MT-008
+    type: MT
+    title: 段头撮要法（段首点明核心观点）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查每个段落的首句是否为该段的核心观点句：段首句须是判断句/观点句，
+      不得是描述句或背景句，其余内容须是对首句的阐述、例证或数据支撑。
+      检查读者只读段首能否掌握全文要点，若不能则须修改段首句。
+      必须包含段首概括观点的结构，为领导快速审阅和定位修改提供入口。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: A
+    source: 胡森林《公文写作底层心法》第13章
+    usage: prompt_supplement
+
+  - id: MT-009
+    type: MT
+    title: 常见五种结构类型选择法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查所选结构类型是否与内容性质匹配：
+      ①并列式——各部分内容是否平行地位相当，适合工作部署/经验总结；
+      ②递进式——各部分是否层层深入，适合分析类论证类文章；
+      ③倒金字塔式——是否结论先行再展开，适合需要快速传递核心信息的报告；
+      ④总分式——是否先总述再分述，适合综合汇报类文章；
+      ⑤自由式——是否根据内容灵活组合，适合复杂综合性文章。
+      不得出现结构类型与内容逻辑不匹配的情况。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第9章
+    usage: prompt_supplement
+
+  - id: MT-010
+    type: MT
+    title: 标题制作四种常用写法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查各部分标题的类型是否符合内容需要，属于以下四种之一：
+      ①陈述式短语——仅概括该部分内容，无观点；
+      ②观点性祈使句——带有明确指向，最常用；
+      ③词语统领式——用同一词组开头统领各标题，形式整齐；
+      ④自然承接式——能准确概括段落大意的句子。
+      不得出现过度追求对仗工整而与内容不符、辞不达意的标题。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第9章、第13章
+    usage: prompt_supplement
+
+  - id: MT-011
+    type: MT
+    title: 起承转合行文技法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文行文是否符合起承转合的基本技法：
+      【起】——开头是否开门见山、直奔主题，让读者快速进入核心；
+      【承】——各部分之间过渡是否自然平顺，不得生硬；
+      【转】——内容转换、对比或递进是否处理得当；
+      【合】——结尾是否呼应开头，干净利落，不得拖沓或强行总结。
+      须在整篇文章、各大部分之间、段落内部、句与句之间四个层次上逐一检查。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: A
+    source: 胡森林《公文写作底层心法》第18章
+    usage: prompt_supplement
+
+  - id: MT-012
+    type: MT
+    title: 四情三脉情况研究法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查起草综合性公文前是否已研究四情三脉：
+      【四情】——上情（上级政策和要求）、下情（基层执行和实际困难）、
+      内情（本单位工作现状）、外情（同类单位做法和经验）是否均已掌握；
+      【三脉】——时间脉络（工作发展历程）、工作脉络（各项工作的逻辑关联）、
+      逻辑脉络（问题-原因-措施的内在逻辑）是否均已梳理清楚。
+      避免以偏概全或遗漏关键背景。
+    applicable_types:
+      - 汇报
+      - 报告
+    importance: B
+    source: 胡森林《公文写作底层心法》第8章
+    usage: prompt_supplement
+
+  - id: MT-013
+    type: MT
+    title: 文为事作·写前六类研究对象
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查起草综合报告/汇报前是否已研究六类内容：
+      ①职能职责——本单位应做什么、能做什么的法定边界是否已明确；
+      ②历史沿革——近五年本单位的工作历程、固定模式和典型成就是否已梳理；
+      ③工作规划——年度计划、五年规划和重点工作安排是否已查阅；
+      ④运作机制——内部组织架构、议事制度的频率和主要议程是否已了解；
+      ⑤上级要求——上级对本单位工作的指示、批示和期望是否已提取；
+      ⑥外部经验——兄弟单位的典型做法和创新举措是否已参考。
+    applicable_types:
+      - 汇报
+      - 报告
+    importance: A
+    source: 胡森林《公文写作底层心法》第15章
+    usage: prompt_supplement
+
+  - id: MT-014
+    type: MT
+    title: 问题意识写作法（围绕问题写公文）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文是否符合问题意识的五步要求：
+      ①是否提出了一个新问题，有的放矢；
+      ②是否有自己悟到的新思想，体现对问题的独到理解；
+      ③是否有精心挑选的事例，能理论联系实践；
+      ④是否有合适的比喻、典故或数据，深入浅出；
+      ⑤是否有与惯例不同的表述或新语言，避免照搬文件。
+      必须包含：公文能回答的真实问题，且问题须重要而具体。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第15章
+    usage: prompt_supplement
+
+  - id: MT-015
+    type: MT
+    title: 运思四法（公文构思的四种思维模式）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文构思是否运用了与文种匹配的思维方式：
+      ①辩证思维——讲话/分析报告是否做到"一分为二"，避免片面；
+      ②战略思维——方案/规划是否从全局和长远角度思考，具备前瞻性；
+      ③全局思维——重要公文是否正确处理全局与局部、未来与现实的关系；
+      ④创新思维——需要出新意的文章是否打破常规，提出新见解。
+    applicable_types:
+      - 讲话
+      - 方案
+      - 报告
+    importance: B
+    source: 胡森林《公文写作底层心法》第15章
+    usage: prompt_supplement
+
+  - id: MT-016
+    type: MT
+    title: 调查研究前序工作法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查高质量公文写作前是否完成了调查研究的标准流程：
+      ①是否精心准备了调研提纲，明确调研目的和核心问题；
+      ②是否提前了解调研单位和相关问题背景；
+      ③调研中是否先看现场再开座谈会；
+      ④座谈中是否善于追问，获取深层信息；
+      ⑤调研后是否认真梳理，去粗取精，将零碎材料系统化。
+    applicable_types:
+      - 汇报
+      - 报告
+    importance: B
+    source: 胡森林《公文写作底层心法》第15章
+    usage: prompt_supplement
+
+  - id: MT-017
+    type: MT
+    title: 统稿八看法（多人协作文稿质量检查）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查统稿修改阶段是否完成八个维度的检查：
+      ①检查各部分与主题的联系——是否存在"开小差"偏离主题的内容；
+      ②检查各部分是否形成有机整体——起承转合是否顺畅，前后是否照应；
+      ③检查各部分内容是否大体均衡——是否存在详略不一的情况；
+      ④检查层次衔接配合——是否存在交叉重复，脉络是否清楚；
+      ⑤检查主次是否分明——重点是否突出，是否存在喧宾夺主；
+      ⑥检查标题逻辑是否严密，制作质量是否一致；
+      ⑦检查关键词/关键数据是否前后一致，是否存在相互矛盾；
+      ⑧检查行文习惯和风格是否统一，是否存在拼凑感。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第18章
+    usage: prompt_supplement
+
+  - id: MT-018
+    type: MT
+    title: 五种公文创新路径
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查公文是否具备以下至少一种创新元素：
+      ①立意创新——是否提炼了与众不同但揭示本质的观点；
+      ②框架结构创新——是否在局部或整体调整了结构，打破固定段落模式；
+      ③阐述角度创新——同一内容是否换了新视角切入，避免老生常谈；
+      ④文字表达创新——是否有令人印象深刻的表达，语言是否生动接地气；
+      ⑤观点论断创新——是否提出了有思想价值的新见解、新论断。
+      不得完全照搬套路，须在保持必要重复的同时包含创新元素。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第17章
+    usage: prompt_supplement
+
+  - id: MT-019
+    type: MT
+    title: 思维导图辅助构思三步法
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文构思是否经历了系统化的三步流程：
+      ①发散——是否以核心主题为中心，辐射发散，写出所有相关联的想法和素材线索；
+      ②归类整理——是否将发散内容进行了系统化整理，归入各主要板块，明确主次和层次关系；
+      ③形成提纲——是否将思维逻辑转化为文字提纲，确定一级二级标题，标注主要内容要点。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第14章
+    usage: prompt_supplement
+
+  - id: MT-020
+    type: MT
+    title: 文气三要素写作法（文以气胜）
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查公文是否具备三个文气要素：
+      ①意气——是否体现思想高度和情怀格局，文章是否充满正气和感召力；
+      ②气势——内容是否充实（言之有物），是否适当运用短句（简洁明快），
+      是否运用修辞，是否贯以真情；
+      ③气脉——思维脉络是否连贯通畅，结构是否紧凑，语言是否流利，首尾是否一体。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第19章
+    usage: prompt_supplement
+
+  - id: MT-021
+    type: MT
+    title: 六项基本功（公文写作六种能力）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文写作是否具备六种基础处理能力：
+      ①扩写——是否能将简短的材料或提纲展开详述，补充细节和逻辑；
+      ②缩写——是否能将长篇内容压缩提炼，保留核心去除冗余；
+      ③改写——是否能在保持核心意思不变的前提下调整文体和表达方式；
+      ④续写——是否能在已有内容基础上保持风格一致地延续；
+      ⑤串写——是否能将多份不同来源的材料整合串联成统一连贯的文章；
+      ⑥补写——是否能对文章空白处、逻辑缺口、内容不完整处进行补充完善。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: C
+    source: 胡森林《公文写作底层心法》第2章
+    usage: prompt_supplement
+
+  - id: MT-022
+    type: MT
+    title: 论据三类型及使用原则
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查公文论据是否符合三种类型的使用要求：
+      ①事实论据——是否真实、有代表性、能直接支撑观点；
+      ②数字论据——来源是否可靠，是否标注时间，是否有纵向/横向对比；
+      ③引用论据——引用是否准确，来源是否可查，是否断章取义。
+      检查是否遵循选用原则：能用数字不得用形容词（"提高50%"优于"大幅提高"）；
+      事实论据须有细节，不得只有空泛概括。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+    importance: B
+    source: 胡森林《公文写作底层心法》第8章
+    usage: prompt_supplement
+
+  - id: MT-023
+    type: MT
+    title: 写作四阶段升维模型
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查当前写作是否已超越初级阶段：
+      ①盲人摸象阶段——是否仅关注文章外在要素拼凑；
+      ②就事论事阶段——是否仅着眼单篇文章无法迁移经验；
+      ③庖丁解牛阶段——是否已掌握写作规律，能以不变应万变；
+      ④运用自如阶段——是否已把握写作本质原理，无心为文却篇篇中的。
+      检查是否在"总结方法"、"寻找规律"、"抓本质"上用力，而非仅积累技巧。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: C
+    source: 胡森林《公文写作底层心法》第20章
+    usage: prompt_supplement
+
+  - id: MT-024
+    type: MT
+    title: 公文四境界进阶法（叙事→辅政→鼎新→立言）
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查公文是否至少达到"以文辅政"的境界：
+      ①以文叙事——是否能真实客观记述客观事物过程；
+      ②以文辅政——是否能准确表达决策层意图，为政务活动提供文字支撑；
+      ③以文鼎新——是否提出了新理念、新思路、新举措；
+      ④以文立言——是否提出了具有历史价值和深远启迪的思想观点。
+      每篇文章至少须追求"以文辅政"的层次，有条件时力争"以文鼎新"。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: C
+    source: 胡森林《公文写作底层心法》第20章
+    usage: prompt_supplement
+
+  # ─────────────────────────────────────────────
+  # PM：短语材料
+  # ─────────────────────────────────────────────
+
+  - id: PM-001
+    type: PM
+    title: 结构三字诀（不板不乱浑然一体）
+    rule_type: LOGIC
+    execution: agent_prompt
+    content: >
+      检查是否符合结构三字诀："不板、不乱、浑然一体。"
+      检查结构是否呆板（不板）、内容是否散乱（不乱）、整体是否连贯（浑然一体）。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第9章
+    usage: dictionary
+
+  - id: PM-002
+    type: PM
+    title: 研究者意识三句话
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查写作者是否保持了"研究者意识"，避免陷入形式主义：
+      检查是否"研究事"而非"研究字"——内容质量来自对工作实际的深入研究；
+      检查文章是否服务于工作目标——公文须为工作服务，工作就是为了解决问题；
+      检查是否偏离写作初衷——不忘"为什么出发"，防止形式大于内容。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: B
+    source: 胡森林《公文写作底层心法》第15章
+    usage: dictionary
+
+  - id: PM-003
+    type: PM
+    title: 公文创新辩证法（永远的重复·持续的创新）
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查公文是否在遵循规范的同时包含创新元素：
+      不得完全套用模板而无创新，须做到"永远的重复，持续的创新"；
+      检查是否出现年年相同的套路化表述，应做到"套路是相对的、暂时的，创新是绝对的、永恒的"；
+      模仿借鉴时须向高层次迈进：不得停留在抄字层次，应追求抄意、抄气的境界。
+    applicable_types:
+      - 汇报
+      - 报告
+      - 讲话
+      - 方案
+    importance: C
+    source: 胡森林《公文写作底层心法》第16-17章
+    usage: dictionary
+
+  - id: PM-004
+    type: PM
+    title: 文字工作者三大机会
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查面向文字工作者的讲话材料是否涵盖三个激励维度：
+      ①发展机会——是否提及好材料让人脱颖而出、进入领导视野的价值；
+      ②锻炼机会——是否提及写材料锻炼逻辑思维、分析判断、思想高度等综合素质；
+      ③学习机会——是否提及参会跟研、阅读文件、接受领导指点的学习价值。
+    applicable_types:
+      - 讲话
+    importance: C
+    source: 胡森林《公文写作底层心法》第21章
+    usage: dictionary
+
+  - id: PM-005
+    type: PM
+    title: 文气与价值观名句集
+    rule_type: STYLE
+    execution: agent_prompt
+    content: >
+      检查引用的经典表述是否准确，可选用以下名句：
+      "从喷泉里出来的都是水，从血管里流出的都是血。"（鲁迅，强调价值观决定文章品格）；
+      "铁肩担道义，妙手著文章。"（李大钊，写作者的使命）；
+      "文章千古事，得失寸心知。"（杜甫，文章是传之久远的事业）；
+      "行于所当行，止于所不可不止。"（苏轼，写作的最高境界）；
+      "不谋全局者，不足谋一域；不谋万世者，不足谋一时。"（陈澹然，全局思维）。
+      不得错误引用或张冠李戴。
+    applicable_types:
+      - 讲话
+      - 报告
+    importance: C
+    source: 胡森林《公文写作底层心法》各章
+    usage: dictionary

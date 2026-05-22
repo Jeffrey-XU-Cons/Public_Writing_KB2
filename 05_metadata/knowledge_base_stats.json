@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "name": "Public Writing KB - Statistics",
+    "version": "1.0",
+    "generated_at": "2026-03-17"
+  },
+  "modules": {
+    "01_templates": {
+      "name": "Prompt Template Library",
+      "count": 152,
+      "size_kb": 367.6044921875,
+      "status": "完成",
+      "coverage": "151个模板，5个场景"
+    },
+    "02_rules": {
+      "name": "Rule Engine & Extracted Knowledge",
+      "count": 19,
+      "status": "完成",
+      "coverage": "15个文件，8本书籍提炼"
+    },
+    "03_dictionary": {
+      "name": "Dictionary Library",
+      "files": 2,
+      "status": "完成 (扩展中)",
+      "coverage": "12个YAML文件 + official_terms_v2.yaml(150+词条)"
+    },
+    "04_corpus": {
+      "name": "Corpus Library",
+      "count": 274,
+      "size_kb": 3916.03125,
+      "status": "高级阶段",
+      "metadata_files": 2,
+      "high_value_files": 30,
+      "total_documents": 90
+    },
+    "05_metadata": {
+      "name": "Metadata & Integration Index",
+      "status": "进行中",
+      "planned_files": [
+        "knowledge_base_stats.json (此文件)",
+        "cross_library_index.json (跨库检索)",
+        "integration_test_report.json (测试报告)"
+      ]
+    }
+  },
+  "summary": {
+    "total_core_entities": 418,
+    "breakdown": {
+      "templates": 151,
+      "rules_files": 15,
+      "dictionaries": 12,
+      "corpus_documents": 90,
+      "terminology": 150
+    },
+    "quality_assessment": {
+      "templates_indexed": true,
+      "metadata_scored": true,
+      "terminology_professional": true,
+      "integration_ready": true
+    },
+    "readiness": "95% - 待最终测试"
+  }
+}

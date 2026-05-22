@@ -1,0 +1,71 @@
+{
+  "rule_engine_source": "GB/T 9704-2012",
+  "knowledge_layer": "规则引擎",
+  "content": {
+    "paper_and_layout_requirements": {
+      "section_ref": "5",
+      "dimensions": "采用A4型纸，成品幅面尺寸为210mm×297mm [cite: 67]",
+      "margins": {
+        "top_margin": "天头（上白边）为37mm±1mm [cite: 72]",
+        "gutter_margin": "订口（左白边）为28mm±1mm [cite: 72]",
+        "layout_area": "版心尺寸为156mm×225mm [cite: 73]"
+      },
+      "typography": {
+        "default_font": "一般用3号仿宋体字 [cite: 75]",
+        "lines_per_page": "一般每面排22行 [cite: 77]",
+        "characters_per_line": "每行排28个字 [cite: 77]",
+        "text_color": "如无特殊说明，颜色均为黑色 [cite: 79]"
+      }
+    },
+    "main_body_elements": {
+      "section_ref": "7.3",
+      "title": {
+        "font": "2号小标宋体字 [cite: 121]",
+        "position": "红色分隔线下空二行位置，分一行或多行居中排布 [cite: 122]",
+        "alignment": "排列应当使用梯形或菱形 [cite: 123]"
+      },
+      "addressee": {
+        "position": "标题下空一行位置，居左顶格 [cite: 127]",
+        "punctuation": "最后一个机关名称后标全角冒号 [cite: 127]"
+      },
+      "content_text": {
+        "font": "一般用3号仿宋体字 [cite: 130]",
+        "indentation": "每个自然段左空二字，回行顶格 [cite: 130]",
+        "hierarchy": {
+          "level_1": "一、 (黑体字) [cite: 130]",
+          "level_2": "(一) (楷体字) [cite: 130]",
+          "level_3": "1. (仿宋体字) [cite: 130]",
+          "level_4": "(1) (仿宋体字) [cite: 130]"
+        }
+      },
+      "attachment_explanation": {
+        "position": "正文下空一行左空二字编排 [cite: 132]",
+        "format": "“附件”二字后标全角冒号和附件名称 [cite: 132]"
+      },
+      "official_date": {
+        "format": "用阿拉伯数字将年、月、日标全，年份应标全称，月、日不编虚位 [cite: 148]"
+      },
+      "annotation": {
+        "format": "居左空二字加圆括号编排在成文日期下一行 [cite: 152]"
+      }
+    },
+    "horizontal_tables": {
+      "section_ref": "8",
+      "page_number_consistency": "页码位置与公文其他页码保持一致 [cite: 170]",
+      "orientation_rules": {
+        "odd_page": "单页码表头在订口（左）一边 [cite: 170]",
+        "even_page": "双页码表头在切口（右）一边 [cite: 170]"
+      }
+    },
+    "minutes_format": {
+      "section_ref": "10.3",
+      "marker": "“×××××纪要”居中排布，上边缘至版心上边缘为35mm，推荐使用红色小标宋体字 [cite: 189]",
+      "attendance_list": {
+        "label_font": "3号黑体字 [cite: 190]",
+        "content_font": "3号仿宋体字 [cite: 190]",
+        "indentation": "正文或附件说明下空一行左空二字编排“出席”二字，后标全角冒号 [cite: 190]"
+      },
+      "absence_and_observers": "编排方法同出席人员名单，另起一行并将“出席”改为“请假”或“列席” [cite: 191]"
+    }
+  }
+}

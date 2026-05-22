@@ -1,0 +1,970 @@
+metadata:
+  file: 词句应用大全_标题库.yaml
+  description: 公文写作标题库，含分类小标题、干部工作小标题、措施类标题词语、同字提纲、大笔讲话文章标题
+  source: 公文写作词句应用大全（530页25万字）.docx
+  source_ranges:
+    分类小标题篇: paras 4269-4984
+    干部工作类小标题篇: paras 4985-5107
+    措施类标题篇: paras 5108-5513
+    小标题同一个字提纲篇: paras 5514-5769
+    大笔领导讲话文章标题提纲篇: paras 8819-9166
+  total_entries: 155
+  id_prefix: TP
+  categories:
+    - 机关党建小标题
+    - 两新组织党建小标题
+    - 国有企业党建小标题
+    - 脱贫攻坚小标题
+    - 公务员工作小标题
+    - 人才工作小标题
+    - 干部选育管用小标题
+    - 措施类标题词语
+    - 同字提纲_以字系列
+    - 同字提纲_把字系列
+    - 同字提纲_要字系列
+    - 同字提纲_抓字系列
+    - 同字提纲_一字系列
+    - 同字提纲_不字系列
+    - 大笔讲话标题
+
+entries:
+  # ===== 机关党建小标题 =====
+
+  - id: TP-001
+    category: 机关党建小标题
+    title: '机关党建突出一个"实"字'
+    sub_items:
+      - 一是"学习"求实——建立跟学制度和会前学习机制
+      - 二是"目标"惟实——制定模范机关建设《实施方案》
+      - 三是"抓手"扎实——组织实施建功行动
+      - 四是"成效"务实——注重检验实际效果
+    usage_note: 四实党建小标题，适用于机关党建工作汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 分类小标题篇·机关党建小标题
+
+  - id: TP-002
+    category: 机关党建小标题
+    title: 关键时候敢干事，危难时刻真担当
+    sub_items:
+      - 一是关键时候敢干（积极参与急难险重）
+      - 二是平常工作实干（干好本职岗位工作）
+      - 三是关键时刻能扛（担当使命责任）
+    usage_note: 三时三干，适用于党员干部表彰或先进事迹材料
+    applicable_types: [汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·机关党建小标题
+
+  - id: TP-003
+    category: 机关党建小标题
+    title: '党建"红色引擎"激发强劲"红色动能"'
+    usage_note: 红色喻党建动力，适用于国企党建汇报标题
+    applicable_types: [汇报]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 分类小标题篇·国有企业党建小标题
+
+  - id: TP-004
+    category: 机关党建小标题
+    title: '"四道加法"推进两新党建信息平台建设工作'
+    usage_note: 加法喻工作措施，适用于两新组织党建汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 分类小标题篇·两新组织党建工作小标题
+
+  - id: TP-005
+    category: 机关党建小标题
+    title: '以"学"为先导，筑牢思想政治之魂；以"做"为根本，切实付诸实际行动；以"改"为动力，努力打造模范机关'
+    usage_note: 三以三动机关建设提纲
+    applicable_types: [汇报, 讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·机关党建
+
+  # ===== 脱贫攻坚小标题 =====
+
+  - id: TP-006
+    category: 脱贫攻坚小标题
+    title: 发起最后总攻，坚决夺取脱贫攻坚战全面胜利
+    sub_items:
+      - 一是聚焦"困难挑战"，着力增强责任意识
+      - 二是聚焦"薄弱环节"，精准发力补短强弱
+      - 三是聚焦"攻坚目标"，全力冲刺清零销号
+    usage_note: 三聚焦攻坚架构，适用于脱贫攻坚讲话或方案
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·最新脱贫攻坚小标题
+
+  - id: TP-007
+    category: 脱贫攻坚小标题
+    title: 精准谋划、精准规划、精准部署；精准实施、精准推进、精准落实
+    usage_note: 精准六字提纲，适用于精准扶贫工作方案或汇报
+    applicable_types: [汇报, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·脱贫攻坚
+
+  # ===== 公务员工作小标题 =====
+
+  - id: TP-008
+    category: 公务员工作小标题
+    title: '公务员招录把"三关"攻"三点"'
+    sub_items:
+      - 把好报名审查关，攻克资格复查难点
+      - 把好考试组织关，攻克公平公正焦点
+      - 把好录用程序关，攻克规范操作盲点
+    usage_note: 三关三点结构，适用于公务员工作汇报
+    applicable_types: [汇报]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 分类小标题篇·公务员工作小标题
+
+  # ===== 人才工作小标题 =====
+
+  - id: TP-009
+    category: 人才工作小标题
+    title: '在"引"上做文章，让人才有奔头；在"育"上下功夫，让人才有干头；在"用"上见实效，让人才有劲头'
+    usage_note: 三头激励人才工作架构，适用于人才工作汇报或方案
+    applicable_types: [汇报, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·最新人才工作小标题
+
+  - id: TP-010
+    category: 人才工作小标题
+    title: '优化选才用才的"量尺"；培厚人才成长的"沃土"；构建吸引人才的"磁场"'
+    usage_note: 三喻词人才工作架构
+    applicable_types: [方案, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 分类小标题篇·人才工作
+
+  # ===== 干部选育管用小标题 =====
+
+  - id: TP-011
+    category: 干部选育管用小标题
+    title: 精准研判，严把选任关口；精准培育，严把教育关口；精准管理，严把监督关口
+    usage_note: 三精准三关口提纲，适用于干部工作汇报
+    applicable_types: [汇报]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  - id: TP-012
+    category: 干部选育管用小标题
+    title: 强化政治定力，培养锻炼优秀年轻干部；突出政治担当，选拔任用优秀年轻干部；严格政治自律，约束激励优秀年轻干部
+    usage_note: 三政治+年轻干部架构，适用于年轻干部培养工作汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  - id: TP-013
+    category: 干部选育管用小标题
+    title: 坚守紧跟核心的定力；提升固学勉行的学力；增强担当有为的魄力；提升团结群众的能力；涵养务实宁静的心力
+    usage_note: 五力干部提纲，适用于干部培训或党性教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  - id: TP-014
+    category: 干部选育管用小标题
+    title: 强化思想引领，筑牢信仰之基；坚定理想信念，补足精神之钙；牢记初心使命，扎根力量之源；加强自我修炼，涵养为政之德；主动担当作为，挺起责任之肩
+    usage_note: 五维干部修养提纲
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  - id: TP-015
+    category: 干部选育管用小标题
+    title: '树立鲜明导向，构建"政治标准链"；拓宽来源渠道，构建"发现储备链"；注重综合培养，构建"立体培育链"；强化激励监管，构建"严管厚爱链"；坚持三个优先，构建"选拔使用链"'
+    usage_note: 五链架构干部工作体系，适用于系统性干部工作汇报
+    applicable_types: [汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  - id: TP-016
+    category: 干部选育管用小标题
+    title: '打造实践"赛马场"，把敢担当的干部磨炼出来；用好考核"指挥棒"，把善作为的干部识别出来；树起选拔"风向标"，把实绩突出的干部使用起来'
+    usage_note: 三喻词干部使用提纲，高频使用结构
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 干部工作类小标题篇
+
+  # ===== 措施类标题词语 =====
+
+  - id: TP-017
+    category: 措施类标题词语
+    sub_category: 单字动词汇编
+    content: 抓、搞、上、下、出、想、谋、访、进、走、察、问、明、看、建、献、严、改、肃、稳、提、拿、动、见、钻、深
+    usage_note: 措施小标题领起动词，单字有力，适用于工作要点或方案小标题
+    applicable_types: [方案, 汇报, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·全网最新最全拟定文稿措施类标题词语汇编
+
+  - id: TP-018
+    category: 措施类标题词语
+    sub_category: 双字动词汇编（推进类）
+    content: 实现、推进、推动、推广、制定、出台、完善、建立、健全、加强、强化、增强、增进、促进、加快、加大、深化、扩大、落实、细化、突出、建设、营造、开展、发挥、发扬、创新、转变、发展、提高、提升、保持
+    usage_note: 措施标题高频双字动词，适用于工作要点措施类小标题
+    applicable_types: [方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·措施类标题词语汇编
+
+  - id: TP-019
+    category: 措施类标题词语
+    sub_category: 双字动词汇编（管理类）
+    content: 带动、帮助、服务、维护、实施、鼓励、引导、坚持、监督、管理、整合、理顺、推行、纠正、满足、遏制、整治、保护、丰富、夯实、尊重、拓宽、拓展、改进、调节、取缔、调控、把握、弘扬、借鉴、倡导、培育、打牢、武装
+    usage_note: 措施标题管理类双字动词汇编
+    applicable_types: [方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·措施类标题词语汇编
+
+  - id: TP-020
+    category: 措施类标题词语
+    sub_category: 促抓强系列
+    content: 促转型、促改革、促民生、促开放、促和谐；抓治理、抓创新、抓改革、抓生态、抓落实、抓力度、抓制度、抓素质；强龙头、强治理、强平台、强三农；稳增长；建机制、建制度；优服务、优规划
+    usage_note: 促抓强稳建优系列短语，适用于工作要点标题
+    applicable_types: [方案, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·促抓强类
+
+  - id: TP-021
+    category: 措施类标题词语
+    sub_category: 新字系列
+    content: |
+      勾勒新路径，绘就新蓝图，迈向新时代，适应新时代，建功新时代；
+      走出新天地，创造新作为，开启新征程，续写新篇章，成为新引擎；
+      跑出新速度，推动新跨越，开创新未来，培育新动能，激发新活力；
+      锁定新目标，谋求新跨越，推出新举措，打造新引擎，拓展新空间。
+    usage_note: 新字系列动宾短语，适用于发展部署类标题
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·新字类
+
+  - id: TP-022
+    category: 措施类标题词语
+    sub_category: 打好唱好系列
+    content: |
+      打好感情牌、打好优势牌、打好服务牌、打好机制牌、打好组合拳、打好精准牌；
+      下好先手棋、练好基本功、立好军令状、打好主动仗、管好责任田、签好责任书；
+      唱好主角戏、唱好重头戏、画好同心圆、当好笔杆子、当好领头雁、用好指挥棒；
+      发出动员令、排出任务书、挂出作战图、定出时间表、打出组合拳、划出硬杠杠。
+    usage_note: 打好唱好当好系列短语，适用于党建或工作部署类标题
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·打好类
+
+  - id: TP-023
+    category: 措施类标题词语
+    sub_category: 高起点高标准系列
+    content: 高起点谋划、高标准推进、高质量落实；高标准定位、高规格推进、高效率落实
+    usage_note: 高字递进三段标题，常用于重大项目工作部署
+    applicable_types: [方案, 讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·高字类
+
+  - id: TP-024
+    category: 措施类标题词语
+    sub_category: 全字系列
+    content: 全方位组织、全覆盖宣传、全身心服务
+    usage_note: 全字三段标题
+    applicable_types: [方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·全字类
+
+  - id: TP-025
+    category: 措施类标题词语
+    sub_category: 比喻+实质系列
+    content: |
+      练就宽肩膀，提升真本领；争当主攻手，细耕责任田；
+      搭建产业链，牵住牛鼻子；形成聚能环，攥成强拳头；
+      激活一池水，唱响主旋律；筑牢基础桩，汇聚正能量；
+      用好印把子，管住钱袋子；摆正官位子，慎碰酒杯子；
+      念好紧箍咒，用好处方权，把好方向盘，把好廉洁关。
+    usage_note: 比喻短语配对标题，适用于廉政或干部工作类标题
+    applicable_types: [讲话, 汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 措施类标题篇·比喻类
+
+  - id: TP-026
+    category: 措施类标题词语
+    sub_category: 综合词语汇编（思想建设）
+    content: |
+      增强政治能力、严守政治纪律、强化政治担当、提高政治觉悟；
+      廓清思想迷雾、增强理论自信、抓好理论武装、加强阵地建设；
+      补足精神之钙、开出醒脑良方、筑牢思想根基、高扬信念之帆；
+      把牢思想之舵、校准思想之标、绷紧纪律之弦、调整行为之舵；
+      常修为官之德、常怀律己之心、坚守为政之本、提升施政本领。
+    usage_note: 思想政治建设类措施标题词语汇编，按需选取组合
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·思想建设类
+
+  - id: TP-027
+    category: 措施类标题词语
+    sub_category: 带着系列
+    content: 带着信仰学、带着忠诚学、带着感情学、带着使命学
+    usage_note: 带着X学的组合，适用于主题教育学习类方案
+    applicable_types: [方案, 讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 措施类标题篇·学习类
+
+  - id: TP-028
+    category: 措施类标题词语
+    sub_category: 把优势做强系列
+    content: 把优势做强、把特色做特、把产业做大、把机制做活、把环境做优
+    usage_note: 把X做Y系列标题，适用于经济发展工作要点
+    applicable_types: [方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇·做字类
+
+  - id: TP-029
+    category: 措施类标题词语
+    sub_category: 注重系列
+    content: 注重规划引领、注重资源融合、注重成效转化、注重需求对接
+    usage_note: 四注重标题格式
+    applicable_types: [方案, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 措施类标题篇
+
+  # ===== 同字提纲_以字系列 =====
+
+  - id: TP-030
+    category: 同字提纲_以字系列
+    title: '以"心"字系列提纲'
+    content: |
+      以忠诚之心践行党的宗旨；
+      以敬畏之心对待手中权力；
+      以感恩之心服务人民群众。
+    usage_note: 三心提纲，适用于党员培训或讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·01
+
+  - id: TP-031
+    category: 同字提纲_以字系列
+    title: '以"大"字系列提纲'
+    content: |
+      以大视野谋划大格局，提升发展理念；
+      以大项目推动大发展，强化产业支撑；
+      以大策划打造大品牌，彰显地方特色；
+      以大文化构建大服务，实现惠及全民。
+    usage_note: 四大提纲，适用于地方经济发展类讲话
+    applicable_types: [讲话, 报告]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·07
+
+  - id: TP-032
+    category: 同字提纲_以字系列
+    title: '以"责任清/纠四风/盯违纪/拍苍蝇/接地气/有担当/强自身"为系列提纲'
+    content: |
+      以"责任清"为基础，强化压力传导；
+      以"纠四风"为抓手，深化作风建设；
+      以"盯违纪"为主线，提升审查成效；
+      以"拍苍蝇"为切口，严查违纪问题；
+      以"接地气"为支点，丰富教育形式；
+      以"有担当"为指引，创新监督执纪；
+      以"强自身"为目标，加强队伍建设。
+    usage_note: 七以提纲，适用于纪检监察工作汇报或讲话
+    applicable_types: [汇报, 讲话]
+    applicable_position: 正文
+    applicable_direction: 上行文
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·09
+
+  - id: TP-033
+    category: 同字提纲_以字系列
+    title: '以"勤政/情感/创新/务实/制度"为系列提纲'
+    content: |
+      以"勤政"为先，密切干群关系；
+      以"情感"为线，提高服务质量；
+      以"创新"为首，转变工作方式；
+      以"务实"为要，筑牢群众基础；
+      以"制度"为纲，规范工作运行。
+    usage_note: 五以提纲，适用于机关效能建设或群众工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·08
+
+  - id: TP-034
+    category: 同字提纲_以字系列
+    title: '以"凤凰涅槃/猛虎扑食/燕子垒窝"精神系列提纲'
+    content: |
+      以凤凰涅槃的决心下好创新驱动先手棋；
+      以猛虎扑食的干劲打好深化改革攻坚战；
+      以燕子垒窝的韧劲筑牢发展环境基础桩。
+    usage_note: 三动物喻三精神提纲，适用于改革攻坚动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·013
+
+  # ===== 同字提纲_把字系列 =====
+
+  - id: TP-035
+    category: 同字提纲_把字系列
+    title: 把信仰/责任/清廉/目标系列提纲
+    content: |
+      把纪律摆在前面，挺起精神脊梁；
+      把责任扛在肩上，打造有为政康；
+      把清廉落在实处，不断完善自我；
+      把目标定在高点，追求永不止步。
+    usage_note: 四把提纲，适用于党性修养或廉政讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·02
+
+  - id: TP-036
+    category: 同字提纲_把字系列
+    title: '把群众当"家人"系列提纲'
+    content: |
+      把信访群众当"家人"；
+      把群众来信当"家书"；
+      把信访之事当"家事"；
+      把信访工作当"家业"。
+    usage_note: 四家系列比喻提纲，适用于信访工作或群众工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 小标题同一个字的提纲篇·07
+
+  - id: TP-037
+    category: 同字提纲_把字系列
+    title: 把路线/话筒/网络/理论关系列提纲
+    content: |
+      把住路线关，堵住"歪门邪道"的人；
+      把住话筒关，堵住"好念歪经"的人；
+      把住网络关，堵住"造谣生事"的人；
+      把住理论关，堵住"精神恍惚"的人。
+    usage_note: 四把住关提纲，适用于宣传意识形态工作讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·04
+
+  - id: TP-038
+    category: 同字提纲_把字系列
+    title: 方向盘/标尺线/原动力/紧箍咒/防火墙五关提纲
+    content: |
+      始终握牢方向盘，把好思想关；
+      努力抬升标尺线，把好学习关；
+      不断注入原动力，把好任务关；
+      用心念好紧箍咒，把好作风关；
+      切实筑牢防火墙，把好廉洁关。
+    usage_note: 五关五比喻提纲，适用于干部廉政教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·05
+
+  - id: TP-039
+    category: 同字提纲_把字系列
+    title: 热情奉献/勤勉敬业/甘守清贫留给群众系列提纲
+    content: |
+      热情奉献，把满意留给群众；
+      勤勉敬业，把口碑留给群众；
+      甘守清贫，把实惠留给群众。
+    usage_note: 三留给群众提纲，适用于联系群众类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 小标题同一个字的提纲篇·06
+
+  # ===== 同字提纲_要字系列 =====
+
+  - id: TP-040
+    category: 同字提纲_要字系列
+    title: 要塑造形象系列提纲
+    content: |
+      要努力塑造为民的形象；
+      要努力塑造务实的形象；
+      要努力塑造清廉的形象。
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·01
+
+  - id: TP-041
+    category: 同字提纲_要字系列
+    title: 要给领导/群众/权力/民生系列提纲
+    content: |
+      要给领导干部"长条凳"（让其接地气）；
+      要给普通群众"麦克风"（让民意充分表达）；
+      要给权力使用"放大镜"（加强监督）；
+      要给民生多用"显微镜"（关注细节）。
+    usage_note: 四比喻工具系列提纲，适用于民主监督或政府工作类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·03
+
+  - id: TP-042
+    category: 同字提纲_要字系列
+    title: 要追求名节/以权谋事/有所畏惧系列提纲
+    content: |
+      要追求名节，不要追名逐利；
+      要以权谋事，不要以权谋私；
+      要有所畏惧，不要无所畏惧。
+    usage_note: 三要三不要廉政提纲
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·04
+
+  # ===== 同字提纲_抓字系列 =====
+
+  - id: TP-043
+    category: 同字提纲_抓字系列
+    title: 抓学习/工作/接访/宣传在X字上下功夫系列提纲
+    content: |
+      抓学习培训，在"活"字上下功夫；
+      抓工作保障，在"实"字上下功夫；
+      抓接访活动，在"深"字上下功夫；
+      抓宣传引导，在"正"字上下功夫。
+    usage_note: 四抓+字上功夫提纲，适用于工作部署类讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·06
+
+  - id: TP-044
+    category: 同字提纲_抓字系列
+    title: 抓组织/宣传/资源/信息/基础五条龙提纲
+    content: |
+      抓组织领导，一盘棋统筹推进；
+      抓宣传策划，一主题深度点击；
+      抓资源整合，一张网联动覆盖；
+      抓信息管控，一口径集中引导；
+      抓基础条件，一条龙服务媒体。
+    usage_note: 五抓+一字提纲，适用于宣传工作或综合协调类讲话
+    applicable_types: [讲话, 方案]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·08
+
+  # ===== 同字提纲_一字系列 =====
+
+  - id: TP-045
+    category: 同字提纲_一字系列
+    title: 心往一处/谋往一处/劲往一处/人往一处系列提纲
+    content: |
+      心往一处想；
+      谋往一处出；
+      劲往一处使；
+      人往一处用。
+    usage_note: 四一凝聚力提纲，适用于团结统一类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 小标题同一个字的提纲篇·01
+
+  - id: TP-046
+    category: 同字提纲_一字系列
+    title: 一在一线工作法系列提纲
+    content: |
+      困难在一线解决；
+      矛盾在一线化解；
+      感情在一线联络；
+      能力在一线培养；
+      作风在一线磨炼；
+      工作在一线推进；
+      政策在一线宣传。
+    usage_note: 七在一线提纲，适用于基层工作作风建设讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·03
+
+  - id: TP-047
+    category: 同字提纲_一字系列
+    title: 一个窗口/一个会议/一个大厅三办提纲
+    content: |
+      一个窗口全程代办；
+      一个会议预审督办；
+      一个大厅中介联办。
+    usage_note: 三一联办提纲，适用于政务服务改革类汇报
+    applicable_types: [汇报]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·09
+
+  - id: TP-048
+    category: 同字提纲_一字系列
+    title: 一张蓝图/一门心思/一鼓作气系列提纲
+    content: |
+      锁定新目标，一张蓝图绘到底；
+      谋求新跨越，一门心思抓发展；
+      推出新举措，一鼓作气谱新篇。
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·08
+
+  # ===== 同字提纲_不字系列 =====
+
+  - id: TP-049
+    category: 同字提纲_不字系列
+    title: 不能一叶障目系列提纲
+    content: |
+      不能一叶障目，要系统全面；
+      不能一曝十寒，要稳扎稳打；
+      不能一成不变，要锐意创新；
+      不能一知半解，要深入实践。
+    usage_note: 四不能+正面要求提纲，适用于工作思路类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 小标题同一个字的提纲篇·01
+
+  - id: TP-050
+    category: 同字提纲_不字系列
+    title: 问题面前不回避系列提纲
+    content: |
+      问题面前不回避；
+      压力面前不躲闪；
+      困难面前不推脱；
+      挑战面前不畏惧；
+      逆境面前不退缩；
+      矛盾面前不犹豫。
+    usage_note: 六不面对提纲，适用于担当精神类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·05
+
+  - id: TP-051
+    category: 同字提纲_不字系列
+    title: 不以事小/事杂/事急/事难系列提纲
+    content: |
+      不以事小而不为；
+      不以事杂而乱为；
+      不以事急而盲为；
+      不以事难而怕为。
+    usage_note: 四不以事提纲，适用于干事担当类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 小标题同一个字的提纲篇·06
+
+  - id: TP-052
+    category: 同字提纲_不字系列
+    title: 必须始终把稳/严守/保持/夯实系列提纲
+    content: |
+      必须始终把稳理想信念之舵不动摇；
+      必须始终严守纪律规矩之戒不含糊；
+      必须始终保持清正廉洁之本不偏离；
+      必须始终夯实执政用权之基不懈怠。
+    usage_note: 四必须始终提纲，适用于党性修养主题讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 小标题同一个字的提纲篇·010
+
+  # ===== 大笔讲话标题 =====
+
+  - id: TP-053
+    category: 大笔讲话标题
+    title: 零偏差/零温差/零落差/零时差系列提纲
+    content: |
+      要加强政治建设，努力做到思想上"零偏差"；
+      要注重统筹实施，努力做到推进上"零温差"；
+      要做好结合文章，努力做到发展上"零落差"；
+      要勇于自我革命，努力做到行动上"零时差"。
+    usage_note: 四零+主题提纲，适用于高规格工作会议讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·一
+
+  - id: TP-054
+    category: 大笔讲话标题
+    title: 往新/高/优里转系列提纲
+    content: |
+      思想观念要往"新"里转，让精神成为发展的"强引擎"；
+      产业结构要往"高"里转，让转型升级成为发展的"主旋律"；
+      城乡建设要往"优"里转，让文明和谐成为发展的"金招牌"。
+    usage_note: 三往里转+比喻提纲，适用于调研讲话或经济工作会
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·二
+
+  - id: TP-055
+    category: 大笔讲话标题
+    title: 让X更X系列提纲
+    content: |
+      要开展好主题教育，让工作贯彻更加深入；
+      要弘扬好优良作风，让时代标识更加鲜明；
+      要磨练好奋斗意志，让发展本领更加高强；
+      要顺应好人民期待，让百姓生活幸福感受更加真实。
+    usage_note: 四让更提纲，适用于主题教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·三
+
+  - id: TP-056
+    category: 大笔讲话标题
+    title: 开放之窗/开放之路/开放之城系列提纲
+    content: |
+      正在打开一扇风景更好的"开放之窗"；
+      正在开拓一条机遇绝佳的"开放之路"；
+      正在打造一座激情燃烧的"开放之城"；
+      将致力打造更加贴心的开放环境；
+      将致力营造更具活力的创新环境；
+      将致力提供更加美好的宜居环境。
+    usage_note: 三窗路城+三环境提纲，适用于对外开放招商讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·五
+
+  - id: TP-057
+    category: 大笔讲话标题
+    title: 融字系列提纲
+    content: |
+      要前瞻谋划思考，增强"融"的行动自觉；
+      要突出生态优先，彰显"融"的鲜明底色；
+      要致力协同创新，激发"融"的强劲动能；
+      要推动共建共享，打造"融"的幸福家园。
+    usage_note: 四融字提纲，适用于区域一体化发展讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·六
+
+  - id: TP-058
+    category: 大笔讲话标题
+    title: 高起点/高标准/高效率三高提纲
+    content: |
+      要高起点绘就"一张蓝图"，在更广的发展坐标中定位；
+      要高标准守牢"三条红线"，在更严的底线思维中发展；
+      要高效率实现"多规合一"，在更好的统筹协调中建设。
+    usage_note: 三高+引号喻词提纲，适用于规划建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·七
+
+  - id: TP-059
+    category: 大笔讲话标题
+    title: 直面挑战系列提纲
+    content: |
+      直面挑战一定要勇于铁肩担当；
+      直面挑战一定要保持战略定力；
+      直面挑战一定要提升斗争本领；
+      直面挑战一定要锤炼过硬作风。
+    usage_note: 四直面挑战提纲，适用于形势分析或动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十
+
+  - id: TP-060
+    category: 大笔讲话标题
+    title: 坚守初心/担当作为系列提纲
+    content: |
+      坚守初心，就是要满足人民群众对美好生活的需要；
+      坚守初心，就是要不断提升人民群众的获得感、幸福感、安全感；
+      担当作为，就是要抢抓机遇，开展研究性探索性开创性工作；
+      担当作为，就是要争做"强富美高"新建设的先行军排头兵。
+    usage_note: 坚守初心+担当作为双主题提纲，适用于主题教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十一
+
+  - id: TP-061
+    category: 大笔讲话标题
+    title: 要在X中做到Y系列提纲
+    content: |
+      要在学史知史中检视对标、永葆忠诚品格；
+      要在学史知史中坚守初心、永葆担当本色；
+      要在学史知史中淬炼思想、永葆斗争精神；
+      要学出更加纯粹的绝对忠诚；
+      要学出更加坚定的理想信念；
+      要学出更加牢靠的责任担当。
+    usage_note: 学史知史三在+三学出提纲，适用于党史学习教育讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十三
+
+  - id: TP-062
+    category: 大笔讲话标题
+    title: 以爱拼/勇闯/一枝一叶精神系列提纲
+    content: |
+      要以"爱拼才会赢"的勇气抓实发展；
+      要以"勇闯无人区"的胆略抓实创新；
+      要以"一枝一叶总关情"的情怀抓实民生；
+      要敢于直面问题。
+    usage_note: 三以名言+精神提纲，适用于发展工作会议讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇
+
+  - id: TP-063
+    category: 大笔讲话标题
+    title: 砥砺忠诚/为民/进取/敬畏之心系列提纲
+    content: |
+      要砥砺忠诚之心，践行"两个维护"；
+      要砥砺为民之心，涵养民生情怀；
+      要砥砺进取之心，勇于担当作为；
+      要砥砺敬畏之心，永葆清廉本色。
+    usage_note: 四砥砺+之心提纲，适用于政治生活或廉政讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十四
+
+  - id: TP-064
+    category: 大笔讲话标题
+    title: 把家业/门楣/口碑/家风立起来系列提纲
+    content: |
+      要做强实力，把"家业"立起来；
+      要做靓形象，把"门楣"立起来；
+      要做优服务，把"口碑"立起来；
+      要做严规矩，把"家风"立起来。
+    usage_note: 四家字比喻提纲，适用于机构或地方建设类讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十九
+
+  - id: TP-065
+    category: 大笔讲话标题
+    title: 发挥精神/干好/闯好系列提纲
+    content: |
+      人是要有一点精神的，有了精神才能干得精彩；
+      干是要有点追求的，干就再干他个轰轰烈烈；
+      闯是要有人带头的，要敢于领风气之先。
+    usage_note: 三段式口语化激励提纲，适用于誓师大会或动员讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 较正式
+    source: 大笔领导讲话文章标题提纲篇·十八
+
+  - id: TP-066
+    category: 大笔讲话标题
+    title: 发扬斗争精神综合提纲
+    content: |
+      要发扬斗争精神，提高政治能力；
+      要紧扣第一要务，抓牢重点任务；
+      要抢抓战略机遇，提升发展能级；
+      要激发群虎腾跃，实现竞相发展；
+      要聚力克难攻坚，争当热血尖兵；
+      要强化党建引领，筑牢发展基石。
+    usage_note: 六要综合提纲，适用于大型工作会议讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十九
+
+  - id: TP-067
+    category: 大笔讲话标题
+    title: 从历史/用数字/要找准差距系列提纲
+    content: |
+      在新形势下，是某地优势最明显的地方；
+      从历史上看，是某地开放基因最好的地方；
+      用数字说话，是某地发展最关键的地方；
+      要找准差距定好标兵，树立发展"大志向"；
+      要强化增量狠抓落实，展现转型"大手笔"；
+      要勇担使命融入大局，构筑开放"大格局"。
+    usage_note: 三定位+三大字提纲，适用于调研座谈会讲话
+    applicable_types: [讲话]
+    applicable_position: 正文
+    applicable_direction: 通用
+    formality_level: 正式
+    source: 大笔领导讲话文章标题提纲篇·十六
