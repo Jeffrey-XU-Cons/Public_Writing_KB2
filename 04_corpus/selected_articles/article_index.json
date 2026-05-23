@@ -14,9 +14,9 @@
     "topics": [
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "破除为文而文误区，以解决问题为导向写作"
+    "summary": "破除为文而文误区，以解决问题为导向写作",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-002",
@@ -33,9 +33,9 @@
     "topics": [
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "讲话稿要写出新颖深刻的\"道道\""
+    "summary": "讲话稿要写出新颖深刻的\"道道\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-003",
@@ -53,9 +53,9 @@
       "讲话稿写作",
       "文书处理"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "整理领导讲话录音的十五字要诀"
+    "summary": "整理领导讲话录音的十五字要诀",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-004",
@@ -72,9 +72,9 @@
     "topics": [
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "提升文字材料思想性的方法技巧"
+    "summary": "提升文字材料思想性的方法技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-005",
@@ -91,9 +91,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "经验材料的写作方法与结构要点"
+    "summary": "经验材料的写作方法与结构要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-006",
@@ -110,9 +110,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关办文需把握七种气质"
+    "summary": "机关办文需把握七种气质",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-007",
@@ -129,9 +129,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "议论文提出论点的十种实用方法"
+    "summary": "议论文提出论点的十种实用方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-008",
@@ -148,9 +148,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "县委书记分享高质量材料写作经验"
+    "summary": "县委书记分享高质量材料写作经验",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-009",
@@ -167,9 +167,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "市委书记讲办公室业务写作要领"
+    "summary": "市委书记讲办公室业务写作要领",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-010",
@@ -187,9 +187,9 @@
       "写作技巧",
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "省委笔杆子总结文字写作十条感悟"
+    "summary": "省委笔杆子总结文字写作十条感悟",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-011",
@@ -206,9 +206,9 @@
     "topics": [
       "特定写法"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "学习东风汽车公司表态讲话的写法"
+    "summary": "学习东风汽车公司表态讲话的写法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-012",
@@ -225,9 +225,9 @@
     "topics": [
       "修改润色"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "系统归纳修改病句的23种方法"
+    "summary": "系统归纳修改病句的23种方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-013",
@@ -244,9 +244,9 @@
     "topics": [
       "修改润色"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "修改病句四大方法与十项注意"
+    "summary": "修改病句四大方法与十项注意",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-014",
@@ -266,9 +266,9 @@
       "信息写作",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "政务信息写作技巧案例点评解析"
+    "summary": "政务信息写作技巧案例点评解析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-015",
@@ -285,9 +285,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "分析湖北省长讲话稿的写作特点"
+    "summary": "分析湖北省长讲话稿的写作特点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-016",
@@ -304,9 +304,9 @@
     "topics": [
       "语言规范"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "新版标点符号用法中的细节要点"
+    "summary": "新版标点符号用法中的细节要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-017",
@@ -323,9 +323,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "撰写解决措施的思路与方法"
+    "summary": "撰写解决措施的思路与方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-018",
@@ -342,9 +342,9 @@
     "topics": [
       "总结写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写工作总结应有历史眼光与纵深视角"
+    "summary": "写工作总结应有历史眼光与纵深视角",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-019",
@@ -361,9 +361,9 @@
     "topics": [
       "文书处理"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "会议纪要写作中需把握的关键问题"
+    "summary": "会议纪要写作中需把握的关键问题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-020",
@@ -380,9 +380,9 @@
     "topics": [
       "语言规范"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "减少错别字的五点实用建议"
+    "summary": "减少错别字的五点实用建议",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-021",
@@ -400,9 +400,9 @@
       "写作技巧",
       "结构框架"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "文稿起草的八个步骤方法"
+    "summary": "文稿起草的八个步骤方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-022",
@@ -419,9 +419,9 @@
     "topics": [
       "修改润色"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "五个典型公文修改案例分析"
+    "summary": "五个典型公文修改案例分析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-023",
@@ -439,9 +439,9 @@
       "写作技巧",
       "结构框架"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "统分结合法在公文写作中的运用"
+    "summary": "统分结合法在公文写作中的运用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-024",
@@ -458,9 +458,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "提高写作水平的五个有效方法"
+    "summary": "提高写作水平的五个有效方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-025",
@@ -477,9 +477,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "提高公文质量需抓好思细改三字"
+    "summary": "提高公文质量需抓好思细改三字",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-026",
@@ -496,9 +496,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿写作要领讲课一"
+    "summary": "领导讲话稿写作要领讲课一",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-027",
@@ -515,9 +515,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿写作要领讲课二"
+    "summary": "领导讲话稿写作要领讲课二",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-028",
@@ -534,9 +534,9 @@
     "topics": [
       "总结写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "述职报告与工作总结的区别辨析"
+    "summary": "述职报告与工作总结的区别辨析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-029",
@@ -553,9 +553,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "市委办公厅新人培训讲话要点"
+    "summary": "市委办公厅新人培训讲话要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-030",
@@ -572,9 +572,9 @@
     "topics": [
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "省委政研室主任二十年写作真经"
+    "summary": "省委政研室主任二十年写作真经",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-031",
@@ -591,9 +591,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "五分钟快速提升公文质量的方法"
+    "summary": "五分钟快速提升公文质量的方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-032",
@@ -611,9 +611,9 @@
       "修改润色",
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "修改校对领导讲话稿的方法要点"
+    "summary": "修改校对领导讲话稿的方法要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-033",
@@ -630,9 +630,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写出让领导满意文稿的实用技巧"
+    "summary": "写出让领导满意文稿的实用技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-034",
@@ -649,9 +649,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写出令人耳目一新讲话稿的技巧"
+    "summary": "写出令人耳目一新讲话稿的技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-035",
@@ -670,9 +670,9 @@
       "写作技巧",
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "起草讲话稿要充分研究人和事"
+    "summary": "起草讲话稿要充分研究人和事",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-036",
@@ -691,9 +691,9 @@
       "写作技巧",
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "起草讲话稿让领导和听众满意"
+    "summary": "起草讲话稿让领导和听众满意",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-037",
@@ -712,9 +712,9 @@
       "结构框架",
       "逻辑关系"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "用逻辑划分规则解决标题混乱问题"
+    "summary": "用逻辑划分规则解决标题混乱问题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-038",
@@ -732,9 +732,9 @@
       "信息写作",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "破解政务信息写作下笔难的问题"
+    "summary": "破解政务信息写作下笔难的问题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-039",
@@ -752,9 +752,9 @@
       "讲话稿写作",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "起草领导讲话稿的四个要点"
+    "summary": "起草领导讲话稿的四个要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-040",
@@ -772,9 +772,9 @@
       "标题写作",
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "拟标题常用词汇短语大全汇编"
+    "summary": "拟标题常用词汇短语大全汇编",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-041",
@@ -791,9 +791,9 @@
     "topics": [
       "写作理念"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "毛泽东公文写作的风格与方法"
+    "summary": "毛泽东公文写作的风格与方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-042",
@@ -811,9 +811,9 @@
       "标题写作",
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "政务信息标题制作的方法要点"
+    "summary": "政务信息标题制作的方法要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-043",
@@ -831,9 +831,9 @@
       "标题写作",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文标题句法本质与写作应用"
+    "summary": "公文标题句法本质与写作应用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-044",
@@ -852,9 +852,9 @@
       "逻辑关系",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "逻辑学语言学在公文写作中的应用"
+    "summary": "逻辑学语言学在公文写作中的应用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-045",
@@ -872,9 +872,9 @@
       "开头结尾",
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿精彩结束语范例汇编"
+    "summary": "领导讲话稿精彩结束语范例汇编",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-046",
@@ -893,9 +893,9 @@
       "写作技巧",
       "结构框架"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿构思要领案例解析"
+    "summary": "领导讲话稿构思要领案例解析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-047",
@@ -914,9 +914,9 @@
       "写作技巧",
       "公文规范"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文案例解析讲课内容"
+    "summary": "公文案例解析讲课内容",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-048",
@@ -935,9 +935,9 @@
       "写作技巧",
       "公文规范"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作方法讲课内容"
+    "summary": "公文写作方法讲课内容",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-049",
@@ -956,9 +956,9 @@
       "写作技巧",
       "公文规范"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文行文规则讲课内容"
+    "summary": "公文行文规则讲课内容",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-050",
@@ -975,9 +975,9 @@
     "topics": [
       "特定写法"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "材料中阐述加强领导的写作技巧"
+    "summary": "材料中阐述加强领导的写作技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-051",
@@ -994,9 +994,9 @@
     "topics": [
       "特定写法"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "创新加强领导写法的实用方法"
+    "summary": "创新加强领导写法的实用方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-052",
@@ -1014,9 +1014,9 @@
       "讲话稿写作",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "合并多个会议讲话稿的起草经验"
+    "summary": "合并多个会议讲话稿的起草经验",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-053",
@@ -1033,9 +1033,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "把最恰当文字放最恰当位置讲课"
+    "summary": "把最恰当文字放最恰当位置讲课",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-054",
@@ -1052,9 +1052,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "以领导片言只语展开写作大文章"
+    "summary": "以领导片言只语展开写作大文章",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-055",
@@ -1074,9 +1074,9 @@
       "逻辑关系",
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "三大规则解决文稿小标题逻辑混乱"
+    "summary": "三大规则解决文稿小标题逻辑混乱",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-056",
@@ -1093,9 +1093,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "两学一做主题排比句70例汇编"
+    "summary": "两学一做主题排比句70例汇编",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-057",
@@ -1112,9 +1112,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（一）：初学写作…"
+    "summary": "机关公文写作知识讲座（一）：初学写作…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-058",
@@ -1131,9 +1131,9 @@
     "topics": [
       "调研报告"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（四）：调研文章…"
+    "summary": "机关公文写作知识讲座（四）：调研文章…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-059",
@@ -1151,9 +1151,9 @@
       "调研报告",
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（五）：调研文章…"
+    "summary": "机关公文写作知识讲座（五）：调研文章…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-060",
@@ -1170,9 +1170,9 @@
     "topics": [
       "调研报告"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（七）：写作调研…"
+    "summary": "机关公文写作知识讲座（七）：写作调研…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-061",
@@ -1189,9 +1189,9 @@
     "topics": [
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（八）：决策性文…"
+    "summary": "机关公文写作知识讲座（八）：决策性文…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-062",
@@ -1208,9 +1208,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（九）：文件怎样…"
+    "summary": "机关公文写作知识讲座（九）：文件怎样…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-063",
@@ -1227,9 +1227,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（十）：文件中怎…"
+    "summary": "机关公文写作知识讲座（十）：文件中怎…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-064",
@@ -1246,9 +1246,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（十一）：怎样写…"
+    "summary": "机关公文写作知识讲座（十一）：怎样写…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-065",
@@ -1265,9 +1265,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（十二）：如何起…"
+    "summary": "机关公文写作知识讲座（十二）：如何起…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-066",
@@ -1284,9 +1284,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（十三）：文件怎…"
+    "summary": "机关公文写作知识讲座（十三）：文件怎…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-067",
@@ -1303,9 +1303,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文写作知识讲座（十四）：谈谈信…"
+    "summary": "机关公文写作知识讲座（十四）：谈谈信…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-068",
@@ -1322,9 +1322,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "常见公文病文解析大全"
+    "summary": "常见公文病文解析大全",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-069",
@@ -1341,9 +1341,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结提纲"
+    "summary": "工作总结提纲",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-070",
@@ -1360,9 +1360,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文常见语法差错5类48例评析"
+    "summary": "机关公文常见语法差错5类48例评析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-071",
@@ -1379,9 +1379,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "秘书新人如何做到\"提笔能写\""
+    "summary": "秘书新人如何做到\"提笔能写\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-072",
@@ -1399,9 +1399,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "初学者如何写作领导讲话稿"
+    "summary": "初学者如何写作领导讲话稿",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-073",
@@ -1418,9 +1418,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "信息报送门道多 千万别弄巧成拙"
+    "summary": "信息报送门道多 千万别弄巧成拙",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-074",
@@ -1437,9 +1437,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "初学者写领导讲话的模板"
+    "summary": "初学者写领导讲话的模板",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-075",
@@ -1457,9 +1457,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好领导讲话稿要学会\"画龙点睛\""
+    "summary": "写好领导讲话稿要学会\"画龙点睛\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-076",
@@ -1476,9 +1476,9 @@
     "topics": [
       "文稿修改"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "力求精准到位 无懈可击——公文修改五例"
+    "summary": "力求精准到位 无懈可击——公文修改五例",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-077",
@@ -1495,9 +1495,9 @@
     "topics": [
       "汇报写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "汇报稿写作的\"三想\"和\"三响\""
+    "summary": "汇报稿写作的\"三想\"和\"三响\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-078",
@@ -1514,9 +1514,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作提速的三个步骤"
+    "summary": "公文写作提速的三个步骤",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-079",
@@ -1534,9 +1534,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何写好领导讲话稿成为单位\"一支笔\""
+    "summary": "如何写好领导讲话稿成为单位\"一支笔\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-080",
@@ -1553,9 +1553,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "\"学习\"\"贯彻\"\"落实\"区别"
+    "summary": "\"学习\"\"贯彻\"\"落实\"区别",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-081",
@@ -1573,9 +1573,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "怎么写离任讲话稿"
+    "summary": "怎么写离任讲话稿",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-082",
@@ -1592,9 +1592,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文的两种写作技法"
+    "summary": "公文的两种写作技法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-083",
@@ -1611,9 +1611,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作的\"十大误区\""
+    "summary": "公文写作的\"十大误区\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-084",
@@ -1630,9 +1630,9 @@
     "topics": [
       "会议纪要"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "会议纪要\"八字诀\""
+    "summary": "会议纪要\"八字诀\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-085",
@@ -1649,9 +1649,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "编写信息的五条\"制胜要诀\""
+    "summary": "编写信息的五条\"制胜要诀\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-086",
@@ -1668,9 +1668,9 @@
     "topics": [
       "汇报写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "毛泽东谈汇报工作要产生观点 用观点统…"
+    "summary": "毛泽东谈汇报工作要产生观点 用观点统…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-087",
@@ -1687,9 +1687,9 @@
     "topics": [
       "标题写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文标题提炼的范例与点评"
+    "summary": "公文标题提炼的范例与点评",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-088",
@@ -1707,9 +1707,9 @@
       "调研报告",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何写好调研文章"
+    "summary": "如何写好调研文章",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-089",
@@ -1726,9 +1726,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "初学写作者尽快\"上路\"的途径"
+    "summary": "初学写作者尽快\"上路\"的途径",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-090",
@@ -1745,9 +1745,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "中央机关\"大笔杆子\"：写领导讲话得会…"
+    "summary": "中央机关\"大笔杆子\"：写领导讲话得会…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-091",
@@ -1764,9 +1764,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "省委办公厅\"大笔杆子\"手把手教你写信息"
+    "summary": "省委办公厅\"大笔杆子\"手把手教你写信息",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-092",
@@ -1783,9 +1783,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好材料一定得练好\"八段锦\""
+    "summary": "写好材料一定得练好\"八段锦\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-093",
@@ -1802,9 +1802,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作基本功：\"学写改防\""
+    "summary": "公文写作基本功：\"学写改防\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-094",
@@ -1821,9 +1821,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "干部考察材料的写法"
+    "summary": "干部考察材料的写法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-095",
@@ -1840,9 +1840,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "当好笔杆子，先要躲开这些\"雷区\""
+    "summary": "当好笔杆子，先要躲开这些\"雷区\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-096",
@@ -1859,9 +1859,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "人民日报社办公厅副主任谈讲话稿写作"
+    "summary": "人民日报社办公厅副主任谈讲话稿写作",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-097",
@@ -1879,9 +1879,9 @@
       "工作总结",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "对写好工作总结的几点思考"
+    "summary": "对写好工作总结的几点思考",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-098",
@@ -1898,9 +1898,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "浅谈怎样写工作总结"
+    "summary": "浅谈怎样写工作总结",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-099",
@@ -1918,9 +1918,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好领导讲话稿需注意的几个问题"
+    "summary": "写好领导讲话稿需注意的几个问题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-100",
@@ -1938,9 +1938,9 @@
       "工作总结",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结起草的方法和技巧"
+    "summary": "工作总结起草的方法和技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-101",
@@ -1957,9 +1957,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话五大核心策略"
+    "summary": "领导讲话五大核心策略",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-102",
@@ -1976,9 +1976,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "市委秘书长谈\"写材料\"的苦和乐"
+    "summary": "市委秘书长谈\"写材料\"的苦和乐",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-103",
@@ -1995,9 +1995,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "人民日报原副总编教你如何写公文"
+    "summary": "人民日报原副总编教你如何写公文",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-104",
@@ -2015,9 +2015,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "起草好领导讲话稿的\"法宝\""
+    "summary": "起草好领导讲话稿的\"法宝\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-105",
@@ -2034,9 +2034,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "政府工作报告是怎样起草出来的？"
+    "summary": "政府工作报告是怎样起草出来的？",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-106",
@@ -2053,9 +2053,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作如何出新出彩"
+    "summary": "公文写作如何出新出彩",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-107",
@@ -2072,9 +2072,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结的八种写作思路"
+    "summary": "工作总结的八种写作思路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-108",
@@ -2091,9 +2091,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作三部曲"
+    "summary": "公文写作三部曲",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-109",
@@ -2110,9 +2110,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "市委大笔杆子讲透公文之道"
+    "summary": "市委大笔杆子讲透公文之道",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-110",
@@ -2129,9 +2129,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "材料中的常错字"
+    "summary": "材料中的常错字",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-111",
@@ -2148,9 +2148,9 @@
     "topics": [
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中的文章结构顺序排列技巧"
+    "summary": "公文写作中的文章结构顺序排列技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-112",
@@ -2167,9 +2167,9 @@
     "topics": [
       "开头结尾"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "开头12招和结尾12式"
+    "summary": "开头12招和结尾12式",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-113",
@@ -2186,9 +2186,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作17类专业术语全汇总"
+    "summary": "公文写作17类专业术语全汇总",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-114",
@@ -2206,9 +2206,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好讲话稿的\"3456\""
+    "summary": "写好讲话稿的\"3456\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-115",
@@ -2225,9 +2225,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好文字材料必须跨越\"三道坎\""
+    "summary": "写好文字材料必须跨越\"三道坎\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-116",
@@ -2244,9 +2244,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "七类讲话稿的写作思路"
+    "summary": "七类讲话稿的写作思路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-117",
@@ -2263,9 +2263,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "毛泽东谈文章写作之道"
+    "summary": "毛泽东谈文章写作之道",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-118",
@@ -2282,9 +2282,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关正式场合用词大汇总"
+    "summary": "机关正式场合用词大汇总",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-119",
@@ -2301,9 +2301,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文常用词汇集锦"
+    "summary": "机关公文常用词汇集锦",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-120",
@@ -2320,9 +2320,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "100句群众人人皆知的老话"
+    "summary": "100句群众人人皆知的老话",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-121",
@@ -2339,9 +2339,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写领导讲话稿时要做到\"四个清楚\""
+    "summary": "写领导讲话稿时要做到\"四个清楚\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-122",
@@ -2358,9 +2358,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "部署工作型领导讲话稿必须把握的三大要点"
+    "summary": "部署工作型领导讲话稿必须把握的三大要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-123",
@@ -2377,9 +2377,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关老\"笔杆\"谈写材料的\"外功\"（讲课）"
+    "summary": "机关老\"笔杆\"谈写材料的\"外功\"（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-124",
@@ -2396,9 +2396,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "五分钟、六步骤给公文快速整容"
+    "summary": "五分钟、六步骤给公文快速整容",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-125",
@@ -2415,9 +2415,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文中的古诗词应用"
+    "summary": "公文中的古诗词应用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-126",
@@ -2435,9 +2435,9 @@
       "标题写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何轻松写好工作报告中的各级标题"
+    "summary": "如何轻松写好工作报告中的各级标题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-127",
@@ -2454,9 +2454,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "在全省党委办公厅（室）系统综合工作座…"
+    "summary": "在全省党委办公厅（室）系统综合工作座…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-128",
@@ -2473,9 +2473,9 @@
     "topics": [
       "排比句式"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "最新排比50句"
+    "summary": "最新排比50句",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-129",
@@ -2493,9 +2493,9 @@
       "会议纪要",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "会议纪要怎么写"
+    "summary": "会议纪要怎么写",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-130",
@@ -2512,9 +2512,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作常用语"
+    "summary": "公文写作常用语",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-131",
@@ -2531,9 +2531,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "向胡乔木学写文章"
+    "summary": "向胡乔木学写文章",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-132",
@@ -2550,9 +2550,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中常用的十个技巧"
+    "summary": "公文写作中常用的十个技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-133",
@@ -2569,9 +2569,9 @@
     "topics": [
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "法定公文和事务文书写作框架指导"
+    "summary": "法定公文和事务文书写作框架指导",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-134",
@@ -2588,9 +2588,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好会议经验交流材料的诀窍"
+    "summary": "写好会议经验交流材料的诀窍",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-135",
@@ -2608,9 +2608,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "怎样起草领导讲话稿（讲课）"
+    "summary": "怎样起草领导讲话稿（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-136",
@@ -2627,9 +2627,9 @@
     "topics": [
       "开头结尾"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作报告结尾十一例"
+    "summary": "工作报告结尾十一例",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-137",
@@ -2646,9 +2646,9 @@
     "topics": [
       "标点符号"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "易错的标点符号"
+    "summary": "易错的标点符号",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-138",
@@ -2665,9 +2665,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作常用的50个最新名词解释"
+    "summary": "公文写作常用的50个最新名词解释",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-139",
@@ -2684,9 +2684,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文起草\"八步法\""
+    "summary": "公文起草\"八步法\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-140",
@@ -2703,9 +2703,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "党政机关公文格式规范18\"要\""
+    "summary": "党政机关公文格式规范18\"要\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-141",
@@ -2722,9 +2722,9 @@
     "topics": [
       "逻辑思维"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "增强公文写作的逻辑性"
+    "summary": "增强公文写作的逻辑性",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-142",
@@ -2741,9 +2741,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "党内称呼的15个常识"
+    "summary": "党内称呼的15个常识",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-143",
@@ -2760,9 +2760,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文常用字词模板"
+    "summary": "公文常用字词模板",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-144",
@@ -2779,9 +2779,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作的思维导图（讲课）"
+    "summary": "公文写作的思维导图（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-145",
@@ -2798,9 +2798,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "五十个古语名句"
+    "summary": "五十个古语名句",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-146",
@@ -2817,9 +2817,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何围绕\"三度\"准确把握组工信息（讲课）"
+    "summary": "如何围绕\"三度\"准确把握组工信息（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-147",
@@ -2836,9 +2836,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何编写组工信息（讲课）"
+    "summary": "如何编写组工信息（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-148",
@@ -2855,9 +2855,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何开发适用对路的组工信息（讲课）"
+    "summary": "如何开发适用对路的组工信息（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-149",
@@ -2874,9 +2874,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何做好组工信息的编辑和报送工作（讲课）"
+    "summary": "如何做好组工信息的编辑和报送工作（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-150",
@@ -2893,9 +2893,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "撰写组工信息的\"三步曲\"（讲课）"
+    "summary": "撰写组工信息的\"三步曲\"（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-151",
@@ -2912,9 +2912,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "例谈讲话稿怎样写才能入耳入心"
+    "summary": "例谈讲话稿怎样写才能入耳入心",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-152",
@@ -2932,9 +2932,9 @@
       "讲话稿写作",
       "排比句式"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "巧用排比句，让领导讲话更有气势"
+    "summary": "巧用排比句，让领导讲话更有气势",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-153",
@@ -2951,9 +2951,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作的五种常用笔法"
+    "summary": "公文写作的五种常用笔法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-154",
@@ -2970,9 +2970,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "文稿起草八问（讲课）"
+    "summary": "文稿起草八问（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-155",
@@ -2989,9 +2989,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "做好文稿起草工作的几点感受"
+    "summary": "做好文稿起草工作的几点感受",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-156",
@@ -3009,9 +3009,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作会议表态发言的酝酿与起草"
+    "summary": "工作会议表态发言的酝酿与起草",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-157",
@@ -3028,9 +3028,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写作的正倒两个\"金字塔\""
+    "summary": "写作的正倒两个\"金字塔\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-158",
@@ -3047,9 +3047,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何把经常性的文字材料写出新意"
+    "summary": "如何把经常性的文字材料写出新意",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-159",
@@ -3066,9 +3066,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "2016年度专题民主生活会对照检查材…"
+    "summary": "2016年度专题民主生活会对照检查材…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-160",
@@ -3085,9 +3085,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "7类讲话稿的写作思路"
+    "summary": "7类讲话稿的写作思路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-161",
@@ -3104,9 +3104,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "用47个经典实例告诉你如何运用辩证法…"
+    "summary": "用47个经典实例告诉你如何运用辩证法…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-162",
@@ -3123,9 +3123,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "初写公文材料人员入门的实用途径和方法"
+    "summary": "初写公文材料人员入门的实用途径和方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-163",
@@ -3142,9 +3142,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "东方亮谈文稿写作·第二章：写作的正倒…"
+    "summary": "东方亮谈文稿写作·第二章：写作的正倒…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-164",
@@ -3161,9 +3161,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "东方亮谈文稿写作·第五章：片言只语可…"
+    "summary": "东方亮谈文稿写作·第五章：片言只语可…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-165",
@@ -3180,9 +3180,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "东方亮谈文稿写作·第九章：总得写出些…"
+    "summary": "东方亮谈文稿写作·第九章：总得写出些…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-166",
@@ -3199,9 +3199,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "东方亮谈文稿写作·第十一章：做\"眼\"…"
+    "summary": "东方亮谈文稿写作·第十一章：做\"眼\"…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-167",
@@ -3218,9 +3218,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "突出抓住\"三个环节\" 努力提升文稿质…"
+    "summary": "突出抓住\"三个环节\" 努力提升文稿质…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-168",
@@ -3237,9 +3237,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结的八种写作思路"
+    "summary": "工作总结的八种写作思路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-169",
@@ -3256,9 +3256,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结的写作方法与要领"
+    "summary": "工作总结的写作方法与要领",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-170",
@@ -3275,9 +3275,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "在2017年全省机关公文写作大讲堂上…"
+    "summary": "在2017年全省机关公文写作大讲堂上…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-171",
@@ -3294,9 +3294,9 @@
     "topics": [
       "汇报写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "汇报材料要清、重、实话"
+    "summary": "汇报材料要清、重、实话",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-172",
@@ -3313,9 +3313,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "类比型领导讲话提纲模板"
+    "summary": "类比型领导讲话提纲模板",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-173",
@@ -3332,9 +3332,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "例谈领导讲话稿写作的构思要领"
+    "summary": "例谈领导讲话稿写作的构思要领",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-174",
@@ -3352,9 +3352,9 @@
       "汇报写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何写好工作汇报材料（经验交流）"
+    "summary": "如何写好工作汇报材料（经验交流）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-175",
@@ -3372,9 +3372,9 @@
       "讲话稿写作",
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿常用句型、词语"
+    "summary": "领导讲话稿常用句型、词语",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-176",
@@ -3391,9 +3391,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿精彩结束语"
+    "summary": "领导讲话稿精彩结束语",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-177",
@@ -3410,9 +3410,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作会议讲话的问题分析与形势研判5例"
+    "summary": "工作会议讲话的问题分析与形势研判5例",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-178",
@@ -3429,9 +3429,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "全市科级以下干部培训班文秘工作讲稿（…"
+    "summary": "全市科级以下干部培训班文秘工作讲稿（…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-179",
@@ -3449,9 +3449,9 @@
       "讲话稿写作",
       "文稿修改"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何修改校对领导讲话稿"
+    "summary": "如何修改校对领导讲话稿",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-180",
@@ -3468,9 +3468,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何做好纪检监察信息工作（讲课）"
+    "summary": "如何做好纪检监察信息工作（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-181",
@@ -3488,9 +3488,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "文稿起草八问——在咸宁市政府研究系统…"
+    "summary": "文稿起草八问——在咸宁市政府研究系统…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-182",
@@ -3507,9 +3507,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写材料有定式无定法（讲课）"
+    "summary": "写材料有定式无定法（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-183",
@@ -3526,9 +3526,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "文字工作者的\"四四二\"法则"
+    "summary": "文字工作者的\"四四二\"法则",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-184",
@@ -3547,9 +3547,9 @@
       "文章结构",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "精心谋篇布局 做到\"四要四不\"——从…"
+    "summary": "精心谋篇布局 做到\"四要四不\"——从…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-185",
@@ -3567,9 +3567,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写好领导讲话稿的几点体会（讲课）"
+    "summary": "写好领导讲话稿的几点体会（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-186",
@@ -3586,9 +3586,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "在抚州市政府办公室干部职工会议上的讲话"
+    "summary": "在抚州市政府办公室干部职工会议上的讲话",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-187",
@@ -3606,9 +3606,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "怎样写好领导讲话、工作报告、典型材料…"
+    "summary": "怎样写好领导讲话、工作报告、典型材料…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-188",
@@ -3627,9 +3627,9 @@
       "开头结尾",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "怎样写好领导讲话的结尾部分"
+    "summary": "怎样写好领导讲话的结尾部分",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-189",
@@ -3646,9 +3646,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关五条秘笈"
+    "summary": "机关五条秘笈",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-190",
@@ -3666,9 +3666,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "怎样写好领导同志讲话稿（讲课）"
+    "summary": "怎样写好领导同志讲话稿（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-191",
@@ -3685,9 +3685,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "撰写领导报告和讲话稿的八点感悟（讲课）"
+    "summary": "撰写领导报告和讲话稿的八点感悟（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-192",
@@ -3704,9 +3704,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "做好文字工作的个人体会（讲课）"
+    "summary": "做好文字工作的个人体会（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-193",
@@ -3723,9 +3723,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "在全市公文写作训练班开班仪式上的讲话…"
+    "summary": "在全市公文写作训练班开班仪式上的讲话…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-194",
@@ -3742,9 +3742,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "在公文与新闻写作培训班上的讲话"
+    "summary": "在公文与新闻写作培训班上的讲话",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-195",
@@ -3761,9 +3761,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于机关公文写作的讲稿（讲课）"
+    "summary": "关于机关公文写作的讲稿（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-196",
@@ -3780,9 +3780,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "如何成长为一名领导讲话稿的写作高手（…"
+    "summary": "如何成长为一名领导讲话稿的写作高手（…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-197",
@@ -3799,9 +3799,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "22种领导讲话稿的写作套路"
+    "summary": "22种领导讲话稿的写作套路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-198",
@@ -3818,9 +3818,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "编写信息的五大秘诀"
+    "summary": "编写信息的五大秘诀",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-199",
@@ -3837,9 +3837,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "变写稿为想稿 变模仿为创造 变堆砌为推敲"
+    "summary": "变写稿为想稿 变模仿为创造 变堆砌为推敲",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-200",
@@ -3856,9 +3856,9 @@
     "topics": [
       "标题写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "标题处理方法"
+    "summary": "标题处理方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-201",
@@ -3875,9 +3875,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "党建范畴相近词语的辨析及体悟"
+    "summary": "党建范畴相近词语的辨析及体悟",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-202",
@@ -3894,9 +3894,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "顿号十不用"
+    "summary": "顿号十不用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-203",
@@ -3913,9 +3913,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "多年实践中总结的三条公文写作技巧"
+    "summary": "多年实践中总结的三条公文写作技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-204",
@@ -3933,9 +3933,9 @@
       "汇报写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作汇报写法"
+    "summary": "工作汇报写法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-205",
@@ -3953,9 +3953,9 @@
       "工作总结",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结起草的方法和技巧"
+    "summary": "工作总结起草的方法和技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-206",
@@ -3972,9 +3972,9 @@
     "topics": [
       "工作总结"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结写作的八种角度"
+    "summary": "工作总结写作的八种角度",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-207",
@@ -3992,9 +3992,9 @@
       "工作总结",
       "汇报写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "工作总结怎样扩展为汇报材料"
+    "summary": "工作总结怎样扩展为汇报材料",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-208",
@@ -4011,9 +4011,9 @@
     "topics": [
       "标题写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文标题的拟制"
+    "summary": "公文标题的拟制",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-209",
@@ -4030,9 +4030,9 @@
     "topics": [
       "标点符号"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文行文标点符号使用常见12个错误"
+    "summary": "公文行文标点符号使用常见12个错误",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-210",
@@ -4049,9 +4049,9 @@
     "topics": [
       "开头结尾"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文开头写作的基本原则"
+    "summary": "公文开头写作的基本原则",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-211",
@@ -4068,9 +4068,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文论证实例分析"
+    "summary": "公文论证实例分析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-212",
@@ -4087,9 +4087,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作的基本规律、要求和方法"
+    "summary": "公文写作的基本规律、要求和方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-213",
@@ -4106,9 +4106,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作三部曲"
+    "summary": "公文写作三部曲",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-214",
@@ -4125,9 +4125,9 @@
     "topics": [
       "标点符号"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中常见标点符号误用例析"
+    "summary": "公文写作中常见标点符号误用例析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-215",
@@ -4144,9 +4144,9 @@
     "topics": [
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中的文章结构顺序"
+    "summary": "公文写作中的文章结构顺序",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-216",
@@ -4163,9 +4163,9 @@
     "topics": [
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中的文章结构顺序排列技巧"
+    "summary": "公文写作中的文章结构顺序排列技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-217",
@@ -4182,9 +4182,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中经常出现的错误"
+    "summary": "公文写作中经常出现的错误",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-218",
@@ -4201,9 +4201,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文中\"指导思想\"的写作方法"
+    "summary": "公文中\"指导思想\"的写作方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-219",
@@ -4220,9 +4220,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文中一些常用字词的用法及辨析"
+    "summary": "公文中一些常用字词的用法及辨析",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-220",
@@ -4239,9 +4239,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "写作的十条基本法则"
+    "summary": "写作的十条基本法则",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-221",
@@ -4258,9 +4258,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于办公室文秘工作的七个话题"
+    "summary": "关于办公室文秘工作的七个话题",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-222",
@@ -4277,9 +4277,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于公文素材积累（讲课）"
+    "summary": "关于公文素材积累（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-223",
@@ -4296,9 +4296,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于公文写作的几点体会（讲课）"
+    "summary": "关于公文写作的几点体会（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-224",
@@ -4315,9 +4315,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于公文写作的几个问题（讲课）"
+    "summary": "关于公文写作的几个问题（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-225",
@@ -4335,9 +4335,9 @@
       "汇报写作",
       "文稿修改"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于汇报材料修改的几点感悟"
+    "summary": "关于汇报材料修改的几点感悟",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-226",
@@ -4354,9 +4354,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于领导讲话稿的写作方法例谈"
+    "summary": "关于领导讲话稿的写作方法例谈",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-227",
@@ -4373,9 +4373,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于如何撰写领导报告和讲话稿的一点粗…"
+    "summary": "关于如何撰写领导报告和讲话稿的一点粗…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-228",
@@ -4392,9 +4392,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于文稿写作的几个问题（讲课）"
+    "summary": "关于文稿写作的几个问题（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-229",
@@ -4411,9 +4411,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "胡乔木谈写文章"
+    "summary": "胡乔木谈写文章",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-230",
@@ -4431,9 +4431,9 @@
       "会议纪要",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "会议纪要如何写"
+    "summary": "会议纪要如何写",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-231",
@@ -4450,9 +4450,9 @@
     "topics": [
       "排比句式"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文常用排比句大全"
+    "summary": "机关公文常用排比句大全",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-232",
@@ -4469,9 +4469,9 @@
     "topics": [
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "机关公文常用词汇集锦"
+    "summary": "机关公文常用词汇集锦",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-233",
@@ -4488,9 +4488,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "经验材料写作\"四步法\""
+    "summary": "经验材料写作\"四步法\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-234",
@@ -4507,9 +4507,9 @@
     "topics": [
       "开头结尾"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "开头12招和结尾12式"
+    "summary": "开头12招和结尾12式",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-235",
@@ -4527,9 +4527,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "老秘书无私传授如何起草领导讲话稿（讲课）"
+    "summary": "老秘书无私传授如何起草领导讲话稿（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-236",
@@ -4546,9 +4546,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "老秘谈对公文写作的几点粗浅认识和体会…"
+    "summary": "老秘谈对公文写作的几点粗浅认识和体会…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-237",
@@ -4565,9 +4565,9 @@
     "topics": [
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "老秘谈怎么写公文（讲课）"
+    "summary": "老秘谈怎么写公文（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-238",
@@ -4584,9 +4584,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "例谈领导讲话的写作要点及注意事项（讲课）"
+    "summary": "例谈领导讲话的写作要点及注意事项（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-239",
@@ -4603,9 +4603,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "例谈领导讲话稿强调意义的几个角度"
+    "summary": "例谈领导讲话稿强调意义的几个角度",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-240",
@@ -4622,9 +4622,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话\"八段锦\""
+    "summary": "领导讲话\"八段锦\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-241",
@@ -4641,9 +4641,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿\"段首导入语\"部分的写作（…"
+    "summary": "领导讲话稿\"段首导入语\"部分的写作（…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-242",
@@ -4662,9 +4662,9 @@
       "标题写作",
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿标题与结构的常见处理方法"
+    "summary": "领导讲话稿标题与结构的常见处理方法",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-243",
@@ -4681,9 +4681,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿写作浅谈（讲课）"
+    "summary": "领导讲话稿写作浅谈（讲课）",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-244",
@@ -4701,9 +4701,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿怎么写"
+    "summary": "领导讲话稿怎么写",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-245",
@@ -4720,9 +4720,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿中\"强调意义统一认识\"部分…"
+    "summary": "领导讲话稿中\"强调意义统一认识\"部分…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-246",
@@ -4739,9 +4739,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导评价文章好坏的几个关键要点"
+    "summary": "领导评价文章好坏的几个关键要点",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-247",
@@ -4759,9 +4759,9 @@
       "讲话稿写作",
       "起草技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "略谈领导讲话稿的起草"
+    "summary": "略谈领导讲话稿的起草",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-248",
@@ -4778,9 +4778,9 @@
     "topics": [
       "信息写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "信息简报写作\"五忌\""
+    "summary": "信息简报写作\"五忌\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-249",
@@ -4797,9 +4797,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中的惯用句式提炼汇总"
+    "summary": "公文写作中的惯用句式提炼汇总",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-250",
@@ -4816,9 +4816,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "关于体制内\"写材料\"的经验和建议清单"
+    "summary": "关于体制内\"写材料\"的经验和建议清单",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-251",
@@ -4835,9 +4835,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "我给总理做十年秘书"
+    "summary": "我给总理做十年秘书",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-252",
@@ -4854,9 +4854,9 @@
     "topics": [
       "标题写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "主体部分标题的六种常用类型及题例"
+    "summary": "主体部分标题的六种常用类型及题例",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-253",
@@ -4874,9 +4874,9 @@
       "讲话稿写作",
       "语言表达"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "讲话稿的语言技巧"
+    "summary": "讲话稿的语言技巧",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-254",
@@ -4893,9 +4893,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "100个时评文章提纲"
+    "summary": "100个时评文章提纲",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-255",
@@ -4912,9 +4912,9 @@
     "topics": [
       "排比句式"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "改革材料排比句72例"
+    "summary": "改革材料排比句72例",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-256",
@@ -4931,9 +4931,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "巧用\"数概\"缩略语写出好材料"
+    "summary": "巧用\"数概\"缩略语写出好材料",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-257",
@@ -4950,9 +4950,9 @@
     "topics": [
       "排比句式"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作中排比手法的运用"
+    "summary": "公文写作中排比手法的运用",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-258",
@@ -4969,9 +4969,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话开场白之\"四忌\""
+    "summary": "领导讲话开场白之\"四忌\"",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-259",
@@ -4988,9 +4988,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "公文写作必知古诗"
+    "summary": "公文写作必知古诗",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-260",
@@ -5007,9 +5007,9 @@
     "topics": [
       "讲话稿写作"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "好的讲话稿怎样炼成"
+    "summary": "好的讲话稿怎样炼成",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-261",
@@ -5026,9 +5026,9 @@
     "topics": [
       "写作技巧"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "作文的三个阶段"
+    "summary": "作文的三个阶段",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-262",
@@ -5045,9 +5045,9 @@
     "topics": [
       "逻辑思维"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "处理好材料中低与高、虚与实、大与小、…"
+    "summary": "处理好材料中低与高、虚与实、大与小、…",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-263",
@@ -5064,9 +5064,9 @@
     "topics": [
       "文稿修改"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "六份写作提纲的修改思路"
+    "summary": "六份写作提纲的修改思路",
+    "line": "写作教材"
   },
   {
     "article_id": "TA-264",
@@ -5084,8 +5084,8 @@
       "讲话稿写作",
       "文章结构"
     ],
-    "quality_grade": "C",
     "industry": "通用",
-    "summary": "领导讲话稿的谋篇布局"
+    "summary": "领导讲话稿的谋篇布局",
+    "line": "写作教材"
   }
 ]
