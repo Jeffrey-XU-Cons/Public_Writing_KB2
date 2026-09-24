@@ -1,0 +1,54 @@
+# 素材登记簿——素材↔知识的唯一台账（杜绝同一素材被萃取两遍）
+# 状态枚举：未萃取 / 进行中 / 已完成 / 弃用
+# 路径为旧项目只读引用（D:\projects\Public_Writing_KB 只读封存，任何写操作都是事故）
+
+sources:
+  - id: S1
+    name: 公文写作技巧汇编（305篇145万字）
+    path: D:\projects\Public_Writing_KB\00_raw_materials\15.公文写作技巧汇编（305篇145万字）\
+    categories: [c1, c3, c4, c6]
+    method: M1-v7.1
+    status: 进行中
+    batches: [B-20260706-01]
+    note: 首件批次取汇编三「关于通知文种写作的几个常见问题」（约11.4K字，6节，单一文种通知）；筛选清单参考旧项目 04_corpus\技巧汇编_筛选结果.txt
+
+  - id: S3-李忠秋
+    name: 结构化写作（李忠秋）
+    path: D:\projects\Public_Writing_KB\00_raw_materials\书籍\Jie Gou Hua Xie Zuo _Xin Zhong - Li Zhong Qiu.md
+    chars: 317561
+    categories: [c3, c5, c6, c4]
+    method: M1-v7.1
+    status: 已完成
+    batches: [B-20260706-02, B-20260706-03, B-20260706-04, B-20260706-05, B-20260706-06, B-20260706-07]
+    qa_count: 25
+    plan: 整本书按结构拆批——基础篇(四原则)/方法篇×4场景(清晰传递·准确总结·充分说服·方案写作)/收官(形象表达+案例复盘)，一批一部分
+    note: |
+      全书 6 批 25 条萃完，跨 c3:15 / c5:6 / c6:3 / c4:1 四类（ADR-016 自动路由实测通过）。
+      各批对应：02=基础篇四原则；03=清晰传递(SPA/SCQA/并列/层进)；04=准确总结(成果vs流水账/行动-成果表/开放封闭分类/摘要推论)；
+      05=充分说服(WA读者意识/疑问-回答5W2H/演绎/归纳)；06=方案五步法前四步；07=第五步形象表达(结构罗盘/上包装四法)+办税厅案例复盘。
+      本书是 c3 架的主力来源；c4「上包装四法」为 c4 首条。
+
+  - id: S2-胡森林底层心法
+    name: 公文写作底层心法：21堂高效公文写作课（胡森林）
+    path: D:/projects/Public_Writing_KB/10_source/raw_materials/书籍/Gong Wen Xie Zuo Di Ceng Xin Fa - Hu Sen Lin.md
+    chars: 509365
+    categories: [c6, c3, c1, c5]
+    method: M1-v7.1
+    status: 进行中
+    batches: [B-20260914-01]
+    plan: 全书 21 章。首件批取 Ch15（研究事意识）+ Ch20（文本四境界）两章共约 1.2 万字，补 c6·站位思维缺口；其余章节视首件口径确认后再排期
+    note: |
+      本书是「机关本位」视角的主力来源，与 S3-李忠秋（结构化思维视角）互补。
+      现有 c6 三条全部出自李忠秋，存在单一来源偏斜，本书用于补 c6·站位思维（原为空）。
+      辅助定位工具：旧项目 20_knowledge/rules/legacy/_方法论提取/01_胡森林底层心法_章节地图.md（只作定位，不直接采信其归纳）。
+
+articles:
+  - file: 公文写作技巧汇编三（101篇33万字）.md
+    title: 关于通知文种写作的几个常见问题
+    lines: 14191-14420
+    chars: 11399
+    category_l1: 1
+    category_l2: 通知通报通告
+    status: 已完成
+    batch: B-20260706-01
+    qa_count: 6

@@ -1,190 +1,146 @@
-# Public_Writing_KB 项目目录结构
+# 项目目录结构
 
-> 最后更新：2026-03-16
-> 项目位置：`D:\projects\Public_Writing_KB\`
+> v2.0 ｜ 2026-09-14 ｜ 按 `90_design/公文链路设计/` 04–10 章的新架构重组。
+> 旧结构（49 个散文件 + 21 个平铺目录）已归档至 `99_前期资料/`。
 
 ---
 
-## 📁 目录树形结构
+## 一、编号规则
+
+目录编号按**数据流方向**排，不按重要性：
 
 ```
-Public_Writing_KB/
-│
-├── 📚 原始材料库
-│   └── 00_raw_materials/
-│       ├── 公文写作词句应用大全（530页25万字）.md
-│       ├── 15.公文写作技巧汇编（305篇145万字)/
-│       ├── 个人历史交付物/
-│       │   ├── 报告类/                (36 files)
-│       │   ├── 讲话类/                (22 files)
-│       │   ├── 方案类/                (18 files)
-│       │   ├── 规划类/                (9 files)
-│       │   ├── 汇报类/                (1 file)
-│       │   └── 待分类/                (4 files)
-│       ├── 个人历史交付物/
-│       ├── 书籍/
-│       └── AI写材料手册/
-│
-├── 📋 模板库
-│   └── 01_templates/ (151 JSON files)
-│       ├── meeting/                   (28 files - 会议类)
-│       ├── norm/                      (11 files - 规范类)
-│       ├── plan/                      (38 files - 计划类)
-│       ├── publicity/                 (71 files - 宣传类)
-│       ├── by_usage_index.json         ⭐ 场景化索引(Day 1生成)
-│       │   └── scenarios/
-│       │       ├── 讲话: 24 templates
-│       │       ├── 方案: 21 templates
-│       │       ├── 计划: 13 templates
-│       │       ├── 汇报: 1 template
-│       │       └── 其他: 92 templates
-│
-├── 📖 规则引擎库
-│   └── 02_rules/ (15 files) ✅ 完成
-│       ├── book_principles/           (9 files - 书籍提炼原理)
-│       │   ├── 8本书籍提炼
-│       │   └── 1个合并索引文件
-│       ├── content_quality/           (2 files - 内容质量)
-│       ├── format_compliance/         (1 file - 格式合规)
-│       ├── language_style/            (2 files - 语言风格)
-│       └── gbt9704_standard.json      (1 file - GB/T 9704标准)
-│
-├── 📚 词典库
-│   └── 03_dictionary/ (18 files) ✅ 已扩展
-│       ├── golden_sentences/          (3 files - 金句库)
-│       │   ├── 词句应用大全_比喻词库.yaml
-│       │   └── 词句应用大全_排比句库.yaml
-│       ├── sentence_patterns/         (2 files - 句式库)
-│       │   ├── 固定句式模板.yaml
-│       │   └── 开头结尾句式库.yaml
-│       ├── title_patterns/            (2 files - 标题库)
-│       │   └── 词句应用大全_标题库.yaml
-│       ├── tobacco_terms/             (5 files - 烟草术语库)
-│       ├── official_terms.yaml         (框架版 - 2026-03-16)
-│       ├── official_terms_v2.yaml      ⭐ v2版(Day 2生成) 150+条
-│       └── 金句库(P4).yaml             ⭐ 394金句(Day 2生成)
-│
-├── 📦 语料库
-│   └── 04_corpus/ (10 files) ⭐ 已有内容
-│       ├── 元数据文件
-│       │   ├── 个人历史交付物元数据索引.yaml          (90 files, Day 1)
-│       │   ├── 个人历史交付物元数据索引_评分版.yaml   (90 files, Day 2)
-│       │   └── 高价值文件清单.yaml                   (30 sorted files)
-│       ├── 范文库文件
-│       │   ├── 优质范文库(P3).yaml                  (90 files, P3完成)
-│       │   └── 范文库统计.json
-│       ├── 段落与金句文件
-│       │   ├── 段落库(P4).yaml                      (330 paragraphs, P4完成)
-│       │   ├── 段落抽取统计.json
-│       │   └── 技巧汇编_标题列表.txt
-│       └── 其他
-│           ├── own_deliverables/
-│           └── selected_articles/
-│
-├── 📊 元数据与索引
-│   └── 05_metadata/ (3 files) ⭐ Day 3生成
-│       ├── knowledge_base_stats.json        (全库统计)
-│       ├── cross_library_index.json         (跨库索引)
-│       └── integration_test_report.json     (集成测试报告)
-│
-├── ✅ 测试库
-│   └── 06_testing/
-│       └── (预备中)
-│
-└── 📄 项目文档
-    ├── 项目进度报告.md                      ⭐ 主要进度文档
-    ├── 公文写作AI知识库_整体进度汇总.md
-    ├── 服务器环境与文件位置布局.md
-    ├── 词句应用大全_提炼方案.md
-    ├── execution_plan_3days.md              (3天计划总结)
-    ├── Day2_工作总结.md
-    ├── 3天计划最终交付总结.md
-    ├── book_tasks.md
-    ├── corpus任务清单.md
-    ├── dictionary_tasks.md
-    └── rule_engine_tasks.md
-
-💾 Python脚本
-    ├── extract_articles.py                 (元数据提取, Day 1)
-    ├── build_template_index.py             (模板索引, Day 1)
-    ├── quality_score_metadata.py           (评分, Day 2)
-    ├── p3_corpus_filtering.py              (范文筛选, P3)
-    ├── p4_paragraph_extraction.py          (段落抽取, P4)
-    └── day3_integration_test.py            (集成测试)
+10 源  →  20 知识  →  30 引擎  →  40 测试  →  50 任务
+                                                    90 设计（横贯，是全部依据）
+                                                    99 前期（已退役）
 ```
 
----
-
-## 📊 各模块文件统计
-
-| 模块 | 类型 | 数量 | 状态 | 说明 |
-|------|------|------|------|------|
-| 原材料库 | 305+ | 68.3MB | ✅ 完成 | 公文教材、范文库、行业资料 |
-| 模板库 | JSON | 151 | ✅ 完成 | 按场景索引已生成 |
-| 规则库 | JSON/YAML | 15 | ✅ 完成 | 格式/质量/风格规则 |
-| 词典库 | YAML | 18 | ✅ 已扩展 | 包含150+条公文用语词典 |
-| 语料库 | YAML/JSON | 10 | ⭐ P3/P4完成 | 90范文+330段落+394金句 |
-| 元数据库 | JSON | 3 | ⭐ Day3完成 | 全库统计+索引+测试报告 |
-| **总计** | **混合** | **592+** | **95%** | **完整知识库** |
+数字留空档（10/20/30…）是为了后续插入不必重编号。
 
 ---
 
-## 🎯 项目阶段完成度
+## 二、目录说明
 
-| Phase | 名称 | 目录 | 完成度 | 状态 |
-|-------|------|------|--------|------|
-| Phase 1 | 模板库 | `01_templates/` | 100% | ✅ |
-| Phase 2 | 规则库 | `02_rules/` | 100% | ✅ |
-| Phase 3 | 词典库 | `03_dictionary/` | 100% | ✅ 已扩展到150+ |
-| Phase 4A | 元数据提取 | `04_corpus/` | 100% | ✅ Day 1 |
-| Phase 4B | 元数据评分 | `04_corpus/` | 100% | ✅ Day 2 |
-| Phase 4C | 范文筛选(P3) | `04_corpus/` | 100% | ✅ P3 |
-| Phase 4D | 段落抽取(P4) | `04_corpus/` | 100% | ✅ P4 |
-| Phase 5 | 集成测试 | `05_metadata/` | 100% | ✅ Day 3 |
-| **整体** | **完整知识库** | **全部** | **95%** | ⭐ **基本完成** |
+### `10_source` · 语料真源
+
+```
+10_source/
+    raw_materials/        3,055 份原始语料 / 3,349 万字（原 00_raw_materials）
+    (待建) manifest/      切分账：篇名 / locator / 篇型 / 是否已萃
+```
+
+**纪律**：批次目录不复制原文，一律按 `locator`（文件+行区间）回源取。复制会产生查不出的不一致。
+
+### `20_knowledge` · 知识库
+
+```
+20_knowledge/
+    qa/          (待建) C1–C6 六大类 JSONL，QA 主库
+    terms/       词典
+        legacy/              旧词典（390 术语，覆盖率 58%，official_terms_v2 程序读不了）
+        (待建) terms.jsonl   四层词典：T1 定义 / T2 搭配 / T3 分寸 / T4 辨析
+    corpus/      语料制品
+        legacy/              范文库 P3、段落库 v2、selected_articles
+        industry_docs/       行业文档 242 篇（原 knowledge/）
+        (待建) paragraphs.jsonl / articles.jsonl
+    templates/
+        legacy/              文种骨架 A2 系列（原 01_templates）
+    rules/
+        legacy/              rules_master 345 条 + 五本书方法论提炼（原 02_rules）
+```
+
+**`legacy/` 的含义**：**可查、可复用、但不是最终形态**。新库建成后按 07 章 v2 重构，届时 legacy 转入 99。
+
+### `30_engine` · 引擎
+
+```
+30_engine/
+    rag/
+        legacy/       现有 ChromaDB 检索栈（⚠️ 依赖 tobacco_kb，待解耦换 LanceDB）
+    tools/
+        legacy_skills/    旧 skill 套件（skill_style/quality/framework + 公文写作体系 12 件）
+        benchmarks/       检索基准
+        (待建) qa_check.py / qa_merge.py / qa_tag.py …
+    runs/         (待建) 批次配置 *.json —— 不放 scratchpad
+    batches/      (待建) 批次产出 B-YYYYMMDD-NN/
+```
+
+**七个新 skill**（gongwen / gw-search / gw-draft / gw-review / gw-rag / gw-ingest / gw-audit）建在 `.claude/skills/`，不在这里——那是 Claude Code 的约定位置。
+
+### `40_tests` · 测试
+
+```
+40_tests/
+    legacy/       Dify 时代 E2E 框架（框架作废，18 个用例可迁移）
+    cases/        (待建) 场景 34 条 + 节点 118 条
+    golden/       (待建) 检索 golden set
+    defects/      (待建) 缺陷注入池——跨层回退测试的关键资产
+```
+
+### `50_tasks` · 写作任务
+
+```
+50_tasks/
+    _历史任务/                  4 个旧任务
+    [日期]_[文种]_[主题]/
+        素材/
+        outline.md              W2 产物，含论点地图
+        v1_初稿.md
+        review_report.md        W5 产物，不生成不得呈报终稿
+        终稿.md
+```
+
+### `90_design` · 设计方案 ★
+
+```
+90_design/公文链路设计/
+    04_知识萃取与知识库.md          C1–C6、QA schema、门禁
+    05_写作流程.md                  S1–S5、三确认点、20 条门禁
+    06_Skills体系.md                7 个 skill
+    07_知识分层与词典架构_v2.md     depth/enforce/词典四层/脱敏
+    08_kb-rag迁移与实施计划.md      QA 引擎、双档规格
+    09_写作体系总体架构.md          A 层公理、W1–W5、八场景
+    10_写作体系作业规格_IPO.md      28 节点 IPO + 三级测试
+    10_知识库建设作业计划.md        建库作业
+    ── 已作废 ──
+    07_L1-L5五层知识架构设计.md
+    09_写作体系架构.md
+```
+
+**唯一依据**。动手前先读，不要凭记忆办事。
+
+### `99_前期资料` · 已退役
+
+五类归档，索引见 `99_前期资料/README.md`。**不要复用其中脚本，不要当现状看。**
 
 ---
 
-## 📈 知识库规模统计
+## 三、设计→目录 对照
 
-### 数据量统计
-- 📋 元数据记录：90条
-- 🎯 模板数量：151个
-- 📖 规则集：15个
-- 📚 词典条目：456+ (旧版) + 150+ (新增) = **606+条**
-- 📄 范文库：90个
-- 📝 段落库：330个可复用段落
-- ✨ 金句库：394个经典金句
-
-### 内容覆盖
-- 🏢 烟草行业术语：65+条
-- 📋 公文写作指导：8本书提炼完毕
-- 🎯 使用场景：讲话/报告/方案/规划/汇报等6类
-- 💾 原材料库：305+文件，68.3MB
+| 设计概念 | 落在哪 | 状态 |
+|---|---|---|
+| A 层 6 公理 | `20_knowledge/qa/c6_*.jsonl`（depth=axiom） | 待建 |
+| C1–C6 QA 库 | `20_knowledge/qa/` | 待建 |
+| 词典四层 | `20_knowledge/terms/terms.jsonl` | 待建 |
+| 段落库 / 范文库 | `20_knowledge/corpus/` | 待建（legacy 可用） |
+| 7 个 skill | `.claude/skills/` | 待建 |
+| gw-rag 脚本 | `30_engine/tools/` | 待建（从 kb-rag copy） |
+| 三级测试 | `40_tests/` | 待建 |
+| W1–W5 产物 | `50_tasks/<任务>/` | 规格已定 |
 
 ---
 
-## 🚀 快速导航
+## 四、根目录只留四样
 
-### 快速查询入口
+```
+CLAUDE.md                        项目指令
+CLAUDE_旧版_v1.1_20260914.md     上一版备份
+PROJECT_STRUCTURE.md             本文件
+.env.template / .gitignore
+```
 
-**想写讲话稿？**
-- → `01_templates/by_usage_index.json` 中 `讲话` 场景 (24个模板)
-- → `04_corpus/优质范文库(P3).yaml` 中讲话类范文 (20个)
-- → `03_dictionary/金句库(P4).yaml` 中讲话类金句
-
-**想查禁用词？**
-- → `03_dictionary/official_terms_v2.yaml` 中 `PW-201-203` 部分 (65+条)
-
-**想找合适的开头/结尾？**
-- → `03_dictionary/sentence_patterns/开头结尾句式库.yaml` (78条)
-- → `04_corpus/段落库(P4).yaml` 中 `开头段落` 和 `结尾段落`
-
-**想了解项目全貌？**
-- → 本文件 (目录结构)
-- → `项目进度报告.md` (详细进度)
-- → `3天计划最终交付总结.md` (执行总结)
+**根目录不再堆散文件。** 新产物一律进编号目录。
 
 ---
 
-*自动生成于 2026-03-16 | 由 Claude Code 生成*
+*结构变更走 git mv，全程可追溯。*

@@ -30,3 +30,8 @@ benchmarks/
 # 系统文件
 .DS_Store
 Thumbs.db
+
+# v2.0 重构后的新路径（2026-09-14 目录重组）
+10_source/raw_materials/
+30_engine/rag/legacy/index/chroma_db/
+.pytest_cache/
