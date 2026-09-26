@@ -65,7 +65,7 @@
     batches/      (待建) 批次产出 B-YYYYMMDD-NN/
 ```
 
-**七个新 skill**（gongwen / gw-search / gw-draft / gw-review / gw-rag / gw-ingest / gw-audit）建在 `.claude/skills/`，不在这里——那是 Claude Code 的约定位置。
+**七个新 skill**（gongwen / gw-search / gw-draft / gw-review / gw-extract / gw-ingest / gw-audit）建在 `.claude/skills/`，不在这里——那是 Claude Code 的约定位置。（2026-09-24 统一：原 `gw-rag` 改 `gw-extract`，kb-rag 已退役，`gw-rag` 无对应物，见 11 章 P0.4）
 
 ### `40_tests` · 测试
 
@@ -123,9 +123,9 @@
 | C1–C6 QA 库 | `20_knowledge/qa/` | 待建 |
 | 词典四层 | `20_knowledge/terms/terms.jsonl` | 待建 |
 | 段落库 / 范文库 | `20_knowledge/corpus/` | 待建（legacy 可用） |
-| 7 个 skill | `.claude/skills/` | 待建 |
-| gw-rag 脚本 | `30_engine/tools/` | 待建（从 kb-rag copy） |
-| 三级测试 | `40_tests/` | 待建 |
+| 7 个 skill | `.claude/skills/` | gongwen / gw-draft / gw-review 已建（2026-09-26）；gw-search / gw-extract / gw-ingest / gw-audit 待建 |
+| gw-extract 脚本 | `30_engine/tools/` | 待建（kb-rag 已退役，检索改接入其 `search.py`，不再 copy 代码，见 11 章§五①） |
+| 三级测试 | `40_tests/` | 首批（硬闸反例 8 条 + F6 问答 8 条）已就绪，其余待建 |
 | W1–W5 产物 | `50_tasks/<任务>/` | 规格已定 |
 
 ---

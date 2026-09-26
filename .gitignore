@@ -25,7 +25,8 @@ benchmarks/
 
 # IDE
 .vscode/
-.claude/
+.claude/*
+!.claude/skills/
 
 # 系统文件
 .DS_Store
@@ -35,3 +36,19 @@ Thumbs.db
 10_source/raw_materials/
 30_engine/rag/legacy/index/chroma_db/
 .pytest_cache/
+
+# 本机 venv（2026-09-24 跑测试临建，两边各自建各自的，不同步不进版本库）
+.venv/
+
+# 脱敏改动日志含原始人名/单位名，只留本地，绝不进版本库
+**/deid_changes.jsonl
+**/names_candidates.txt
+**/names_confirmed.txt
+# 文件级清单用原始文件名，文件名常带真实人名/单位名
+20_knowledge/corpus/清理清单_空壳与重复.json
+20_knowledge/corpus/不外流清单_密级标记.txt
+# 未过滤的原始候选词，含"XX卷烟厂"等地名单位名；过滤后的 candidates_accepted.jsonl 可入库
+20_knowledge/terms/candidates.jsonl
+
+# 行业文档原文未脱敏，文件名带讲话人姓名（2026-09-25 拍板忽略）
+20_knowledge/corpus/industry_docs/
