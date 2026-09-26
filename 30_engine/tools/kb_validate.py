@@ -117,6 +117,41 @@ def validate_record(rec: dict) -> list:
     if rec["answer_hash"] != answer_hash(rec["answer"]):
         errors.append("answer_hash 与答案内容不符")
 
+    # 07 章 v2 §1.1/1.2/1.3、09 章§4.1（11 章 P1.3）：depth/enforce/w_layer + 最小挂钩链。
+    # 现有库尚未打标（P1.4 才回填），所以不进 REQUIRED_FIELDS——只要字段出现就校验取值，
+    # 不出现不算错，避免还没回填就把全库判不合格。
+    if "depth" in rec:
+        depth = rec["depth"]
+        if depth not in vocab.DEPTH_VALUES:
+            errors.append(f"depth 非法: {depth}（应为 {vocab.DEPTH_VALUES} 之一）")
+        else:
+            if depth == "axiom":
+                governs = rec.get("governs")
+                if not isinstance(governs, list) or not governs:
+                    errors.append("depth=axiom 必须填 governs（管辖的大类数组，如 [1,3,4]）")
+                elif any(g not in vocab.CATEGORY_NAMES for g in governs):
+                    errors.append(f"governs 含非法大类: {governs}")
+            elif depth == "technique":
+                implements = rec.get("implements")
+                if not isinstance(implements, list) or not implements:
+                    errors.append("depth=technique 必须填 implements（挂靠的 method id 数组）")
+                elif any(not ID_RE.match(i) for i in implements):
+                    errors.append(f"implements 含非法 id 格式: {implements}")
+            elif depth in ("method", "principle"):
+                derives = rec.get("derives_from")
+                if not isinstance(derives, list) or not derives:
+                    errors.append(f"depth={depth} 必须填 derives_from（挂靠上一级 id 数组）")
+                elif any(not ID_RE.match(d) for d in derives):
+                    errors.append(f"derives_from 含非法 id 格式: {derives}")
+
+    if "enforce" in rec and rec["enforce"] not in vocab.ENFORCE_VALUES:
+        errors.append(f"enforce 非法: {rec['enforce']}（应为 {vocab.ENFORCE_VALUES} 之一）")
+
+    if "w_layer" in rec:
+        wl = rec["w_layer"]
+        if not isinstance(wl, list) or not wl or any(w not in vocab.W_LAYER_VALUES for w in wl):
+            errors.append(f"w_layer 须为 {vocab.W_LAYER_VALUES} 的非空子集: {wl}")
+
     return errors
 
 

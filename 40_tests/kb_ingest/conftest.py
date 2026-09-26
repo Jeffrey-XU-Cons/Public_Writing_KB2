@@ -13,8 +13,8 @@ import kb_validate  # noqa: E402
 @pytest.fixture()
 def tmp_root(tmp_path, monkeypatch):
     """Point all tools at a temporary project root via KBRAG_ROOT."""
-    (tmp_path / "knowledge" / "qa").mkdir(parents=True)
-    (tmp_path / "batches").mkdir()
+    (tmp_path / "20_knowledge" / "qa").mkdir(parents=True)
+    (tmp_path / "30_engine" / "batches").mkdir(parents=True)
     (tmp_path / ".claude" / "skills").mkdir(parents=True)
     (tmp_path / "source").mkdir()
     source = tmp_path / "source" / "source_doc.md"

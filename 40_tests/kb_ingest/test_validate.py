@@ -56,3 +56,65 @@ def test_method_type_needs_reverse_question(tmp_root):
         question="怎么写好开头？ / 开头有哪些写法？ / 如何让开头出彩？",
     )
     assert any("反向问法" in e for e in validate_record(rec))
+
+
+# --- P1.3：depth/enforce/w_layer + 最小挂钩链（可选字段，出现才校验） ---
+
+def test_record_without_depth_still_passes(tmp_root):
+    """现有 34 条未打标，回填前不能被判不合格。"""
+    assert validate_record(make_record(tmp_root)) == []
+
+
+def test_invalid_depth_fails(tmp_root):
+    rec = make_record(tmp_root, depth="不存在的等级")
+    assert any("depth 非法" in e for e in validate_record(rec))
+
+
+def test_axiom_without_governs_fails(tmp_root):
+    rec = make_record(tmp_root, depth="axiom")
+    assert any("必须填 governs" in e for e in validate_record(rec))
+
+
+def test_axiom_with_governs_passes(tmp_root):
+    rec = make_record(tmp_root, depth="axiom", governs=[1, 3, 4])
+    assert validate_record(rec) == []
+
+
+def test_axiom_governs_bad_category_fails(tmp_root):
+    rec = make_record(tmp_root, depth="axiom", governs=[9])
+    assert any("governs 含非法大类" in e for e in validate_record(rec))
+
+
+def test_technique_without_implements_fails(tmp_root):
+    rec = make_record(tmp_root, depth="technique")
+    assert any("必须填 implements" in e for e in validate_record(rec))
+
+
+def test_technique_with_implements_passes(tmp_root):
+    rec = make_record(tmp_root, depth="technique", implements=["QA-C3-00002"])
+    assert validate_record(rec) == []
+
+
+def test_method_without_derives_from_fails(tmp_root):
+    rec = make_record(tmp_root, depth="method")
+    assert any("必须填 derives_from" in e for e in validate_record(rec))
+
+
+def test_invalid_enforce_fails(tmp_root):
+    rec = make_record(tmp_root, enforce="拦不住")
+    assert any("enforce 非法" in e for e in validate_record(rec))
+
+
+def test_valid_enforce_passes(tmp_root):
+    rec = make_record(tmp_root, enforce="hard")
+    assert validate_record(rec) == []
+
+
+def test_invalid_w_layer_fails(tmp_root):
+    rec = make_record(tmp_root, w_layer=["W9"])
+    assert any("w_layer" in e for e in validate_record(rec))
+
+
+def test_multi_w_layer_passes(tmp_root):
+    rec = make_record(tmp_root, w_layer=["W2", "W3"])
+    assert validate_record(rec) == []

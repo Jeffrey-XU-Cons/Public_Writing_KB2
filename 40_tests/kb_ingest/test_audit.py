@@ -43,6 +43,15 @@ def test_broken_json_detected(tmp_root):
 
 
 def test_banned_filename_detected(tmp_root):
-    (tmp_root / "knowledge" / "规则_v2.yaml").write_text("x", encoding="utf-8")
+    (tmp_root / "20_knowledge" / "规则_v2.yaml").write_text("x", encoding="utf-8")
     errors, _ = kb_audit.audit()
     assert any("禁用命名" in e for e in errors)
+
+
+def test_banned_name_inside_dot_dir_is_skipped(tmp_root):
+    """.venv/.git 等点号目录整棵子树都不扫——第三方依赖代码里常见 _final 这类误命中。"""
+    nested = tmp_root / ".venv" / "lib" / "some_final_module.py"
+    nested.parent.mkdir(parents=True)
+    nested.write_text("x", encoding="utf-8")
+    errors, _ = kb_audit.audit()
+    assert not any("some_final_module" in e for e in errors)

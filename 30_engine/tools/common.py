@@ -22,8 +22,8 @@ def project_root() -> Path:
 
 
 def qa_dir() -> Path:
-    return project_root() / "knowledge" / "qa"
+    return project_root() / "20_knowledge" / "qa"
 
 
 def batches_dir() -> Path:
-    return project_root() / "batches"
+    return project_root() / "30_engine" / "batches"

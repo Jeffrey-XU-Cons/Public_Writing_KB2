@@ -59,8 +59,9 @@ def audit(fast: bool = False):
 
     if not fast:
         for p in root.rglob("*"):
-            if ".git" in p.parts or p.parts and p.name.startswith("."):
-                continue
+            rel_parts = p.relative_to(root).parts
+            if any(part.startswith(".") for part in rel_parts):
+                continue  # 整个点号目录子树都跳过（.git/.venv/.claude…），不止顶层
             if re.search(vocab.BANNED_NAME_PATTERN, p.name):
                 errors.append(f"[D] 禁用命名: {p.relative_to(root)}")
 
