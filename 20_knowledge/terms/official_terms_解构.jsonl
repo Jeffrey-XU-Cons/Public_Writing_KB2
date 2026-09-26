@@ -1,0 +1,84 @@
+{"id": "PW-201-01", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最好的", "replace_with": ["较好的", "更好的"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-02", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "完全", "replace_with": ["基本上", "较为", "大体上"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-03", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "所有", "replace_with": ["主要", "基本", "绝大多数"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-04", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "永远", "replace_with": ["长期", "坚持", "始终"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-05", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "绝对不", "replace_with": ["不能", "不会", "严禁"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-06", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "必定会", "replace_with": ["有利于", "有助于", "可望"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-07", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "一定要", "replace_with": ["应当", "应该", "需要"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-08", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最重要的是", "replace_with": ["重要的是", "首要的是"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-09", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最好", "replace_with": ["更好", "最佳", "优化"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-10", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最先进的", "replace_with": ["先进的", "领先的"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-11", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最高水平", "replace_with": ["高水平", "较高水平"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-12", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最优秀的", "replace_with": ["优秀的", "较优秀的"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-13", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "完美的", "replace_with": ["良好的", "较为完善的"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-14", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "最快", "replace_with": ["较快", "快速"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-15", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "违法犯罪", "replace_with": ["违反法律规定"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-16", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "严厉处罚", "replace_with": ["依法处理"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-17", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "必须执行", "replace_with": ["应当执行", "需执行"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-201-18", "category": "禁用词", "subgroup": "政治性禁用词（30条）", "banned": "强制要求", "replace_with": ["明确要求", "提出要求"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-01", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "要不得", "replace_with": ["不适当", "不可行", "不合适"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-02", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "死板", "replace_with": ["不够灵活"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-03", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "不靠谱", "replace_with": ["不可靠", "不稳定"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-04", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "折腾", "replace_with": ["反复调整", "多次改进"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-05", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "坑人", "replace_with": ["不利于", "损害"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-06", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "玩花样", "replace_with": ["搞变通", "搞花样"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-07", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "虚拟语气（似乎、好像、可能是）", "replace_with": ["删除或改为确定语气"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-08", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "网络用语（打不通、不在线等）", "replace_with": ["规范表述"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-09", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "自说自话", "replace_with": ["自我论证"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-202-10", "category": "禁用词", "subgroup": "非规范用语与俗语禁忌（20条）", "banned": "一厢情愿", "replace_with": ["主观性较强"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-203-01", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟草销售", "replace_with": ["卷烟营销", "烟草制品流通"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-203-02", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟民数量", "replace_with": ["消费者规模"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-203-03", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟草上瘾", "replace_with": ["消费习惯", "消费粘性"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-203-04", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟草利税", "replace_with": [], "condition": "可用，但需强调社会责任", "severity": "谨慎", "enforce": "soft"}
+{"id": "PW-203-05", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟草产能", "replace_with": [], "condition": "可用，但需与产业结构优化结合", "severity": "谨慎", "enforce": "soft"}
+{"id": "PW-203-06", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "烟草危害人体", "replace_with": ["烟草的健康风险"], "severity": "禁止", "enforce": "hard"}
+{"id": "PW-203-07", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "卷烟消费量", "replace_with": [], "condition": "可用于内部报告，外发需谨慎", "severity": "谨慎", "enforce": "soft"}
+{"id": "PW-203-08", "category": "禁用词", "subgroup": "行业特定禁忌词（15条）", "banned": "鼓励吸烟", "replace_with": ["完全禁止"], "severity": "禁止", "enforce": "hard"}
+{"id": "MM-301-01", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "制定规划", "correct": "编制规划", "example": "编制十四五规划", "note": "规划用\"编制\"", "enforce": "hard"}
+{"id": "MM-301-02", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "落实任务", "correct": "完成任务", "example": "完成全年任务", "note": "任务用\"完成\"", "enforce": "hard"}
+{"id": "MM-301-03", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "加强意识", "correct": "增强意识", "example": "增强安全意识", "note": "意识用\"增强\"", "enforce": "hard"}
+{"id": "MM-301-04", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "取得进步", "correct": "取得进展", "example": "工作取得新进展", "note": "进展更规范", "enforce": "hard"}
+{"id": "MM-301-05", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "建立成效", "correct": "取得成效", "example": "工作取得成效", "note": "成效用\"取得\"", "enforce": "hard"}
+{"id": "MM-301-06", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "进行工作", "correct": "开展工作", "example": "开展本项工作", "note": "工作用\"开展\"", "enforce": "hard"}
+{"id": "MM-301-07", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "强化管理", "correct": "加强管理", "example": "加强队伍管理", "note": "管理用\"加强\"", "enforce": "hard"}
+{"id": "MM-301-08", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "推动发展", "correct": "促进发展", "example": "促进产业发展", "note": "发展用\"促进\"", "enforce": "hard"}
+{"id": "MM-301-09", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "制定目标", "correct": "确定目标/制定计划", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-10", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "取得措施", "correct": "采取措施", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-11", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "形成计划", "correct": "制定计划", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-12", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "进行通知", "correct": "下达通知", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-13", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "工作事项", "correct": "工作任务/工作事务", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-14", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "管理建议", "correct": "改进建议", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-15", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "应对措施", "correct": "应急措施/应对办法", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-301-16", "category": "搭配", "subgroup": "常见搭配错误（35条）", "wrong": "实施手段", "correct": "实施方式/方法", "example": "", "note": "", "enforce": "hard"}
+{"id": "MM-302-01", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "一项规划", "correct": "一个规划", "example": "", "note": "规划用\"个\"", "enforce": "hard"}
+{"id": "MM-302-02", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "召开一个会议", "correct": "召开一次会议", "example": "", "note": "会议用\"次\"", "enforce": "hard"}
+{"id": "MM-302-03", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "进行一次改革", "correct": "推进一项改革", "example": "", "note": "改革用\"项\"", "enforce": "hard"}
+{"id": "MM-302-04", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "三项建议", "correct": "三条建议", "example": "", "note": "建议用\"条\"", "enforce": "hard"}
+{"id": "MM-302-05", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "一种措施", "correct": "一项措施", "example": "", "note": "措施用\"项\"", "enforce": "hard"}
+{"id": "MM-302-06", "category": "搭配", "subgroup": "量词使用规范（10条）", "wrong": "五份方案", "correct": "五个方案", "example": "", "note": "方案用\"个\"", "enforce": "hard"}
+{"id": "CP-401-01", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "当前形势发生了新变化", "suggested": "面对新变化、新形势", "scene": "形势分析", "note": "更加简洁有力", "enforce": "advice"}
+{"id": "CP-401-02", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "以...为指导", "suggested": "以...为引领", "scene": "精神贯彻", "note": "更加文雅", "enforce": "advice"}
+{"id": "CP-401-03", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "新的历史时期", "suggested": "新时代", "scene": "时代背景", "note": "表述更准确", "enforce": "advice"}
+{"id": "CP-401-04", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "与此同时", "suggested": "同时", "scene": "并列表述", "note": "更加简洁", "enforce": "advice"}
+{"id": "CP-401-05", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "随着...的深入推进", "suggested": "在...推进中", "scene": "过程描述", "note": "更加自然", "enforce": "advice"}
+{"id": "CP-401-06", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "为了进一步", "suggested": "为进一步", "scene": "目的说明", "note": "更加规范", "enforce": "advice"}
+{"id": "CP-401-07", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "据了解", "suggested": "了解到", "scene": "信息引出", "note": "更加正式", "enforce": "advice"}
+{"id": "CP-401-08", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "近年来", "suggested": "近年(来)", "scene": "时间表述", "note": "可删除冗余", "enforce": "advice"}
+{"id": "CP-401-09", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "一直以来", "suggested": "长期以来", "scene": "时间背景", "note": "更加学术", "enforce": "advice"}
+{"id": "CP-401-10", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "普遍存在", "suggested": "普遍反映", "scene": "问题说明", "note": "更加准确", "enforce": "advice"}
+{"id": "CP-401-11", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "值得一提的是", "suggested": "需要指出的是", "scene": "补充说明", "note": "更加规范", "enforce": "advice"}
+{"id": "CP-401-12", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "这充分说明", "suggested": "这充分表明", "scene": "逻辑推导", "note": "表意更准确", "enforce": "advice"}
+{"id": "CP-401-13", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "事实上", "suggested": "实际上", "scene": "强调真实", "note": "更加清晰", "enforce": "advice"}
+{"id": "CP-401-14", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "不可否认", "suggested": "无可否认", "scene": "承认事实", "note": "表述更稳妥", "enforce": "advice"}
+{"id": "CP-401-15", "category": "套话", "subgroup": "开头套话优化（15条）", "original": "从某种意义上讲", "suggested": "从某种意义说", "scene": "推理表述", "note": "删冗余", "enforce": "advice"}
+{"id": "CP-402-01", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "本决定自发布之日起执行", "suggested": "自发布之日起施行", "scene": "规范标准", "note": "规范化表述", "enforce": "advice"}
+{"id": "CP-402-02", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "各部门要认真落实", "suggested": "（删除-重复）", "scene": "通知结尾", "note": "避免重复", "enforce": "advice"}
+{"id": "CP-402-03", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "特此通知", "suggested": "保留或根据需要删除", "scene": "通知结尾", "note": "视文种而定", "enforce": "advice"}
+{"id": "CP-402-04", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "望各有关单位...", "suggested": "（改为正文要求）", "scene": "结尾要求", "note": "融入正文", "enforce": "advice"}
+{"id": "CP-402-05", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "有任何问题可...", "suggested": "有疑问请...", "scene": "联系说明", "note": "更加正式", "enforce": "advice"}
+{"id": "CP-402-06", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "谨此通知", "suggested": "特此通知", "scene": "通知结尾", "note": "规范表述", "enforce": "advice"}
+{"id": "CP-402-07", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "此令", "suggested": "特此通知/公告", "scene": "公告结尾", "note": "根据文种选择", "enforce": "advice"}
+{"id": "CP-402-08", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "由...负责解释", "suggested": "本通知由...负责解释", "scene": "责任说明", "note": "添加主语", "enforce": "advice"}
+{"id": "CP-402-09", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "本通知贯彻执行情况...", "suggested": "（改为附则）", "scene": "结尾补充", "note": "移至附则部分", "enforce": "advice"}
+{"id": "CP-402-10", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "敬请...", "suggested": "请...", "scene": "请求表述", "note": "删除敬语冗余", "enforce": "advice"}
+{"id": "CP-402-11", "category": "套话", "subgroup": "结尾套话优化（12条）", "original": "切盼", "suggested": "期待/期望", "scene": "期望表述", "note": "更加现代", "enforce": "advice"}

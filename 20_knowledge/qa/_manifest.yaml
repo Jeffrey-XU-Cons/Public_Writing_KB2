@@ -1,11 +1,10 @@
 # 素材登记簿——素材↔知识的唯一台账（杜绝同一素材被萃取两遍）
 # 状态枚举：未萃取 / 进行中 / 已完成 / 弃用
-# 路径为旧项目只读引用（D:\projects\Public_Writing_KB 只读封存，任何写操作都是事故）
 
 sources:
   - id: S1
     name: 公文写作技巧汇编（305篇145万字）
-    path: D:\projects\Public_Writing_KB\00_raw_materials\15.公文写作技巧汇编（305篇145万字）\
+    path: D:/projects/Public_Writing_KB/10_source/raw_materials/15.公文写作技巧汇编（305篇145万字）/
     categories: [c1, c3, c4, c6]
     method: M1-v7.1
     status: 进行中
@@ -14,7 +13,7 @@ sources:
 
   - id: S3-李忠秋
     name: 结构化写作（李忠秋）
-    path: D:\projects\Public_Writing_KB\00_raw_materials\书籍\Jie Gou Hua Xie Zuo _Xin Zhong - Li Zhong Qiu.md
+    path: D:/projects/Public_Writing_KB/10_source/raw_materials/书籍/Jie Gou Hua Xie Zuo _Xin Zhong - Li Zhong Qiu.md
     chars: 317561
     categories: [c3, c5, c6, c4]
     method: M1-v7.1
