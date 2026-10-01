@@ -55,3 +55,29 @@ def test_banned_name_inside_dot_dir_is_skipped(tmp_root):
     nested.write_text("x", encoding="utf-8")
     errors, _ = kb_audit.audit()
     assert not any("some_final_module" in e for e in errors)
+
+
+def test_banned_name_in_source_archive_legacy_is_skipped(tmp_root):
+    """原始素材、前期归档、legacy 存档保留原名，不报禁用命名。"""
+    for rel in ("10_source/raw_materials/方案_v3.2_完成版.md",
+                "99_前期资料/02_Dify部署/GUIDE_v2.md",
+                "20_knowledge/terms/legacy/official_terms_v2.yaml"):
+        f = tmp_root / rel
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text("x", encoding="utf-8")
+    errors, _ = kb_audit.audit()
+    assert not any("禁用命名" in e for e in errors)
+
+
+def test_legacy_dir_name_itself_does_not_exempt_siblings(tmp_root):
+    """豁免只看上级目录；legacy 目录外的同名违规照报。"""
+    (tmp_root / "20_knowledge" / "terms").mkdir(parents=True)
+    (tmp_root / "20_knowledge" / "terms" / "词典_v2.yaml").write_text("x", encoding="utf-8")
+    errors, _ = kb_audit.audit()
+    assert any("词典_v2.yaml" in e for e in errors)
+
+
+def test_project_structure_md_allowed_at_root(tmp_root):
+    (tmp_root / "PROJECT_STRUCTURE.md").write_text("x", encoding="utf-8")
+    errors, _ = kb_audit.audit()
+    assert not any("PROJECT_STRUCTURE.md" in e for e in errors)

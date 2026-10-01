@@ -97,7 +97,7 @@
     04_知识萃取与知识库.md          C1–C6、QA schema、门禁
     05_写作流程.md                  S1–S5、三确认点、20 条门禁
     06_Skills体系.md                7 个 skill
-    07_知识分层与词典架构_v2.md     depth/enforce/词典四层/脱敏
+    07_知识分层与词典架构.md     depth/enforce/词典四层/脱敏
     08_kb-rag迁移与实施计划.md      QA 引擎、双档规格
     09_写作体系总体架构.md          A 层公理、W1–W5、八场景
     10_写作体系作业规格_IPO.md      28 节点 IPO + 三级测试
@@ -130,11 +130,10 @@
 
 ---
 
-## 四、根目录只留四样
+## 四、根目录只留三样
 
 ```
 CLAUDE.md                        项目指令
-CLAUDE_旧版_v1.1_20260914.md     上一版备份
 PROJECT_STRUCTURE.md             本文件
 .env.template / .gitignore
 ```

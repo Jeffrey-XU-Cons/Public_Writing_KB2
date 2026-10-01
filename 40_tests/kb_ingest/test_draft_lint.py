@@ -202,7 +202,7 @@ def test_blank_report_template_is_blocked():
 
 def test_report_all_redlines_pass_and_resolved():
     rep = REPORT_TPL
-    for g in ["政策引用层级零倒置", "零编造（数据案例可溯源，[待补]清零）", "文种要件齐全",
+    for g in ["政策引用层级零倒置", "零编造（数据、案例、判断可溯源，[待补]清零）", "文种要件齐全",
               "政治表述顺序与固定套语零差错", "待人工裁决项全部经 Jeffrey 明示处理"]:
         rep = re.sub(r"(\| " + re.escape(g) + r" \| \*\*红线\*\* \| [^|]+\| )[^|]*\|", r"\1✅ |", rep)
     assert not [f for f in dl.check_report(rep) if f["rule"] == "红线未过"]
@@ -328,3 +328,170 @@ def test_long_clause_density_is_warn():
     """2026-09-25 拍板：真实成稿全部超标，降为 warn。"""
     long_clause = "通过系统梳理和深入研究国家局关于企业管理成熟度评价体系建设的系列指导文件和政策要求"
     assert [f["severity"] for f in dl.check_long_clauses((long_clause + "。") * 3)] == ["warn"]
+
+
+# ---------------- R6 判断溯源（2026-09-29） ----------------
+
+JUDGE_DRAFT = "一、总体情况\n试点暴露的问题主要是等级递进不清。原因在于编制人员对等级特征掌握不够系统。\n"
+
+
+def _trace_report(rows):
+    return "## 六、判断溯源表\n\n| # | 判断（原句摘录） | 出处（素材 + 原话） | 结论 |\n|---|---|---|---|\n" + rows + "\n## 七、知识库贡献分\n"
+
+
+def test_trace_table_missing_blocks():
+    assert any(f["rule"] == "R6 溯源表缺失" for f in dl.check_trace(JUDGE_DRAFT, "## 一、轮次记录\n"))
+
+
+def test_unregistered_judgment_blocks():
+    """模板原样（只有占位行）= 判断句全部未登记。"""
+    rules = [f["rule"] for f in dl.check_trace(JUDGE_DRAFT, REPORT_TPL)]
+    assert "R6 判断未溯源" in rules
+
+
+def test_judgment_without_source_blocks():
+    rep = _trace_report("| 1 | 原因在于编制人员对等级特征掌握不够系统 | | 无出处 |")
+    assert any(f["rule"] == "R6 判断无出处" for f in dl.check_trace(JUDGE_DRAFT, rep))
+
+
+def test_registered_judgments_pass():
+    rep = _trace_report("| 1 | 试点暴露的问题主要是等级递进不清 | 素材5.2：各等级间递进路径不够清晰 | 有出处 |\n"
+                        "| 2 | 原因在于编制人员对等级特征掌握不够系统 | 素材5.5：对理论体系、方法工具掌握不够系统 | 有出处 |")
+    assert dl.check_trace(JUDGE_DRAFT, rep) == []
+
+
+def test_ordinal_shi_not_flagged_as_judgment():
+    """“二是……的保障要素”是序数列举，不是“是……的保障”判断句。"""
+    assert dl.judgment_sentences("二是综合管理，聚焦支撑企业运行的保障要素。") == []
+
+
+def test_final_without_report_blocks(tmp_path, capsys):
+    draft = tmp_path / "终稿.md"
+    draft.write_text("一、总体情况\n销量同比增长5%。\n", encoding="utf-8")
+    assert dl.main([str(draft), "--final"]) == 1
+    assert "R6 缺审校报告" in capsys.readouterr().out
+
+
+# ---------------- 补齐 AUTO 项（2026-09-29） ----------------
+
+def _rules(res):
+    return {(f["rule"], f["severity"]) for f in res}
+
+
+def test_policy_order_inversion_warns():
+    res = dl.check_policy_order("认真贯彻全国烟草工作会议精神和习近平新时代中国特色社会主义思想，推动工作。")
+    assert ("Q-017 指导思想顺序", "warn") in _rules(res)
+
+
+def test_official_policy_formula_not_flagged():
+    """国家局十四五规划原句：大会精神在前、思想在后，是正式句式。"""
+    assert dl.check_policy_order("深入贯彻党的十九大精神，坚持以习近平新时代中国特色社会主义思想为指导，全面推进。") == []
+
+
+def test_sige_order_is_advice_only():
+    res = dl.check_sige("坚决做到“两个维护”，树牢“四个意识”，坚定“四个自信”。")
+    assert _rules(res) == {("Q-018 固定组合顺序", "advice")}
+
+
+def test_wrong_political_form_warns():
+    assert ("Q-019/025 表述不规范", "warn") in _rules(dl.check_wrong_forms("推动公司高质量的发展。"))
+
+
+def test_mixed_numbering_format_warns():
+    assert dl.check_numbering_format("1、第一项内容\n2.第二项内容\n")[0]["rule"] == "Q-030 同层序号格式不一"
+    assert dl.check_numbering_format("1.第一项内容\n2.第二项内容\n") == []
+
+
+def test_percent_in_chinese_warns():
+    assert dl.check_number_format("合格率达到百分之八十五。")
+    assert dl.check_number_format("做到百分之百覆盖。") == []
+
+
+def test_paragraph_over_500_without_items_warns():
+    para = "公司持续推进管理体系建设工作取得了阶段成效" * 30 + "。"
+    assert ("Q-041 长段无分条", "warn") in _rules(dl.check_long_paragraph(para))
+
+
+def test_same_lead_verb_three_times_advice():
+    res = dl.check_same_lead("一是坚持目标导向。二是坚持问题导向。三是坚持结果导向。")
+    assert ("Q-054 领起词重复", "advice") in _rules(res)
+
+
+def test_opening_metaphor_and_generic_ending_warn():
+    text = "站在新的历史坐标系上，公司启动体系建设。\n正文。\n让我们携手并进，共创辉煌。\n"
+    rules = _rules(dl.check_open_close(text))
+    assert ("Q-055 开场铺垫", "warn") in rules and ("Q-056 通用结尾", "warn") in rules
+
+
+def test_length_out_of_range():
+    outline = "- 字数区间：5000–7000 字｜构建方向：自下而上"
+    short = "字" * 3000
+    assert dl.check_length(short, outline, final=True)[0]["severity"] == "block"
+    assert dl.check_length(short, outline, final=False)[0]["severity"] == "warn"
+    assert dl.check_length("字" * 4500, outline, final=True)[0]["severity"] == "warn"  # 超出不到 20%
+    assert dl.check_length("字" * 6000, outline, final=True) == []
+
+
+# ---------------- R7 逐段审表（2026-10-01） ----------------
+
+PARA_A = "我们以端到端视角梳理核心业务流程，共识别一级流程〔数据〕条、二级流程〔数据〕条，形成覆盖全业务链条的流程清单，为后续标准编写打下基础。"
+PARA_B = "流程长由业务分管领导担任，对流程绩效负总责；流程专员由业务骨干担任，负责流程文件起草和日常维护，确保每条流程都有人管、有人改。"
+SEG_DRAFT = f"一、搭建流程框架\n现将主要做法介绍如下。\n{PARA_A}\n（一）明确流程责任\n{PARA_B}\n"
+SEG_HEAD = "## 七、逐段审表\n\n| # | 位置 | 段首摘录 | 本段主旨 | 跑题句 | 与上下段衔接 | 概念/数据口径核对 | 结论 |\n|---|---|---|---|---|---|---|---|\n"
+ROW_A = ("| 1 | 一 | 我们以端到端视角梳理核心业务 | 用端到端梳理建立覆盖全链条的流程清单 | 无 "
+         "| 承接标题“搭建框架”，下接（一）责任落实 | 一级、二级流程数取自 2024-08 清单，口径一致 | 通过 |")
+ROW_B = ("| 2 | 一（一） | 流程长由业务分管领导担任 | 流程长、流程专员两级责任分工 | 无 "
+         "| 上段建清单、本段定责任，顺接 | “流程长”与四（二）用法一致 | 通过 |")
+
+
+def _seg_report(rows):
+    return SEG_HEAD + rows + "\n## 八、知识库贡献分\n"
+
+
+def test_r7_table_missing_blocks():
+    assert [f["rule"] for f in dl.check_paragraphs(SEG_DRAFT, "## 六、判断溯源表\n")] == ["R7 逐段审表缺失"]
+
+
+def test_r7_template_placeholder_means_all_unreviewed():
+    """模板原样（只有占位行）= 每段都未审。"""
+    rules = [f["rule"] for f in dl.check_paragraphs(SEG_DRAFT, REPORT_TPL)]
+    assert rules == ["R7 段落未审", "R7 段落未审"]
+
+
+def test_r7_unregistered_paragraph_blocks():
+    found = dl.check_paragraphs(SEG_DRAFT, _seg_report(ROW_A))
+    assert [(f["rule"], f["line"]) for f in found] == [("R7 段落未审", 5)]
+
+
+def test_r7_tick_only_blocks():
+    lazy = ROW_B.replace("上段建清单、本段定责任，顺接", "✅").replace("“流程长”与四（二）用法一致", "无")
+    found = dl.check_paragraphs(SEG_DRAFT, _seg_report(ROW_A + "\n" + lazy))
+    assert [f["rule"] for f in found] == ["R7 只打勾未留痕"]
+    assert "衔接" in found[0]["msg"] and "口径" in found[0]["msg"]
+
+
+def test_r7_thesis_copying_heading_blocks():
+    copied = ROW_B.replace("流程长、流程专员两级责任分工", "明确流程责任")
+    found = dl.check_paragraphs(SEG_DRAFT, _seg_report(ROW_A + "\n" + copied))
+    assert [f["rule"] for f in found] == ["R7 只打勾未留痕"] and "本段主旨" in found[0]["msg"]
+
+
+def test_r7_failed_verdict_blocks():
+    failed = ROW_B.replace("| 通过 |", "| 不通过 |")
+    found = dl.check_paragraphs(SEG_DRAFT, _seg_report(ROW_A + "\n" + failed))
+    assert [f["rule"] for f in found] == ["R7 段落审查未过"]
+
+
+def test_r7_all_rows_filled_pass_and_short_transition_skipped():
+    """“现将主要做法介绍如下。”不足 40 字，不要求登记。"""
+    assert dl.check_paragraphs(SEG_DRAFT, _seg_report(ROW_A + "\n" + ROW_B)) == []
+
+
+def test_r7_runs_only_in_final_with_report(tmp_path, capsys):
+    d, r = tmp_path / "d.md", tmp_path / "r.md"
+    d.write_text(SEG_DRAFT, encoding="utf-8")
+    r.write_text(REPORT_TPL, encoding="utf-8")
+    dl.main([str(d), "--report", str(r)])
+    assert "R7" not in capsys.readouterr().out          # 非终验不触发
+    dl.main([str(d), "--report", str(r), "--final"])
+    assert "R7 段落未审" in capsys.readouterr().out

@@ -7,8 +7,13 @@ Gates:
   W1-2 判断句   check_thesis      topic-phrase patterns + no-predicate detection
   W2-4 MECE     check_mece        sibling headings identical after stripping filler / empty / near-synonym
   W3-2 数据基准 check_baseline    change-numbers without a baseline; degree adverbs without a number
+  R6   判断溯源 check_trace       --final: judgment sentences must be registered with a source in report
+  R7   逐段审   check_paragraphs  --final: every body paragraph must have a filled row in report 逐段审表
+                                  (主旨/跑题句/衔接/口径 written out, not just ticked; 结论 not 不通过)
   W5-1 机检     machine checks    quotes, numbering, 总分, long clauses, delete-list, title punctuation,
                                   dictionary rules (terms.jsonl kind 禁用词/搭配错误/套话), [待补] residue
+                                  + 2026-09-29: Q-017/018/019/030/032/039/041/048/054/055/056 and 字数区间
+                                  (levels calibrated on 82 real docs; see gw-review quality-checklist 机检实现状态)
 
 W1-2 and W2-4 are semantic by nature: the code gate is NECESSARY, not sufficient — it blocks clear
 violations; gw-review's LLM pass covers the rest.
@@ -228,6 +233,177 @@ def check_placeholder(text, final):
             for no, line in enumerate(text.splitlines(), 1) if re.search(r"[\[【]待补", line)]
 
 
+# ---------------- 补齐 AUTO 项（2026-09-29，quality-checklist 标 AUTO 但此前未实现的） ----------------
+# 严重级别原则：判据清楚、误报近零才 block；其余 warn/advice，由 82 份真实成稿基线校准。
+
+def is_heading(raw):
+    """markdown 标题，或带编号且不超过 40 字的短标题行。"""
+    return raw.lstrip().startswith("#") or any(p.match(clean_line(raw)) and len(clean_line(raw)) <= 40
+                                               for _, p in HEADING_PATTERNS)
+
+
+def body_paragraphs(text):
+    """正文段落 = 一个非空物理行（跳过 markdown 标题、表格、编号短标题）：[(行号, 段落文本)]。
+    不按空行拼段：转换来的成稿段间常无空行，拼段会把多段误判成超长段（82 份实测 452 条误报）。"""
+    paras = []
+    for no, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if line and not line.startswith("|") and not is_heading(raw):
+            paras.append((no, line))
+    return paras
+
+
+# Q-017 指导思想引用顺序——只做预筛（warn），R1 红线终判在人工：
+# 82 份实测，国家局正式文件既有“贯彻党的十九大精神，坚持以……思想为指导”，也有“以……思想为指导，贯彻党的二十大精神”，
+# 故“思想”与“党的X大”视为同级；“省委省政府”与“国家局”的先后 legacy 两处规格矛盾，不查。
+POLICY_RANK = [(r"习近平新时代中国特色社会主义思想", 1), (r"党的[一二三四五六七八九十]+大", 1),
+               (r"中央经济工作会议", 2), (r"全国烟草工作会议|国家局党组|国家烟草专卖局党组", 3)]
+
+
+def check_policy_order(text):
+    res = []
+    for no, para in body_paragraphs(text):
+        for sent in re.split(r"(?<=[。；！？])", para):
+            hits = sorted((m.start(), rank) for pat, rank in POLICY_RANK for m in [re.search(pat, sent)] if m)
+            ranks = [r for _, r in hits]
+            if any(a > b for a, b in zip(ranks, ranks[1:])):
+                res.append(finding("Q-017 指导思想顺序", no, f"「{sent.strip()[:30]}」高层级引用排在低层级之后，人工核", "warn"))
+    return res
+
+
+# Q-018 “四个意识/四个自信/两个维护”顺序——只提示（advice）：国家局讲话原文就有“坚决做到‘两个维护’……树牢‘四个意识’”
+# 的倒序用法，“两个维护”单用也常见，legacy“不可拆开、不可调换”对真实文本不成立。
+def check_sige(text):
+    res = []
+    for no, para in body_paragraphs(text):
+        pos = [(para.find(k), k) for k in ("四个意识", "四个自信", "两个维护") if k in para]
+        if not pos:
+            continue
+        if [k for _, k in sorted(pos)] != [k for _, k in pos]:
+            res.append(finding("Q-018 固定组合顺序", no, "“四个意识、四个自信、两个维护”非标准顺序，确认是否有意", "advice"))
+    return res
+
+
+# Q-019 政治套语改写；Q-025/026/028 术语错写（清单原文的小表，词典 t4_contrast 建成后迁过去）
+WRONG_FORMS = [("高质量的发展", "高质量发展", "warn"), ("现代化的建设", "现代化建设", "warn"),
+               ("成熟度考核", "成熟度评价", "warn"), ("下属单位", "直属单位（烟草系统口径）", "advice")]
+# “省公司→省局（公司）”未纳入：工业公司与正式文件里“省公司”是正常说法，82 份实测多为误报
+
+
+def check_wrong_forms(text):
+    res = []
+    for no, line in enumerate(text.splitlines(), 1):
+        for wrong, right, sev in WRONG_FORMS:
+            if wrong in line:
+                res.append(finding("Q-019/025 表述不规范", no, f"「{wrong}」→「{right}」", sev))
+    return res
+
+
+# Q-030/031 同层序号格式唯一、全文一致
+def check_numbering_format(text):
+    fmts = {}
+    for no, raw in enumerate(text.splitlines(), 1):
+        line = clean_line(raw)
+        for key, pat in (("三级", r"^\d+\s*([.．、])(?!\d)"), ("二级", r"^([（(])\s*[一二三四五六七八九十]+\s*[）)]"),
+                         ("四级", r"^([（(])\s*\d+\s*[）)]")):
+            m = re.match(pat, line)
+            if m:
+                fmts.setdefault(key, {}).setdefault(m.group(1).replace("．", "."), no)
+    return [finding("Q-030 同层序号格式不一", min(v.values()), f"{k}序号混用「{'」「'.join(v)}」", "warn")
+            for k, v in fmts.items() if len(v) > 1]
+
+
+# Q-032 数字表述：百分数用阿拉伯数字
+def check_number_format(text):
+    return [finding("Q-032 百分数写法", no, "百分数用阿拉伯数字（如 85.7%）", "warn")
+            for no, line in enumerate(text.splitlines(), 1)
+            if re.search(r"百分之(?!百)[零〇一二三四五六七八九十点]+", line)]
+
+
+# Q-039 连续 3 句无数据（汇总成一条 advice，逐句报会淹没真问题）
+def check_data_density(text):
+    runs = 0
+    for _, para in body_paragraphs(text):
+        streak = 0
+        for s in re.split(r"(?<=[。；！？])", para):
+            streak = 0 if re.search(r"\d", s) else streak + 1
+            if streak == 3:
+                runs += 1
+    return [finding("Q-039 连续无数据", None, f"{runs} 处连续 3 句以上无数据（成效段需补数据，其余可忽略）", "advice")] if runs else []
+
+
+# Q-041 超长段无分条（tobacco-style：一般 ≤300 字，禁止 >500 字无分条；清单 200 字偏严，按 style 取值）
+def check_long_paragraph(text):
+    """>500 字无分条逐段 warn（style 的“禁止”线）；300–500 字汇总一条 advice。
+    82 份真实成稿实测 >300 字无分条 298 处，与 Q-052 长句一样，规范比交付实际严，不逐条刷屏。"""
+    res, mid = [], 0
+    for no, para in body_paragraphs(text):
+        n = len(HANZI_RE.findall(para))
+        if n <= 300 or re.search(r"[一二三四五六七八九十]是|（[一二三四五六七八九十]）|第[一二三四五六七八九十]，", para):
+            continue
+        if n > 500:
+            res.append(finding("Q-041 长段无分条", no, f"段落 {n} 字未分条（>500 字须用一是/二是展开）", "warn"))
+        else:
+            mid += 1
+    if mid:
+        res.append(finding("Q-041 长段偏长", None, f"{mid} 段 300–500 字未分条，可考虑拆分", "advice"))
+    return res
+
+
+# Q-048 节奏断点：连续 4 句字数相差不超过 3 字（汇总 advice）
+def check_rhythm(text):
+    hits = 0
+    for _, para in body_paragraphs(text):
+        lens = [len(HANZI_RE.findall(s)) for s in re.split(r"[，。；！？]", para) if len(HANZI_RE.findall(s)) >= 6]
+        hits += sum(1 for i in range(len(lens) - 3) if max(lens[i:i + 4]) - min(lens[i:i + 4]) <= 3)
+    return [finding("Q-048 节奏单调", None, f"{hits} 处连续 4 个分句字数相近，可用长短句交错", "advice")] if hits else []
+
+
+# Q-054 句式重复：“一是X…二是X…三是X”领起词相同
+def check_same_lead(text):
+    res = []
+    for no, para in body_paragraphs(text):
+        leads = re.findall(r"[一二三四五六七八九十]是(?:要)?([一-鿿]{2})", para)
+        for w in {w for w in leads if leads.count(w) >= 3}:
+            res.append(finding("Q-054 领起词重复", no, f"「{w}」连续作领起词 {leads.count(w)} 次，交替使用不同动词", "advice"))
+    return res
+
+
+# Q-055 开场、Q-056 结尾（首段/末段 ≤200 字；开场禁比喻铺垫；结尾禁通用号召）
+OPENING_BAN = re.compile(r"坐标系|里程碑|新征程上|大潮|浪潮|号角")
+ENDING_GENERIC = re.compile(r"让我们.{0,20}(?:携手|凝心聚力|共同努力|一起|同心协力)|奋力谱写.{0,10}新篇章")
+
+
+def check_open_close(text):
+    paras = body_paragraphs(text)
+    if not paras:
+        return []
+    res = []
+    (no1, first), (no2, last) = paras[0], paras[-1]
+    if len(HANZI_RE.findall(first)) > 200:
+        res.append(finding("Q-055 开场过长", no1, f"开场 {len(HANZI_RE.findall(first))} 字，须 ≤200 字直切主题", "warn"))
+    if OPENING_BAN.search(first):
+        res.append(finding("Q-055 开场铺垫", no1, f"开场用了「{OPENING_BAN.search(first).group(0)}」类比喻铺垫", "warn"))
+    if len(paras) > 1 and len(HANZI_RE.findall(last)) > 200:
+        res.append(finding("Q-056 结尾过长", no2, f"结尾 {len(HANZI_RE.findall(last))} 字，须 ≤200 字", "advice"))
+    if ENDING_GENERIC.search(last):
+        res.append(finding("Q-056 通用结尾", no2, f"「{ENDING_GENERIC.search(last).group(0)}」可移植到任何文章", "warn"))
+    return res
+
+
+# 字数区间（outline「字数区间：X–Y 字」）：终稿超出区间 20% 以上 block，其余超区间 warn
+def check_length(text, outline, final):
+    m = re.search(r"字数区间[:：]\s*([\d,，]+)\s*[–\-~～至]\s*([\d,，]+)", outline or "")
+    if not m:
+        return []
+    lo, hi = (int(re.sub(r"[,，]", "", g)) for g in m.groups())
+    n = len(re.sub(r"\s", "", text))
+    if lo <= n <= hi:
+        return []
+    far = n < lo * 0.8 or n > hi * 1.2
+    return [finding("字数超区间", None, f"全文 {n} 字，大纲区间 {lo}–{hi} 字", "block" if final and far else "warn", gate="W3-4")]
+
+
 # ---------------- 词典规则（terms.jsonl，单一来源） ----------------
 
 def load_rules(root=None):
@@ -435,6 +611,111 @@ def check_report(report):
     return res
 
 
+# ---------------- R6 判断溯源（2026-09-29，P4 两轮头号漏检） ----------------
+# 机器只做两件事：①把带因果/定性标记的句子全部挑出来；②核对每句都在 review_report「判断溯源表」
+# 里登记且写了出处。出处对不对是人工的事，机器保证“逐条过、留痕、可抽查”。
+
+JUDGE_RE = re.compile(
+    # 因果
+    r"原因在于|根因(?:是|在于)|根源在于|归因于|导致|造成了|致使|使得|从而|因此|因而|所以|由于|得益于"
+    r"|表明|说明了|证明|可见"
+    # 成效定性
+    r"|解决了|破解了|奠定了|打下了|夯实了|实现了.{0,12}转变|有了|确保了|大多数|普遍"
+    r"|关键在于|前提是|(?<![一二三四五六七八九十])是[^，。；]{1,16}的(?:关键|前提|基础|保障|根本|抓手)(?!举措)"
+    # 问题定性（对单位现状的负面判断，最容易编）
+    r"|不足|缺少|缺乏|不够|差距|不一致|不清晰|不统一|不齐|滞后|薄弱|偏少|偏低"
+    r"|完整(?!性)|显著|有效(?!性|期)")
+NORM_RE = re.compile(r"[^一-鿿0-9A-Za-z]")
+
+
+def judgment_sentences(text):
+    """正文里带因果/定性标记的句子（跳过标题和表格行）。"""
+    body = "\n".join(l for l in text.splitlines() if not re.match(r"^\s*(#|\|)", l))
+    return [s.strip() for s in re.split(r"(?<=[。！？；])|\n", body) if s.strip() and JUDGE_RE.search(s)]
+
+
+def check_trace(text, report):
+    """R6：每句判断都要在「判断溯源表」登记、有出处；结论为“无出处”的不得进终稿。"""
+    rows = table_rows(report, "判断溯源")
+    if rows is None:
+        return [finding("R6 溯源表缺失", None, "review_report 没有「判断溯源表」小节", gate="W5-4")]
+    res, keys = [], []
+    for r in rows:
+        if len(r) < 4 or not r[1] or PLACEHOLDER_RE.fullmatch(r[1]):
+            continue
+        if not r[2] or PLACEHOLDER_RE.fullmatch(r[2]) or "无出处" in r[3]:
+            res.append(finding("R6 判断无出处", None, f"「{r[1][:30]}」没有素材出处——删除或改写后重登", gate="W5-4"))
+        keys.append(NORM_RE.sub("", r[1])[:12])
+    for s in judgment_sentences(text):
+        norm = NORM_RE.sub("", s)
+        if not any(k and k in norm for k in keys):
+            res.append(finding("R6 判断未溯源", None, f"「{s[:30]}」含因果/定性判断，未在判断溯源表登记", gate="W5-4"))
+    return res
+
+
+# ---------------- R7 逐段审表（2026-10-01，P4 第 2 轮 8 处段落层漏检） ----------------
+# 门禁表里“段首句可还原主线 ✅”一行打勾就过，模型自评即放行；R6 强制逐句填表后当轮就抓出主语偷换。
+# R7 与 R6 同构：机器只核对“每段都有一行、四列写实、结论不是不通过”，写得对不对由人抽查。
+
+R7_MIN_PARA = 40       # 去标点后不足 40 字的过渡句（“现将主要做法介绍如下”）不要求登记
+R7_KEY_LEN = 10        # 段首摘录去标点后取前 10 字，须是段落的前缀
+R7_TICK_RE = re.compile(r"^[\s✅✓√☑无—\-－/／、，,。.]*$")
+HEAD_NUM_RE = re.compile(r"^(?:第[一二三四五六七八九十]+(?:部分|篇|章)|[一二三四五六七八九十]+\s*、"
+                         r"|[（(]\s*[一二三四五六七八九十\d]+\s*[）)]|\d+\s*[.．、](?!\d))\s*")
+
+
+def paragraphs_with_heading(text):
+    """[(行号, 段落文本, 所在最近一级标题的正文)]，段落口径同 body_paragraphs。"""
+    out, heading = [], ""
+    for no, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("|"):
+            continue
+        if is_heading(raw):
+            heading = HEAD_NUM_RE.sub("", clean_line(raw))
+            continue
+        out.append((no, line, heading))
+    return out
+
+
+def check_paragraphs(text, report):
+    """R7：正文每段（≥40 字）都要在「逐段审表」登记一行，主旨/跑题句/衔接/口径四列写实，结论不得为“不通过”。
+    表列：# | 位置 | 段首摘录 | 本段主旨 | 跑题句 | 与上下段衔接 | 概念/数据口径核对 | 结论"""
+    rows = table_rows(report, "逐段审")
+    if rows is None:
+        return [finding("R7 逐段审表缺失", None, "review_report 没有「逐段审表」小节", gate="W5-4")]
+    res, filled = [], []
+    for r in rows:
+        if len(r) < 8 or not r[2] or PLACEHOLDER_RE.search(r[2]):
+            continue
+        filled.append((NORM_RE.sub("", r[2])[:R7_KEY_LEN], r))
+    for no, para, heading in paragraphs_with_heading(text):
+        norm = NORM_RE.sub("", para)
+        if len(norm) < R7_MIN_PARA:
+            continue
+        hit = next((r for key, r in filled if len(key) == R7_KEY_LEN and norm.startswith(key)), None)
+        if hit is None:
+            res.append(finding("R7 段落未审", no, f"「{para[:20]}」未在逐段审表登记", gate="W5-4"))
+            continue
+        thesis, offtopic, link, caliber, verdict = (c.strip() for c in hit[3:8])
+        if "不通过" in verdict:
+            res.append(finding("R7 段落审查未过", no, f"「{para[:20]}」逐段审结论为不通过——改稿后重审", gate="W5-4"))
+        lazy = []
+        thesis_norm = NORM_RE.sub("", thesis)
+        if len(thesis_norm) < 8 or (heading and thesis_norm == NORM_RE.sub("", heading)):
+            lazy.append("本段主旨")
+        if not offtopic:
+            lazy.append("跑题句")
+        if R7_TICK_RE.match(link):
+            lazy.append("衔接")
+        if R7_TICK_RE.match(caliber):
+            lazy.append("口径")
+        if lazy:
+            res.append(finding("R7 只打勾未留痕", no, f"「{para[:20]}」的{'、'.join(lazy)}列没有写实（不许只打勾或照抄标题）",
+                               gate="W5-4"))
+    return res
+
+
 # ---------------- 汇总 ----------------
 
 def lint(text, outline=None, final=False, rules=None):
@@ -442,7 +723,10 @@ def lint(text, outline=None, final=False, rules=None):
     res = (check_quotes(text) + check_numbering(text) + check_shi_series(text) + check_total_parts(text)
            + check_long_clauses(text) + check_delete_list(text) + check_title_punct(text)
            + check_vague_time(text) + check_placeholder(text, final) + check_dictionary(text, rules)
-           + check_baseline(text))
+           + check_baseline(text)
+           + check_policy_order(text) + check_sige(text) + check_wrong_forms(text) + check_numbering_format(text)
+           + check_number_format(text) + check_data_density(text) + check_long_paragraph(text) + check_rhythm(text)
+           + check_same_lead(text) + check_open_close(text))
     for g in sibling_groups(text):
         res += check_mece(g)
     if outline:
@@ -454,6 +738,7 @@ def lint(text, outline=None, final=False, rules=None):
         for g in sibling_groups(outline):
             res += check_mece(g)
         res += check_outline(outline)
+        res += check_length(text, outline, final)
     return res
 
 
@@ -476,7 +761,12 @@ def main(argv):
     outline = outline_path.read_text(encoding="utf-8") if outline_path else None
     res = lint(text, outline, final)
     if report_path:
-        res += check_report(report_path.read_text(encoding="utf-8"))
+        report = report_path.read_text(encoding="utf-8")
+        res += check_report(report)
+        if final:
+            res += check_trace(text, report) + check_paragraphs(text, report)
+    elif final:
+        res.append(finding("R6 缺审校报告", None, "终验必须带 --report review_report.md（不生成不得呈报）", gate="W5-4"))
     if as_json:
         print(json.dumps(res, ensure_ascii=False, indent=1))
     else:

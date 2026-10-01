@@ -11,6 +11,14 @@ Pipeline:  batches/B-xxx/raw_output.md  →  parse header + 10-column MD table
 
 Index build is skipped until the retrieval slice exists (printed as a notice).
 
+Table forms (P5, 2026-09-29):
+  10 columns — the original layout; source_path comes from the header.
+  15 columns — the 10 above + source_path | depth | enforce | w_layer | 挂钩.
+     Any of the five may be left empty.  Per-row source_path overrides the
+     header (one batch can span several source files, e.g. 汇编一至五).
+     挂钩 is read according to depth: axiom → governs (大类 numbers),
+     technique → implements, method/principle → derives_from (QA ids).
+
 CLI:  python tools/kb_ingest.py --batch batches/B-20260706-01 [--dry-run]
 """
 
@@ -44,7 +52,8 @@ def parse_header(text: str) -> dict:
         if ":" in line:
             k, v = line.split(":", 1)
             meta[k.strip()] = v.strip()
-    for key in ("batch_id", "source_path", "extract_method"):
+    # source_path may instead be given per row (15-column table); checked in build_records
+    for key in ("batch_id", "extract_method"):
         if key not in meta:
             raise ValueError(f"头部元数据缺少 {key}")
     return meta
@@ -77,12 +86,18 @@ def split_row(line: str) -> list:
 # ADR-016: category_l1 is now the first data column (10 columns total)
 COLUMNS = ["category_l1", "question", "answer", "answer_type", "tags",
            "scenarios", "question_keywords", "category_l2", "doc_types", "source_anchor"]
+# Optional trailing columns (15-column form). Header text must match exactly,
+# so a mis-ordered table fails loudly instead of landing values in wrong fields.
+EXTRA_COLUMNS = ["source_path", "depth", "enforce", "w_layer", "挂钩"]
+EXTRA_KEYS = ["row_source_path", "depth", "enforce", "w_layer", "links"]
+LIST_SPLIT = re.compile(r"[；;，,\s]+")
 
 
 def parse_table(text: str) -> list:
     """Return list of dicts for each data row of the 10-column table."""
     rows = []
     in_table = False
+    keys = COLUMNS
     for line in text.splitlines():
         s = line.strip()
         if not s.startswith("|"):
@@ -92,15 +107,52 @@ def parse_table(text: str) -> list:
         if not in_table:
             # header row must contain 大类 (category_l1 header) and 问题
             if cells and "问题" in " ".join(cells) and len(cells) >= 10:
+                if len(cells) == len(COLUMNS) + len(EXTRA_COLUMNS):
+                    if cells[len(COLUMNS):] != EXTRA_COLUMNS:
+                        raise ValueError(f"15 列表头后 5 列须依次为 {' | '.join(EXTRA_COLUMNS)}，"
+                                         f"实为 {' | '.join(cells[len(COLUMNS):])}")
+                    keys = COLUMNS + EXTRA_KEYS
+                elif len(cells) != len(COLUMNS):
+                    raise ValueError(f"表头列数 {len(cells)}，应为 10 或 15")
+                else:
+                    keys = COLUMNS
                 in_table = "header"
             continue
         if in_table == "header":          # separator row |---|---|
             in_table = True
             continue
-        if len(cells) != len(COLUMNS):
-            raise ValueError(f"表格行列数 {len(cells)} ≠ {len(COLUMNS)}: {s[:60]}…")
-        rows.append(dict(zip(COLUMNS, cells)))
+        if len(cells) != len(keys):
+            raise ValueError(f"表格行列数 {len(cells)} ≠ {len(keys)}: {s[:60]}…")
+        rows.append(dict(zip(keys, cells)))
     return rows
+
+
+def apply_layer_fields(rec: dict, row: dict, i: int) -> None:
+    """Copy optional depth/enforce/w_layer/挂钩 cells into rec; empty cells are omitted
+    (same as records not yet tagged), kb_validate checks the values."""
+    depth = row.get("depth", "").strip()
+    if depth:
+        rec["depth"] = depth
+    enforce = row.get("enforce", "").strip()
+    if enforce:
+        rec["enforce"] = enforce
+    w_layer = [w for w in LIST_SPLIT.split(row.get("w_layer", "")) if w]
+    if w_layer:
+        rec["w_layer"] = w_layer
+    links = [x for x in LIST_SPLIT.split(row.get("links", "")) if x]
+    if not links:
+        return
+    if depth == "axiom":
+        try:
+            rec["governs"] = [int(x.upper().lstrip("C")) for x in links]
+        except ValueError:
+            raise ValueError(f"第 {i} 行 depth=axiom 的挂钩须为大类编号（如 3；C3），实为 {links}")
+    elif depth == "technique":
+        rec["implements"] = links
+    elif depth in ("method", "principle"):
+        rec["derives_from"] = links
+    else:
+        raise ValueError(f"第 {i} 行填了挂钩但 depth={depth or '空'}，无法判断挂到哪个字段")
 
 
 def next_seq(category_l1: int) -> int:
@@ -133,6 +185,9 @@ def build_records(meta: dict, rows: list) -> list:
         if l1 not in seq_by_cat:
             seq_by_cat[l1] = next_seq(l1)
         seq_by_cat[l1] += 1
+        source_path = row.get("row_source_path", "").strip() or meta.get("source_path", "")
+        if not source_path:
+            raise ValueError(f"第 {i} 行无 source_path：表头和本行都没填")
         rec = {
             "id": f"QA-C{l1}-{seq_by_cat[l1]:05d}",
             "question": row["question"],
@@ -144,7 +199,7 @@ def build_records(meta: dict, rows: list) -> list:
             "category_l1": l1,
             "category_l2": row["category_l2"],
             "doc_types": [d for d in re.split("[；;]", row["doc_types"]) if d.strip()],
-            "source_path": meta["source_path"],
+            "source_path": source_path,
             "source_anchor": row["source_anchor"],
             "extract_method": meta["extract_method"],
             "quality_grade": "B",
@@ -155,6 +210,7 @@ def build_records(meta: dict, rows: list) -> list:
             "updated": today,
             "answer_hash": answer_hash(row["answer"]),
         }
+        apply_layer_fields(rec, row, i)
         records.append(rec)
     return records
 

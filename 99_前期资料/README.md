@@ -29,7 +29,7 @@
 | `01_旧版归档` | 旧版词典 `official_terms.yaml`、段落库/金句库 (P4)、范文索引 JSON、清洗清单 | 已被 `03_dictionary/official_terms_v2.yaml`、`04_corpus/段落库_v2.yaml` 取代；P4 金句库已退役 |
 | `02_Dify部署` | Dify 部署全套：`deployment/`、`code/`（6 个 agent 脚本）、`prompts/`（6 个 agent 提示词）、docker-compose、nginx、DEPLOY 系列文档、`CLAUDE_旧版_Dify.md` | **架构换代**。新方案不走 Dify，改本地 skill |
 | `03_建库脚本` | 21 个一次性建库脚本（prepare_/extract_/p3_/p4_/audit_ 等）、`scripts/`、`__pycache__` | 已跑完，产物就是 `01_templates`～`04_corpus`。新建库走 `10_知识库建设作业计划.md` |
-| `04_旧文档报告` | 旧 README、PROJECT_STRUCTURE、旧架构设计 v2、各类进度/审计/清洗报告、`docs/` | 描述的是旧架构与旧进度，**与现状不符，误导性强** |
+| `04_旧文档报告` | 旧 README、PROJECT_STRUCTURE、旧架构设计 v2、各类进度/审计/清洗报告、`docs/`、`CLAUDE_旧版_v1.1_20260914.md`（2026-09-29 从根目录移入） | 描述的是旧架构与旧进度，**与现状不符，误导性强** |
 | `05_旧元数据` | `05_metadata/`、`data_prep/`（含 Dify 上传件）、`_backup_清洗前_2026-05-22/` | 旧统计与旧管线中间产物 |
 
 ---

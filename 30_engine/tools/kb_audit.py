@@ -21,7 +21,13 @@ import common
 import vocab
 from kb_validate import validate_record
 
-ROOT_MD_WHITELIST = {"CLAUDE.md", "ARCHITECTURE.md", "STATUS.md", "README.md"}
+ROOT_MD_WHITELIST = {"CLAUDE.md", "ARCHITECTURE.md", "STATUS.md", "README.md",
+                     "PROJECT_STRUCTURE.md"}  # CLAUDE.md 末行引用的目录说明
+
+# 命名检查只管本项目产出的文件。原始素材（客户交付物原件，版本号本身是信息）、
+# 前期归档与 legacy 存档保留原名，不在检查范围（2026-09-29 Jeffrey 裁定）。
+NAMING_EXEMPT_TOP = {"10_source", "99_前期资料"}
+NAMING_EXEMPT_ANY = {"legacy"}
 
 
 def audit(fast: bool = False):
@@ -62,6 +68,8 @@ def audit(fast: bool = False):
             rel_parts = p.relative_to(root).parts
             if any(part.startswith(".") for part in rel_parts):
                 continue  # 整个点号目录子树都跳过（.git/.venv/.claude…），不止顶层
+            if rel_parts[0] in NAMING_EXEMPT_TOP or NAMING_EXEMPT_ANY & set(rel_parts[:-1]):
+                continue
             if re.search(vocab.BANNED_NAME_PATTERN, p.name):
                 errors.append(f"[D] 禁用命名: {p.relative_to(root)}")
 

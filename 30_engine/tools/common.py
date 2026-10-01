@@ -18,7 +18,10 @@ def project_root() -> Path:
     env = os.environ.get("KBRAG_ROOT")
     if env:
         return Path(env)
-    return Path(__file__).resolve().parent.parent
+    # tools/ lives at <root>/30_engine/tools, so the root is three levels up.
+    # (Was parent.parent = 30_engine/, which silently pointed qa_dir() at an
+    # empty dir and made draft_lint load zero dictionary rules.)
+    return Path(__file__).resolve().parents[2]
 
 
 def qa_dir() -> Path:
