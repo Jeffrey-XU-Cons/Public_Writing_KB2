@@ -81,3 +81,15 @@ def test_project_structure_md_allowed_at_root(tmp_root):
     (tmp_root / "PROJECT_STRUCTURE.md").write_text("x", encoding="utf-8")
     errors, _ = kb_audit.audit()
     assert not any("PROJECT_STRUCTURE.md" in e for e in errors)
+
+
+def test_banned_name_in_corpus_is_skipped_but_not_elsewhere(tmp_root):
+    """20_knowledge/corpus/ 是外部迁入的原始语料，保留原名；20_knowledge 其他目录照报。"""
+    f = tmp_root / "20_knowledge/corpus/tobacco_kb/语料/inventory_enriched_v3_2.csv"
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text("x", encoding="utf-8")
+    g = tmp_root / "20_knowledge/qa_v2_备份.md"
+    g.write_text("x", encoding="utf-8")
+    errors, _ = kb_audit.audit()
+    assert not any("inventory_enriched" in e for e in errors)
+    assert any("qa_v2_备份.md" in e for e in errors)

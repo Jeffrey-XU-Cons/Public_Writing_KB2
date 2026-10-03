@@ -28,6 +28,8 @@ ROOT_MD_WHITELIST = {"CLAUDE.md", "ARCHITECTURE.md", "STATUS.md", "README.md",
 # 前期归档与 legacy 存档保留原名，不在检查范围（2026-09-29 Jeffrey 裁定）。
 NAMING_EXEMPT_TOP = {"10_source", "99_前期资料"}
 NAMING_EXEMPT_ANY = {"legacy"}
+# 外部迁入的原始语料同理：20_knowledge/corpus/（2026-10-03 Jeffrey 裁定；tobacco_kb 迁入件带 _v3 等原名）
+NAMING_EXEMPT_PREFIXES = {("20_knowledge", "corpus")}
 
 
 def audit(fast: bool = False):
@@ -68,7 +70,8 @@ def audit(fast: bool = False):
             rel_parts = p.relative_to(root).parts
             if any(part.startswith(".") for part in rel_parts):
                 continue  # 整个点号目录子树都跳过（.git/.venv/.claude…），不止顶层
-            if rel_parts[0] in NAMING_EXEMPT_TOP or NAMING_EXEMPT_ANY & set(rel_parts[:-1]):
+            if (rel_parts[0] in NAMING_EXEMPT_TOP or NAMING_EXEMPT_ANY & set(rel_parts[:-1])
+                    or any(rel_parts[:len(px)] == px for px in NAMING_EXEMPT_PREFIXES)):
                 continue
             if re.search(vocab.BANNED_NAME_PATTERN, p.name):
                 errors.append(f"[D] 禁用命名: {p.relative_to(root)}")
