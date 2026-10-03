@@ -113,7 +113,7 @@ QSTD_RE = re.compile(r"Q/[A-Z]{2,8}")
 EXTRA_PLACES = ["五峰县", "东光县", "滦平县", "湘阴县", "新化县", "水城县", "同德县", "龙里县", "河间县",
                 "盐山县", "孟村县", "吴桥县", "澧县", "蠡县", "任丘县", "任丘市", "泊头市", "绥芬河市", "儋州",
                 "红河州", "贵安新区", "郑东新区", "果洛", "宁乡", "北仑", "金沙江", "雅砻江", "安宁河", "鲁南山",
-                "南流江", "翠湖宾馆", "王林", "涞源", "竹山", "竹溪", "日照四地市"]  # 王林 = 玉林的 OCR 错字（“王林市局”“大王林”）
+                "南流江", "翠湖宾馆", "王林", "涞源", "竹山", "竹溪", "日照四地市", "金州"]  # 王林 = 玉林的 OCR 错字（“王林市局”“大王林”）
 EXTRA_PLACE_RE = re.compile("(?<![渠街频轨])道县|" + "|".join(sorted(EXTRA_PLACES, key=len, reverse=True)))
 # “X自治州/自治县”（含民族名）：果洛藏族自治州、黔南布依族苗族自治州……
 AUTONOMOUS_RE = re.compile(r"[^\s，。、；和与及〔〕]{0,4}?(?:[一-龥]{1,3}族){1,3}自治(?:州|县)")
@@ -130,6 +130,16 @@ ROLE_WORDS = ("成\\s*员|组\\s*长|副组长|组员|指导老师|老师|负责
 NAME_TOKEN = "[" + SURNAMES + "][一-龥]{1,2}"
 NAME_LIST_RE = re.compile("((?:" + ROLE_WORDS + r")[：:]\s*)((?:" + NAME_TOKEN + r"[、，,\s]*)+)")
 NAME_TABLE_RE = re.compile(r"(?<![一-龥])(" + NAME_TOKEN + r")(?=\s*[|\s]\s*[男女](?:[\s|]|$))")
+# r8 复查（2026-10-03）抽到的两类漏网：
+#   文号与平台里的省份简称：“陕烟工办〔2023〕”“渝烟局办”“黔府发〔2019〕”“智慧渝烟”“浙烟专有云”——能直接认出省份。
+#   不收“苏烟”“云烟”“贵烟”（品牌，2026-09-25 拍板不脱敏），也不收“黑烟”“青烟”“新烟”“宁烟”“藏烟”这类普通词。
+DOCNO_ABBR = "渝浙陕黔滇湘鄂豫川粤桂闽赣皖鲁冀晋辽吉蒙甘琼"
+DOCNO_ABBR_RE = re.compile("[" + DOCNO_ABBR + "](?:烟(?=[局工办发〔（(专方案平台”\"字商]|$)|(?:府|政)办?(?:发|函))")
+#   PDF 封面逐字加空格：“雄 安 烟 草 专 卖 局”“南 宁 卷 烟”“黔 烟 办 通 报”，字间有空格就躲过了全部规则。
+#   只在去掉空格后能命中地名、单位名或文号简称时才合并，表格碎片“务 工 商 在 获”之类原样保留。
+SPACED_RUN_RE = re.compile(r"(?:[一-龥（）][ 　]+){3,}[一-龥（）]")
+# 合并后地名须紧跟机构/行政字样才算（表格碎片“条 的 简 款 通 化 预 知”拼出的“通化”不算）
+SPACED_HIT_RE = re.compile("(?:" + "|".join(PLACES) + ")(?=[烟卷市省县区局公（]|$)")
 DATA_RE = re.compile(
     r"\d+(?:\.\d+)?\s*(万箱|万条|亿支|万支|万元|亿元|万担|个百分点|百分点|%|％|箱|担|吨|元|万)")
 NAME_TITLE_RE = re.compile(
@@ -167,10 +177,14 @@ def deidentify(text: str, known_names=()):
     for name in sorted(known_names, key=len, reverse=True):
         # 字间允许空白：PDF 转写常把“邹岚”排成“邹  岚”（r7 名单实测）
         rx = re.compile(r"[ 　]*".join(map(re.escape, name)))
+        # 名单里带职务的条目（“凌局长”“志成同志”）只替换人名，职务保留（4.2：删人名、留职务）
+        title = next((t for t in sorted(TITLES + SHORT_TITLES, key=len, reverse=True)
+                      if name.endswith(t) and len(name) > len(t)), "")
+        new = "〔姓名〕" + title
         hits = rx.findall(text)
         if hits:
-            changes.extend({"type": "人名(已知名单)", "orig": h, "new": "〔姓名〕"} for h in hits)
-            text = rx.sub("〔姓名〕", text)
+            changes.extend({"type": "人名(已知名单)", "orig": h, "new": new} for h in hits)
+            text = rx.sub(new, text)
 
     def unit_repl(m):
         # 同一单位的全称与简称共用一个编号：“南阳卷烟厂/南阳厂”“河南中烟/河南中烟工业有限责任公司”
@@ -225,6 +239,14 @@ def deidentify(text: str, known_names=()):
             changes.append({"type": "人名(署名行)", "orig": stripped, "new": "〔姓名〕"})
             out.append("〔姓名〕")
             continue
+        def spaced_repl(m):
+            joined = re.sub(r"[ 　]+", "", m.group(0))
+            if any(rx.search(joined) for rx in (SPACED_HIT_RE, UNIT_RE, DOCNO_ABBR_RE)):
+                changes.append({"type": "空格拆字合并", "orig": m.group(0), "new": joined})
+                return joined
+            return m.group(0)
+        line = SPACED_RUN_RE.sub(spaced_repl, line)
+
         def list_repl(m):
             names = re.sub(NAME_TOKEN, "〔姓名〕", m.group(2))
             if names != m.group(2):
@@ -247,6 +269,9 @@ def deidentify(text: str, known_names=()):
             for m in rx.finditer(line):
                 changes.append({"type": tag, "orig": m.group(0), "new": new})
             line = rx.sub(new, line)
+        for m in DOCNO_ABBR_RE.finditer(line):
+            changes.append({"type": "省份简称(文号/平台)", "orig": m.group(0), "new": "〔某省〕" + m.group(0)[1:]})
+        line = DOCNO_ABBR_RE.sub(lambda m: "〔某省〕" + m.group(0)[1:], line)
         line = DATA_RE.sub(data_repl, line)
         for m in QSTD_RE.finditer(line):
             changes.append({"type": "企标代号", "orig": m.group(0), "new": "Q/〔企业〕"})

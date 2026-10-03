@@ -280,6 +280,6 @@ $KPY -m pytest -q 40_tests/kb_ingest/test_kb_dedup_vec.py
 
 **重新导入与验收**：active 121 条 / 560 问法；索引 121 行；F6 应命中 4/4（F6-02、F6-03 的期望 id 随合并改为 QA-C5-00001、QA-C6-00008，F6-03 由第 2 位升为第 1 位）；冒烟 10/10 Top1；合并后的两条用新问法查（“工作总结写成流水账怎么办”“为什么材料要结论先行”“行动成果对照表怎么用”）均 Top1 或 Top2 命中。
 
-**单测**：本会话前段 229 passed；后段 `test_skills.py` 两条起子进程的用例报 `WinError 6 句柄无效`，把改动全部 stash 后在 HEAD 上同样失败，判为本机会话环境问题，不是代码回归，下次新开会话复跑确认。
+**单测**：本会话前段 229 passed；后段 `test_skills.py` 两条起子进程的用例报 `WinError 6 句柄无效`，把改动全部 stash 后在 HEAD 上同样失败，判为本机会话环境问题，不是代码回归。同日稍后连续复跑 4 次 229 全过，确认是间歇性的。
 
 **遗留**：kb_audit 有 18 个命名 error，全在 `20_knowledge/corpus/tobacco_kb/`（tobacco_kb 迁入时带的 `_v3` 文件名），使 `kb_mark_checked` 末尾 audit 报错退出（标记本身已写入）。改名可能牵动引用这些语料的脚本或配置（本会话未查全），没动，待 Jeffrey 定。

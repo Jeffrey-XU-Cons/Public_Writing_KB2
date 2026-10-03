@@ -269,3 +269,30 @@ def test_abbr_direction_lookalikes_kept():
 
 def test_surname_title_after_conjunction():
     assert _new("重大任务和凌局长在讲话中") == "重大任务和〔姓名〕局长在讲话中"
+
+
+# --- r8 复查（2026-10-03）抽到的漏网 ---
+
+def test_province_abbr_in_doc_numbers_and_platforms():
+    assert _new("《实施方案》（陕烟工办〔2024〕3号）") == "《实施方案》（〔某省〕烟工办〔2024〕3号）"
+    assert "黔" not in _new("《意见》（黔府发〔2019〕12号）")
+    assert "渝" not in _new("以“智慧渝烟”为基础平台")
+
+
+def test_brand_and_common_words_not_masked_as_province():
+    assert _new("苏烟、云烟、贵烟品牌") == "苏烟、云烟、贵烟品牌"
+    assert _new("一缕青烟，黑烟排放") == "一缕青烟，黑烟排放"
+
+
+def test_letter_spaced_cover_unit_is_caught():
+    out = _new("衡 水 烟 草 专 卖 局 （ 公 司 ）")
+    assert "衡" not in out and "水" not in out
+
+
+def test_letter_spaced_table_fragment_kept():
+    assert _new("条 的 简 款 通 化 预 知") == "条 的 简 款 通 化 预 知"
+
+
+def test_known_name_with_title_keeps_title():
+    out = deidentify("落实凌局长思考，刚才志成同志传达", known_names=["凌局长", "志成同志"])[0]
+    assert out == "落实〔姓名〕局长思考，刚才〔姓名〕同志传达"

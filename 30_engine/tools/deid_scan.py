@@ -51,6 +51,13 @@ def scan(batch_dir, known_names=()):
         plain = EXEMPT.sub("", text)
         for m in re.finditer("|".join(d.PLACES), plain):
             hard.append({"type": "省市名残留", "file": f.name, "hit": plain[max(0, m.start() - 8):m.end() + 8]})
+        for m in d.DOCNO_ABBR_RE.finditer(text):
+            hard.append({"type": "省份简称残留", "file": f.name, "hit": text[max(0, m.start() - 8):m.end() + 8]})
+        # 字间加空格躲过扫描的地名（PDF 封面“雄 安 烟 草”）：去空格后再查一遍
+        for m in d.SPACED_RUN_RE.finditer(plain):
+            joined = re.sub(r"[ 　]+", "", m.group(0))
+            if d.SPACED_HIT_RE.search(joined) or d.DOCNO_ABBR_RE.search(joined):
+                hard.append({"type": "空格拆字地名残留", "file": f.name, "hit": joined[:30]})
         for kind, rx in CONTEXTS.items():
             for m in rx.finditer(text):
                 for n in re.findall(NAME, m.group(1)):
