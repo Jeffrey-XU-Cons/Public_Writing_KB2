@@ -22,7 +22,7 @@ def test_miss_fails():
 
 
 def test_hit_beyond_top5_fails():
-    assert evaluate(CASE["F6-02"], ["X"] * 5 + ["QA-C5-00002"])[1] is False
+    assert evaluate(CASE["F6-02"], ["X"] * 5 + ["QA-C5-00001"])[1] is False
 
 
 def test_known_gap_reported_not_failed():

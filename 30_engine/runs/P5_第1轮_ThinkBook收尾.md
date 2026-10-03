@@ -261,6 +261,25 @@ $KPY -m pytest -q 40_tests/kb_ingest/test_kb_dedup_vec.py
 - [x] 清单生成；P99 应接近上次的 0.792，过线约 76 对（7,503 × 1%）。数字明显不符就停下报告
 - [x] 真模型用例在 `$KPY` 下通过（共 8 条）
 - [x] 判定列、理由列留空，不改任何 jsonl；在本节下写一行结果（P99 值、对数、同小类对数）
-- [ ] 不提交，等 Jeffrey 填完判定一起处理
+- [x] 不提交，等 Jeffrey 填完判定一起处理（2026-10-03：Jeffrey 授权 Claude 判定，已处置并提交）
 
 **结果（2026-10-03 ThinkBook，Kb-RAG 会话执行）**：解释器 `D:/ai-runtime/venv-cuda/Scripts/python.exe`（torch 2.11.0+cu128，tobacco_kb 迁出后的新环境，Kb-RAG ADR-030）。active 123 条、7,503 对；中位数 0.6552、P90 0.7356、**P99 0.7917**、最高 0.8585；过线 **76 对**，其中同小类 **25 对**；清单 `30_engine/runs/P5_第1轮_向量判重P99清单.md`，判定列、理由列留空待 Jeffrey 填。`test_kb_dedup_vec.py` 8 passed（15.6s）。未提交。
+
+---
+
+## 收尾决定与执行 · 2026-10-03（ThinkBook，Claude Code 会话；Jeffrey：“向量判重的你来合并……ThinkBook 收尾你决定”）
+
+| 项 | 决定 | 执行结果 |
+|---|---|---|
+| 向量判重 P99 76 对 | 判据：两条回答的是不是同一个问题。合并 2 对（QA-C6-00001→QA-C3-00001，QA-C5-00002→QA-C5-00001），改问法 1 对，其余保留并写明边界 | 迁移 `20261003_p5_dedup_merge.py`；被并 2 条 deprecated；顺带全库 27 条「」统一为弯引号。逐对理由见 P99 清单 |
+| 第⑤步专家抽检 15 条 | Claude 代检（记明不是专家本人检），并扩到三批 83 条全部答案的数字回源核对 | 12 条合格、3 条修正后合格（编造比例 1、例子写成规则 1、一条两点 1），迁移 `20261003_p5_spotcheck_fix.py`；三批 quality_checked=true。详见三份 plan.md“第⑦步抽检” |
+| 问题 1 阈值 | 已由 Jeffrey 10-02 定为 P99，本轮执行完毕 | — |
+| 问题 2 `--tags` 召回后过滤 | 不改 Kb-RAG：按标签取“全部条目”的需求目前没有，gw-draft“检索”节已写明这一局限；真出现需求时在 Kb-RAG 立 ADR | 只记录 |
+| 问题 3 CLAUDE.md 过时两处 | 已在 10-03 前由 7050 改掉；本轮再按新状态更新 QA 库、检索栈两行 | 见 CLAUDE.md §〇 |
+| 问题 4 Kb-RAG STATUS.md | 记：本库派生文件变动应在 STATUS 留一行，便于 Kb-RAG 侧知道数据来源变化 | Kb-RAG STATUS.md 补一行并与派生 qa.jsonl 同一提交 |
+
+**重新导入与验收**：active 121 条 / 560 问法；索引 121 行；F6 应命中 4/4（F6-02、F6-03 的期望 id 随合并改为 QA-C5-00001、QA-C6-00008，F6-03 由第 2 位升为第 1 位）；冒烟 10/10 Top1；合并后的两条用新问法查（“工作总结写成流水账怎么办”“为什么材料要结论先行”“行动成果对照表怎么用”）均 Top1 或 Top2 命中。
+
+**单测**：本会话前段 229 passed；后段 `test_skills.py` 两条起子进程的用例报 `WinError 6 句柄无效`，把改动全部 stash 后在 HEAD 上同样失败，判为本机会话环境问题，不是代码回归，下次新开会话复跑确认。
+
+**遗留**：kb_audit 有 18 个命名 error，全在 `20_knowledge/corpus/tobacco_kb/`（tobacco_kb 迁入时带的 `_v3` 文件名），使 `kb_mark_checked` 末尾 audit 报错退出（标记本身已写入）。改名可能牵动引用这些语料的脚本或配置（本会话未查全），没动，待 Jeffrey 定。
