@@ -38,3 +38,4 @@
 - 向量判重：入库后全库 128 条重跑，P99 线 0.79，新 7 条无一对过线
 - Kb-RAG 重导：128 条 / 589 问法 / 索引 128 行；换说法实查 7 问，Top1 全中；F6 应命中 4/4
 - 未抽检（quality_checked=false）：规则出自 Jeffrey 本人，由他核对转写措辞
+- 2026-10-03 Jeffrey 核对 7 条转写无误，标为抽检通过（kb_mark_checked，quality_checked=true）

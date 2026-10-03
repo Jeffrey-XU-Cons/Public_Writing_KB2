@@ -57,7 +57,7 @@ sources:
     note: |
       原话逐字收在源文件，删去客户单位名。7 条均 depth=rule、enforce=hard：QA-C1-00020 方案分工、QA-C2-00006 汇报类不用表格、
       QA-C3-00034 同级节数、QA-C3-00035 标题句式、QA-C3-00036 开篇写法、QA-C3-00037 国企汇报结尾、QA-C4-00009 “一是”句式。
-      quality_checked=false，待 Jeffrey 核对转写是否走样。
+      2026-10-03 Jeffrey 核对通过，quality_checked=true。
 
 articles:
   - file: 公文写作技巧汇编三（101篇33万字）.md
