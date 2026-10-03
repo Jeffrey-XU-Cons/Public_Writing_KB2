@@ -495,3 +495,39 @@ def test_r7_runs_only_in_final_with_report(tmp_path, capsys):
     assert "R7" not in capsys.readouterr().out          # 非终验不触发
     dl.main([str(d), "--report", str(r), "--final"])
     assert "R7 段落未审" in capsys.readouterr().out
+
+
+# ---------------- 公文体例（2026-10-03，P4 第 2 轮人工审 6 条全漏） ----------------
+
+def test_two_subsections_warns():
+    text = "一、坚持系统谋划，明确路径\n（一）锚定模式，确立主线\n（二）统筹要素，整体优化\n"
+    assert ("Q-071 同级节数", "warn") in _rules(dl.check_section_count(text))
+
+
+def test_three_subsections_pass():
+    text = "一、坚持系统谋划，明确路径\n（一）锚定模式，确立主线\n（二）统筹要素，整体优化\n（三）健全机制，压实责任\n"
+    assert dl.check_section_count(text) == []
+
+
+def test_seven_level1_sections_warn():
+    text = "".join(f"{c}、做好第{c}项工作\n" for c in "一二三四五六七")
+    assert ("Q-071 同级节数", "warn") in _rules(dl.check_section_count(text))
+
+
+def test_mixed_heading_form_warns_on_odd_one():
+    text = "（一）锚定模式，确立主线\n（二）统筹要素，整体优化\n（三）六要素整体优化\n"
+    res = dl.check_heading_form(text)
+    assert [f["line"] for f in res] == [3] and res[0]["severity"] == "warn"
+
+
+def test_uniform_heading_form_pass_and_run_in_title_ignored():
+    text = "（一）锚定管控模式。公司实行母分公司体制，构建管理模式。\n（二）统筹六大要素\n（三）健全组织机制\n"
+    assert dl.check_heading_form(text) == []
+
+
+def test_table_in_report_genre_blocks_only_with_genre():
+    draft = "正文。\n| 类别 | 数量 |\n|---|---|\n| 核心业务 | 16 |\n"
+    assert ("Q-073 汇报类用了表格", "block") in _rules(dl.check_report_table(draft, "- 文种：经验交流材料｜依据：…"))
+    assert dl.check_report_table(draft, "- 文种：实施方案｜依据：…") == []
+    assert dl.check_report_table(draft, None) == []
+    assert dl.check_report_table("正文。", "- 文种：汇报材料") == []

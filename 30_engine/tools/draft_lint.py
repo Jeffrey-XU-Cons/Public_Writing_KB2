@@ -14,6 +14,8 @@ Gates:
                                   dictionary rules (terms.jsonl kind 禁用词/搭配错误/套话), [待补] residue
                                   + 2026-09-29: Q-017/018/019/030/032/039/041/048/054/055/056 and 字数区间
                                   (levels calibrated on 82 real docs; see gw-review quality-checklist 机检实现状态)
+                                  + 2026-10-03 公文体例: Q-071 同级节数 / Q-072 标题句式 (warn),
+                                  Q-073 汇报类正文禁表格 (block, needs --outline for 文种)
 
 W1-2 and W2-4 are semantic by nature: the code gate is NECESSARY, not sufficient — it blocks clear
 violations; gw-review's LLM pass covers the rest.
@@ -392,6 +394,62 @@ def check_open_close(text):
 
 
 # 字数区间（outline「字数区间：X–Y 字」）：终稿超出区间 20% 以上 block，其余超区间 warn
+# ---------------- 公文体例（2026-10-03，P4 第 2 轮 Jeffrey 人工审 6 条意见门禁全漏） ----------------
+# 这一层设计方案与 quality-checklist 原本没有规则。82 份实测：二级 2 节的组 49 个、同组标题逗号有无混用
+# 一级/二级各 12 组——真实成稿里方案、诊断报告常见，只报 warn；表格只对汇报类文种拦，且须带 outline 才知道文种。
+
+REPORT_GENRE_RE = re.compile(r"汇报|总结|经验交流|讲话|述职")
+
+
+def heading_title(h):
+    """随文标题只取句号前的标题部分。"""
+    return re.split(r"[。；！？]", h["body"])[0].strip()
+
+
+def check_section_count(text):
+    """Q-071 同级节数：二级一般 3—5 节、最多 6 节；二级只有 2 节、一级或二级超过 6 节报 warn。"""
+    res = []
+    for g in sibling_groups(text):
+        lv, n = g[0]["level"], len(g)
+        if (lv == 2 and n == 2) or (lv in (1, 2) and n > 6):
+            res.append(finding("Q-071 同级节数", g[0]["line"],
+                               f"「{g[0]['text'][:12]}」这组{lv}级标题共{n}节，公文习惯 3—5 节、最多 6 节", "warn"))
+    return res
+
+
+def check_heading_form(text):
+    """Q-072 同组标题句式一致：同一组一级/二级标题，有的用逗号分成两段、有的不分，报 warn。"""
+    res = []
+    for g in sibling_groups(text):
+        if g[0]["level"] not in (1, 2):
+            continue
+        has_comma = [bool(re.search(r"[，,]", heading_title(h))) for h in g]
+        if any(has_comma) and not all(has_comma):
+            majority = sum(has_comma) * 2 >= len(g)
+            for h, c in zip(g, has_comma):
+                if c != majority:
+                    res.append(finding("Q-072 标题句式不一", h["line"],
+                                       f"「{heading_title(h)[:16]}」与同组其他{h['level']}级标题句式不同（逗号分段有无不一）",
+                                       "warn"))
+    return res
+
+
+def outline_genre(outline):
+    m = re.search(r"文种[：:]\s*([^｜|\n]+)", outline or "")
+    return m.group(1).strip() if m else ""
+
+
+def check_report_table(text, outline):
+    """Q-073 汇报类材料正文不用表格（汇报、总结、经验交流、讲话、述职）。文种取自 outline。"""
+    genre = outline_genre(outline)
+    if not REPORT_GENRE_RE.search(genre):
+        return []
+    rows = [no for no, raw in enumerate(text.splitlines(), 1) if raw.strip().startswith("|")]
+    if not rows:
+        return []
+    return [finding("Q-073 汇报类用了表格", rows[0], f"文种为“{genre[:10]}”，正文不能有表格，改写成文字")]
+
+
 def check_length(text, outline, final):
     m = re.search(r"字数区间[:：]\s*([\d,，]+)\s*[–\-~～至]\s*([\d,，]+)", outline or "")
     if not m:
@@ -726,7 +784,7 @@ def lint(text, outline=None, final=False, rules=None):
            + check_baseline(text)
            + check_policy_order(text) + check_sige(text) + check_wrong_forms(text) + check_numbering_format(text)
            + check_number_format(text) + check_data_density(text) + check_long_paragraph(text) + check_rhythm(text)
-           + check_same_lead(text) + check_open_close(text))
+           + check_same_lead(text) + check_open_close(text) + check_section_count(text) + check_heading_form(text))
     for g in sibling_groups(text):
         res += check_mece(g)
     if outline:
@@ -739,6 +797,7 @@ def lint(text, outline=None, final=False, rules=None):
             res += check_mece(g)
         res += check_outline(outline)
         res += check_length(text, outline, final)
+        res += check_report_table(text, outline)
     return res
 
 
