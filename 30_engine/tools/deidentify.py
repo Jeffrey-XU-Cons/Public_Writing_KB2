@@ -69,11 +69,12 @@ SUFFIX_LEVEL = [
     ("物流园", "园区"), ("中烟", "中烟"),
 ]
 LEVEL_OF = dict(SUFFIX_LEVEL)
-# 卷烟品牌不脱敏（2026-09-25 拍板）。
+# 卷烟品牌不脱敏（2026-09-25 拍板；2026-09-30 复议维持：已知“贵烟”“泰山”等品牌可反推省份，仍不脱敏，
+# deid_scan 不把品牌列为漏网）。
 
 SURNAMES = ("王李张刘陈杨黄赵吴周徐孙马朱胡郭何高林罗郑梁谢宋唐许韩冯邓曹彭曾肖田董袁潘"
             "于蒋蔡余杜叶程苏魏吕丁任沈姚卢姜崔钟谭陆汪范金石廖贾夏韦付方白邹孟熊秦邱江"
-            "尹薛闫段雷侯龙史陶黎贺顾毛郝龚邵万钱严覃武戴莫孔向汤常温康施文牛樊葛邢安齐易乔伍庞颜倪庄聂章鲁岳翟殷詹申欧耿关兰焦俞左柳甘祝包宁尚符舒阮柯纪梅童凌毕单季裴霍涂成苗谷盛曲翁冉骆蓝路游辛靳管柴蒙鲍华喻祁蒲房滕屈饶解牟艾尤阳时穆农司卓古吉缪简车项连芦麦褚娄窦戚岑景党宫费卜冷晏席卫米柏宗瞿桂全佟应臧闵苟邬边卞姬师和仇栾隋商刁沙荣巫寇桑郎甄丛仲虞敖巩明佘池查麻苑迟邝")
+            "尹薛闫段雷侯龙史陶黎贺顾毛郝龚邵万钱严覃武戴莫孔向汤常温康施文牛樊葛邢安齐易乔伍庞颜倪庄聂章鲁岳翟殷詹申欧耿关兰焦俞左柳甘祝包宁尚符舒阮柯纪梅童凌毕单季裴霍涂成苗谷盛曲翁冉骆蓝路游辛靳管柴蒙鲍华喻祁蒲房滕屈饶解牟艾尤阳时穆农司卓古吉缪简车项连芦麦褚娄窦戚岑景党宫费卜冷晏席卫米柏宗瞿桂全佟应臧闵苟邬边卞姬师和仇栾隋商刁沙荣巫寇桑郎甄丛仲虞敖巩明佘池查麻苑迟邝阚郜茹訾眭隗蔺郗")  # 阚郜茹：r7 名单里的真名，原表缺
 TITLES = ["副总经理", "总经理", "董事长", "秘书长", "副局长", "局长", "副厂长", "厂长",
           "副主任", "主任", "书记", "经理", "总监", "处长", "科长", "部长", "同志"]
 SHORT_TITLES = ["副局长", "副主任", "副处长", "副厂长", "副总",  # 徐副局长 类（只有姓）
@@ -107,12 +108,34 @@ ABBR_RE = re.compile(
 # 年/月/日不在列表里，日期不受影响
 # 企业标准号的企业代码能直接对应到具体中烟公司（抽查发现 Q/SZY）；国标 GB/T、行标 YC/T 不动
 QSTD_RE = re.compile(r"Q/[A-Z]{2,8}")
+# r7 残留扫描（2026-09-30，deid_scan.py）抽到的县级地名、地标、OCR 错字。地名长尾靠“扫描候选 + 人工筛”
+# 逐批补进这里，不指望一张表穷尽。两字县名一律带“县/市”后缀才认，避免误伤普通词。
+EXTRA_PLACES = ["五峰县", "东光县", "滦平县", "湘阴县", "新化县", "水城县", "同德县", "龙里县", "河间县",
+                "盐山县", "孟村县", "吴桥县", "澧县", "蠡县", "任丘县", "任丘市", "泊头市", "绥芬河市", "儋州",
+                "红河州", "贵安新区", "郑东新区", "果洛", "宁乡", "北仑", "金沙江", "雅砻江", "安宁河", "鲁南山",
+                "南流江", "翠湖宾馆", "王林", "涞源", "竹山", "竹溪", "日照四地市"]  # 王林 = 玉林的 OCR 错字（“王林市局”“大王林”）
+EXTRA_PLACE_RE = re.compile("(?<![渠街频轨])道县|" + "|".join(sorted(EXTRA_PLACES, key=len, reverse=True)))
+# “X自治州/自治县”（含民族名）：果洛藏族自治州、黔南布依族苗族自治州……
+AUTONOMOUS_RE = re.compile(r"[^\s，。、；和与及〔〕]{0,4}?(?:[一-龥]{1,3}族){1,3}自治(?:州|县)")
+# 省份简称 + 方位（滇东南、粤东、鲁南）：后接区域类词才认；京/沪/津/新不收（京东、新中国）
+_ABBR_DIR = r"[滇黔豫湘鄂川渝桂粤闽赣皖鲁冀晋陕甘宁青藏蒙辽吉黑苏浙琼](?:东南|西南|东北|西北|东|南|西|北|中)"
+# 后接区域类词才认；或紧跟在已替换的地名之后（“〔乙地〕粤东要……”）
+ABBR_DIRECTION_RE = re.compile(
+    "(?:(?<=〕)" + _ABBR_DIR + "|" + _ABBR_DIR + r"(?=工商|区域|片区|地区|一带|烟区|产区|[、，。；]))")
+# 名单与人员表（r7 漏网约 90 个真名的两个语境）：
+#   “诊断组成员：王一凡、曹文静”“指导老师：陈立新”——角色词后的冒号名单
+#   “项目实施 黄子轩 男 本科 政工师”——姓名后紧跟性别的人员表行
+ROLE_WORDS = ("成\\s*员|组\\s*长|副组长|组员|指导老师|老师|负责人|联系人|编写|编制|审核|批准|起草|执笔|撰稿|"
+              "主持人|参与人员|项目经理|顾问|专家|讲师|记录人|汇报人|诊断员|评价员|审核员|内审员|调研员|联络员")
+NAME_TOKEN = "[" + SURNAMES + "][一-龥]{1,2}"
+NAME_LIST_RE = re.compile("((?:" + ROLE_WORDS + r")[：:]\s*)((?:" + NAME_TOKEN + r"[、，,\s]*)+)")
+NAME_TABLE_RE = re.compile(r"(?<![一-龥])(" + NAME_TOKEN + r")(?=\s*[|\s]\s*[男女](?:[\s|]|$))")
 DATA_RE = re.compile(
     r"\d+(?:\.\d+)?\s*(万箱|万条|亿支|万支|万元|亿元|万担|个百分点|百分点|%|％|箱|担|吨|元|万)")
 NAME_TITLE_RE = re.compile(
     "(?<![一-龥])([" + SURNAMES + "])((?!副)[一-龥]{1,2}?)(" + "|".join(TITLES) + ")")  # 名字取短且不以"副"开头
 SHORT_NAME_RE = re.compile(
-    "(?<![一-龥])([" + SURNAMES + "])(" + "|".join(SHORT_TITLES) + ")(?![体结部量额计裁统部监机法令空])")
+    "(?:(?<![一-龥])|(?<=[和与及、]))([" + SURNAMES + "])(" + "|".join(SHORT_TITLES) + ")(?![体结部量额计裁统部监机法令空])")
 SIGNATURE_RE = re.compile(r"^[" + SURNAMES + r"][ 　]*[一-龥](?:[ 　]*[一-龥])?$")
 
 
@@ -140,19 +163,26 @@ def harvest_names(texts_and_names):
 
 
 def deidentify(text: str, known_names=()):
-    changes, unit_map, place_map = [], {}, {}
+    changes, unit_map, place_map, key_map = [], {}, {}, {}
     for name in sorted(known_names, key=len, reverse=True):
-        if name in text:
-            changes.extend({"type": "人名(已知名单)", "orig": name, "new": "〔姓名〕"}
-                           for _ in range(text.count(name)))
-            text = text.replace(name, "〔姓名〕")
+        # 字间允许空白：PDF 转写常把“邹岚”排成“邹  岚”（r7 名单实测）
+        rx = re.compile(r"[ 　]*".join(map(re.escape, name)))
+        hits = rx.findall(text)
+        if hits:
+            changes.extend({"type": "人名(已知名单)", "orig": h, "new": "〔姓名〕"} for h in hits)
+            text = rx.sub("〔姓名〕", text)
 
     def unit_repl(m):
+        # 同一单位的全称与简称共用一个编号：“南阳卷烟厂/南阳厂”“河南中烟/河南中烟工业有限责任公司”
+        # （r7 实测一份报告里同一个厂被编成〔A厂〕〔C厂〕两个号）。键 = 地名 + 行政级 + 去掉通用词的中缀 + 层级
         full = m.group(0)
-        if full not in unit_map:
-            letter = chr(ord("A") + len(unit_map))
-            admin = m.group(2) or ""
-            unit_map[full] = f"〔{letter}{admin}{LEVEL_OF[m.group(4)]}〕"
+        middle = m.group(3) or ""
+        level = "中烟" if "中烟" in middle else LEVEL_OF[m.group(4)]
+        key = (m.group(1), m.group(2) or "", re.sub("中烟|工业|卷烟|烟草|有限责任|专卖", "", middle), level)
+        if key not in key_map:
+            letter = chr(ord("A") + len(key_map))
+            key_map[key] = f"〔{letter}{m.group(2) or ''}{level}〕"
+        unit_map[full] = key_map[key]
         changes.append({"type": "单位名", "orig": full, "new": unit_map[full]})
         return unit_map[full]
 
@@ -195,6 +225,15 @@ def deidentify(text: str, known_names=()):
             changes.append({"type": "人名(署名行)", "orig": stripped, "new": "〔姓名〕"})
             out.append("〔姓名〕")
             continue
+        def list_repl(m):
+            names = re.sub(NAME_TOKEN, "〔姓名〕", m.group(2))
+            if names != m.group(2):
+                changes.append({"type": "人名(名单)", "orig": m.group(2).strip(), "new": names.strip()})
+            return m.group(1) + names
+        line = NAME_LIST_RE.sub(list_repl, line)
+        for m in NAME_TABLE_RE.finditer(line):
+            changes.append({"type": "人名(人员表)", "orig": m.group(1), "new": "〔姓名〕"})
+        line = NAME_TABLE_RE.sub("〔姓名〕", line)
         line = UNIT_RE.sub(unit_repl, line)
         for m in COMPANY_RE.finditer(line):
             changes.append({"type": "企业名", "orig": m.group(0), "new": "〔某企业〕"})
@@ -203,6 +242,11 @@ def deidentify(text: str, known_names=()):
             changes.append({"type": "单位简称", "orig": m.group(0), "new": "〔某厂〕"})
         line = ABBR_RE.sub("〔某厂〕", line)
         line = PLACE_RE.sub(place_repl, line)
+        for rx, tag, new in ((EXTRA_PLACE_RE, "地名(县级/地标)", "〔某地〕"), (AUTONOMOUS_RE, "地名(自治州县)", "〔某自治州〕"),
+                             (ABBR_DIRECTION_RE, "地名(省简称方位)", "〔某区域〕")):
+            for m in rx.finditer(line):
+                changes.append({"type": tag, "orig": m.group(0), "new": new})
+            line = rx.sub(new, line)
         line = DATA_RE.sub(data_repl, line)
         for m in QSTD_RE.finditer(line):
             changes.append({"type": "企标代号", "orig": m.group(0), "new": "Q/〔企业〕"})

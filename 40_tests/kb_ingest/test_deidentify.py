@@ -220,3 +220,52 @@ def test_ambiguous_place_with_institution_coded():
 def test_company_without_place_prefix():
     out = _new("对标红塔烟草集团，学习红塔山品牌经验")
     assert "红塔烟草" not in out and "红塔山" in out
+
+
+# --- r7 残留扫描（2026-09-30）抽到的整类漏网，逐类做成回归 ---
+
+def test_member_list_names():
+    assert _new("诊断组成员：王一凡、曹文静 指导老师：陈立新") == "诊断组成员：〔姓名〕、〔姓名〕 指导老师：〔姓名〕"
+
+
+def test_role_word_with_spaces_and_inspector():
+    assert _new("诊断员：史国平  组  长：黄明") == "诊断员：〔姓名〕  组  长：〔姓名〕"
+
+
+def test_personnel_table_row():
+    assert _new("项目实施 黄子轩 男 本科 政工师") == "项目实施 〔姓名〕 男 本科 政工师"
+
+
+def test_known_name_with_inner_spaces():
+    assert deidentify("运行线：邹  岚（计划处）", known_names=["邹岚"])[0] == "运行线：〔姓名〕（计划处）"
+
+
+def test_rare_surname_caught_in_list():
+    assert "阚" not in _new("业务联系人：阚志远")
+
+
+def test_same_factory_full_and_short_share_code():
+    out = _new("南阳卷烟厂与南阳厂，另有许昌卷烟厂")
+    assert out == "〔A厂〕与〔A厂〕，另有〔B厂〕"
+
+
+def test_county_level_places_and_landmarks():
+    for text in ["同德县", "绥芬河市", "贵安新区", "金沙江、雅砻江", "以宁乡片区为例", "王林市局（公司）"]:
+        assert "〔某地〕" in _new(text), text
+
+
+def test_autonomous_prefecture_does_not_eat_brackets():
+    assert _new("〔癸地〕藏族自治州同德县和果洛藏族自治州") == "〔癸地〕〔某自治州〕〔某地〕和〔某地〕〔某自治州〕"
+
+
+def test_province_abbr_direction():
+    assert _new("烟草滇东南工商区域物流中心") == "烟草〔某区域〕工商区域物流中心"
+    assert _new("〔乙地〕粤东要保持打假力度") == "〔乙地〕〔某区域〕要保持打假力度"
+
+
+def test_abbr_direction_lookalikes_kept():
+    assert _new("京东物流、新中国成立、渠道县级市场") == "京东物流、新中国成立、渠道县级市场"
+
+
+def test_surname_title_after_conjunction():
+    assert _new("重大任务和凌局长在讲话中") == "重大任务和〔姓名〕局长在讲话中"
