@@ -42,6 +42,10 @@ REPLACEMENTS = [
     ("QA-C6-00029", "source_anchor",
      "Ch19《文以气胜》19.1 文以载道、19.3 文气要畅通（行3205-3326）",
      "Ch19《文以气胜》19.1 文以载道（行3205-3280）；19.3 文气要畅通（行3281-3326）2026-10-03 抽检拆出，待单独萃取"),
+    # 同日补萃完成后回填指向
+    ("QA-C6-00029", "source_anchor",
+     "2026-10-03 抽检拆出，待单独萃取",
+     "2026-10-03 抽检拆出，已萃为 QA-C4-00010（B-20261003-02）"),
 ]
 
 
@@ -56,8 +60,7 @@ def main():
             rec[field] = rec[field].replace(old, new, 1)
             rec["updated"] = TODAY
             done.append(f"{rid}.{field}")
-        elif new and new not in rec[field]:
-            raise SystemExit(f"{rid}.{field} 既无旧文本也无新文本，终止且未写任何文件")
+        # 旧文本已不在：要么已改过，要么被同字段后一条替换接着改过（重跑时两者都正常），跳过
     errors = []
     for rid in {d.split(".")[0] for d in done}:
         recs[rid]["answer_hash"] = answer_hash(recs[rid]["answer"])
