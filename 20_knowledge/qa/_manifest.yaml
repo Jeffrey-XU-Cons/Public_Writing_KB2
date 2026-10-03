@@ -45,6 +45,19 @@ sources:
       现有 c6 三条全部出自李忠秋，存在单一来源偏斜，本书用于补 c6·站位思维（原为空）。
       辅助定位工具：旧项目 20_knowledge/rules/legacy/_方法论提取/01_胡森林底层心法_章节地图.md（只作定位，不直接采信其归纳）。
 
+  - id: S5-专家审核意见
+    name: 专家审核意见·公文体例（Jeffrey 2026-10-03，P4 第 2 轮两次人工审核与裁定）
+    path: 10_source/expert/2026-10-03_专家审核意见_公文体例.md
+    categories: [c1, c2, c3, c4]
+    method: 人工规则转写（条文型 rule，附 r9 语料校准）
+    status: 已完成
+    batches: [B-20261003-01]
+    qa_count: 7
+    note: |
+      原话逐字收在源文件，删去客户单位名。7 条均 depth=rule、enforce=hard：QA-C1-00020 方案分工、QA-C2-00006 汇报类不用表格、
+      QA-C3-00034 同级节数、QA-C3-00035 标题句式、QA-C3-00036 开篇写法、QA-C3-00037 国企汇报结尾、QA-C4-00009 “一是”句式。
+      quality_checked=false，待 Jeffrey 核对转写是否走样。
+
 articles:
   - file: 公文写作技巧汇编三（101篇33万字）.md
     title: 关于通知文种写作的几个常见问题
