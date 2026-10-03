@@ -16,7 +16,7 @@ claude --add-dir D:\projects\Kb-RAG "读 30_engine/runs/P5_第1轮_ThinkBook收�
 
 **先读**：本项目 `CLAUDE.md`；`30_engine/runs/P3.7_检索接入_ThinkBook操作清单.md` 的“执行记录”（上次 ThinkBook 会话踩过的坑，下面已吸收）；Kb-RAG 的 `CLAUDE.md`。
 
-**解释器**：Kb-RAG 的命令一律用 `D:/projects/tobacco_kb/.venv-cuda/Scripts/python.exe`（下文记作 `$KPY`）。系统 `py` 在会话里会被拒，且没有 torch/lancedb。路径一律写正斜杠。
+**解释器**：Kb-RAG 的命令一律用 `D:/ai-runtime/venv-cuda/Scripts/python.exe`（2026-10-02 由 tobacco_kb 迁出，Kb-RAG ADR-030）（下文记作 `$KPY`）。系统 `py` 在会话里会被拒，且没有 torch/lancedb。路径一律写正斜杠。
 
 **允许改的文件**：
 - 本项目：新增 `30_engine/tools/kb_dedup_vec.py` 及其测试；本清单；`30_engine/batches/B-20260929-01/plan.md`、`B-20260929-02/plan.md`、`B-20261001-01/plan.md` 的“完成报告”下追加判重结果；`CLAUDE.md` 的检索栈、测试两行
@@ -179,7 +179,7 @@ CLAUDE.md
 判读：bge-m3 对整段答案编码，分数挤在 0.43–0.86，0.92 这条线在本库上基本不会触发。要真抓换词复述，阈值应按分布定（例如 >P99 即 0.79 以上逐对人看，共 22+21+9 对量级），这条留 Jeffrey 定。
 
 **接续要点（本地窗口）**
-- 解释器：Kb-RAG 命令用 `D:/projects/tobacco_kb/.venv-cuda/Scripts/python.exe`；本项目单测用 `C:/Users/febin/AppData/Local/Python/bin/python`（WindowsApps 里的 `python` 是商店别名，执行被拒）
+- 解释器：Kb-RAG 命令用 `D:/ai-runtime/venv-cuda/Scripts/python.exe`；本项目单测用 `C:/Users/febin/AppData/Local/Python/bin/python`（WindowsApps 里的 `python` 是商店别名，执行被拒）
 - 4②③ 可直接跑 `$KPY tools/search.py --kb public_writing_qa --top 5 --q "…" --json`（cwd = Kb-RAG），JSON 的 `results[].id/score/tags` 即所需字段
 - 5、6、7 按清单原文执行；提交 A 记得带上 `kb_dedup_vec.py` 与 `test_kb_dedup_vec.py`，提交 B 带上三份 plan.md 的改动
 
@@ -244,3 +244,23 @@ CLAUDE.md
 4. Kb-RAG 提交时其 hook 提示“动了 knowledge/ 但未更新 STATUS.md”。STATUS.md 不在本清单允许改的范围内，未补；要不要在 Kb-RAG STATUS 记一笔，由 Jeffrey 定。
 
 **提交号**：本项目提交 A `7477d83`、提交 B `10b74ec`（本行与第 4 条另以一个小提交补入）；Kb-RAG `63dc70d`。均未 push。
+
+---
+
+## 补充任务 · 2026-10-02（7050 写，ThinkBook 执行）
+
+Jeffrey 2026-10-02 定：向量判重阈值不用固定 0.92，改为全库分布的 **P99**，过线对逐对出清单交人判定。7050 已给 `kb_dedup_vec.py` 加了 `--percentile` 和 `--out`（7050 单测 230 passed、1 skipped，跳过的是真模型用例）。7050 没有 torch，实际出分只能在这边跑。
+
+$KPY 取 Kb-RAG `CLAUDE.md`“运行环境”里当时规定的解释器。tobacco_kb 规划弃用（Kb-RAG ADR-024⑤），若模型与 venv 已迁出，按新路径；本清单不再写死 tobacco_kb 路径。
+
+```
+cd D:/projects/Public_Writing_KB
+$KPY 30_engine/tools/kb_dedup_vec.py --percentile 99 --out 30_engine/runs/P5_第1轮_向量判重P99清单.md
+$KPY -m pytest -q 40_tests/kb_ingest/test_kb_dedup_vec.py
+```
+- [x] 清单生成；P99 应接近上次的 0.792，过线约 76 对（7,503 × 1%）。数字明显不符就停下报告
+- [x] 真模型用例在 `$KPY` 下通过（共 8 条）
+- [x] 判定列、理由列留空，不改任何 jsonl；在本节下写一行结果（P99 值、对数、同小类对数）
+- [ ] 不提交，等 Jeffrey 填完判定一起处理
+
+**结果（2026-10-03 ThinkBook，Kb-RAG 会话执行）**：解释器 `D:/ai-runtime/venv-cuda/Scripts/python.exe`（torch 2.11.0+cu128，tobacco_kb 迁出后的新环境，Kb-RAG ADR-030）。active 123 条、7,503 对；中位数 0.6552、P90 0.7356、**P99 0.7917**、最高 0.8585；过线 **76 对**，其中同小类 **25 对**；清单 `30_engine/runs/P5_第1轮_向量判重P99清单.md`，判定列、理由列留空待 Jeffrey 填。`test_kb_dedup_vec.py` 8 passed（15.6s）。未提交。

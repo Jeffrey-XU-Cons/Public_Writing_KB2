@@ -54,6 +54,33 @@ def test_inactive_records_skipped(tmp_path):
     assert [r["id"] for r in dv.load_records(tmp_path)] == ["QA-C1-00001"]
 
 
+def test_percentile_value_nearest_rank():
+    scores = [0.1 * n for n in range(1, 11)]  # 0.1 … 1.0
+    assert dv.percentile_value(scores, 50) == pytest.approx(0.5)
+    assert dv.percentile_value(scores, 99) == pytest.approx(1.0)
+    assert dv.percentile_value(scores, 90) == pytest.approx(0.9)
+
+
+def test_percentile_gate_lists_pairs_at_or_above_line():
+    # 4 条 6 对：甲×甲 1.0，甲乙与甲（两条）、乙各 0.7071，甲×乙 0
+    result = dv.analyze(RECORDS, fake_encode, percentile=50)
+    line = result["threshold"]
+    assert result["pair_count"] == 6 and result["percentile"] == 50
+    assert all(r["score"] >= line for r in result["over_threshold"])
+    assert result["over_threshold"][0]["score"] == pytest.approx(1.0)
+    assert result["distribution"]["max"] == pytest.approx(1.0)
+
+
+def test_checklist_markdown_one_row_per_pair():
+    records = [dict(r, category_l2="甲类", batch_id="B-1") for r in RECORDS]
+    result = dv.analyze(records, fake_encode, percentile=99)
+    md = dv.checklist_markdown(result, records)
+    rows = [l for l in md.splitlines() if l.startswith("| ") and l[2].isdigit()]
+    assert len(rows) == len(result["over_threshold"]) == 1
+    assert "QA-C1-00001" in rows[0] and "QA-C1-00002" in rows[0] and "| 是 |" in rows[0]
+    assert "第 99 百分位" in md
+
+
 @pytest.mark.skipif(importlib.util.find_spec("sentence_transformers") is None or not KBRAG.is_dir(),
                     reason="需 Kb-RAG 的 venv 解释器与 Kb-RAG 目录")
 def test_real_model_unrelated_pair_below_threshold():
