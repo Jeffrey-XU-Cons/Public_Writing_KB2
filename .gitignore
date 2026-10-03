@@ -58,3 +58,7 @@ Thumbs.db
 
 # 任务目录的原始素材：客户材料未脱敏，只留本地；README、素材盘点等工作文件照常入库（2026-09-26 定）
 50_tasks/*/素材/
+
+# tobacco_kb 迁入的语料、写作成品与召回草料：客户材料未脱敏，只留本地；仅 README 入库（2026-10-03，Kb-RAG ADR-030 / D-068）
+20_knowledge/corpus/tobacco_kb/*
+!20_knowledge/corpus/tobacco_kb/README.md

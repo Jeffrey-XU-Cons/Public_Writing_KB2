@@ -42,6 +42,7 @@
     corpus/      语料制品
         legacy/              范文库 P3、段落库 v2、selected_articles
         industry_docs/       行业文档 242 篇（原 knowledge/）
+        tobacco_kb/          tobacco_kb 迁入：语料（原文切块 69,283 段）/ 交付物 / 召回草料，未脱敏不入库，见其 README（2026-10-03）
         (待建) paragraphs.jsonl / articles.jsonl
     templates/
         legacy/              文种骨架 A2 系列（原 01_templates）
@@ -56,7 +57,7 @@
 ```
 30_engine/
     rag/
-        legacy/       现有 ChromaDB 检索栈（⚠️ 依赖 tobacco_kb，待解耦换 LanceDB）
+        legacy/       现有 ChromaDB 检索栈（⚠️ 依赖 tobacco_kb；tobacco_kb 2026-10 弃用后不可运行，检索改走 Kb-RAG `public_writing_qa`）
     tools/
         legacy_skills/    旧 skill 套件（skill_style/quality/framework + 公文写作体系 12 件）
         benchmarks/       检索基准
@@ -66,6 +67,8 @@
 ```
 
 **七个新 skill**（gongwen / gw-search / gw-draft / gw-review / gw-extract / gw-ingest / gw-audit）建在 `.claude/skills/`，不在这里——那是 Claude Code 的约定位置。（2026-09-24 统一：原 `gw-rag` 改 `gw-extract`，kb-rag 已退役，`gw-rag` 无对应物，见 11 章 P0.4）
+
+另有 **`draft`**（咨询材料快速整合，2026-10-03 由全局 skill 迁入）：经 Kb-RAG `search.py` 召回 QA 写五段式/八段式咨询材料；正式公文仍走 gongwen。
 
 ### `40_tests` · 测试
 

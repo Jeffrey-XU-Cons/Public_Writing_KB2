@@ -12,7 +12,7 @@ import deidentify
 
 ROOT = Path(__file__).resolve().parents[2]
 SKILLS = ROOT / ".claude/skills"
-NAMES = ["gongwen", "gw-draft", "gw-review"]
+NAMES = ["gongwen", "gw-draft", "gw-review", "draft"]  # draft：2026-10-03 由全局迁入（Kb-RAG D-068）
 
 
 def read(name):
