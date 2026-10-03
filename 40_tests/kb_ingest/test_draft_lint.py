@@ -531,3 +531,8 @@ def test_table_in_report_genre_blocks_only_with_genre():
     assert dl.check_report_table(draft, "- 文种：实施方案｜依据：…") == []
     assert dl.check_report_table(draft, None) == []
     assert dl.check_report_table("正文。", "- 文种：汇报材料") == []
+
+
+def test_table_rule_skips_outline_itself():
+    outline = "- 文种：汇报材料｜依据：…\n## 论点地图\n| 编号 | 论点 |\n|---|---|\n| P-01 | 甲 |\n"
+    assert dl.check_report_table(outline, outline) == []

@@ -442,7 +442,8 @@ def outline_genre(outline):
 def check_report_table(text, outline):
     """Q-073 汇报类材料正文不用表格（汇报、总结、经验交流、讲话、述职）。文种取自 outline。"""
     genre = outline_genre(outline)
-    if not REPORT_GENRE_RE.search(genre):
+    # 机检大纲本身时（draft_lint outline.md --outline outline.md），论点地图、素材清单本来就是表格
+    if not REPORT_GENRE_RE.search(genre) or text.strip() == (outline or "").strip():
         return []
     rows = [no for no, raw in enumerate(text.splitlines(), 1) if raw.strip().startswith("|")]
     if not rows:
