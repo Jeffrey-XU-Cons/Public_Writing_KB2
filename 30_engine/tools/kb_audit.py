@@ -1,7 +1,7 @@
 """Knowledge-base audit gate (heir of the old project's audit_kb_sources.py).
 
 Checks (slice version — index checks join when the retrieval slice lands):
-  A  every qa/*.jsonl line parses as JSON
+  A  every qa/*.jsonl and articles/articles.jsonl line parses as JSON
   B  every record passes kb_validate.validate_record   (skipped with --fast)
   C  global id uniqueness + answer_hash uniqueness
   D  hygiene: banned file names, root .md whitelist,
@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common
 import vocab
-from kb_validate import validate_record
+from kb_validate import validate_article, validate_record
 
 ROOT_MD_WHITELIST = {"CLAUDE.md", "ARCHITECTURE.md", "STATUS.md", "README.md",
                      "PROJECT_STRUCTURE.md"}  # CLAUDE.md 末行引用的目录说明
@@ -64,6 +64,29 @@ def audit(fast: bool = False):
             if not fast:
                 for e in validate_record(rec):
                     errors.append(f"[B] {f.name}:{line_no} [{rid}] {e}")
+
+    # 范文库：JSON 可解析、id 唯一、字段与 source_path 合格；linked_qa 必须指向存在的 QA
+    art = common.articles_dir() / vocab.ARTICLE_FILENAME
+    if art.exists():
+        art_ids = set()
+        for line_no, line in enumerate(art.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError as exc:
+                errors.append(f"[A] {art.name}:{line_no} JSON 解析失败: {exc}")
+                continue
+            rid = rec.get("id", f"{art.name}:{line_no}")
+            if rid in art_ids:
+                errors.append(f"[C] 范文 id 重复: {rid}")
+            art_ids.add(rid)
+            if not fast:
+                for e in validate_article(rec):
+                    errors.append(f"[B] {art.name}:{line_no} [{rid}] {e}")
+                for q in rec.get("linked_qa") or []:
+                    if q not in seen_ids:
+                        errors.append(f"[B] {art.name}:{line_no} [{rid}] linked_qa 指向不存在的 QA: {q}")
 
     if not fast:
         for p in root.rglob("*"):

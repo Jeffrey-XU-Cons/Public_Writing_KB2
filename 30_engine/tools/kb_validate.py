@@ -155,6 +155,43 @@ def validate_record(rec: dict) -> list:
     return errors
 
 
+def validate_article(rec: dict) -> list:
+    """范文库 articles.jsonl 单条校验（04 章§4.1 字段 + 讲话类 subtype/skeleton/must_haves）。"""
+    errors = []
+    for f in vocab.ARTICLE_REQUIRED:
+        empty = (None, "") if f == "linked_qa" else (None, "", [])  # linked_qa 允许空列表
+        if f not in rec or rec[f] in empty:
+            errors.append(f"缺字段或为空: {f}")
+    if errors:
+        return errors
+    if not re.match(vocab.ARTICLE_ID_PATTERN, rec["id"]):
+        errors.append(f"id 须为 AR-NNNN: {rec['id']}")
+    if rec["doc_type"] not in vocab.DOC_TYPES:
+        errors.append(f"doc_type 不在受控词表: {rec['doc_type']}")
+    if rec["doc_type"] == "讲话稿" and rec["subtype"] not in vocab.SPEECH_SUBTYPES:
+        errors.append(f"讲话稿 subtype 须为 {vocab.SPEECH_SUBTYPES}: {rec['subtype']}")
+    if rec["org_level"] not in vocab.ORG_LEVELS:
+        errors.append(f"org_level 须为 {vocab.ORG_LEVELS}: {rec['org_level']}")
+    if rec["grade"] not in vocab.ARTICLE_GRADES:
+        errors.append(f"grade 须为 {vocab.ARTICLE_GRADES}（C 级不入库）: {rec['grade']}")
+    if rec["grade"] == "B" and not rec.get("caveat"):
+        errors.append("grade=B 须写 caveat（短板）")
+    for f, (lo, hi) in (("why_good", vocab.ARTICLE_WHY_GOOD_COUNT), ("must_haves", vocab.ARTICLE_MUST_HAVES_COUNT)):
+        v = rec[f]
+        if not isinstance(v, list) or not lo <= len(v) <= hi:
+            errors.append(f"{f} 须为 {lo}—{hi} 条的列表")
+    if not isinstance(rec["skeleton"], list) or len(rec["skeleton"]) < 2:
+        errors.append("skeleton 须为至少 2 个一级标题的列表")
+    if not isinstance(rec["linked_qa"], list) or any(not ID_RE.match(q) for q in rec["linked_qa"]):
+        errors.append(f"linked_qa 须为 QA id 列表: {rec['linked_qa']}")
+    if not (common.project_root() / rec["source_path"]).exists():
+        errors.append(f"source_path 不存在: {rec['source_path']}")
+    text = json.dumps(rec, ensure_ascii=False)
+    if re.search(r"[「」『』]", text):
+        errors.append("含「」『』，中文引号须用弯引号")
+    return errors
+
+
 def validate_file(path: Path) -> list:
     """Return [(line_no, record_id_or_None, [errors])] for every bad line."""
     problems = []
@@ -166,7 +203,7 @@ def validate_file(path: Path) -> list:
         except json.JSONDecodeError as exc:
             problems.append((line_no, None, [f"JSON 解析失败: {exc}"]))
             continue
-        errs = validate_record(rec)
+        errs = validate_article(rec) if path.name == vocab.ARTICLE_FILENAME else validate_record(rec)
         if errs:
             problems.append((line_no, rec.get("id"), errs))
     return problems

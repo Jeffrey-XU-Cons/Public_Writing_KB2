@@ -89,3 +89,22 @@ ENFORCE_VALUES = ["hard", "soft", "advice"]
 
 # 写作体系六层，可多值（09 章§4.1）
 W_LAYER_VALUES = ["W1", "W2", "W3", "W4", "W5"]
+
+# --- 范文库 articles.jsonl（04 章§4.1 非 QA 单元；2026-10-04 P4 第 5、6 轮缺口提前开讲话类）---
+# 04 章原字段 id/title/doc_type/org_level/industry/summary/why_good/linked_qa/source_path/grade，
+# 讲话类加 subtype/skeleton/must_haves 三字段：起草时逐条对照“范文有、本稿缺”。
+
+ARTICLE_FILENAME = "articles.jsonl"
+ARTICLE_ID_PATTERN = r"^AR-\d{4}$"
+ARTICLE_REQUIRED = ["id", "title", "doc_type", "subtype", "org_level", "industry", "summary",
+                    "skeleton", "why_good", "must_haves", "linked_qa", "source_path", "grade", "batch_id"]
+
+# 讲话稿子类（文种_06 及其变体）
+SPEECH_SUBTYPES = ["工作会议讲话", "现场会讲话", "启动部署讲话", "推进会讲话", "培训动员讲话", "总结讲话"]
+
+# 讲话人所在层级（脱敏后保留的行政层级）
+ORG_LEVELS = ["行业", "省级商业", "省级工业", "地市级", "县级"]
+
+ARTICLE_GRADES = ["A", "B"]          # C 级不入库
+ARTICLE_WHY_GOOD_COUNT = (3, 6)
+ARTICLE_MUST_HAVES_COUNT = (4, 10)
