@@ -536,3 +536,24 @@ def test_table_in_report_genre_blocks_only_with_genre():
 def test_table_rule_skips_outline_itself():
     outline = "- 文种：汇报材料｜依据：…\n## 论点地图\n| 编号 | 论点 |\n|---|---|\n| P-01 | 甲 |\n"
     assert dl.check_report_table(outline, outline) == []
+
+
+# ---- Q-079 讲话复述方案（P4 第 6 轮）----
+
+PLAN = "以标准化良好行为企业认证为突破口建立健全企业标准体系和工作机制开展识别谋共管宣贯聚共识运行促共用反馈求共进的四共活动"
+
+
+def test_plan_copy_warns_when_later_parts_restate_plan():
+    text = "一、认识\n" + PLAN + "\n二、重点\n" + PLAN + "\n三、落实\n要抓好领导带头这个关键。\n"
+    res = dl.check_plan_copy(text, PLAN)
+    assert [f["rule"] for f in res] == ["Q-079 讲话复述方案"]
+
+
+def test_plan_copy_ignores_first_part_and_fresh_requirements():
+    text = ("一、认识\n" + PLAN + "\n二、关键\n主要领导要当第一责任人，班子成员要当好指挥员，各单位明确一名分管负责人。\n"
+            "三、落实\n做好进度表，做好设计图，做好施工图，每个节点倒排工期。\n")
+    assert dl.check_plan_copy(text, PLAN) == []
+
+
+def test_plan_copy_skips_text_without_second_level1_heading():
+    assert dl.plan_copy_ratio("一、只有一部分\n" + PLAN, PLAN) is None

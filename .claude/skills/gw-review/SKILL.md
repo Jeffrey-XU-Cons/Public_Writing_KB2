@@ -31,6 +31,7 @@ description: 公文审校与修改（写作体系 W4–W5）：四 pass 审校�
 ```
 python3 30_engine/tools/draft_lint.py 50_tasks/…/v1_初稿.md --outline 50_tasks/…/outline.md
 ```
+讲话、部署类材料若有已印发的方案或已宣贯的宣贯稿，在命令末尾加 `--plan` 加方案文件路径（可多次），查 Q-079 讲话复述方案。
 `[block]` 全部改掉才进 pass2；`[warn]` 逐条过目，确认后可保留并在报告里说明。再用 LLM 补判：文种要件齐全、行文规则、标题四戒。
 
 **pass2 措辞审（W4-3/W4-4 + W5-2）**：措辞分寸（请示"恳请"≠"要求"）、大话降级、程度副词须有数据、主语残缺、零信息句、烟草术语与搭配（查 `20_knowledge/terms/terms.jsonl`）。**句级改写在本 pass 内立即复检**，防改出新问题。

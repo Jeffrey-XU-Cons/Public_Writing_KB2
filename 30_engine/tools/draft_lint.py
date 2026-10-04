@@ -16,11 +16,12 @@ Gates:
                                   (levels calibrated on 82 real docs; see gw-review quality-checklist 机检实现状态)
                                   + 2026-10-03 公文体例: Q-071 同级节数 / Q-072 标题句式 (warn),
                                   Q-073 汇报类正文禁表格 (block, needs --outline for 文种)
+                                  + 2026-10-04: Q-079 讲话复述方案 (warn, needs --plan 方案或宣贯稿.md)
 
 W1-2 and W2-4 are semantic by nature: the code gate is NECESSARY, not sufficient — it blocks clear
 violations; gw-review's LLM pass covers the rest.
 
-CLI: python draft_lint.py DRAFT.md [--outline OUTLINE.md] [--report REVIEW_REPORT.md] [--final] [--json]
+CLI: python draft_lint.py DRAFT.md [--outline OUTLINE.md] [--report REVIEW_REPORT.md] [--plan PLAN.md ...] [--final] [--json]
 """
 
 import json
@@ -463,6 +464,42 @@ def check_length(text, outline, final):
     return [finding("字数超区间", None, f"全文 {n} 字，大纲区间 {lo}–{hi} 字", "block" if final and far else "warn", gate="W3-4")]
 
 
+# ---------------- Q-079 讲话复述方案（2026-10-04，P4 第 6 轮） ----------------
+# 启动/部署讲话第二部分起应是领导要求，不是把已宣贯的方案再念一遍。
+# 实测：真实定稿第二、三部分与宣贯稿 6 字连续重合 10%—12%，盲写稿 30%—38%。第一部分（意义）允许大段取用，不计。
+
+PLAN_GRAM = 6
+PLAN_COPY_MAX = 0.15
+LEVEL1_RE = re.compile(r"^\s*#*\s*[一二三四五六七八九十]+\s*、")
+
+
+def plan_copy_ratio(text, plan):
+    """第二个一级标题起的正文，与 plan 连续 PLAN_GRAM 字以上相同的汉字占比；没有第二个一级标题时返回 None。"""
+    lines = text.splitlines()
+    starts = [i for i, l in enumerate(lines) if LEVEL1_RE.match(l)]
+    if len(starts) < 2:
+        return None
+    body = re.sub(r"[^一-鿿]", "", "\n".join(lines[starts[1]:]))
+    src = re.sub(r"[^一-鿿]", "", plan)
+    grams = {src[i:i + PLAN_GRAM] for i in range(len(src) - PLAN_GRAM + 1)}
+    if not body or not grams:
+        return None
+    hit = [False] * len(body)
+    for i in range(len(body) - PLAN_GRAM + 1):
+        if body[i:i + PLAN_GRAM] in grams:
+            hit[i:i + PLAN_GRAM] = [True] * PLAN_GRAM
+    return sum(hit) / len(body)
+
+
+def check_plan_copy(text, plan):
+    ratio = plan_copy_ratio(text, plan)
+    if ratio is None or ratio <= PLAN_COPY_MAX:
+        return []
+    return [finding("Q-079 讲话复述方案", None,
+                    f"第二部分起与方案/宣贯稿连续 {PLAN_GRAM} 字相同的文字占 {ratio:.0%}（上限 {PLAN_COPY_MAX:.0%}）"
+                    "——方案条目只点名，篇幅留给领导要求，退 W2 重排", "warn", gate="W2")]
+
+
 # ---------------- 词典规则（terms.jsonl，单一来源） ----------------
 
 def load_rules(root=None):
@@ -809,6 +846,11 @@ def main(argv):
     as_json = "--json" in args
     args = [a for a in args if a not in ("--final", "--json")]
     report_path = None
+    plan_paths = []
+    while "--plan" in args:
+        i = args.index("--plan")
+        plan_paths.append(Path(args[i + 1]))
+        del args[i:i + 2]
     for flag in ("--outline", "--report"):
         if flag in args:
             i = args.index(flag)
@@ -820,6 +862,8 @@ def main(argv):
     text = Path(args[0]).read_text(encoding="utf-8")
     outline = outline_path.read_text(encoding="utf-8") if outline_path else None
     res = lint(text, outline, final)
+    if plan_paths:
+        res += check_plan_copy(text, "\n".join(p.read_text(encoding="utf-8") for p in plan_paths))
     if report_path:
         report = report_path.read_text(encoding="utf-8")
         res += check_report(report)
