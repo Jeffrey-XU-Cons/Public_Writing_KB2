@@ -81,8 +81,11 @@ def test_standalone_region_name():
     assert "长株潭" not in out
 
 
-def test_brand_names_kept():
-    assert _new("完成黄金叶（天叶细支）开发") == "完成黄金叶（天叶细支）开发"
+def test_brand_names_masked():
+    # 2026-10-04 口径变更：品牌能反推是哪家中烟，按单位名同等替换
+    assert _new("完成黄金叶（天叶细支）开发") == "完成〔品牌〕（天叶细支）开发"
+    assert _new("玉溪品牌表现良好，南京品牌") == "〔品牌〕品牌表现良好，〔品牌〕品牌"
+    assert _new("实现中华民族伟大复兴，发扬“泰山挑山工”精神") == "实现中华民族伟大复兴，发扬“泰山挑山工”精神"
 
 
 def test_operational_counts_kept():
@@ -209,7 +212,7 @@ def test_hebei_guangxi_jiangsu_units():
 
 def test_place_names_that_are_common_words_kept():
     for s in ["各位来宾，同志们", "年日照时数充足", "三明治", "发展朝阳产业", "四平八稳", "长治久安",
-              "大同小异", "孙中山", "玉溪品牌表现良好", "南京品牌"]:
+              "大同小异", "孙中山"]:
         assert _new(s) == s, s
 
 
@@ -219,7 +222,7 @@ def test_ambiguous_place_with_institution_coded():
 
 def test_company_without_place_prefix():
     out = _new("对标红塔烟草集团，学习红塔山品牌经验")
-    assert "红塔烟草" not in out and "红塔山" in out
+    assert out == "对标〔某企业〕烟草集团，学习〔品牌〕品牌经验"  # 品牌按 2026-10-04 口径一并替换
 
 
 # --- r7 残留扫描（2026-09-30）抽到的整类漏网，逐类做成回归 ---
@@ -280,7 +283,8 @@ def test_province_abbr_in_doc_numbers_and_platforms():
 
 
 def test_brand_and_common_words_not_masked_as_province():
-    assert _new("苏烟、云烟、贵烟品牌") == "苏烟、云烟、贵烟品牌"
+    # 品牌按 2026-10-04 口径替换成〔品牌〕，但不得被当成省份简称替换成〔某省〕
+    assert _new("苏烟、云烟、贵烟品牌") == "〔品牌〕、〔品牌〕、〔品牌〕品牌"
     assert _new("一缕青烟，黑烟排放") == "一缕青烟，黑烟排放"
 
 
@@ -296,3 +300,17 @@ def test_letter_spaced_table_fragment_kept():
 def test_known_name_with_title_keeps_title():
     out = deidentify("落实凌局长思考，刚才志成同志传达", known_names=["凌局长", "志成同志"])[0]
     assert out == "落实〔姓名〕局长思考，刚才〔姓名〕同志传达"
+
+
+def test_rare_char_name_in_private_use_area():
+    # 生僻字转写成私用区字符的人名（r9 实测“徐”+U+E052），姓 + 私用区字整体替换
+    text, _, _ = deidentify("副局长徐\ue052同志亲临会议，徐\ue052副局长讲话")
+    assert "\ue052" not in text and "徐" not in text
+    assert text.count("〔姓名〕") == 2
+
+
+def test_scan_flags_rare_char_name_in_filename_and_body(tmp_path):
+    import deid_scan
+    (tmp_path / "〔姓名〕徐\ue052同志的发言.md").write_text("正文徐\ue052副局长强调。", encoding="utf-8")
+    hard, _, _ = deid_scan.scan(tmp_path)
+    assert {h["type"] for h in hard} == {"生僻字人名残留（文件名）", "生僻字人名残留（正文）"}

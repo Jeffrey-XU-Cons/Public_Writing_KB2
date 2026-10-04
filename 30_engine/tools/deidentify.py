@@ -91,9 +91,23 @@ UNIT_RE = re.compile(
     "(" + "|".join(UNIT_PLACES) + ")(省|市|县|区)?([一-龥]{0,8}?)("
     + "|".join(s for s, _ in SUFFIX_LEVEL) + ")")
 # 延安精神/遵义会议/南昌起义 等固定政治表述不替换（05章红线1）
-PLACE_RE = re.compile("(" + "|".join(PLACES) + ")(省|市|县|区)?(?!精神|会议|起义|整风|时期|道路)")
+PLACE_RE = re.compile("(" + "|".join(PLACES) + ")(省|市|县|区)?(?!精神|会议|起义|整风|时期|道路|额)")  # “确保定额”里的“保定”不是地名（r9 实测误伤）
 # 无地名前缀的烟草企业名（r7 结构扫描抽到）。品牌"红塔山"不动，只认后接烟草/集团/公司
 COMPANY_RE = re.compile(r"(红塔|红云红河|红云|白沙|黄鹤楼|芙蓉王|娇子)(?=烟草|集团|公司|卷烟厂)")
+# 卷烟品牌能直接反推是哪家中烟（“黄金叶”= 某省中烟），按单位名同等处理（2026-10-04 范文标注发现 r9 漏网）。
+# 口径变更：2026-09-26 起曾有意保留品牌（测试 test_brand_names_kept），未见 Jeffrey 裁定记录；单位名已脱敏而
+# 品牌照留，等于把单位名换个说法留着，故改为替换。品牌分析类内容需要具体品牌时由 Jeffrey 裁定是否回退。
+# 这些词单独出现即为品牌；“黔彩”“湘村”是省级营销平台/品牌名，同样能反推省份。
+BRANDS = ["黄金叶", "贵烟", "真龙", "云烟", "芙蓉王", "黄鹤楼", "利群", "苏烟", "娇子", "七匹狼", "好猫",
+          "宽窄", "黔锋", "黔彩", "双喜", "湘村", "红塔山"]
+BRAND_RE = re.compile("|".join(BRANDS))
+# 与普通词、地名同形的品牌：须在引号里或后接规格括号/“品牌”“卷烟”才算（“中华民族”“泰山挑山工”不动）
+BRAND_CTX_RE = re.compile(r"(?:中华|泰山|钻石|南京|白沙|玉溪|红河)(?=”|（|\(|品牌|卷烟|系列)")
+# 无地名前缀的其他企业（投资公司、合资企业、行业直属公司、合作银行），名单逐批补
+EXTRA_UNITS = ["中烟商务物流有限责任公司", "中烟商务物流公司", "中烟商务物流", "中维资本", "中维公司", "金福公司",
+               "双维公司", "双维投资", "双维伊士曼", "国电双维", "中维"]
+EXTRA_UNIT_RE = re.compile("|".join(sorted(EXTRA_UNITS, key=len, reverse=True)))
+BANK_RE = re.compile(r"(?:中信|招商|浦发|民生|光大|华夏|兴业|平安|邮储)银行")
 # 卷烟厂简称（P3 机检实测时抽到"建设现代化南烟"漏检）。"贵烟"与品牌同名不收；
 # 后接叶/草/丝/农/区/田/苗等时是"南烟区""上烟叶"之类，不是简称
 # 独立出现即可认定的简称（实测："建设现代化南烟""许烟经验""昆烟制丝"）
@@ -113,7 +127,8 @@ QSTD_RE = re.compile(r"Q/[A-Z]{2,8}")
 EXTRA_PLACES = ["五峰县", "东光县", "滦平县", "湘阴县", "新化县", "水城县", "同德县", "龙里县", "河间县",
                 "盐山县", "孟村县", "吴桥县", "澧县", "蠡县", "任丘县", "任丘市", "泊头市", "绥芬河市", "儋州",
                 "红河州", "贵安新区", "郑东新区", "果洛", "宁乡", "北仑", "金沙江", "雅砻江", "安宁河", "鲁南山",
-                "南流江", "翠湖宾馆", "王林", "涞源", "竹山", "竹溪", "日照四地市", "金州"]  # 王林 = 玉林的 OCR 错字（“王林市局”“大王林”）
+                "南流江", "翠湖宾馆", "王林", "涞源", "竹山", "竹溪", "日照四地市", "金州",
+                "湘阴", "衡山", "平坝", "常张"]  # 2026-10-04 范文标注时发现的 r9 残留  # 王林 = 玉林的 OCR 错字（“王林市局”“大王林”）
 EXTRA_PLACE_RE = re.compile("(?<![渠街频轨])道县|" + "|".join(sorted(EXTRA_PLACES, key=len, reverse=True)))
 # “X自治州/自治县”（含民族名）：果洛藏族自治州、黔南布依族苗族自治州……
 AUTONOMOUS_RE = re.compile(r"[^\s，。、；和与及〔〕]{0,4}?(?:[一-龥]{1,3}族){1,3}自治(?:州|县)")
@@ -147,6 +162,9 @@ NAME_TITLE_RE = re.compile(
 SHORT_NAME_RE = re.compile(
     "(?:(?<![一-龥])|(?<=[和与及、]))([" + SURNAMES + "])(" + "|".join(SHORT_TITLES) + ")(?![体结部量额计裁统部监机法令空])")
 SIGNATURE_RE = re.compile(r"^[" + SURNAMES + r"][ 　]*[一-龥](?:[ 　]*[一-龥])?$")
+# 名字里的生僻字转写成私用区字符（U+E000–F8FF），NAME_TITLE_RE 的 [一-龥] 匹配不到，整名漏网
+# （2026-10-04 r9 实测：国家局副局长名“徐”+私用区字，正文 6 处、文件名 1 处）。姓 + 私用区字即视为人名。
+PUA_NAME_RE = re.compile("[" + SURNAMES + r"][-]+")
 
 
 PLACE_CODES = "甲乙丙丁戊己庚辛壬癸"
@@ -185,6 +203,10 @@ def deidentify(text: str, known_names=()):
         if hits:
             changes.extend({"type": "人名(已知名单)", "orig": h, "new": new} for h in hits)
             text = rx.sub(new, text)
+
+    for m in PUA_NAME_RE.finditer(text):
+        changes.append({"type": "人名(生僻字)", "orig": m.group(0), "new": "〔姓名〕"})
+    text = PUA_NAME_RE.sub("〔姓名〕", text)
 
     def unit_repl(m):
         # 同一单位的全称与简称共用一个编号：“南阳卷烟厂/南阳厂”“河南中烟/河南中烟工业有限责任公司”
@@ -260,6 +282,11 @@ def deidentify(text: str, known_names=()):
         for m in COMPANY_RE.finditer(line):
             changes.append({"type": "企业名", "orig": m.group(0), "new": "〔某企业〕"})
         line = COMPANY_RE.sub("〔某企业〕", line)
+        for rx, tag, new in ((EXTRA_UNIT_RE, "企业名(无地名)", "〔某企业〕"), (BANK_RE, "银行名", "〔某银行〕"),
+                             (BRAND_RE, "品牌", "〔品牌〕"), (BRAND_CTX_RE, "品牌", "〔品牌〕")):
+            for m in rx.finditer(line):
+                changes.append({"type": tag, "orig": m.group(0), "new": new})
+            line = rx.sub(new, line)
         for m in ABBR_RE.finditer(line):
             changes.append({"type": "单位简称", "orig": m.group(0), "new": "〔某厂〕"})
         line = ABBR_RE.sub("〔某厂〕", line)

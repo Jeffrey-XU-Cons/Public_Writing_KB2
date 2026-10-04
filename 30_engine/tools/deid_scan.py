@@ -33,7 +33,7 @@ CONTEXTS = {
 PLACE_CAND = re.compile(r"([一-龥]{2})(市|县|新区|旗|自治州|州)(?![一-龥]?(?:场|民|级|域|委|政|直|长|区县))")
 # 候选的首字若是虚词/量词/泛指，基本不是地名（“各县”“全州”“个县”）
 FUNC_FIRST = set("的了在和与及等为将对向由到是有中上下以其这那此各全本该每个两三多几所超大小新老某")
-EXEMPT = re.compile("(?:延安|遵义|南昌|井冈山|西柏坡)(?:精神|会议|起义|整风|时期|道路)")
+EXEMPT = re.compile("(?:延安|遵义|南昌|井冈山|西柏坡)(?:精神|会议|起义|整风|时期|道路)|保定额")
 META_FILES = re.compile("复核报告|试跑报告")  # 批次里的复核记录不是语料（r7 里就混进了带原始单位名的复核报告）
 
 
@@ -46,8 +46,13 @@ def scan(batch_dir, known_names=()):
             continue
         text = f.read_text(encoding="utf-8")
         for n in known_names:
-            if n in text:
+            if n in text or n in f.stem:
                 hard.append({"type": "已确认人名残留", "file": f.name, "hit": n})
+        # 文件名与正文都查：r9 的生僻字人名同时出现在文件名里，旧版只扫正文
+        for where, src in (("文件名", f.stem), ("正文", text)):
+            for m in d.PUA_NAME_RE.finditer(src):
+                hard.append({"type": f"生僻字人名残留（{where}）", "file": f.name,
+                             "hit": src[max(0, m.start() - 8):m.end() + 8]})
         plain = EXEMPT.sub("", text)
         for m in re.finditer("|".join(d.PLACES), plain):
             hard.append({"type": "省市名残留", "file": f.name, "hit": plain[max(0, m.start() - 8):m.end() + 8]})
