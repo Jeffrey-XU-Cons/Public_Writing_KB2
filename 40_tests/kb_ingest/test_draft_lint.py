@@ -557,3 +557,26 @@ def test_plan_copy_ignores_first_part_and_fresh_requirements():
 
 def test_plan_copy_skips_text_without_second_level1_heading():
     assert dl.plan_copy_ratio("一、只有一部分\n" + PLAN, PLAN) is None
+
+
+# ---- W2-0 范文对照表（2026-10-04）----
+
+def _speech_outline(table_rows_text):
+    return ("文种：领导讲话（启动部署）｜依据：会上口头部署\n\n## 范文对照表\n\n| 范文要件 | 本稿 | 位置 |\n|---|---|---|\n"
+            + table_rows_text + "\n## 缺口\n")
+
+
+def test_speech_outline_without_exemplar_table_warns():
+    res = dl.check_outline(_speech_outline("| 〔开场交代分工（AR-0001）〕 | 具备 | 〔开场〕 |\n"))
+    assert any(f["rule"] == "W2-0 范文对照表未填" for f in res)
+
+
+def test_speech_outline_missing_item_warns_and_filled_passes():
+    res = dl.check_outline(_speech_outline("| 部署段压实领导责任（AR-0012） | 缺 | — |\n"))
+    assert any(f["rule"] == "W2-0 范文要件缺" for f in res)
+    res = dl.check_outline(_speech_outline("| 部署段压实领导责任（AR-0012） | 具备 | 三（二） |\n"))
+    assert not any(f["gate"] == "W2-0" for f in res)
+
+
+def test_non_speech_outline_skips_exemplar_check():
+    assert not any(f["gate"] == "W2-0" for f in dl.check_outline("文种：汇报材料｜依据：x\n"))

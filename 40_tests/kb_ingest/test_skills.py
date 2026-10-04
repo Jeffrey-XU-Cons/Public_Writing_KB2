@@ -48,7 +48,7 @@ def test_gw_draft_retrieval_command_runs():
     cmd = next(l for l in read("gw-draft").splitlines() if l.startswith("python3 -c"))
     code = re.search(r'python3 -c "(.+)" (\S+)$', cmd)
     out = subprocess.run([sys.executable, "-c", code.group(1), code.group(2)], cwd=ROOT,
-                         capture_output=True, text=True, timeout=60)
+                         capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
     assert out.returncode == 0, out.stderr
     assert "QA-C3-00001" in out.stdout
 
@@ -68,11 +68,11 @@ def test_lint_command_forms_in_skills_run(tmp_path):
         [str(task / "v1_初稿.md"), "--outline", str(task / "outline.md"), "--report", str(task / "review_report.md"), "--final"],
     ]
     for args in forms:
-        r = subprocess.run([sys.executable, lint, *args], cwd=ROOT, capture_output=True, text=True, timeout=60)
+        r = subprocess.run([sys.executable, lint, *args], cwd=ROOT, capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
         assert r.returncode in (0, 1), r.stderr
         assert "机检：" in r.stdout
     # 空模板必须被拦（不能拿模板原样过终验）
-    r = subprocess.run([sys.executable, lint, *forms[2]], cwd=ROOT, capture_output=True, text=True, timeout=60)
+    r = subprocess.run([sys.executable, lint, *forms[2]], cwd=ROOT, capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
     assert r.returncode == 1
 
 
@@ -82,3 +82,14 @@ def test_skill_body_has_no_real_names_or_units(name):
     _, changes, _ = deidentify.deidentify(read(name))
     leaks = [c for c in changes if c["type"] in ("人名", "人名(简称)", "单位名", "地名", "企业名", "单位简称")]
     assert not leaks, leaks
+
+
+def test_gw_draft_exemplar_command_runs():
+    """W2-0 范文对照命令要真能列出同子类范文的要件。"""
+    lines = [l for l in read("gw-draft").splitlines() if l.startswith("python3 -c") and "articles.jsonl" in l]
+    assert lines, "gw-draft 缺范文对照命令"
+    code = re.search(r'python3 -c "(.+)" (\S+)$', lines[0])
+    out = subprocess.run([sys.executable, "-c", code.group(1), code.group(2)], cwd=ROOT,
+                         capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
+    assert out.returncode == 0, out.stderr
+    assert "AR-" in out.stdout and "  - " in out.stdout

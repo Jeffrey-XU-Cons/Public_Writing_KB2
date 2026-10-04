@@ -17,6 +17,7 @@ Gates:
                                   + 2026-10-03 公文体例: Q-071 同级节数 / Q-072 标题句式 (warn),
                                   Q-073 汇报类正文禁表格 (block, needs --outline for 文种)
                                   + 2026-10-04: Q-079 讲话复述方案 (warn, needs --plan 方案或宣贯稿.md)
+                                  + 2026-10-04: W2-0 讲话稿 outline 范文对照表未填/有缺 (warn)
 
 W1-2 and W2-4 are semantic by nature: the code gate is NECESSARY, not sufficient — it blocks clear
 violations; gw-review's LLM pass covers the rest.
@@ -683,6 +684,16 @@ def check_outline(outline):
     for r in filled:
         if len(r) < 3 or not r[2] or PLACEHOLDER_RE.fullmatch(r[2]):
             res.append(finding("W2-5 论点无归属", None, f"{r[0]} 未写唯一归属位置", gate="W2-4"))
+    # W2-0 范文对照（2026-10-04）：讲话稿已建范文库，大纲须逐条核对同类范文要件；标“缺”的要补进骨架或写理由
+    if "讲话" in outline_genre(outline):
+        ex_rows = [r for r in (table_rows(outline, "范文对照表") or []) if r and r[0] and not PLACEHOLDER_RE.search(r[0])]
+        if not ex_rows:
+            res.append(finding("W2-0 范文对照表未填", None,
+                               "讲话稿须按 gw-draft W2-0 取 2—3 篇同子类范文，把要件逐条填进“范文对照表”", "warn", gate="W2-0"))
+        for r in ex_rows:
+            if len(r) > 1 and r[1].strip() == "缺":
+                res.append(finding("W2-0 范文要件缺", None, f"「{r[0][:24]}」标为缺——补进骨架，或改标不适用并写理由",
+                                   "warn", gate="W2-0"))
     left = [l.strip() for l in outline.splitlines() if PLACEHOLDER_RE.search(l) and "待补" not in l and not l.strip().startswith("<!--")]
     if left:
         res.append(finding("模板占位未填", None, f"{len(left)} 行仍有〔…〕占位，例：{left[0][:30]}", "warn"))
