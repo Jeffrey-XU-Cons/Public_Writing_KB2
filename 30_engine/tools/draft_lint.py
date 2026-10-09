@@ -18,6 +18,9 @@ Gates:
                                   Q-073 汇报类正文禁表格 (block, needs --outline for 文种)
                                   + 2026-10-04: Q-079 讲话复述方案 (warn, needs --plan 方案或宣贯稿.md)
                                   + 2026-10-04: W2-0 讲话稿 outline 范文对照表未填/有缺 (warn)
+                                  + 2026-10-07: W2-0 扩到 汇报/方案/规划/调研/诊断 (范文库 B-20261007-AR-02)
+  W2-6 人工两问 check_human_*     2026-10-06: 讲话稿 outline 须有“确认点 2 人工两问”（分工、问题分量）且起草方
+                                  判断写实 (block)；--final 须有 Jeffrey 答复“已确认（YYYY-MM-DD）：……” (block)
 
 W1-2 and W2-4 are semantic by nature: the code gate is NECESSARY, not sufficient — it blocks clear
 violations; gw-review's LLM pass covers the rest.
@@ -401,6 +404,8 @@ def check_open_close(text):
 # 一级/二级各 12 组——真实成稿里方案、诊断报告常见，只报 warn；表格只对汇报类文种拦，且须带 outline 才知道文种。
 
 REPORT_GENRE_RE = re.compile(r"汇报|总结|经验交流|讲话|述职")
+# W2-0 范文对照：范文库已建的文种（讲话 2026-10-04；汇报、方案、规划、调研/诊断 2026-10-07）。工作总结无范文，不在内。
+EXEMPLAR_GENRE_RE = re.compile(r"讲话|汇报|方案|规划|调研|诊断")
 
 
 def heading_title(h):
@@ -684,19 +689,61 @@ def check_outline(outline):
     for r in filled:
         if len(r) < 3 or not r[2] or PLACEHOLDER_RE.fullmatch(r[2]):
             res.append(finding("W2-5 论点无归属", None, f"{r[0]} 未写唯一归属位置", gate="W2-4"))
-    # W2-0 范文对照（2026-10-04）：讲话稿已建范文库，大纲须逐条核对同类范文要件；标“缺”的要补进骨架或写理由
-    if "讲话" in outline_genre(outline):
+    # W2-0 范文对照（2026-10-04 讲话；2026-10-07 扩到汇报、方案、规划、调研/诊断）：已建范文库的文种，
+    # 大纲须逐条核对同类范文要件；标“缺”的要补进骨架或写理由
+    genre = outline_genre(outline)
+    if EXEMPLAR_GENRE_RE.search(genre):
         ex_rows = [r for r in (table_rows(outline, "范文对照表") or []) if r and r[0] and not PLACEHOLDER_RE.search(r[0])]
         if not ex_rows:
             res.append(finding("W2-0 范文对照表未填", None,
-                               "讲话稿须按 gw-draft W2-0 取 2—3 篇同子类范文，把要件逐条填进“范文对照表”", "warn", gate="W2-0"))
+                               f"{genre[:12]}已有同类范文，须按 gw-draft W2-0 取 2—3 篇，把要件逐条填进“范文对照表”",
+                               "warn", gate="W2-0"))
         for r in ex_rows:
             if len(r) > 1 and r[1].strip() == "缺":
                 res.append(finding("W2-0 范文要件缺", None, f"「{r[0][:24]}」标为缺——补进骨架，或改标不适用并写理由",
                                    "warn", gate="W2-0"))
+    if "讲话" in outline_genre(outline):
+        res += check_human_questions(outline)
     left = [l.strip() for l in outline.splitlines() if PLACEHOLDER_RE.search(l) and "待补" not in l and not l.strip().startswith("<!--")]
     if left:
         res.append(finding("模板占位未填", None, f"{len(left)} 行仍有〔…〕占位，例：{left[0][:30]}", "warn"))
+    return res
+
+
+# 确认点 2 人工两问（2026-10-06，P4 第 7 轮）：讲话稿的两条重要缺陷——骨架取自同场工作报告的备料、
+# 问题段被规则压成一条——机检和自审都拦不住，但在大纲上一眼可见。所以大纲必须把这两问摆出来，
+# 由 Jeffrey 本人答；机器只管“摆没摆、答没答”，答得对不对是人的事。
+HUMAN_QUESTIONS = (("分工", "Q1 分工"), ("问题", "Q2 问题分量"))
+ANSWERED_RE = re.compile(r"^已确认\s*[（(]\s*\d{4}-\d{2}-\d{2}")
+
+
+def human_question_rows(outline):
+    rows = [r for r in (table_rows(outline, "确认点 2 人工两问") or []) if r and r[0]]
+    return {label: next((r for r in rows if key in r[0]), None) for key, label in HUMAN_QUESTIONS}
+
+
+def check_human_questions(outline):
+    """讲话稿 outline：两问须在，起草方判断须写实（呈报前）。"""
+    res = []
+    for label, r in human_question_rows(outline).items():
+        if r is None:
+            res.append(finding("确认点2 人工两问缺失", None,
+                               f"讲话稿大纲缺“{label}”行（gw-draft W2-6），不得呈报确认点 2", gate="W2-6"))
+        elif len(r) < 3 or any(not c or PLACEHOLDER_RE.fullmatch(c) for c in r[1:3]):
+            res.append(finding("确认点2 人工两问未填", None,
+                               f"“{label}”的起草方判断或选项未写实", gate="W2-6"))
+    return res
+
+
+def check_human_answers(outline):
+    """--final：讲话稿的两问须有 Jeffrey 的答复（“已确认（YYYY-MM-DD）：……”），起草方不得代答。"""
+    if "讲话" not in outline_genre(outline):
+        return []
+    res = []
+    for label, r in human_question_rows(outline).items():
+        if r is not None and not (len(r) >= 4 and ANSWERED_RE.match(r[3])):
+            res.append(finding("确认点2 人工两问未答复", None,
+                               f"“{label}”没有 Jeffrey 的答复——须本人答，起草方不得代答", gate="W2-6"))
     return res
 
 
@@ -847,6 +894,8 @@ def lint(text, outline=None, final=False, rules=None):
         res += check_outline(outline)
         res += check_length(text, outline, final)
         res += check_report_table(text, outline)
+        if final:
+            res += check_human_answers(outline)
     return res
 
 

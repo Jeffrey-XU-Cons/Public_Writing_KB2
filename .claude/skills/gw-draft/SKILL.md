@@ -39,8 +39,9 @@ D:/ai-runtime/venv-cuda/Scripts/python.exe D:/projects/Kb-RAG/tools/search.py --
 
 在 dell-7050 上跑不了上面的命令（无 GPU、无模型），退回本地直查，并如实说明"本地库直查、覆盖有限"：
 ```
-python3 -c "import json,glob,sys;kw=sys.argv[1];[print(r['id'],r.get('depth'),r.get('w_layer'),r['question'][:50]) for f in glob.glob('20_knowledge/qa/*.jsonl') for r in map(json.loads,open(f,encoding='utf-8')) if kw in r['question']+r['answer']]" 结论先行
+python3 -c "import json,glob,sys;kw=sys.argv[1];[print(r['id'],r['status'],r.get('depth'),r.get('w_layer'),r['question'][:50]) for f in glob.glob('20_knowledge/qa/*.jsonl') for r in map(json.loads,open(f,encoding='utf-8')) if kw in r['question']+r['answer']]" 结论先行
 ```
+输出第二列是 `status`：合并去重后废弃的条目仍留在库里（查“结论先行”第一条就是已废弃的 QA-C6-00001），`deprecated` 的一律不用。本命令与 gw-search 路线 B 第 1 条同一版本，改一处须两处同改。
 术语与搭配仍查 `20_knowledge/terms/terms.jsonl`（未进索引；`kind=术语` 的 `t2_collocation` 给常见前接/后接词）。查不到/查到没用/查到用错，记进 review_report 第六节，喂后续扩库。
 
 公文库更新后，要在 ThinkBook 的 Kb-RAG 下重跑 `kb_import.py public_writing_qa` 与 `kb_index.py public_writing_qa`，否则检索到的是旧数据。
@@ -111,11 +112,19 @@ python3 -c "import json,glob,sys;kw=sys.argv[1];[print(r['id'],r.get('depth'),r.
   > P4 教训：两份培训讲稿因为“口语化”被整份弃用，里面恰好有评价方法（五档评分、等级区间）和必要性论证（三类问题），这两块是送审汇报的要件。
 - **F2 自上而下**：主旨→设想读者疑问→逐层回答→缺的素材标 `[待补:XX]`。
 
-**W2-0 范文对照（库里有同类范文时必做，目前讲话稿已建 20 篇）**：搭骨架前，按子类（工作会议讲话／现场会讲话／启动部署讲话／推进会讲话／培训动员讲话／总结讲话）列出同类范文的要件：
+**W2-0 范文对照（库里有同类范文时必做）**：库里现有讲话稿 20 篇、汇报材料 7 篇、方案 8 篇、规划 5 篇、调研报告 8 篇（`20_knowledge/articles/articles.jsonl`）；工作总结没有范文，outline 写“无同类范文”。搭骨架前列出同类范文的要件，两种写法：
+
+- **讲话按子类（subtype）取**（工作会议讲话／现场会讲话／启动部署讲话／推进会讲话／培训动员讲话／总结讲话）：
 ```
 python3 -c "import json,sys;[print(r['id'],r['grade'],r['org_level'],r['title'][:40],*['  - '+m for m in r['must_haves']],sep='\n') for r in map(json.loads,open('20_knowledge/articles/articles.jsonl',encoding='utf-8')) if r['subtype']==sys.argv[1]]" 启动部署讲话
 ```
-取 2—3 篇（A 级优先，层级相近优先），把 `must_haves` 合并去重，填进 outline“范文对照表”，每条标“具备（落在哪一节）／不适用（理由）”。要件带适用条件的（如“方案已由他人解读时，讲话只点名不复述”），先核本稿是否满足条件，不满足标“不适用”。拿不准写法时读该篇 `why_good`，需要看原文按 `source_path` 打开（本机脱敏批次，不外流）。
+- **其他文种按文种（doc_type）取**，参数用库里的写法：`汇报材料`／`方案`／`规划`／`调研报告`。输出带子类和 caveat（`!` 行），先取子类相同的篇目：
+```
+python3 -c "import json,sys;[print(r['id'],r['grade'],r['subtype'],r['org_level'],r['title'][:40],*['  - '+m for m in r['must_haves']],*(['  ! '+r['caveat']] if r.get('caveat') else []),sep='\n') for r in map(json.loads,open('20_knowledge/articles/articles.jsonl',encoding='utf-8')) if r['doc_type']==sys.argv[1]]" 方案
+```
+  子类现有：汇报材料（上报汇报、专题汇报、经验交流），方案（工作方案、实施方案、项目方案），规划（五年规划、专项规划），调研报告（诊断报告、课题结题报告）。B 级篇目先读 caveat 再取要件，caveat 点名的短板不当要件；AR-0305 是国家局行业规划，只用来看上级规划骨架，不当本单位写法。
+
+取 2—3 篇（A 级优先，层级相近优先；讲话排在工作报告之后的〔文种_06 位置 B〕，先取要件里写明“讲话与工作报告分工”的篇目，目前是 AR-0018，不论层级），把 `must_haves` 合并去重，填进 outline“范文对照表”，每条标“具备（落在哪一节）／不适用（理由）”。要件带适用条件的（如“方案已由他人解读时，讲话只点名不复述”），先核本稿是否满足条件，不满足标“不适用”。拿不准写法时读该篇 `why_good`，需要看原文按 `source_path` 打开（本机脱敏批次，不外流）。
 > 为什么：P4 第 5、6 轮 F1 起草的缺陷——漏传达上级部署、讲话复述方案、漏写领导责任——单看稿子都自洽，所有门禁打 ✅；拿同类成品一对就看出来。范文对照就是把“拿成品对一对”变成固定动作。只学写法，不搬范文的数据与提法。
 
 步骤：
@@ -131,7 +140,12 @@ python3 30_engine/tools/draft_lint.py 50_tasks/…/outline.md --outline 50_tasks
 ```
 （查主旨句是否判断句、同级标题互换/空泛、论点地图是否填写、一个论点是否登记多处。Windows 用 `python`。）
 
-交 gongwen 呈报**确认点 2：确认即冻结**。呈报时**弃用清单必须列出**，让用户看到丢了什么。之后任何偏离都在 outline.md"冻结后偏离记录"里写明原因。
+6. **W2-6 人工两问（讲话稿必填；其他文种同场另有报告、方案时也填）**：按模板“确认点 2 人工两问”表写两行，**只写判断、选项和推荐，“人工答复”栏保持“待确认”，不许代答**。
+   - **Q1 分工**：同场还有谁讲什么（议程）；素材清单“归属”栏逐份标明本稿料／他人备料／上级精神／背景；骨架里哪一节的条目或排列来自他人备料（列素材编号）。来自他人备料的部署节，默认改写成方向和要求，或在选项里摆出来让 Jeffrey 定。
+   - **Q2 问题分量**：先按文种_06“先定讲话人位置”判位置，再给选项（单列／并入形势末条／第一部分末话锋一转／不设），写推荐及理由。位置 B（工作报告之后的主要领导讲话）不得默认套“问题段不超第一部分 15%”。
+   > 为什么：P4 第 7 轮盲写稿嘴上说“不重复工作报告”，第三部分的骨架却是工作报告备料（贯标、对标、诊断、创新＋队伍）；问题段被现场会讲话的规则压成一条。两条在大纲上一眼可见，机检、自审、范文对照都打了 ✅。
+
+交 gongwen 呈报**确认点 2：确认即冻结**。呈报时**弃用清单必须列出**，让用户看到丢了什么；讲话稿**连同人工两问一起呈报，两问未答不冻结**。之后任何偏离都在 outline.md"冻结后偏离记录"里写明原因。
 
 ---
 

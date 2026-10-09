@@ -578,5 +578,77 @@ def test_speech_outline_missing_item_warns_and_filled_passes():
     assert not any(f["gate"] == "W2-0" for f in res)
 
 
-def test_non_speech_outline_skips_exemplar_check():
-    assert not any(f["gate"] == "W2-0" for f in dl.check_outline("文种：汇报材料｜依据：x\n"))
+def test_genre_without_exemplars_skips_exemplar_check():
+    # 工作总结、请示等范文库未建的文种不查 W2-0
+    for genre in ("工作总结", "请示"):
+        assert not any(f["gate"] == "W2-0" for f in dl.check_outline(f"文种：{genre}｜依据：x\n")), genre
+
+
+# ---- W2-0 扩到汇报、方案、规划、调研/诊断（2026-10-07，B-20261007-AR-02）----
+
+def _genre_outline(genre, table_rows_text=""):
+    return (f"文种：{genre}｜依据：x\n\n## 范文对照表\n\n| 范文要件 | 本稿 | 位置 |\n|---|---|---|\n"
+            + table_rows_text + "\n## 缺口\n")
+
+
+@pytest.mark.parametrize("genre", ["汇报材料（经验交流）", "实施方案", "工作方案", "发展规划", "调研报告", "管理诊断报告"])
+def test_exemplar_genres_without_table_warn(genre):
+    res = dl.check_outline(_genre_outline(genre, "| 〔开篇一句交代依据（AR-0201）〕 | 具备 | 〔开篇〕 |\n"))
+    hits = [f for f in res if f["rule"] == "W2-0 范文对照表未填"]
+    assert hits and hits[0]["severity"] == "warn"
+
+
+@pytest.mark.parametrize("genre", ["汇报材料", "实施方案", "发展规划", "调研报告"])
+def test_exemplar_genres_missing_item_warns_and_filled_passes(genre):
+    res = dl.check_outline(_genre_outline(genre, "| 每阶段列标志性成果（AR-0203） | 缺 | — |\n"))
+    assert any(f["rule"] == "W2-0 范文要件缺" for f in res)
+    res = dl.check_outline(_genre_outline(genre, "| 每阶段列标志性成果（AR-0203） | 具备 | 三（一） |\n"))
+    assert not any(f["gate"] == "W2-0" for f in res)
+
+
+def test_exemplar_extension_does_not_extend_human_questions():
+    # W2-6 人工两问只对讲话；汇报等文种不因 W2-0 扩展而被要求两问
+    for genre in ("汇报材料", "实施方案", "发展规划", "调研报告"):
+        assert not any(f["gate"] == "W2-6" for f in dl.check_outline(_genre_outline(genre))), genre
+
+
+# ---- W2-6 确认点 2 人工两问（2026-10-06，P4 第 7 轮）----
+
+SPEECH_OUTLINE_HEAD = "文种：领导讲话（工作报告之后的主要领导讲话）｜依据：年度工作会\n\n"
+TWO_Q = ("## 确认点 2 人工两问\n\n| 问 | 起草方判断与依据 | 选项与推荐 | 人工答复 |\n|---|---|---|---|\n"
+         "| Q1 分工：本稿与同场其他讲话、报告、方案怎么分工？ | 工作报告已部署明年任务；三（二）条目来自 S-02 报告备料 | A 只讲方向／B 照部署；推荐 A | {a1} |\n"
+         "| Q2 问题分量：问题部分放多重？ | 位置 B；素材有思想、合力两层问题 | A 单列／B 并入；推荐 A | {a2} |\n")
+
+
+def test_speech_outline_without_two_questions_blocked():
+    rules = [f["rule"] for f in dl.check_outline(SPEECH_OUTLINE_HEAD) if f["severity"] == "block"]
+    assert rules.count("确认点2 人工两问缺失") == 2
+
+
+def test_speech_outline_placeholder_two_questions_blocked():
+    tpl = (ROOT / ".claude/skills/gw-draft/templates/outline.md").read_text(encoding="utf-8")
+    section = tpl[tpl.index("## 确认点 2 人工两问"):tpl.index("## 确认点 2\n")]
+    assert any(f["rule"] == "确认点2 人工两问未填" for f in dl.check_outline(SPEECH_OUTLINE_HEAD + section))
+
+
+def test_two_questions_pending_ok_before_final_but_blocked_at_final():
+    outline = SPEECH_OUTLINE_HEAD + TWO_Q.format(a1="待确认", a2="待确认")
+    assert not any(f["gate"] == "W2-6" for f in dl.check_outline(outline))
+    res = dl.lint("正文。", outline=outline, final=True, rules=[])
+    assert [f["rule"] for f in res if f["gate"] == "W2-6"] == ["确认点2 人工两问未答复"] * 2
+
+
+def test_two_questions_self_answer_not_accepted():
+    """起草方代答（没有“已确认（日期）”格式）不算数。"""
+    outline = SPEECH_OUTLINE_HEAD + TWO_Q.format(a1="起草方选 A", a2="已确认：单列")
+    assert len(dl.check_human_answers(outline)) == 2
+
+
+def test_two_questions_answered_passes_final():
+    outline = SPEECH_OUTLINE_HEAD + TWO_Q.format(a1="已确认（2026-10-06）：A", a2="已确认（2026-10-06）：单列，约三成")
+    assert dl.check_human_answers(outline) == [] and not any(f["gate"] == "W2-6" for f in dl.check_outline(outline))
+
+
+def test_two_questions_not_required_for_report():
+    assert dl.check_human_answers("文种：汇报材料｜依据：x\n") == []
+    assert not any(f["gate"] == "W2-6" for f in dl.check_outline("文种：汇报材料｜依据：x\n"))
