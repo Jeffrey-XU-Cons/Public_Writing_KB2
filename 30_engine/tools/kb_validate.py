@@ -67,7 +67,7 @@ def validate_record(rec: dict) -> list:
                 errors.append("方法型/拆解型至少需 1 个反向问法（踩坑/误区/失败类）")
 
     if '"' in rec["answer"] or "'" in rec["answer"]:
-        errors.append("答案含英文直引号（须用中文弯引号「」“”）")
+        errors.append("答案含英文直引号（须用中文弯引号“”‘’）")
 
     if not isinstance(rec["tags"], list) or not (
             vocab.TAGS_COUNT[0] <= len(rec["tags"]) <= vocab.TAGS_COUNT[1]):
