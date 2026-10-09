@@ -105,7 +105,8 @@ ARTICLE_REQUIRED = ["id", "title", "doc_type", "subtype", "org_level", "industry
 SPEECH_SUBTYPES = ["工作会议讲话", "现场会讲话", "启动部署讲话", "推进会讲话", "培训动员讲话", "总结讲话"]
 
 # 讲话人所在层级（脱敏后保留的行政层级）
-ORG_LEVELS = ["行业", "省级商业", "省级工业", "地市级", "县级"]
+# 2026-10-09 Jeffrey 裁定加“卷烟厂”（含其物流中心等下属单位）、“直属单位”（省局（公司）所属多元化企业等）
+ORG_LEVELS = ["行业", "省级商业", "省级工业", "地市级", "县级", "卷烟厂", "直属单位"]
 
 ARTICLE_GRADES = ["A", "B"]          # C 级不入库
 ARTICLE_WHY_GOOD_COUNT = (3, 6)
