@@ -9,9 +9,13 @@ reviewed by a human before anything leaves the machine; confirmed items go back 
 Candidates, not verdicts: most hits are ordinary words. Review, don't auto-replace.
 
 CLI: python deid_scan.py BATCH_DIR [--names NAMES.txt] [--json]
-  --names  confirmed-names file: any of them still present in the batch is reported as a hard leak.
+  --names  confirmed-names file: any of them still present in the batch is reported as a hard leak
+           (person names, or typed entries “〔某企业〕Name”, see deidentify.load_names_file).
 Exit code 1 if any hard leak (known name still present, or a province/city name left outside the
-political-phrase exemptions); candidates alone exit 0.
+political-phrase exemptions, or anything the 2026-10-07 rules in deidentify.r11_rules would still
+change: phone numbers, name-list rows, brand spec names, overflowed placeholders …); candidates alone
+exit 0. Exit code 2 if BATCH_DIR does not exist or holds no .md files — an empty scan used to print
+“硬泄露 0” and pass, which is how a typo in the path looked like a clean batch.
 """
 
 import json
@@ -37,17 +41,29 @@ EXEMPT = re.compile("(?:延安|遵义|南昌|井冈山|西柏坡)(?:精神|会�
 META_FILES = re.compile("复核报告|试跑报告")  # 批次里的复核记录不是语料（r7 里就混进了带原始单位名的复核报告）
 
 
+# r10 的误伤形态：“及时处置”→“及〔姓名〕处置”，“17项处于”→“17〔姓名〕处于”
+MISFIRE_RE = re.compile(r"(?:及|\d)〔姓名〕处(?=[置理于罚])")
+
+
 def scan(batch_dir, known_names=()):
     hard, cands = [], defaultdict(Counter)
     examples = {}
+    terms = [n if isinstance(n, str) else n[0] for n in known_names]
+    name_rx = [(n, re.compile(r"[ 　]*".join(map(re.escape, n)))) for n in terms]
     for f in sorted(Path(batch_dir).glob("*.md")):
         if META_FILES.search(f.name):
             hard.append({"type": "非语料文件", "file": f.name, "hit": "复核/试跑记录混在批次里，可能含原始名称"})
             continue
         text = f.read_text(encoding="utf-8")
-        for n in known_names:
-            if n in text or n in f.stem:
-                hard.append({"type": "已确认人名残留", "file": f.name, "hit": n})
+        for n, rx in name_rx:
+            if rx.search(text) or rx.search(f.stem):
+                hard.append({"type": "已确认名单残留", "file": f.name, "hit": n})
+        # 2026-10-07 规则（deidentify.r11_rules）在这份文件上还能改动的地方，都是漏网
+        for where, src in (("文件名", f.stem), ("正文", text)):
+            for c in d.r11_rules(src)[1]:
+                hard.append({"type": f"{c['type']}（{where}）", "file": f.name, "hit": c["orig"][:30]})
+        for m in MISFIRE_RE.finditer(text):
+            hard.append({"type": "人名规则误伤", "file": f.name, "hit": text[max(0, m.start() - 6):m.end() + 4]})
         # 文件名与正文都查：r9 的生僻字人名同时出现在文件名里，旧版只扫正文
         for where, src in (("文件名", f.stem), ("正文", text)):
             for m in d.PUA_NAME_RE.finditer(src):
@@ -88,9 +104,13 @@ def main(argv):
     names = []
     if "--names" in argv:
         i = argv.index("--names")
-        names = [n.strip() for n in Path(argv[i + 1]).read_text(encoding="utf-8").splitlines() if n.strip()]
+        names = d.load_names_file(argv[i + 1])
         del argv[i:i + 2]
-    hard, cands, ex = scan(argv[0], names)
+    batch = Path(argv[0]) if argv else None
+    if batch is None or not batch.is_dir() or not any(batch.glob("*.md")):
+        print(f"错误：批次目录不存在或没有 .md 文件：{batch}", file=sys.stderr)
+        return 2
+    hard, cands, ex = scan(batch, names)
     if as_json:
         print(json.dumps({"hard": hard, "candidates": {k: dict(v) for k, v in cands.items()}},
                          ensure_ascii=False, indent=1))

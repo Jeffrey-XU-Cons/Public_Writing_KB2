@@ -11,7 +11,7 @@ import draft_lint as dl
 
 ROOT = Path(__file__).resolve().parents[2]
 SNAP = ROOT / "40_tests/golden/draft_lint_real_docs.json"
-BATCH = ROOT / "30_engine/batches/B-20261004-deid-个人历史交付物-r10"
+BATCH = ROOT / "30_engine/batches/B-20261007-deid-个人历史交付物-r11"
 
 
 @pytest.mark.skipif(not BATCH.exists(), reason="脱敏批次不在本机")

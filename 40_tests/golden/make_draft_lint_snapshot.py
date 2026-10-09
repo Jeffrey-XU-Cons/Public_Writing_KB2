@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "30_engine/tools"))
 import draft_lint as dl  # noqa: E402
 
-BATCH = ROOT / "30_engine/batches/B-20261004-deid-个人历史交付物-r10"
+BATCH = ROOT / "30_engine/batches/B-20261007-deid-个人历史交付物-r11"
 rules = dl.load_rules(ROOT)
 snap = {}
 for f in sorted(BATCH.glob("*.md")):
